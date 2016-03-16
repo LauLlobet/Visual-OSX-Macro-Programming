@@ -48,7 +48,7 @@ sed -e "s/c:$LAST_NUM.*/\*DONE &\*/" <./wiki/TrackSpark/data/$BRANCH.wiki > ./wi
 
 #read -p "step3"
 
-cp ./wiki/TrackSpark/TrackSpark/data/tmp.$BRANCH.wiki ./wiki/TrackSpark/data/$BRANCH.wiki
+cp ./wiki/TrackSpark/data/tmp.$BRANCH.wiki ./wiki/TrackSpark/data/$BRANCH.wiki
 
 rm ./wiki/TrackSpark/data/tmp.$BRANCH.wiki
 
