@@ -97,10 +97,14 @@ public class TransPanel extends Panel implements java.beans.Customizer {
     }
 
     public Graphics paintExtra(Graphics g) {
-        g.setColor(Color.WHITE);
-        g.drawLine(0, 0, 10, 10);
-        g.setColor(Color.GREEN);
-        g.drawLine(10, 10, 20, 20);
+        Point point = ((SymmetricResizableFrame)this.getParent()).point;
+        int px = (int)point.getX();
+        int py = (int)point.getY();
+
+        g.setColor(Color.BLACK);
+        g.drawLine(px-10, py, px+10, py);
+        g.setColor(Color.BLACK);
+        g.drawLine(px, py-10, px, py+10);
         return g;
     }
 

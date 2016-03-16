@@ -7,11 +7,16 @@ import java.awt.event.MouseMotionListener;
 public class SymmetricResizableFrame extends Frame {
 
     public Point lastLocation;
+    public Point point;
     public Dimension lastSize;
+    public Dimension nonFullscreenSize;
+    public boolean isFullscreen = false;
     public SymmetricResizableFrame (String name, int x, int y, int w, int h) {
         super(name);
         lastSize = new Dimension(w,h);
         lastLocation = new Point(x,y);
+        nonFullscreenSize = this.getSize();
+        point = new Point(w/2,h/2);
         this.setBounds(x,y,w,h);
         this.setUndecorated( true );
         TransPanel p = new TransPanel();
@@ -37,14 +42,30 @@ public class SymmetricResizableFrame extends Frame {
                 */
     }
 
+
+    public void setFullscreen(Boolean b){
+        if(b){
+            this.nonFullscreenSize = this.getSize();
+            Toolkit tk = Toolkit.getDefaultToolkit();
+            int xSize = ((int) tk.getScreenSize().getWidth());
+            int ySize = ((int) tk.getScreenSize().getHeight());
+            this.setSize(xSize,ySize);
+            this.setLocation(0,0);
+        }else {
+            this.setSize(this.nonFullscreenSize);
+        }
+        this.isFullscreen = b;
+    }
+
+
     class MoveMouseListener implements MouseListener, MouseMotionListener {
-        Frame target;
+        SymmetricResizableFrame target;
         Point start_drag;
         Point start_loc;
         Dimension start_size;
         Point relative_start_loc;
 
-        public MoveMouseListener(Frame target) {
+        public MoveMouseListener(SymmetricResizableFrame target) {
             this.target = target;
         }
 
@@ -56,6 +77,8 @@ public class SymmetricResizableFrame extends Frame {
         }
 
         public void mouseClicked(MouseEvent e) {
+            boolean fs = !target.isFullscreen;
+            target.setFullscreen(fs);
         }
 
         public void mouseEntered(MouseEvent e) {
@@ -82,10 +105,13 @@ public class SymmetricResizableFrame extends Frame {
         }
 
         public void mouseDragged(MouseEvent e) {
+            point = e.getPoint();
             if(isAtTheBottomRight(e.getPoint())){
                 changeSize(e);
+
             }else{
-                System.out.println("click------>");
+
+               System.out.println("click------>");
 
                 Point current = this.getScreenLocation(e);
                 Point offset = new Point((int) current.getX() - (int) start_drag.getX(),
