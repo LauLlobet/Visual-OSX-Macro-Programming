@@ -4,4 +4,9 @@
 
 *DONE c:1 windows resize and wiki done, wiki fixed*
 
-- testing wikid
+*DONE c:2 testing wikid*
+
+- aaa
+- bbb
+- ccc
+
