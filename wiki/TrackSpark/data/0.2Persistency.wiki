@@ -1,6 +1,8 @@
 ﻿++ 0.2Persistency
 
-- a mig modelar els beans
+*DONE c:1 a mig modelar els beans*
+
+- abans primer intent de storing en json injecting argument and having poliformisms
 
 - Tree instantiation from json :180
 

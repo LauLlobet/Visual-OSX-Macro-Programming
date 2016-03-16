@@ -1,5 +1,6 @@
 package model;
 
+import Constants.TSOConstants;
 import logic.ConnectionsChecker;
 
 /**
@@ -7,4 +8,8 @@ import logic.ConnectionsChecker;
  */
 public class TSObjectInputConnectionHub extends TSObjectConnectionHub {
 
+    public TSObjectInputConnectionHub(ConnectionsChecker cc){
+        super(cc);
+        type = TSOConstants.IDTSObjectInputConnectionHub;
+    }
 }

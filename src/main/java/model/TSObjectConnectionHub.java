@@ -1,28 +1,42 @@
 package model;
 
+import Constants.TSOConstants;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import logic.ConnectionsChecker;
 
 import java.util.ArrayList;
 
-/**
- * Created by quest on 16/3/16.
- */
+@JsonTypeInfo(
+        use = JsonTypeInfo.Id.NAME,
+        include = JsonTypeInfo.As.PROPERTY,
+        property = "type")
+@JsonSubTypes({
+        @JsonSubTypes.Type(value = TSObjectInputConnectionHub.class, name = TSOConstants.IDTSObjectInputConnectionHub),
+        @JsonSubTypes.Type(value = TSObjectOutputConnectionHub.class, name = TSOConstants.IDTSObjectOutputConnectionHub) })
 public class TSObjectConnectionHub {
 
     protected ArrayList<TSOConnection> connectedToList;
     private boolean isRegisteredToAConnectionsChecker;
     protected ArrayList<Port> ports;
-    protected TSObject hubOwner;
+    protected String ownerID;
     protected ConnectionsChecker connectionsChecker;
+    public String type = TSOConstants.IDTSObjectConnectionHub;
 
-    public TSObjectConnectionHub() {
-        isRegisteredToAConnectionsChecker = false;
+    public TSObjectConnectionHub(ConnectionsChecker connectionsChecker) throws Throwable {
+        this.connectionsChecker = connectionsChecker;
+        this.connectionsChecker.registerConnectionHub(this);
     }
 
-    public void setConnectedToList(ArrayList<TSOConnection> connectedToList) throws Exception{
-        this.connectionsChecker.areConnectionsPossible(hubOwner,this,connectedToList);
-        this.connectedToList = connectedToList;
+    @JsonIgnore
+    public String getNextMessageFromBuffer(int i) throws Exception{
+        return ports.get(i).getNextMessageFromBuffer();
+    }
+
+    public void setConnectedToList(ArrayList<TSOConnection> connections) throws Throwable{
+        this.connectionsChecker.ifAreConnectionsPossibleRegisterThemElseThrow(connections);
+        this.connectedToList = connections;
     }
 
     public ArrayList<TSOConnection> getConnectedToList() {
@@ -35,20 +49,5 @@ public class TSObjectConnectionHub {
 
     public ArrayList<Port> getPorts() {
         return  ports;
-    }
-
-    @JsonIgnore
-    public String getNextMessageFromBuffer(int i) throws Exception{
-        return ports.get(i).getNextMessageFromBuffer();
-    }
-
-    public boolean isNotRegisteredToAConnectionsChecker() {
-        return !isRegisteredToAConnectionsChecker;
-    }
-
-    public void registerToAConnectionsChecker(ConnectionsChecker connectionsChecker,TSObject owner) {
-        this.connectionsChecker = connectionsChecker;
-        this.hubOwner = owner;
-        isRegisteredToAConnectionsChecker = true;
     }
 }

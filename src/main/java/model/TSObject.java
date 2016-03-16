@@ -25,43 +25,23 @@ public class TSObject {
         this.connectionsChecker = connectionsChecker;
     }
 
-    public void connectTo(String destinyId, String portId) throws Exception {
-        this.getOutputsHub().connectTo(destinyId,portId);
-    }
-    public void setConectedToList(ArrayList<String> conectedTo) throws Exception {
-        this.getOutputsHub().setConnectedToList(conectedTo);
-    }
-    public ArrayList<String> getConectedToList() {
-        return this.getOutputsHub().getConnectedToList();
+    public void connectTo(int outPort,String destinyId, int inPort) throws Throwable {
+        TSOConnection conn = new TSOConnection(this.getId(),outPort,destinyId,inPort);
+        this.getOutputsHub().connectTo(conn);
     }
 
-    public TSObjectOutputConnectionHub getOutputsHub(){
+    public TSObjectOutputConnectionHub getOutputsHub() throws Throwable{
         if(outputsHub == null){
-            outputsHub = new TSObjectOutputConnectionHub();
+            outputsHub = new TSObjectOutputConnectionHub(connectionsChecker);
         }
         return outputsHub;
     }
 
-    public void setOutputsHub( TSObjectOutputConnectionHub outputs) {
-        outputsHub = outputs;
-        if(outputsHub.isNotRegisteredToAConnectionsChecker()){
-            outputsHub.registerToAConnectionsChecker(connectionsChecker);
-        }
-    }
-
-
     public TSObjectInputConnectionHub getInputsHub(){
         if(inputsHub == null){
-            inputsHub = new TSObjectInputConnectionHub();
+            inputsHub = new TSObjectInputConnectionHub(connectionsChecker);
         }
         return inputsHub;
-    }
-
-    public void setInputsHub( TSObjectInputConnectionHub inputs) {
-        inputsHub = inputs;
-        if(inputsHub.isNotRegisteredToAConnectionsChecker()){
-            inputsHub.registerToAConnectionsChecker(connectionsChecker);
-        }
     }
 
     public String getId() {
@@ -69,6 +49,25 @@ public class TSObject {
             id = idgen.getNextId(this);
         }
         return id;
+    }
+
+
+    //-------- NOLOGIC ----------   regular getters and setters  ----------------------
+
+    public void setConectedToList(ArrayList<TSOConnection> conectedTo) throws Throwable {
+        this.getOutputsHub().setConnectedToList(conectedTo);
+    }
+
+    public ArrayList<TSOConnection> getConectedToList() throws Throwable {
+        return this.getOutputsHub().getConnectedToList();
+    }
+
+    public void setOutputsHub( TSObjectOutputConnectionHub outputs) {
+        outputsHub = outputs;
+    }
+
+    public void setInputsHub( TSObjectInputConnectionHub inputs) {
+        inputsHub = inputs;
     }
 
     public void setId(String id) {
