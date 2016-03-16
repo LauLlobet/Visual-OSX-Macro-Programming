@@ -3,10 +3,18 @@
 
 
 *DONE c:1 windows resize and wiki done, wiki fixed*
-
 *DONE c:2 testing wikid*
-
 *DONE c:3 aaa*
 *DONE c:4 bbb*
 *DONE c:5 ccc*
-- ddd
+*DONE c:6 ddd*
+
+- detect keys in any OS/window :20
+
+- transparent windows :20
+
+- drawing on transparent windows :30
+
+- full panel background :60
+
+- windows manager :45

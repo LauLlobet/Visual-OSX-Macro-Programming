@@ -53,4 +53,4 @@ cp ./wiki/TrackSpark/data/tmp.$BRANCH.wiki ./wiki/TrackSpark/data/$BRANCH.wiki
 rm ./wiki/TrackSpark/data/tmp.$BRANCH.wiki
 
 pkill -f WikidPad.py
-/Applications/wikipad/run.sh
+/Applications/wikipad/run.sh &

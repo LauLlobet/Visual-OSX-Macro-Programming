@@ -1,4 +1,5 @@
-/*import org.jnativehook.GlobalScreen;
+package IO;
+import org.jnativehook.GlobalScreen;
 import org.jnativehook.NativeHookException;
 import org.jnativehook.keyboard.NativeKeyEvent;
 import org.jnativehook.keyboard.NativeKeyListener;
@@ -8,7 +9,11 @@ public class GlobalKeyListener implements NativeKeyListener {
         System.out.println("Key Pressed: " + NativeKeyEvent.getKeyText(e.getKeyCode()));
 
         if (e.getKeyCode() == NativeKeyEvent.VC_ESCAPE) {
-            GlobalScreen.unregisterNativeHook();
+            try{
+                GlobalScreen.unregisterNativeHook();
+            }catch (Exception ex){
+
+            }
         }
     }
 
@@ -31,6 +36,6 @@ public class GlobalKeyListener implements NativeKeyListener {
             System.exit(1);
         }
 
-        GlobalScreen.addNativeKeyListener(new GlobalKeyListenerExample());
+        GlobalScreen.addNativeKeyListener(new GlobalKeyListener());
     }
-}*/
+}
