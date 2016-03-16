@@ -11,9 +11,9 @@
 
 *DONE c:7 detect keys in any OS/window :20*
 
-- transparent windows :5
+*DONE c:8 transparent windows :5*
 
-- drawing on transparent windows :30
+- drawing on transparent windows :10
 
 - full panel background :60
 

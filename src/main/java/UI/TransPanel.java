@@ -92,7 +92,16 @@ public class TransPanel extends Panel implements java.beans.Customizer {
         // update background image by parts
         updateBackgroundImageParts();
         // paint all components added to the TransPanel
+        g = paintExtra(g);
         this.paintComponents(g);
+    }
+
+    public Graphics paintExtra(Graphics g) {
+        g.setColor(Color.WHITE);
+        g.drawLine(0, 0, 10, 10);
+        g.setColor(Color.GREEN);
+        g.drawLine(10, 10, 20, 20);
+        return g;
     }
 
     /*
