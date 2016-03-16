@@ -1,0 +1,5 @@
+﻿++ 0.1Walking Skeleton
+
+- windows resize and wiki done
+
+- sOKeys

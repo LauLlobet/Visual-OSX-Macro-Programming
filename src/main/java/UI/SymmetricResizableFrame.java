@@ -76,28 +76,39 @@ public class SymmetricResizableFrame extends Frame {
         }
 
         public boolean isAtTheBottomRight(Point p){
+            int squareSize = 10;
             Dimension d = target.getSize();
-            return (p.getX() > d.getWidth() - 50 && p.getY() > d.getHeight() - 50 );
+            return (p.getX() > d.getWidth() - 10 && p.getY() > d.getHeight() - 10 );
         }
 
         public void mouseDragged(MouseEvent e) {
-           // if(isAtTheBottomRight(e.getPoint())){
+            if(isAtTheBottomRight(e.getPoint())){
                 changeSize(e);
-           // }else{
+            }else{
                 System.out.println("click------>");
 
-             /*   Point current = this.getScreenLocation(e);
+                Point current = this.getScreenLocation(e);
                 Point offset = new Point((int) current.getX() - (int) start_drag.getX(),
                         (int) current.getY() - (int) start_drag.getY());
                 Frame frame = target;
                 Point new_location = new Point(
                         (int) (this.start_loc.getX() + offset.getX()), (int) (this.start_loc
                         .getY() + offset.getY()));
-                frame.setLocation(new_location);*/
-            //rr}
+                frame.setLocation(new_location);
+            }
         }
 
         public void changeSize(MouseEvent e){
+            Point current = this.getScreenLocation(e);
+            Point offset = new Point((int) current.getX() - (int) start_drag.getX(),
+                    (int) current.getY() - (int) start_drag.getY());
+            target.setSize(
+                    (int) (this.start_size.getWidth() + offset.getX()),
+                    (int) (this.start_size.getHeight() + offset.getY())
+                    );
+        }
+
+        public void changeSizeSymmetric(MouseEvent e){
             Point current = this.getScreenLocation(e);
             Point offset = new Point((int) current.getX() - (int) start_drag.getX(),
                     (int) current.getY() - (int) start_drag.getY());
@@ -107,8 +118,9 @@ public class SymmetricResizableFrame extends Frame {
             target.setSize(
                     (int) (this.start_size.getWidth() + 2* offset.getX()),
                     (int) (this.start_size.getHeight() + 2* offset.getY())
-                    );
+            );
         }
+
         public void mouseMoved(MouseEvent e) {
         }
     }
