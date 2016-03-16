@@ -9,9 +9,9 @@
 *DONE c:5 ccc*
 *DONE c:6 ddd*
 
-- detect keys in any OS/window :20
+*DONE c:7 detect keys in any OS/window :20*
 
-- transparent windows :20
+- transparent windows :5
 
 - drawing on transparent windows :30
 

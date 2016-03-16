@@ -14,7 +14,7 @@ public class SymmetricResizableFrame extends Frame {
         lastLocation = new Point(x,y);
         this.setBounds(x,y,w,h);
         this.setUndecorated( true );
-        Panel p = new Panel(new BorderLayout());
+        TransPanel p = new TransPanel();
         this.add(p,BorderLayout.CENTER);
         MoveMouseListener mouseListener = new MoveMouseListener(this);
         p.addMouseListener(mouseListener);
