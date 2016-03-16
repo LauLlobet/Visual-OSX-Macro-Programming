@@ -1,5 +1,5 @@
 ﻿++ 0.1Walking Skeleton
 
-- windows resize and wiki done
+- windows resize and wiki done, wiki fixed
 
 - sOKeys

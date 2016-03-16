@@ -3,7 +3,7 @@
 BRANCH=$(sed -n 's/.*\[\(.*\)\][ ]*\<=====.*/\1/p' ./wiki/TrackSpark/data/TrackSpark.wiki)
 read -p "Current branch: $BRANCH [OK?]"
 
-#TASKS=$(sed -n 's/\-\(.*\)/\1/p' ./wikilexitree/TrackSpark/$BRANCH.wiki)
+#TASKS=$(sed -n 's/\-\(.*\)/\1/p' ./wiki/TrackSpark/$BRANCH.wiki)
 TASKS=$(cat ./wiki/TrackSpark/data/$BRANCH.wiki)
 
 old=$IFS
@@ -33,28 +33,24 @@ MSGP=$(echo -e "$BRANCH [$LAST_NUM]\n $TASK")
 
 read -p "Current task: $MSGP"
 
-
-cp  ./lexitree/assets/new_lexitree*.db ~/development/altres/ 
 git add -A;
 git commit -m "$MSG"; 
-touch /Users/laullobetpayas/git/lexitree/ioslexitree/DictioTest/Resources/test.db; 
-cp ~/development/altres/new_lexitree*.db  /Users/laullobetpayas/git/lexitree/lexitree/assets/ ; 
-git push origin
 
 read -p "SAVE task? [OK?]"
 
-sed -e "1,/\(\-\)/s/\(\-\)/c:$LAST_NUM/" <./wikilexitree/TrackSpark/$BRANCH.wiki > ./wikilexitree/TrackSpark/tmp.$BRANCH.wiki
+sed -e "1,/\(\-\)/s/\(\-\)/c:$LAST_NUM/" <./wiki/TrackSpark/data/$BRANCH.wiki > ./wiki/TrackSpark/data/tmp.$BRANCH.wiki
 
-cp ./wikilexitree/TrackSpark/tmp.$BRANCH.wiki ./wikilexitree/TrackSpark/$BRANCH.wiki
+cp ./wiki/TrackSpark/data/tmp.$BRANCH.wiki ./wiki/TrackSpark/data/$BRANCH.wiki
 
 #read -p "step2"
 
-sed -e "s/c:$LAST_NUM.*/\*DONE &\*/" <./wikilexitree/TrackSpark/$BRANCH.wiki > ./wikilexitree/TrackSpark/tmp.$BRANCH.wiki
+sed -e "s/c:$LAST_NUM.*/\*DONE &\*/" <./wiki/TrackSpark/data/$BRANCH.wiki > ./wiki/TrackSpark/data/tmp.$BRANCH.wiki
 
 #read -p "step3"
 
-cp ./wikilexitree/TrackSpark/tmp.$BRANCH.wiki ./wikilexitree/TrackSpark/$BRANCH.wiki
+cp ./wiki/TrackSpark/TrackSpark/data/tmp.$BRANCH.wiki ./wiki/TrackSpark/data/$BRANCH.wiki
 
-rm ./wikilexitree/TrackSpark/tmp.$BRANCH.wiki
+rm ./wiki/TrackSpark/data/tmp.$BRANCH.wiki
 
-open /Applications/restartwikidpad.app
+pkill -f WikidPad.py
+/Applications/wikipad/run.sh
