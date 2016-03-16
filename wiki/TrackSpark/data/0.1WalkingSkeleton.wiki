@@ -7,6 +7,6 @@
 *DONE c:2 testing wikid*
 
 *DONE c:3 aaa*
-- bbb
+*DONE c:4 bbb*
 - ccc
 
