@@ -15,6 +15,6 @@
 
 *DONE c:9 drawing on transparent windows :10*
 
-- full panel background :60
+*DONE c:10 full panel background :60*
 
-- windows manager :45
+- windows manager :20
