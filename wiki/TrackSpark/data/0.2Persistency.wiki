@@ -1,0 +1,15 @@
+﻿++ 0.2Persistency
+
+- a mig modelar els beans
+
+- Tree instantiation from json :180
+
+- Windows to places of instantiation :45
+
+- Creation of windows :20
+
+- Updating windows position updates persistency :30
+
+- Store Screenshot under windows in a file : 30
+
+- Pack all project in a zip : 30

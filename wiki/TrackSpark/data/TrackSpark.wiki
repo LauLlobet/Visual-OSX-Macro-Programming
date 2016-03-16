@@ -12,7 +12,9 @@ DoneRelases
 
 +++ 0.1X *Prototype 
 
-Relase [0.1WalkingSkeleton] <======(CURRENT)
+Relase [0.1WalkingSkeleton] 
+
+Relase [0.2Persistency] <======(CURRENT)
 
 
 	* WikiSettings

@@ -17,4 +17,4 @@
 
 *DONE c:10 full panel background :60*
 
-- windows manager :20
+*DONE c:11 windows manager :20*
