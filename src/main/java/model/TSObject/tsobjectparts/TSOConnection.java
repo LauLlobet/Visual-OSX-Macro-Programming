@@ -1,4 +1,4 @@
-package model;
+package model.tsobject.tsobjectparts;
 
 /**
  * Created by quest on 16/3/16.
@@ -8,6 +8,8 @@ public class TSOConnection {
     private int outPort;
     private String destinyId;
     private int inPort;
+
+    public int portNum = 10;
 
     public TSOConnection(String originId, int outPort, String destinyId, int inPort) {
         this.originId = originId;

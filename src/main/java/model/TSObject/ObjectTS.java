@@ -1,28 +1,27 @@
-package model;
+package model.tsobject;
 
-import logic.ConnectionsChecker;
 import logic.IdGenerator;
+import model.tsobject.tsobjectparts.TSOConnection;
+import model.tsobject.tsobjectparts.InputConnectionHubTS;
+import model.tsobject.tsobjectparts.OutputConnectionHubTS;
 
 import java.util.ArrayList;
 
 /**
  * Created by quest on 16/3/16.
  */
-public class TSObject {
+public class ObjectTS {
 
     private int x;
     private int y;
     private int w;
     private int h;
     private String id;
-    private TSObjectInputConnectionHub inputsHub;
-    private TSObjectOutputConnectionHub outputsHub;
+    private InputConnectionHubTS inputsHub;
+    private OutputConnectionHubTS outputsHub;
     private IdGenerator idgen;
-    ConnectionsChecker connectionsChecker;
 
-    public void TSObject(IdGenerator idgen, ConnectionsChecker connectionsChecker){
-        this.idgen = idgen;
-        this.connectionsChecker = connectionsChecker;
+    public void TSObject(){
     }
 
     public void connectTo(int outPort,String destinyId, int inPort) throws Throwable {
@@ -30,24 +29,15 @@ public class TSObject {
         this.getOutputsHub().connectTo(conn);
     }
 
-    public TSObjectOutputConnectionHub getOutputsHub() throws Throwable{
-        if(outputsHub == null){
-            outputsHub = new TSObjectOutputConnectionHub(connectionsChecker);
-        }
+    public OutputConnectionHubTS getOutputsHub() throws Throwable{
         return outputsHub;
     }
 
-    public TSObjectInputConnectionHub getInputsHub(){
-        if(inputsHub == null){
-            inputsHub = new TSObjectInputConnectionHub(connectionsChecker);
-        }
+    public InputConnectionHubTS getInputsHub() throws Throwable{
         return inputsHub;
     }
 
     public String getId() {
-        if(id == null){
-            id = idgen.getNextId(this);
-        }
         return id;
     }
 
@@ -62,11 +52,11 @@ public class TSObject {
         return this.getOutputsHub().getConnectedToList();
     }
 
-    public void setOutputsHub( TSObjectOutputConnectionHub outputs) {
+    public void setOutputsHub( OutputConnectionHubTS outputs) {
         outputsHub = outputs;
     }
 
-    public void setInputsHub( TSObjectInputConnectionHub inputs) {
+    public void setInputsHub( InputConnectionHubTS inputs) {
         inputsHub = inputs;
     }
 

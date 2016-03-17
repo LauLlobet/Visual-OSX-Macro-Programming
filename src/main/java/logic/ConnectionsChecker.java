@@ -1,21 +1,23 @@
 package logic;
 
-import model.TSOConnection;
-import model.TSObjectConnectionHub;
+import model.tsobject.tsobjectparts.TSOConnection;
+import model.tsobject.tsobjectparts.ConnectionHubTS;
 import java.util.ArrayList;
 import java.util.Hashtable;
 
 public class ConnectionsChecker extends Hashtable<String,ArrayList<TSOConnection>> {
 
-    public Hashtable<String, TSObjectConnectionHub> connectionHubs;
+    public Hashtable<String, ConnectionHubTS> connectionHubs;
     private ArrayList<TSOConnection> validConnections;
     private ArrayList<TSOConnection> toCheckLaterWhenAllLoadedList;
 
     public ConnectionsChecker(){
-        connectionHubs = new Hashtable<String, TSObjectConnectionHub>();
+        connectionHubs = new Hashtable<String, ConnectionHubTS>();
+        validConnections = new ArrayList<TSOConnection>();
+        toCheckLaterWhenAllLoadedList = new ArrayList<TSOConnection>();
     }
 
-    public void registerConnectionHub(TSObjectConnectionHub tsoch) throws Exception{
+    public void registerConnectionHub(ConnectionHubTS tsoch) throws Exception{
         //connectionHubs.add(tsoch);
     }
 

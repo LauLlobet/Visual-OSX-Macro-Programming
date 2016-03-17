@@ -2,7 +2,7 @@
 
 *DONE c:1 a mig modelar els beans*
 
-- abans primer intent de storing en json injecting argument and having poliformisms
+*DONE c:2 abans primer intent de storing en json injecting argument and having poliformisms*
 
 - Tree instantiation from json :180
 
