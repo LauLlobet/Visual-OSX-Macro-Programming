@@ -10,7 +10,7 @@ import model.tsobject.tsobjectparts.InputConnectionHubTS;
 public class DelayTS extends ObjectTS {
 
 
-    public DelayTS(@JacksonInject Caller caller) {
-        super(caller);
+    public DelayTS(){//@JacksonInject Caller caller) {
+        //super(caller);
     }
 }

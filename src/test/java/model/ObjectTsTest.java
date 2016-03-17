@@ -27,7 +27,7 @@ public class ObjectTsTest {
         mapper.setInjectableValues(injectableValues);
         Caller c = new Caller();
         injectableValues.addValue(Caller.class, c);
-        ObjectTS ihavethem = new ObjectTS(c);
+        ObjectTS ihavethem = new ObjectTS();//c);
         ihavethem.setOutputsHub(new OutputConnectionHubTS(cc));
         ihavethem.setInputsHub(new InputConnectionHubTS(cc));
 

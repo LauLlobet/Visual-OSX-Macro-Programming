@@ -31,9 +31,9 @@ public class ObjectTS {
 
     private Caller caller;
 
-    public ObjectTS(@JacksonInject final Caller caller){
+  /*  public ObjectTS(@JacksonInject final Caller caller){
         this.caller = caller;
-    }
+    }*/
 
     public ObjectTS(){
         //this.caller = caller;

@@ -39,7 +39,7 @@ public class ObjectsFactoryTS {
         ObjectTS newObj = null;
 
         if( type.startsWith(TSOConstants.DELAY_TSOBJID) ){
-            newObj = new DelayTS(this.caller);
+            newObj = new DelayTS();//(this.caller);
             newObj = setConectionHubs(newObj);
             newObj.getOutputsHub().setPorts(generatePorts(Arrays.asList(
                     TSOConstants.MANY
