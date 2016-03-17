@@ -1,5 +1,5 @@
 
-package UI;
+package view.UI;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;

@@ -4,7 +4,9 @@
 
 *DONE c:2 abans primer intent de storing en json injecting argument and having poliformisms*
 
-- Tree instantiation from json :180
+*DONE c:3 Tree instantiation from json :180*
+
+- MVC fails for jackson
 
 - Windows to places of instantiation :45
 

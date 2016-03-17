@@ -1,6 +1,11 @@
 package model.tsobject;
 
+import com.fasterxml.jackson.annotation.JacksonInject;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import logic.Caller;
 import logic.IdGenerator;
+import logic.ModelCaller;
+import logic.ViewCaller;
 import model.tsobject.tsobjectparts.TSOConnection;
 import model.tsobject.tsobjectparts.InputConnectionHubTS;
 import model.tsobject.tsobjectparts.OutputConnectionHubTS;
@@ -10,18 +15,28 @@ import java.util.ArrayList;
 /**
  * Created by quest on 16/3/16.
  */
+
+@JsonPropertyOrder({ "id"})
 public class ObjectTS {
 
     private int x;
     private int y;
     private int w;
     private int h;
+
     private String id;
     private InputConnectionHubTS inputsHub;
     private OutputConnectionHubTS outputsHub;
     private IdGenerator idgen;
 
-    public void TSObject(){
+    private Caller caller;
+
+    public ObjectTS(@JacksonInject final Caller caller){
+        this.caller = caller;
+    }
+
+    public ObjectTS(){
+        //this.caller = caller;
     }
 
     public void connectTo(int outPort,String destinyId, int inPort) throws Throwable {
@@ -35,10 +50,6 @@ public class ObjectTS {
 
     public InputConnectionHubTS getInputsHub() throws Throwable{
         return inputsHub;
-    }
-
-    public String getId() {
-        return id;
     }
 
 
@@ -62,8 +73,13 @@ public class ObjectTS {
 
     public void setId(String id) {
         this.id = id;
+       // caller.registerModelObject(this);
     }
 
+
+    public String getId() {
+        return id;
+    }
 
     public int getX() {
         return x;
@@ -71,6 +87,7 @@ public class ObjectTS {
 
     public void setX(int x) {
         this.x = x;
+       // caller.callModel(this.getId(),10,20);
     }
 
     public int getY() {

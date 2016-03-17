@@ -1,4 +1,6 @@
 package model;
+import com.fasterxml.jackson.annotation.JacksonInject;
+import logic.Caller;
 import model.tsobject.ObjectTS;
 import model.tsobject.tsobjectparts.InputConnectionHubTS;
 
@@ -8,5 +10,7 @@ import model.tsobject.tsobjectparts.InputConnectionHubTS;
 public class DelayTS extends ObjectTS {
 
 
-
+    public DelayTS(@JacksonInject Caller caller) {
+        super(caller);
+    }
 }

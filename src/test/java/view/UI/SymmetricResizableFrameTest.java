@@ -1,9 +1,6 @@
-package UI;
+package view.UI;
 
 import java.awt.*;
-import java.awt.event.ComponentAdapter;
-import java.awt.event.ComponentEvent;
-import java.util.ArrayList;
 
 /**
  * Created by quest on 15/3/16.

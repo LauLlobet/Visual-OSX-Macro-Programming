@@ -4,6 +4,7 @@ import Constants.TSOConstants;
 import com.fasterxml.jackson.databind.InjectableValues;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import logic.Caller;
 import logic.ConnectionsChecker;
 import logic.IdGenerator;
 import model.tsobject.ObjectTS;
@@ -24,8 +25,9 @@ public class ObjectTsTest {
         final InjectableValues.Std injectableValues = new InjectableValues.Std();
         injectableValues.addValue(ConnectionsChecker.class, cc);
         mapper.setInjectableValues(injectableValues);
-
-        ObjectTS ihavethem = new ObjectTS();
+        Caller c = new Caller();
+        injectableValues.addValue(Caller.class, c);
+        ObjectTS ihavethem = new ObjectTS(c);
         ihavethem.setOutputsHub(new OutputConnectionHubTS(cc));
         ihavethem.setInputsHub(new InputConnectionHubTS(cc));
 
@@ -42,11 +44,13 @@ public class ObjectTsTest {
         ObjectMapper mapper = new ObjectMapper();
         mapper.enable(SerializationFeature.INDENT_OUTPUT);
         final InjectableValues.Std injectableValues = new InjectableValues.Std();
+
         injectableValues.addValue(ConnectionsChecker.class, cc);
+        injectableValues.addValue(Caller.class, new Caller());
         mapper.setInjectableValues(injectableValues);
         IdGenerator idGen = new IdGenerator("TestSet");
 
-        ObjectsFactoryTS of = new ObjectsFactoryTS(cc,idGen);
+        ObjectsFactoryTS of = new ObjectsFactoryTS(cc,idGen, new Caller());
         DelayTS dts = (DelayTS) of.build(TSOConstants.DELAY_TSOBJID);
         String jsonInString = mapper.writeValueAsString(dts);
         System.out.println(jsonInString);

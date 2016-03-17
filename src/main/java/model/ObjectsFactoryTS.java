@@ -1,6 +1,7 @@
 package model;
 
 import Constants.TSOConstants;
+import logic.Caller;
 import logic.ConnectionsChecker;
 import logic.IdGenerator;
 import model.tsobject.ObjectTS;
@@ -17,11 +18,13 @@ import java.util.List;
  */
 public class ObjectsFactoryTS {
 
+    private final Caller caller;
     ConnectionsChecker connectionChecker;
     IdGenerator idGenerator;
-    public ObjectsFactoryTS(ConnectionsChecker cc, IdGenerator idGen) {
+    public ObjectsFactoryTS(ConnectionsChecker cc, IdGenerator idGen, Caller caller) {
         this.connectionChecker = cc;
         this.idGenerator = idGen;
+        this.caller = caller;
     }
 
     public ObjectTS setConectionHubs(ObjectTS obj) throws Throwable{
@@ -36,7 +39,7 @@ public class ObjectsFactoryTS {
         ObjectTS newObj = null;
 
         if( type.startsWith(TSOConstants.DELAY_TSOBJID) ){
-            newObj = new DelayTS();
+            newObj = new DelayTS(this.caller);
             newObj = setConectionHubs(newObj);
             newObj.getOutputsHub().setPorts(generatePorts(Arrays.asList(
                     TSOConstants.MANY
@@ -47,6 +50,10 @@ public class ObjectsFactoryTS {
             )));
         }
         newObj.setId(idGenerator.getNextId(newObj));
+        newObj.setW(100);
+        newObj.setW(161);
+        newObj.setX(300);
+        newObj.setY(300);
         return newObj;
     }
 
