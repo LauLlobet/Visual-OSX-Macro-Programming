@@ -16,42 +16,53 @@ import org.junit.Test;
  * Created by quest on 17/3/16.
  */
 public class ObjectTsTest {
-
+/*
     @Test
     public void testTSObjectSeralization() throws Throwable {
-        ConnectionsChecker cc = new ConnectionsChecker();
         ObjectMapper mapper = new ObjectMapper();
         mapper.enable(SerializationFeature.INDENT_OUTPUT);
+
         final InjectableValues.Std injectableValues = new InjectableValues.Std();
-        injectableValues.addValue(ConnectionsChecker.class, cc);
-        mapper.setInjectableValues(injectableValues);
+
         Caller c = new Caller();
-        injectableValues.addValue(Caller.class, c);
-        ObjectTS ihavethem = new ObjectTS();//c);
+        ConnectionsChecker cc = new ConnectionsChecker();
+        injectableValues.addValue("cc", cc);
+        injectableValues.addValue("caller", c);
+
+        mapper.setInjectableValues(injectableValues);
+
+        ObjectTS ihavethem = new ObjectTS();//new Caller());//c);
+
+        ihavethem.setId("iddddd");
+
         ihavethem.setOutputsHub(new OutputConnectionHubTS(cc));
         ihavethem.setInputsHub(new InputConnectionHubTS(cc));
 
         String jsonInString = mapper.writeValueAsString(ihavethem);
-        System.out.println(jsonInString);
-
         ObjectTS result = mapper.readValue(jsonInString,ObjectTS.class);
         System.out.println(result.getClass().getName());
-    }
+    }*/
 
-    @Test
+   @Test
     public void testTSFactorySeralization() throws Throwable {
-        ConnectionsChecker cc = new ConnectionsChecker();
-        ObjectMapper mapper = new ObjectMapper();
-        mapper.enable(SerializationFeature.INDENT_OUTPUT);
-        final InjectableValues.Std injectableValues = new InjectableValues.Std();
+       ObjectMapper mapper = new ObjectMapper();
+       mapper.enable(SerializationFeature.INDENT_OUTPUT);
 
-        injectableValues.addValue(ConnectionsChecker.class, cc);
-        injectableValues.addValue(Caller.class, new Caller());
-        mapper.setInjectableValues(injectableValues);
+       final InjectableValues.Std injectableValues = new InjectableValues.Std();
+
+       Caller c = new Caller();
+       ConnectionsChecker cc = new ConnectionsChecker();
+       injectableValues.addValue("cc", cc);
+       injectableValues.addValue("caller", c);
+
+       mapper.setInjectableValues(injectableValues);
+
         IdGenerator idGen = new IdGenerator("TestSet");
-
         ObjectsFactoryTS of = new ObjectsFactoryTS(cc,idGen, new Caller());
+
+
         DelayTS dts = (DelayTS) of.build(TSOConstants.DELAY_TSOBJID);
+
         String jsonInString = mapper.writeValueAsString(dts);
         System.out.println(jsonInString);
         ObjectTS result = mapper.readValue(jsonInString,ObjectTS.class);

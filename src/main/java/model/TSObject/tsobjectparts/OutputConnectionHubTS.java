@@ -10,7 +10,7 @@ public class OutputConnectionHubTS extends ConnectionHubTS {
 
 
     protected ArrayList<TSOConnection> connectedToList;
-    public OutputConnectionHubTS(@JacksonInject final ConnectionsChecker cc) throws Throwable {
+    public OutputConnectionHubTS(@JacksonInject("cc") final ConnectionsChecker cc) throws Throwable {
         super(cc);
         type = TSOConstants.IDTSObjectOutputConnectionHub;
         connectedToList = new ArrayList<TSOConnection>();

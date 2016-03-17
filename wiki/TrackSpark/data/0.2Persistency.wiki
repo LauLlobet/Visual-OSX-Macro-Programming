@@ -6,7 +6,9 @@
 
 *DONE c:3 Tree instantiation from json :180*
 
-- MVC fails for jackson SOLVED for the moment
+*DONE c:4 MVC fails for jackson SOLVED for the moment*
+
+-apunt de tenir el mvc funcionant una mica
 
 - Windows to places of instantiation :45
 

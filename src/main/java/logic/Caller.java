@@ -3,6 +3,8 @@ package logic;
 import model.tsobject.ObjectTS;
 import view.VObjectTS;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.Hashtable;
 
 /**
@@ -20,6 +22,7 @@ public class Caller {
 
     public void registerModelObject(ObjectTS model){
         modelHash.put(model.getId(),model);
+        viewHash.put(model.getId(),new VObjectTS(model.getId(),this));
     }
     public void registerViewObject(VObjectTS view){
         viewHash.put(view.getId(),view);
@@ -35,6 +38,7 @@ public class Caller {
 
     public void callModel(String id, Object x, Object old) {
         if(x.equals(old)){
+            System.out.println("stoping loop trying to set model");
             return;
         }
         ObjectTS obj = modelHash.get(id);
@@ -43,6 +47,7 @@ public class Caller {
 
     public void callView(String id, Object x, Object old) {
         if(x.equals(old)){
+            System.out.println("stoping loop trying to set view");
             return;
         }
         VObjectTS obj = viewHash.get(id);
@@ -51,8 +56,19 @@ public class Caller {
 
     private void callFunction(Object obj, Object x) {
         StackTraceElement[] stacktrace = Thread.currentThread().getStackTrace();
-        StackTraceElement e = stacktrace[2];//maybe this number needs to be corrected
+        StackTraceElement e = stacktrace[4];//maybe this number needs to be corrected
         String methodName = e.getMethodName();
-        System.out.println("called:"+methodName);
+        Method method;
+        try {
+            method = obj.getClass().getMethod(methodName, int.class);
+            method.invoke(obj,x);
+        } catch (Exception q) {
+            try {
+                method = obj.getClass().getMethod(methodName, obj.getClass());
+                method.invoke(obj,x);
+            }catch (Exception b){
+                b.printStackTrace();
+            }
+        }
     }
 }

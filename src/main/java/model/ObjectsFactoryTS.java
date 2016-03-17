@@ -1,6 +1,10 @@
 package model;
 
 import Constants.TSOConstants;
+import IO.GlobalKeyListener;
+import com.fasterxml.jackson.databind.InjectableValues;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import logic.Caller;
 import logic.ConnectionsChecker;
 import logic.IdGenerator;
@@ -8,6 +12,8 @@ import model.tsobject.ObjectTS;
 import model.tsobject.tsobjectparts.InputConnectionHubTS;
 import model.tsobject.tsobjectparts.OutputConnectionHubTS;
 import model.tsobject.tsobjectparts.Port;
+import org.jnativehook.GlobalScreen;
+import org.jnativehook.NativeHookException;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -39,7 +45,7 @@ public class ObjectsFactoryTS {
         ObjectTS newObj = null;
 
         if( type.startsWith(TSOConstants.DELAY_TSOBJID) ){
-            newObj = new DelayTS();//(this.caller);
+            newObj = new DelayTS();
             newObj = setConectionHubs(newObj);
             newObj.getOutputsHub().setPorts(generatePorts(Arrays.asList(
                     TSOConstants.MANY
@@ -50,8 +56,9 @@ public class ObjectsFactoryTS {
             )));
         }
         newObj.setId(idGenerator.getNextId(newObj));
+        newObj.registerToMvc(caller);
         newObj.setW(100);
-        newObj.setW(161);
+        newObj.setH(161);
         newObj.setX(300);
         newObj.setY(300);
         return newObj;
@@ -63,6 +70,40 @@ public class ObjectsFactoryTS {
             ports.add(new Port(type));
         }
         return ports;
+    }
+
+    public static void main(String[] args) {
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.enable(SerializationFeature.INDENT_OUTPUT);
+
+        final InjectableValues.Std injectableValues = new InjectableValues.Std();
+
+        Caller c = new Caller();
+        ConnectionsChecker cc = new ConnectionsChecker();
+        injectableValues.addValue("cc", cc);
+        injectableValues.addValue("caller", c);
+
+        mapper.setInjectableValues(injectableValues);
+
+        IdGenerator idGen = new IdGenerator("TestSet");
+        ObjectsFactoryTS of = new ObjectsFactoryTS(cc, idGen, new Caller());
+
+
+        try {
+
+            DelayTS dts = (DelayTS) of.build(TSOConstants.DELAY_TSOBJID);
+
+            dts = (DelayTS) of.build(TSOConstants.DELAY_TSOBJID);
+
+            dts.setX(500);
+            String jsonInString = mapper.writeValueAsString(dts);
+            System.out.println(jsonInString);
+            ObjectTS result = mapper.readValue(jsonInString, ObjectTS.class);
+            System.out.println(result.getClass().getName());
+
+        }catch (Throwable e){
+            e.printStackTrace();
+        }
     }
 
 }

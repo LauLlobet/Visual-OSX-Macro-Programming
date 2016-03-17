@@ -22,7 +22,7 @@ public abstract class ConnectionHubTS {
     protected ConnectionsChecker connectionsChecker;
     public String type;
 
-    public ConnectionHubTS(@JacksonInject final ConnectionsChecker connectionsChecker) throws Throwable {
+    public ConnectionHubTS(@JacksonInject("cc") final ConnectionsChecker connectionsChecker) throws Throwable {
         this.connectionsChecker = connectionsChecker;
         this.connectionsChecker.registerConnectionHub(this);
         ports = new ArrayList<Port>();

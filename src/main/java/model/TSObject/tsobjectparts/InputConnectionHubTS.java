@@ -9,7 +9,7 @@ import logic.ConnectionsChecker;
  */
 public class InputConnectionHubTS extends ConnectionHubTS {
 
-    public InputConnectionHubTS(@JacksonInject final ConnectionsChecker cc) throws Throwable{
+    public InputConnectionHubTS(@JacksonInject("cc") final ConnectionsChecker cc) throws Throwable{
         super(cc);
         type = TSOConstants.IDTSObjectInputConnectionHub;
     }
