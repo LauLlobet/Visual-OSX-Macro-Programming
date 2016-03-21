@@ -40,4 +40,8 @@ public abstract class ConnectionHubTS {
     public ArrayList<Port> getPorts() {
         return  ports;
     }
+
+    public void disconnectAll(){
+
+    }
 }

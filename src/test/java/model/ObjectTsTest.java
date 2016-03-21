@@ -43,31 +43,7 @@ public class ObjectTsTest {
         System.out.println(result.getClass().getName());
     }*/
 
-   @Test
-    public void testTSFactorySeralization() throws Throwable {
-       ObjectMapper mapper = new ObjectMapper();
-       mapper.enable(SerializationFeature.INDENT_OUTPUT);
 
-       final InjectableValues.Std injectableValues = new InjectableValues.Std();
-
-       Caller c = new Caller();
-       ConnectionsChecker cc = new ConnectionsChecker();
-       injectableValues.addValue("cc", cc);
-       injectableValues.addValue("caller", c);
-
-       mapper.setInjectableValues(injectableValues);
-
-        IdGenerator idGen = new IdGenerator("TestSet");
-        ObjectsFactoryTS of = new ObjectsFactoryTS(cc,idGen, new Caller());
-
-
-        DelayTS dts = (DelayTS) of.build(TSOConstants.DELAY_TSOBJID);
-
-        String jsonInString = mapper.writeValueAsString(dts);
-        System.out.println(jsonInString);
-        ObjectTS result = mapper.readValue(jsonInString,ObjectTS.class);
-        System.out.println(result.getClass().getName());
-    }
 
 
 }

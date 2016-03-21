@@ -1,7 +1,6 @@
 package model;
 
 import Constants.TSOConstants;
-import IO.GlobalKeyListener;
 import com.fasterxml.jackson.databind.InjectableValues;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -12,12 +11,13 @@ import model.tsobject.ObjectTS;
 import model.tsobject.tsobjectparts.InputConnectionHubTS;
 import model.tsobject.tsobjectparts.OutputConnectionHubTS;
 import model.tsobject.tsobjectparts.Port;
-import org.jnativehook.GlobalScreen;
-import org.jnativehook.NativeHookException;
+import view.VObjectTS;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.*;
 
 /**
  * Created by quest on 17/3/16.
@@ -45,19 +45,49 @@ public class ObjectsFactoryTS {
         ObjectTS newObj = null;
 
         if( type.startsWith(TSOConstants.DELAY_TSOBJID) ){
-            newObj = new DelayTS();
-            newObj = setConectionHubs(newObj);
-            newObj.getOutputsHub().setPorts(generatePorts(Arrays.asList(
-                    TSOConstants.MANY
-            )));
-            newObj.getInputsHub().setPorts(generatePorts(Arrays.asList(
-                    TSOConstants.MANY,
-                    TSOConstants.MINT
-            )));
+            newObj = createDelayTS();
+        }
+        if( type.startsWith(TSOConstants.SWITCH_TSOBJID) ){
+            newObj = createSwitchTS();
         }
         newObj.setId(idGenerator.getNextId(newObj));
         newObj.registerToMvc(caller);
-        newObj.setW(100);
+
+        refreshUiAfter300Ms();
+        return newObj;
+    }
+
+    private ObjectTS createSwitchTS() throws Throwable {
+        ObjectTS newObj;
+        newObj = new SwitchTS();
+        newObj = setConectionHubs(newObj);
+        newObj.getOutputsHub().setPorts(generatePorts(Arrays.asList(
+                TSOConstants.MANY,
+                TSOConstants.MBANG
+        )));
+        newObj.getInputsHub().setPorts(generatePorts(Arrays.asList(
+                TSOConstants.MANY,
+                TSOConstants.MANY
+        )));
+        newObj.setW(90);
+        newObj.setH(60);
+        newObj.setX(800);
+        newObj.setY(300);
+        return newObj;
+    }
+
+    private ObjectTS createDelayTS() throws Throwable {
+        ObjectTS newObj;
+        newObj = new DelayTS();
+        newObj = setConectionHubs(newObj);
+        newObj.getOutputsHub().setPorts(generatePorts(Arrays.asList(
+                TSOConstants.MANY
+        )));
+        newObj.getInputsHub().setPorts(generatePorts(Arrays.asList(
+                TSOConstants.MANY,
+                TSOConstants.MINT
+        )));
+        newObj.setW(90);
         newObj.setH(161);
         newObj.setX(300);
         newObj.setY(300);
@@ -72,38 +102,82 @@ public class ObjectsFactoryTS {
         return ports;
     }
 
-    public static void main(String[] args) {
+///--------------------------------- SERIALIZATION
+
+    public void storeAllModelsInFile(String file) throws Exception{
+        String string = getStringsFromModel();
+        System.out.println(string);
+        writeIntoFile(string,file);
+    }
+
+    private void writeIntoFile(String string, String file) throws Exception {
+        PrintStream out = new PrintStream(new FileOutputStream(file));
+        out.print(string);
+    }
+
+
+    private String getStringsFromModel() throws Exception{
+        ArrayList<ObjectTS> list = this.caller.getModelsInArray();
+        String modelJson = serializeModel(list);
+        return modelJson;
+
+    }
+
+    private String serializeModel(ArrayList<ObjectTS> list) throws Exception {
         ObjectMapper mapper = new ObjectMapper();
         mapper.enable(SerializationFeature.INDENT_OUTPUT);
+        String jsonInString = mapper.writeValueAsString(list);
+        return jsonInString;
+    }
 
-        final InjectableValues.Std injectableValues = new InjectableValues.Std();
+    //// -_----------------- read
 
-        Caller c = new Caller();
-        ConnectionsChecker cc = new ConnectionsChecker();
-        injectableValues.addValue("cc", cc);
-        injectableValues.addValue("caller", c);
-
-        mapper.setInjectableValues(injectableValues);
-
-        IdGenerator idGen = new IdGenerator("TestSet");
-        ObjectsFactoryTS of = new ObjectsFactoryTS(cc, idGen, new Caller());
-
-
-        try {
-
-            DelayTS dts = (DelayTS) of.build(TSOConstants.DELAY_TSOBJID);
-
-            dts = (DelayTS) of.build(TSOConstants.DELAY_TSOBJID);
-
-            dts.setX(500);
-            String jsonInString = mapper.writeValueAsString(dts);
-            System.out.println(jsonInString);
-            ObjectTS result = mapper.readValue(jsonInString, ObjectTS.class);
-            System.out.println(result.getClass().getName());
-
-        }catch (Throwable e){
-            e.printStackTrace();
+    public void loadFromFile(String file) throws Exception{
+        String json =  readJsonFromFile(file);
+        ObjectTS[] arrayList = deserializeObjectsTs(json);
+        for(ObjectTS obj : arrayList){
+            obj.registerToMvc(caller);
         }
+        refreshUiAfter300Ms();
+    }
+
+    private void refreshUiAfter300Ms() {
+        class Refresher implements Runnable {
+            private final Collection<VObjectTS> views;
+
+            public Refresher(Collection<VObjectTS> e){
+                this.views = e;
+            }
+            public void run() {
+                try{
+                    Thread.sleep(300);
+                    for(VObjectTS view : views){
+                        view.resetSize();
+                    }
+                }catch(Exception e){
+                    e.printStackTrace();
+                }
+
+            }
+        }
+        Thread myThread = new Thread(new Refresher(this.caller.getViews()));
+        myThread.start();
+    }
+
+    private String readJsonFromFile(String file) throws Exception{
+        String content = new String(Files.readAllBytes(Paths.get(file)));
+        return content;
+    }
+
+    private ObjectTS[] deserializeObjectsTs(String jsonString) throws Exception {
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.enable(SerializationFeature.INDENT_OUTPUT);
+        final InjectableValues.Std injectableValues = new InjectableValues.Std();
+        injectableValues.addValue("cc", this.connectionChecker);
+        injectableValues.addValue("caller", this.caller);
+        mapper.setInjectableValues(injectableValues);
+        ObjectTS[] result = mapper.readValue(jsonString,ObjectTS[].class);
+        return result;
     }
 
 }

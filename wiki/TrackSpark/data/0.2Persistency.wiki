@@ -8,14 +8,6 @@
 
 *DONE c:4 MVC fails for jackson SOLVED for the moment*
 
--apunt de tenir el mvc funcionant una mica
+*DONE c:5apunt de tenir el mvc funcionant una mica*
 
-- Windows to places of instantiation :45
-
-- Creation of windows :20
-
-- Updating windows position updates persistency :30
-
-- Store Screenshot under windows in a file : 30
-
-- Pack all project in a zip : 30
+- all mvc works

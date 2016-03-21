@@ -1,7 +1,12 @@
 package model.tsobject;
 
+import Constants.TSOConstants;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import logic.*;
+import model.DelayTS;
+import model.SwitchTS;
 import model.tsobject.tsobjectparts.TSOConnection;
 import model.tsobject.tsobjectparts.InputConnectionHubTS;
 import model.tsobject.tsobjectparts.OutputConnectionHubTS;
@@ -14,6 +19,13 @@ import java.util.ArrayList;
  * Created by quest on 16/3/16.
  */
 
+@JsonTypeInfo(
+        use = JsonTypeInfo.Id.NAME,
+        include = JsonTypeInfo.As.PROPERTY,
+        property = "type")
+@JsonSubTypes({
+        @JsonSubTypes.Type(value = DelayTS.class, name = TSOConstants.DELAY_TSOBJID),
+        @JsonSubTypes.Type(value = SwitchTS.class, name = TSOConstants.SWITCH_TSOBJID) })
 @JsonPropertyOrder({ "id"})
 public class ObjectTS {
 
@@ -21,6 +33,7 @@ public class ObjectTS {
     private int y;
     private int w;
     private int h;
+    public String type;
     boolean registeredInMvc = false;
 
     private String id;
@@ -49,6 +62,7 @@ public class ObjectTS {
 
     public void registerToMvc(Caller caller) throws Exception{
         this.caller = caller;
+        registeredInMvc = true;
         caller.registerModelObject(this);
         registerAllFields();
     }
@@ -58,10 +72,9 @@ public class ObjectTS {
            try{
                propertyDescriptor.getWriteMethod().invoke(this,propertyDescriptor.getReadMethod().invoke(this));
            }catch( Exception e){
-               System.out.println("ole");
+               System.out.println("oletuu");
            }
         }
-        registeredInMvc = true;
     }
 
     //-------- NOLOGIC ----------   regular getters and setters  ----------------------
@@ -90,24 +103,24 @@ public class ObjectTS {
     public void setX(int x) {
         int old = getX();
         this.x = x;
-        if(registeredInMvc){caller.callView(getId(),x,old);}
+        if(registeredInMvc){caller.shyncronizeMVCView(getId(),x,null);}
     }
     public void setY(int y)
     {
         int old = getY();
         this.y = y;
-        if(registeredInMvc){caller.callView(getId(),y,old);}
+        if(registeredInMvc){caller.shyncronizeMVCView(getId(),y,null);}
     }
     public void setW(int w) {
         int old = getW();
         this.w = w;
-        if(registeredInMvc){caller.callView(getId(),w,old);}
+        if(registeredInMvc){caller.shyncronizeMVCView(getId(),w,null);}
     }
 
     public void setH(int h) {
         int old = getH();
         this.h = h;
-        if(registeredInMvc){caller.callView(getId(),h,old);};
+        if(registeredInMvc){caller.shyncronizeMVCView(getId(),h,null);};
     }
     
 
@@ -131,4 +144,9 @@ public class ObjectTS {
         return h;
     }
 
+    public void destroy() {
+        this.outputsHub.disconnectAll();
+        this.inputsHub.disconnectAll();
+        this.caller.removeTSObject(this);
+    }
 }

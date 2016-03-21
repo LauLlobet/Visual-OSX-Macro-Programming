@@ -3,8 +3,9 @@ package logic;
 import model.tsobject.ObjectTS;
 import view.VObjectTS;
 
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Hashtable;
 
 /**
@@ -28,26 +29,20 @@ public class Caller {
         viewHash.put(view.getId(),view);
     }
 
-    public void callModel(String id, int x, int old) {
-        callModel(id,new Integer(x),new Integer(old));
-    }
 
-    public void callView(String id, int x, int old) {
-        callView(id,new Integer(x),new Integer(old));
-    }
-
-    public void callModel(String id, Object x, Object old) {
+    public void shynchronizeMVCModel(String id, Object x, Object old) {
         if(x.equals(old)){
-            System.out.println("stoping loop trying to set model");
+            System.out.println("stoping loop trying to update model");
             return;
         }
+        System.out.println("updating model");
         ObjectTS obj = modelHash.get(id);
         callFunction(obj,x);
     }
 
-    public void callView(String id, Object x, Object old) {
+    public void shyncronizeMVCView(String id, Object x, Object old) {
         if(x.equals(old)){
-            System.out.println("stoping loop trying to set view");
+            System.out.println("stoping loop trying to update view");
             return;
         }
         VObjectTS obj = viewHash.get(id);
@@ -56,19 +51,44 @@ public class Caller {
 
     private void callFunction(Object obj, Object x) {
         StackTraceElement[] stacktrace = Thread.currentThread().getStackTrace();
-        StackTraceElement e = stacktrace[4];//maybe this number needs to be corrected
+        StackTraceElement e = stacktrace[3];//maybe this number needs to be corrected
         String methodName = e.getMethodName();
         Method method;
+
+        System.out.println("-REFLECT-->"+methodName+" -> "+x);
         try {
             method = obj.getClass().getMethod(methodName, int.class);
             method.invoke(obj,x);
         } catch (Exception q) {
             try {
-                method = obj.getClass().getMethod(methodName, obj.getClass());
+                method = obj.getClass().getMethod(methodName, x.getClass());
                 method.invoke(obj,x);
             }catch (Exception b){
+                q.printStackTrace();
                 b.printStackTrace();
             }
         }
+    }
+
+    public ArrayList<ObjectTS> getModelsInArray() {
+        return new ArrayList(this.modelHash.values());
+    }
+
+    public void removeTSObject(ObjectTS objectTS) {
+        modelHash.remove(objectTS.getId());
+        VObjectTS removed = viewHash.remove(objectTS.getId());
+        removed.dispose();
+    }
+
+    public int size() {
+        return modelHash.size();
+    }
+
+    public VObjectTS getView(String id) {
+        return viewHash.get(id);
+    }
+
+    public Collection<VObjectTS> getViews() {
+        return viewHash.values();
     }
 }

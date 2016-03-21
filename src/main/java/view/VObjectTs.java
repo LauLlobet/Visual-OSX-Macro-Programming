@@ -1,7 +1,6 @@
 package view;
 
 import logic.Caller;
-import logic.ModelCaller;
 import view.UI.SymmetricResizableFrame;
 
 import java.awt.*;
@@ -15,11 +14,17 @@ public class VObjectTS extends SymmetricResizableFrame {
 
     public String id;
 
+
+    private int x;
+    private int y;
+    private int w;
+    private int h;
+
     public VObjectTS(String name, Caller mc) {
-        super("Symmetric",100,200,100,100);
+        super("Symmetric",1,1,1,1);
+        this.modelCaller = mc;
         this.setVisible(true);
         id = name;
-        modelCaller = mc;
     }
 
 
@@ -27,32 +32,73 @@ public class VObjectTS extends SymmetricResizableFrame {
         return id;
     }
 
-    public int getX() {
-        return (int)this.getLocation().getX();
+    @Override
+    public void setSize(int _w, int _h){
+        System.out.println("Setting size to :"+_w+" "+_h);
+        super.setSize(_w,_h);
+        this.setW(_w);
+        this.setH(_h);
     }
 
-    public void setX(int x) {
-        int old = getX();
-        this.setLocation(x,this.getY());
-        modelCaller.callModel(getId(),x,old);
+    @Override
+    public void setLocation(int _x, int _y){
+        super.setLocation(_x,_y);
+        this.setX(_x);
+        this.setY(_y);
     }
-    public void setY(int y)
+
+
+    public void setW(int nw) {;
+        if(nw != w && modelCaller != null) {
+            w = nw;
+            modelCaller.shynchronizeMVCModel(getId(), nw, null);  // set model
+        }
+        w = nw;
+        if (nw != this.getSize().getWidth())  {
+            System.out.println("settingW:"+nw+" "+h);
+            super.setSize(nw,h);
+        }
+
+    }
+
+    public void setH(int nh) {
+        if(nh != h && modelCaller != null) {
+            h = nh;
+            modelCaller.shynchronizeMVCModel(getId(), nh, null);  // set model
+        }
+        h = nh;
+        if (nh != this.getSize().getHeight())  {
+            System.out.println("settingH:"+w+" "+nh);
+            super.setSize(w,nh);
+        }
+    }
+
+    public void resetSize(){
+        this.setW(w);
+        this.setH(h);
+    }
+
+
+    public void setX(int nx) {
+        if(nx != x && modelCaller != null) {
+            x = nx;
+            modelCaller.shynchronizeMVCModel(getId(), nx, null);  // set model
+        }
+        if (nx != this.getLocation().getX())  {
+            super.setLocation(nx,this.getY());
+        }
+    }
+    public void setY(int ny)
     {
-        int old = getY();
-        this.setLocation(this.getX(),y);
-        modelCaller.callModel(getId(),y,old);
-    }
-    public void setW(int w) {
-        int old = getW();
-        this.setSize(w,this.getH());
-        modelCaller.callModel(getId(),w,old);
+        if(ny != y && modelCaller != null) {
+            y = ny;
+            modelCaller.shynchronizeMVCModel(getId(), ny, null);  // set model
+        }
+        if (ny != this.getLocation().getY())  {
+            super.setLocation(this.getX(),ny);
+        }
     }
 
-    public void setH(int h) {
-        int old = getH();
-        this.setSize(this.getWidth(),h);
-        modelCaller.callModel(getId(),h,old);
-    }
 
     public int getY() {
         return (int)this.getLocation().getY();
@@ -69,5 +115,9 @@ public class VObjectTS extends SymmetricResizableFrame {
         return (int)this.getSize().getHeight();
     }
 
+
+    public int getX() {
+        return (int)this.getLocation().getX();
+    }
 
 }

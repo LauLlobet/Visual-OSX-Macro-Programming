@@ -1,0 +1,16 @@
+﻿++ 0.3Screen Capture
+
+
+- panels dont auto resize when moved 
+
+- panels dont auto move when resizes
+
+- panels update with video
+
+- panels can store on frame 
+
+- panels can show the diference of background in red
+
+- panels can be SO transparent while needed
+
+ 
