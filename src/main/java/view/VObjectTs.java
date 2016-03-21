@@ -1,14 +1,12 @@
 package view;
 
 import logic.Caller;
-import view.UI.SymmetricResizableFrame;
-
-import java.awt.*;
+import view.UI.TransparentFrame;
 
 /**
  * Created by quest on 17/3/16.
  */
-public class VObjectTS extends SymmetricResizableFrame {
+public class VObjectTS extends TransparentFrame {
 
     public Caller modelCaller;
 

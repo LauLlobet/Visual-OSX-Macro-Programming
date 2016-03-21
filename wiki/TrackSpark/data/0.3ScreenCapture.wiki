@@ -3,4 +3,6 @@
 
 *DONE c:1 ready for cleaning old libraries regarding windows*
 
-- transparent windows  buttons on transparent window decorated window
+*DONE c:2 transparent windows  buttons on transparent window decorated window*
+
+- apunt per capturar pantalla

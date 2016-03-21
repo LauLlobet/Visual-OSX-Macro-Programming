@@ -2,10 +2,8 @@ package view.UI;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
-public class SymmetricResizableFrame extends Frame {
+
+public class TransparentFrame extends Frame {
 
     public Point lastLocation;
     public Point point;
@@ -13,11 +11,8 @@ public class SymmetricResizableFrame extends Frame {
     public Dimension nonFullscreenSize;
     public boolean isFullscreen = false;
 
-    public SymmetricResizableFrame(String name){
-        this(name,200,300,100,161);
-    }
 
-    public SymmetricResizableFrame (String name, int x, int y, int w, int h) {
+    public TransparentFrame(String name, int x, int y, int w, int h) {
         super(name);
         lastSize = new Dimension(w,h);
         lastLocation = new Point(x,y);
