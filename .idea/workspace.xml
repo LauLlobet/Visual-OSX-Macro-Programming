@@ -5,34 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68c84884-33a5-4953-89cf-c14b9ee7c1b2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/model/SwitchTS.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/view/UI/ComponentMover.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/view/UI/RelativeLayout.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/model/ObjectsFactoryTSTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/view/UI/TransparentPanel.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/view/UI/SymmetricResizableFrame$MoveMouseListener.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/Constants/TSOConstants.class" afterPath="$PROJECT_DIR$/build/classes/main/Constants/TSOConstants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/logic/Caller.class" afterPath="$PROJECT_DIR$/build/classes/main/logic/Caller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/model/DelayTS.class" afterPath="$PROJECT_DIR$/build/classes/main/model/DelayTS.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/model/ObjectsFactoryTS.class" afterPath="$PROJECT_DIR$/build/classes/main/model/ObjectsFactoryTS.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/model/tsobject/ObjectTS.class" afterPath="$PROJECT_DIR$/build/classes/main/model/tsobject/ObjectTS.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/model/tsobject/tsobjectparts/ConnectionHubTS.class" afterPath="$PROJECT_DIR$/build/classes/main/model/tsobject/tsobjectparts/ConnectionHubTS.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/UI/SymmetricResizableFrame.class" afterPath="$PROJECT_DIR$/build/classes/main/view/UI/SymmetricResizableFrame.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/VObjectTS.class" afterPath="$PROJECT_DIR$/build/classes/main/view/VObjectTS.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/model/ObjectTsTest.class" afterPath="$PROJECT_DIR$/build/classes/test/model/ObjectTsTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wiki/TrackSpark/data/wikiovw.sli" afterPath="$PROJECT_DIR$/wiki/TrackSpark/data/wikiovw.sli" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Constants/TSOConstants.java" afterPath="$PROJECT_DIR$/src/main/java/Constants/TSOConstants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/logic/Caller.java" afterPath="$PROJECT_DIR$/src/main/java/logic/Caller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/DelayTS.java" afterPath="$PROJECT_DIR$/src/main/java/model/DelayTS.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/ObjectsFactoryTS.java" afterPath="$PROJECT_DIR$/src/main/java/model/ObjectsFactoryTS.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/TSObject/ObjectTS.java" afterPath="$PROJECT_DIR$/src/main/java/model/TSObject/ObjectTS.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/TSObject/tsobjectparts/ConnectionHubTS.java" afterPath="$PROJECT_DIR$/src/main/java/model/TSObject/tsobjectparts/ConnectionHubTS.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/view/UI/SymmetricResizableFrame.java" afterPath="$PROJECT_DIR$/src/main/java/view/UI/SymmetricResizableFrame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/view/VObjectTs.java" afterPath="$PROJECT_DIR$/src/main/java/view/VObjectTs.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/model/ObjectTsTest.java" afterPath="$PROJECT_DIR$/src/test/java/model/ObjectTsTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wiki/TrackSpark/TrackSpark.wiki" afterPath="$PROJECT_DIR$/wiki/TrackSpark/TrackSpark.wiki" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wiki/TrackSpark/data/0.2Persistency.wiki" afterPath="$PROJECT_DIR$/wiki/TrackSpark/data/0.2Persistency.wiki" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wiki/TrackSpark/data/0.3ScreenCapture.wiki" afterPath="$PROJECT_DIR$/wiki/TrackSpark/data/0.3ScreenCapture.wiki" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wiki/TrackSpark/data/TrackSpark.wiki" afterPath="$PROJECT_DIR$/wiki/TrackSpark/data/TrackSpark.wiki" />
     </list>
     <ignored path="trackspark.iws" />
@@ -135,8 +114,8 @@
       <file leaf-file-name="SymmetricResizableFrame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/view/UI/SymmetricResizableFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.1818181">
-              <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.3721591">
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1611,20 +1590,11 @@
       <option name="number" value="Default" />
       <updated>1458049848191</updated>
       <workItem from="1458049849672" duration="54274000" />
-      <workItem from="1458231061772" duration="41143000" />
+      <workItem from="1458231061772" duration="41569000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ObjectsFactoryTSTest_testReadFromToFile - 2016.03.21 at 14h 33m 51s.xml">
-      <configuration name="ObjectsFactoryTSTest.testReadFromToFile" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ObjectsFactoryTSTest_testReadFromToFile - 2016.03.21 at 14h 37m 21s.xml">
-      <configuration name="ObjectsFactoryTSTest.testReadFromToFile" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ObjectsFactoryTSTest_testReadFromToFile - 2016.03.21 at 14h 37m 49s.xml">
-      <configuration name="ObjectsFactoryTSTest.testReadFromToFile" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ObjectsFactoryTSTest_testReadFromToFile - 2016.03.21 at 14h 39m 42s.xml">
       <configuration name="ObjectsFactoryTSTest.testReadFromToFile" configurationId="JUnit" />
     </history-entry>
@@ -1646,9 +1616,18 @@
     <history-entry file="ObjectsFactoryTSTest_testReadFromToFile - 2016.03.21 at 15h 06m 11s.xml">
       <configuration name="ObjectsFactoryTSTest.testReadFromToFile" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ObjectsFactoryTSTest_testReadFromToFile - 2016.03.21 at 15h 10m 53s.xml">
+      <configuration name="ObjectsFactoryTSTest.testReadFromToFile" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ObjectsFactoryTSTest_testReadFromToFile - 2016.03.21 at 15h 11m 33s.xml">
+      <configuration name="ObjectsFactoryTSTest.testReadFromToFile" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ObjectsFactoryTSTest_testReadFromToFile - 2016.03.21 at 15h 11m 52s.xml">
+      <configuration name="ObjectsFactoryTSTest.testReadFromToFile" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95417000" />
+    <option name="totallyTimeSpent" value="95843000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1661,7 +1640,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="15" y="34" width="1419" height="824" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286119" sideWeight="0.49745825" order="6" side_tool="false" content_ui="tabs" />
@@ -1673,7 +1652,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38668555" sideWeight="0.5395788" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286119" sideWeight="0.49164852" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20116195" sideWeight="0.4927235" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20116195" sideWeight="0.4927235" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286119" sideWeight="0.47131446" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15686275" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -2308,8 +2287,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/view/UI/SymmetricResizableFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1818181">
-          <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.3721591">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
         </state>
       </provider>

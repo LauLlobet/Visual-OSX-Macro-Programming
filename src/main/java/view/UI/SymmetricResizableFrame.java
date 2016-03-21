@@ -27,6 +27,8 @@ public class SymmetricResizableFrame extends Frame {
         this.setUndecorated( true );
 
 
+        setBackground(new Color(200,0,0,80));
+
 /*
         Panel mainPanel =  new TransPanel();
         mainPanel.setVisible(true);

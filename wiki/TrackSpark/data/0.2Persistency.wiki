@@ -10,4 +10,4 @@
 
 *DONE c:5apunt de tenir el mvc funcionant una mica*
 
-- all mvc works
+*DONE c:6 all mvc works*
