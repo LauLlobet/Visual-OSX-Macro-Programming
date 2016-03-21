@@ -1,10 +1,6 @@
 ﻿++ 0.3Screen Capture
 
 
-- ready for cleaning old libraries regarding windows
+*DONE c:1 ready for cleaning old libraries regarding windows*
 
-- transparent windows
-
-- buttons on transparent window
-
-- decorated window
+- transparent windows  buttons on transparent window decorated window

@@ -24,47 +24,40 @@ public class SymmetricResizableFrame extends Frame {
         nonFullscreenSize = this.getSize();
         point = new Point(w/2,h/2);
         this.setBounds(x,y,w,h);
-        this.setUndecorated( true );
+        this.setUndecorated(true);
+
+        this.setBackground(new Color(255,255,255,40));
+
+        this.setLayout(new BorderLayout());
+
+        JPanel header = new JPanel();
+        header.setPreferredSize(new Dimension(10, 10));
+
+        JPanel body = new JPanel();
+        body.setBackground(new Color(0,255,0,10));
+
+        JPanel footer = new JPanel();
+        footer.setPreferredSize(new Dimension(10, 10));
+        footer.setBackground(new Color(0,0,255,50));
+        footer.setLayout(new BorderLayout());
+
+        JPanel resizer = new JPanel();
+        footer.setPreferredSize(new Dimension(10, 10));
+        footer.setBackground(new Color(0,255,255,50));
+        footer.setLayout(new BorderLayout());
 
 
-        setBackground(new Color(200,0,0,80));
-
-/*
-        Panel mainPanel =  new TransPanel();
-        mainPanel.setVisible(true);
-        this.add(mainPanel);
-
-        Panel header = new Panel();
-        header.setSize(50,10);
-        header.setVisible(true);
-*/
-        //mainPanel.add(header);
+        this.add(header, BorderLayout.PAGE_START);
+        this.add(body, BorderLayout.CENTER);
+        this.add(footer, BorderLayout.PAGE_END);
+        footer.add(resizer,BorderLayout.EAST);
 
 
-/*
-        Panel footer = new Panel(new RelativeLayout(RelativeLayout.X_AXIS));
-        footer.setVisible(true);
-        mainPanel.add(footer, new Float(1));
-*/
+        this.pack();
+        this.setVisible(true);
 
-      //  ComponentMover componentMover = new ComponentMover(this,mainPanel);
-
-
-
-/*        Panel footerInputs = new Panel(new RelativeLayout(RelativeLayout.X_AXIS));
-        Panel footerResize = new Panel(new RelativeLayout(RelativeLayout.X_AXIS));
-
-        footerResize.setSize(10,10);
-        footerResize.setBackground(Color.green);
-        footerInputs.setSize(50,10);
-        footerInputs.setBackground(Color.gray);
-
-        footer.add(footerInputs,new Float(8));
-        footer.add(footerResize,new Float(1));
-
-        JPanel panel = new JPanel( new RelativeLayout(RelativeLayout.Y_AXIS) );*/
-
-
+        ComponentResizer cr = new ComponentResizer(new Insets(2, 2, 2, 2),new Dimension(1, 1));
+        cr.registerComponent(this);
     }
 
 

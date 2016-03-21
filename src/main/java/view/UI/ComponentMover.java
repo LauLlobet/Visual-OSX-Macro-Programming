@@ -6,8 +6,8 @@ import javax.swing.JComponent;
 import javax.swing.SwingUtilities;
 
 /**
- *  This class allows you to move a Component by using a mouse. The Component
- *  moved can be a high level Window (ie. Window, Frame, Dialog) in which case
+     *  This class allows you to move a Component by using a mouse. The Component
+     *  moved can be a high level Window (ie. Window, Frame, Dialog) in which case
  *  the Window is moved within the desktop. Or the Component can belong to a
  *  Container in which case the Component is moved within the Container.
  *
