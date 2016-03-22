@@ -5,4 +5,6 @@
 
 *DONE c:2 transparent windows  buttons on transparent window decorated window*
 
-- apunt per capturar pantalla
+*DONE c:3 apunt per capturar pantalla*
+
+- pantalla capturada

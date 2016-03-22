@@ -25,7 +25,7 @@ public class TransparentFrame extends Frame {
 
         this.setLayout(new BorderLayout());
 
-        JPanel header = new JPanel();
+       /* JPanel header = new JPanel();
         header.setPreferredSize(new Dimension(10, 10));
 
         JPanel body = new JPanel();
@@ -52,7 +52,7 @@ public class TransparentFrame extends Frame {
         this.setVisible(true);
 
         ComponentResizer cr = new ComponentResizer(new Insets(2, 2, 2, 2),new Dimension(1, 1));
-        cr.registerComponent(this);
+        cr.registerComponent(this);*/
     }
 
 
