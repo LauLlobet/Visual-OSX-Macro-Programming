@@ -89,10 +89,12 @@ public class ObjectTS {
 
     public void setOutputsHub( OutputConnectionHubTS outputs) {
         outputsHub = outputs;
+        if(registeredInMvc){caller.shyncronizeMVCView(getId(),outputs.toJSON(),null);}
     }
 
     public void setInputsHub( InputConnectionHubTS inputs) {
         inputsHub = inputs;
+        if(registeredInMvc){caller.shyncronizeMVCView(getId(),inputs.toJSON(),null);}
     }
 
     public void setId(String id) {

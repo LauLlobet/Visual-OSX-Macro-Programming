@@ -1,6 +1,7 @@
 package logic;
 
 import model.tsobject.ObjectTS;
+import view.UI.PortPanelFactory;
 import view.VObjectTS;
 
 import java.lang.reflect.Method;
@@ -15,29 +16,35 @@ public class Caller {
 
     Hashtable<String,ObjectTS> modelHash;
     Hashtable<String, VObjectTS> viewHash;
+    PortPanelFactory portPanelFactory;
 
-    public Caller() {
+    public Caller(PortPanelFactory portPanelFactory) {
         modelHash = new Hashtable<String, ObjectTS>();
         viewHash = new Hashtable<String, VObjectTS>();
+        this.portPanelFactory = portPanelFactory;
     }
 
     public void registerModelObject(ObjectTS model){
         modelHash.put(model.getId(),model);
-        viewHash.put(model.getId(),new VObjectTS(model.getId(),this));
+        viewHash.put(model.getId(),new VObjectTS(model.getId(),this, this.portPanelFactory));
     }
     public void registerViewObject(VObjectTS view){
         viewHash.put(view.getId(),view);
     }
 
 
-    public void shynchronizeMVCModel(String id, Object x, Object old) {
+    public void shynchronizeMVCModel(String id, Object x, Object old) { //throws Exception{
         if(x.equals(old)){
             System.out.println("stoping loop trying to update model");
             return;
         }
-        System.out.println("updating model");
         ObjectTS obj = modelHash.get(id);
-        callFunction(obj,x);
+        if(obj == null){
+            //throw new Exception("View not connected to model");
+            System.out.println("View not connected to model");
+        } else {
+            callFunction(obj, x);
+        }
     }
 
     public void shyncronizeMVCView(String id, Object x, Object old) {
@@ -54,8 +61,6 @@ public class Caller {
         StackTraceElement e = stacktrace[3];//maybe this number needs to be corrected
         String methodName = e.getMethodName();
         Method method;
-
-        System.out.println("-REFLECT-->"+methodName+" -> "+x);
         try {
             method = obj.getClass().getMethod(methodName, int.class);
             method.invoke(obj,x);
@@ -86,6 +91,10 @@ public class Caller {
 
     public VObjectTS getView(String id) {
         return viewHash.get(id);
+    }
+
+    public ObjectTS getModel(String id) {
+        return modelHash.get(id);
     }
 
     public Collection<VObjectTS> getViews() {

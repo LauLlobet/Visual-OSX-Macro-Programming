@@ -5,8 +5,10 @@ import com.fasterxml.jackson.annotation.JacksonInject;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import logic.ConnectionsChecker;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 @JsonTypeInfo(
@@ -43,5 +45,15 @@ public abstract class ConnectionHubTS {
 
     public void disconnectAll(){
 
+    }
+
+    public Object toJSON() {
+        ObjectMapper om = new ObjectMapper();
+        try {
+            return om.writeValueAsString(this);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return "{}";
+        }
     }
 }

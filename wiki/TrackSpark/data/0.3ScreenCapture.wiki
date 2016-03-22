@@ -7,4 +7,4 @@
 
 *DONE c:3 apunt per capturar pantalla*
 
-- pantalla capturada
+*DONE c:4 pantalla capturada*

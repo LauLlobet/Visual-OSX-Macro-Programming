@@ -1,0 +1,3 @@
+﻿++ 0.4Connections Display
+
+- ports are displayed and drag adn drop connects at model level

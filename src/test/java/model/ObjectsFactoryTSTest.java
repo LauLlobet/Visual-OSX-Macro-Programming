@@ -41,7 +41,7 @@ public class ObjectsFactoryTSTest {
 
     @Test
     public void testReadFromToFile() throws Throwable {
-
+/*
         String fileName = "temp.tsp";
         Caller c = new Caller();
         ConnectionsChecker cc = new ConnectionsChecker();
@@ -73,7 +73,7 @@ public class ObjectsFactoryTSTest {
             dts6.setX(700);
             of.storeAllModelsInFile(fileName);
         }
-        Thread.sleep(5700);
+        Thread.sleep(15700);*/
     }
 
 /*

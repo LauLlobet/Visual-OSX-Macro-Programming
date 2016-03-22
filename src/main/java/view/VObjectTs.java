@@ -1,28 +1,30 @@
 package view;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import logic.Caller;
-import view.UI.TransparentFrame;
+import view.UI.FrameVObject;
+import view.UI.PortPanelFactory;
+
+import java.io.IOException;
+import java.util.Iterator;
 
 /**
  * Created by quest on 17/3/16.
  */
-public class VObjectTS extends TransparentFrame {
+public class VObjectTS extends FrameVObject {
 
     public Caller modelCaller;
-
-    public String id;
-
 
     private int x;
     private int y;
     private int w;
     private int h;
 
-    public VObjectTS(String name, Caller mc) {
-        super("Symmetric",1,1,1,1);
+    public VObjectTS(String id, Caller mc, PortPanelFactory portPanelFactory) {
+        super(id,1,1,1,1, portPanelFactory);
         this.modelCaller = mc;
         this.setVisible(true);
-        id = name;
     }
 
 
@@ -116,6 +118,59 @@ public class VObjectTS extends TransparentFrame {
 
     public int getX() {
         return (int)this.getLocation().getX();
+    }
+
+    public void setInputsHub(String inputHubString) {
+        try{
+            trySetInputsHub(inputHubString);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+    }
+
+
+    public void setOutputsHub(String outputsHubString) {
+        try{
+            trySetOutputsHub(outputsHubString);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    private void trySetOutputsHub(String outputsHubString) throws Exception{
+        Iterator<JsonNode> i = getJsonNodeIterator(outputsHubString);
+        int num = 1;
+        while (i.hasNext()){
+            String port = i.next().path("messageType").textValue();
+            createVOutputPort(port,num);
+            num++;
+        }
+    }
+
+    private void trySetInputsHub(String inputHubString) throws Exception{
+        Iterator<JsonNode> i = getJsonNodeIterator(inputHubString);
+        int num = 1;
+        while (i.hasNext()){
+            String port = i.next().path("messageType").textValue();
+            createVInputPort(port,num);
+            num++;
+        }
+    }
+
+    private void createVInputPort(String port,int num) {
+        createInputPanelPort(port,num);
+    }
+
+    private void createVOutputPort(String port, int num) {
+        createOutputPanelPort(port, num);
+    }
+
+
+    private Iterator<JsonNode> getJsonNodeIterator(String inputHubString) throws IOException {
+        ObjectMapper mapper = new ObjectMapper();
+        JsonNode rootNode = mapper.readTree(inputHubString);
+        return rootNode.path("ports").elements();
     }
 
 }

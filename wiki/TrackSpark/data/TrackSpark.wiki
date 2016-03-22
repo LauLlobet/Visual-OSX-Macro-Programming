@@ -16,9 +16,9 @@ Relase [0.1WalkingSkeleton]
 
 Relase [0.2Persistency] 
 
-Relase [0.3ScreenCapture] <======(CURRENT)
+Relase [0.3ScreenCapture]
 
-Relase [0.4ScreenCapture]
+Relase [0.4ConnectionsDisplay]  <======(CURRENT)
 
 
 

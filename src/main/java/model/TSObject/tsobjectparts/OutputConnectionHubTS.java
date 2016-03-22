@@ -17,7 +17,7 @@ public class OutputConnectionHubTS extends ConnectionHubTS {
     }
     public void connectTo(TSOConnection newConn) throws  Throwable{
         this.connectionsChecker.ifAreConnectionPossibleRegisterThemElseThrow(newConn);
-        //this.connectedToList.add(newConn);
+        this.connectedToList.add(newConn);
     }
     public void setConnectedToList(ArrayList<TSOConnection> connections) throws Throwable{
         this.connectionsChecker.ifAreConnectionsPossibleRegisterThemElseThrow(connections);

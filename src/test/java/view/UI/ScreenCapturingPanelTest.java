@@ -1,5 +1,9 @@
 package view.UI;
 
+import logic.Caller;
+import logic.ConnectionsChecker;
+import logic.IdGenerator;
+import model.ObjectsFactoryTS;
 import org.junit.Test;
 
 import javax.swing.*;
@@ -34,13 +38,20 @@ public class ScreenCapturingPanelTest {
     @Test
     public void testScreenCapturingTest() throws Exception {
 
+        BewteenWindowsConnectionMaker bwcm = new BewteenWindowsConnectionMaker();
+        PortPanelFactory ppf = new PortPanelFactory(bwcm);
+        Caller c = new Caller(ppf);
+        IdGenerator idg = new IdGenerator("testing");
+        ConnectionsChecker cc = new ConnectionsChecker();
+        ObjectsFactoryTS of = new ObjectsFactoryTS(cc,idg,c);
+
         ScreenCapturer sc = new ScreenCapturer();
-        Frame frame = new TransparentFrame("Symmetric",100,100,100,200);
+        Frame frame = new FrameVObject("Symmetric",100,100,100,200,ppf);
 
 
         JPanel header = new ScreenCapturingPanel();
         header.setPreferredSize(new Dimension(100, 100));
-        header.setBackground(new Color(30,30,30,50));
+        header.setBackground(new Color(30,30,30,0));
 
         ShowingFramesPanel footer = new ShowingFramesPanel();
         footer.setPreferredSize(new Dimension(100, 100));
@@ -63,7 +74,7 @@ public class ScreenCapturingPanelTest {
         frame.pack();
         frame.setVisible(true);
 
-        ComponentMover componentMover = new ComponentMover(frame,footer);
+        //ComponentMover componentMover = new ComponentMover(frame,footer);
 
         Thread.sleep(30000);
 
