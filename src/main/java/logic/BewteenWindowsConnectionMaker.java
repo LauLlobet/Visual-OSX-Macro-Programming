@@ -1,16 +1,18 @@
-package view.UI;
+package logic;
 
-import jdk.nashorn.internal.codegen.CompilerConstants;
-import logic.Caller;
 import model.tsobject.ObjectTS;
+import view.UI.connections.ConectionDisplayer;
 
 /**
  * Created by quest on 22/3/16.
  */
 public class BewteenWindowsConnectionMaker {
     Caller caller;
+    private ConectionDisplayer conectionDisplayer;
+    private boolean isDragging = false;
 
-    BewteenWindowsConnectionMaker(){
+    public BewteenWindowsConnectionMaker(){
+        conectionDisplayer = new ConectionDisplayer();
     }
 
     public void setCaller(Caller c){
@@ -40,6 +42,15 @@ public class BewteenWindowsConnectionMaker {
 
     private ObjectTS getObject(String id) {
         return caller.getModel(id.substring(4));
+    }
+
+    public void draggingOver(int xOrig, int yOrig, int xMouse, int yMouse) {
+
+        this.conectionDisplayer.draggingConnection(xOrig,yOrig,xMouse,yMouse);
+    }
+
+    public void draggingEnded() {
+        this.isDragging = false;
     }
 }
 

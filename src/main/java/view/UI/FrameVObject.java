@@ -53,9 +53,9 @@ public class FrameVObject extends JFrame {
         this.pack();
         this.setVisible(true);
 
-        /*ComponentResizer cr = new ComponentResizer(new Insets(2, 2, 2, 2),new Dimension(1, 1));
+        ComponentResizer cr = new ComponentResizer(new Insets(2, 2, 2, 2),new Dimension(1, 1));
         cr.registerComponent(this);
-        ComponentMover cm = new ComponentMover(this,this);*/
+        ComponentMover cm = new ComponentMover(this,header);
     }
 
     public void createInputPanelPort(String type,int numPort){

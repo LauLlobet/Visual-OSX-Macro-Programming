@@ -1,5 +1,7 @@
 package view.UI;
 
+import logic.BewteenWindowsConnectionMaker;
+
 import javax.swing.*;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.StringSelection;
@@ -28,19 +30,19 @@ public class PortPanel extends JPanel implements DragGestureListener, DragSource
     }
 
     public void dragEnter(DropTargetDragEvent e) {
-      //  System.out.println("Entering drop target #1");
+        //  System.out.println("Entering drop target #1");
     }
 
     public void dragExit(DropTargetEvent e) {
-       // System.out.println("Exiting drop target #1");
+        // System.out.println("Exiting drop target #1");
     }
 
     public void dragOver(DropTargetDragEvent e) {
-      //  System.out.println("Dragging over drop target #1");
+        //  System.out.println("Dragging over drop target #1");
     }
 
     public void drop(DropTargetDropEvent e) {
-       // System.out.println("Dropping");
+        // System.out.println("Dropping");
 
         try {
             Transferable t = e.getTransferable();
@@ -50,7 +52,7 @@ public class PortPanel extends JPanel implements DragGestureListener, DragSource
 
                 String s;
                 s = (String) t.getTransferData(DataFlavor.stringFlavor);
-               this.bwcm.connect(s,this.id);
+                this.bwcm.connect(s,this.id);
                 e.dropComplete(true);
             } else
                 e.rejectDrop();
@@ -73,11 +75,11 @@ public class PortPanel extends JPanel implements DragGestureListener, DragSource
     }
 
     public void dragDropEnd(DragSourceDropEvent e) {
-       // System.out.println("Drag and drop end");
+        this.bwcm.draggingEnded();
     }
 
     public void dragEnter(DragSourceDragEvent e) {
-       // System.out.println("Entering drop target #2");
+        // System.out.println("Entering drop target #2");
         DragSourceContext ctx = e.getDragSourceContext();
         int action = e.getDropAction();
         if ((action & DnDConstants.ACTION_COPY) != 0)
@@ -91,11 +93,14 @@ public class PortPanel extends JPanel implements DragGestureListener, DragSource
     }
 
     public void dragOver(DragSourceDragEvent e) {
-        //System.out.println("Dragging over drop target #2");
+        this.bwcm.draggingOver((int)this.getLocationOnScreen().getX()+this.getWidth()/2,
+                (int)this.getLocationOnScreen().getY()+this.getHeight(),
+                e.getX(),
+                e.getY());
     }
 
     public void dropActionChanged(DragSourceDragEvent e) {
-       // System.out.println("Drop action changed #2");
+        // System.out.println("Drop action changed #2");
     }
 
 }

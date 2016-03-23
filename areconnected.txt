@@ -1,5 +1,32 @@
 [ {
-  "id" : "testing.model.DelayTS.2.20160322174806987",
+  "id" : "testing.model.DelayTS.1.20160323192501710",
+  "x" : 701,
+  "y" : 96,
+  "w" : 90,
+  "h" : 161,
+  "type" : "DELAY_TSOBJID",
+  "inputsHub" : {
+    "type" : "IDTSObjectInputConnectionHub",
+    "ports" : [ {
+      "messageType" : "MANY",
+      "buffer" : [ ]
+    }, {
+      "messageType" : "MINT",
+      "buffer" : [ ]
+    } ],
+    "type" : "IDTSObjectInputConnectionHub"
+  },
+  "outputsHub" : {
+    "type" : "IDTSObjectOutputConnectionHub",
+    "ports" : [ {
+      "messageType" : "MANY",
+      "buffer" : [ ]
+    } ],
+    "type" : "IDTSObjectOutputConnectionHub",
+    "connectedToList" : [ ]
+  }
+}, {
+  "id" : "testing.model.DelayTS.2.20160323192502536",
   "x" : 500,
   "y" : 300,
   "w" : 90,
@@ -24,38 +51,17 @@
     } ],
     "type" : "IDTSObjectOutputConnectionHub",
     "connectedToList" : [ {
-      "originId" : "testing.model.DelayTS.2.20160322174806987",
-      "outPort" : 2,
-      "destinyId" : "o[1]testing.model.DelayTS.1.20160322174805057",
-      "inPort" : 2,
+      "originId" : "testing.model.DelayTS.2.20160323192502536",
+      "outPort" : 1,
+      "destinyId" : "o[1]testing.model.DelayTS.1.20160323192501710",
+      "inPort" : 1,
+      "portNum" : 10
+    }, {
+      "originId" : "testing.model.DelayTS.2.20160323192502536",
+      "outPort" : 1,
+      "destinyId" : "o[1]testing.model.DelayTS.1.20160323192501710",
+      "inPort" : 1,
       "portNum" : 10
     } ]
-  }
-}, {
-  "id" : "testing.model.DelayTS.1.20160322174805057",
-  "x" : 300,
-  "y" : 300,
-  "w" : 90,
-  "h" : 161,
-  "type" : "DELAY_TSOBJID",
-  "inputsHub" : {
-    "type" : "IDTSObjectInputConnectionHub",
-    "ports" : [ {
-      "messageType" : "MANY",
-      "buffer" : [ ]
-    }, {
-      "messageType" : "MINT",
-      "buffer" : [ ]
-    } ],
-    "type" : "IDTSObjectInputConnectionHub"
-  },
-  "outputsHub" : {
-    "type" : "IDTSObjectOutputConnectionHub",
-    "ports" : [ {
-      "messageType" : "MANY",
-      "buffer" : [ ]
-    } ],
-    "type" : "IDTSObjectOutputConnectionHub",
-    "connectedToList" : [ ]
   }
 } ]

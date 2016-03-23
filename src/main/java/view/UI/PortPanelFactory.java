@@ -1,6 +1,7 @@
 package view.UI;
 
 import Constants.TSOConstants;
+import logic.BewteenWindowsConnectionMaker;
 
 import javax.swing.*;
 import java.awt.*;
@@ -52,7 +53,7 @@ public class PortPanelFactory {
     }
 
     private JPanel createPortPanel(String id) {
-        JPanel panel = new PortPanel(this.bwcm,id);
+        PortPanel panel = new PortPanel(this.bwcm,id);
         panel.setSize(new Dimension(20,20));
         panel.setMaximumSize(panel.getSize());
         panel.setBackground(new Color(0,0,0,255));
