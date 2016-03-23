@@ -93,7 +93,7 @@ public class VObjectTSTest {
         ObjectTS ob2 = of.build(TSOConstants.DELAY_TSOBJID);
         ob2.setX(500);
 
-        Thread.sleep(20000);
+        Thread.sleep(200000);
         of.storeAllModelsInFile("areconnected.txt");
     }
 

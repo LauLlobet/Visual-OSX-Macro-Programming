@@ -1,3 +1,9 @@
 ﻿++ 0.4Connections Display
 
-- ports are displayed and drag adn drop connects at model level
+*DONE c:1 ports are displayed and drag adn drop connects at model level*
+
+- connectiondrawerminimizewhen not active
+
+- connections are verified
+
+- connections are stored and keept drawn

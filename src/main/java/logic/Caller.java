@@ -100,4 +100,8 @@ public class Caller {
     public Collection<VObjectTS> getViews() {
         return viewHash.values();
     }
+
+    public Collection<VObjectTS> getViewsInArray() {
+        return viewHash.values();
+    }
 }

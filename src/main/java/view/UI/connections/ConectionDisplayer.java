@@ -1,11 +1,17 @@
 package view.UI.connections;
 
 import com.sun.awt.AWTUtilities;
+import logic.Caller;
 import logic.ConnectionsChecker;
+import view.VObjectTS;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.awt.geom.Path2D;
+import java.util.ArrayList;
+import java.util.Collection;
 
 /**
  * Created by quest on 23/3/16.
@@ -24,9 +30,12 @@ public class ConectionDisplayer extends JFrame{
 
     private ConnectionCable currentDraggingConnection;
 
+    private Caller caller;
+    private boolean onFocusZNum2 = false;
 
-    public ConectionDisplayer(){
+    public ConectionDisplayer(Caller caller){
         super();
+        this.caller = caller;
         currentDraggingConnection = new ConnectionCable();
         panel = new JPanel()
         {
@@ -64,6 +73,13 @@ public class ConectionDisplayer extends JFrame{
         this.pack ();
         this.setLocationRelativeTo ( null );
         this.setVisible ( true );
+
+        this.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                ConectionDisplayer.this.bringToBack();
+            }
+        });
     }
 
     private void paintCurves(Graphics g) {
@@ -79,13 +95,35 @@ public class ConectionDisplayer extends JFrame{
         currentDraggingConnection.y6 = yMouse;
         currentDraggingConnection.setShouldBePainted(true);
         panel.repaint();
-
+        if(!onFocusZNum2){
+            this.bringToBackOfAppWindows();
+            onFocusZNum2 = true;
+        }
     }
 
     public boolean isNotInFront(){
         return !this.isFocusableWindow();
     }
-    public void bringToFront(){
+
+    public void bringToBackOfAppWindows(){
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                ConectionDisplayer.this.toFront();
+                ConectionDisplayer.this.repaint();
+                Window w = KeyboardFocusManager.getCurrentKeyboardFocusManager().getFocusedWindow();
+                Collection<VObjectTS> list = caller.getViewsInArray();
+                for(VObjectTS windows : list){
+                    windows.toFront();
+                    windows.repaint();
+                }
+                w.toFront();
+                w.repaint();
+            }
+        });
+    }
+
+    public void bringToBack(){
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
@@ -95,4 +133,7 @@ public class ConectionDisplayer extends JFrame{
         });
     }
 
+    public void invalidateConnectionDisplayerWasAtFocusZNum2() {
+        onFocusZNum2 = false;
+    }
 }

@@ -12,11 +12,11 @@ public class BewteenWindowsConnectionMaker {
     private boolean isDragging = false;
 
     public BewteenWindowsConnectionMaker(){
-        conectionDisplayer = new ConectionDisplayer();
     }
 
     public void setCaller(Caller c){
         this.caller = c;
+        conectionDisplayer = new ConectionDisplayer(caller);
     }
     public void connect(String out, String in) {;
         if(! (out.startsWith("o") && in.startsWith("i"))) {
@@ -51,6 +51,7 @@ public class BewteenWindowsConnectionMaker {
 
     public void draggingEnded() {
         this.isDragging = false;
+        this.conectionDisplayer.invalidateConnectionDisplayerWasAtFocusZNum2();
     }
 }
 

@@ -1,7 +1,7 @@
 [ {
-  "id" : "testing.model.DelayTS.1.20160323192501710",
-  "x" : 701,
-  "y" : 96,
+  "id" : "testing.model.DelayTS.1.20160323200400417",
+  "x" : 910,
+  "y" : 275,
   "w" : 90,
   "h" : 161,
   "type" : "DELAY_TSOBJID",
@@ -26,9 +26,9 @@
     "connectedToList" : [ ]
   }
 }, {
-  "id" : "testing.model.DelayTS.2.20160323192502536",
-  "x" : 500,
-  "y" : 300,
+  "id" : "testing.model.DelayTS.2.20160323200401303",
+  "x" : 1075,
+  "y" : 264,
   "w" : 90,
   "h" : 161,
   "type" : "DELAY_TSOBJID",
@@ -51,15 +51,21 @@
     } ],
     "type" : "IDTSObjectOutputConnectionHub",
     "connectedToList" : [ {
-      "originId" : "testing.model.DelayTS.2.20160323192502536",
+      "originId" : "testing.model.DelayTS.2.20160323200401303",
       "outPort" : 1,
-      "destinyId" : "o[1]testing.model.DelayTS.1.20160323192501710",
+      "destinyId" : "o[1]testing.model.DelayTS.1.20160323200400417",
       "inPort" : 1,
       "portNum" : 10
     }, {
-      "originId" : "testing.model.DelayTS.2.20160323192502536",
+      "originId" : "testing.model.DelayTS.2.20160323200401303",
       "outPort" : 1,
-      "destinyId" : "o[1]testing.model.DelayTS.1.20160323192501710",
+      "destinyId" : "o[1]testing.model.DelayTS.1.20160323200400417",
+      "inPort" : 1,
+      "portNum" : 10
+    }, {
+      "originId" : "testing.model.DelayTS.2.20160323200401303",
+      "outPort" : 1,
+      "destinyId" : "o[1]testing.model.DelayTS.1.20160323200400417",
       "inPort" : 1,
       "portNum" : 10
     } ]
