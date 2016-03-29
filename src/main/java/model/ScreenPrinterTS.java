@@ -6,6 +6,7 @@ import model.tsobject.ObjectTS;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 public class ScreenPrinterTS extends ObjectTS {
@@ -21,7 +22,11 @@ public class ScreenPrinterTS extends ObjectTS {
     @Override
     public void processTic(){
         try {
-            String message = getInputsHub().getPorts().get(0).getBuffer().removeFirst();
+            LinkedList<String> buffer = getInputsHub().getPorts().get(0).getBuffer();
+            if(buffer.size() == 0){
+                return;
+            }
+            String message = buffer.removeFirst();
             setPrintValue(message);
         } catch (Throwable throwable) {
             throwable.printStackTrace();

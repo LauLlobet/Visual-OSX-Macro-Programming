@@ -25,7 +25,7 @@ public class RepetitiveCountdownTS extends ObjectTS {
     @Override
     public void processTic(){
         double now = System.currentTimeMillis();
-        if(lastBang - now > countdownTime){
+        if( now - lastBang > countdownTime){
             lastBang = System.currentTimeMillis();
             bang();
         }

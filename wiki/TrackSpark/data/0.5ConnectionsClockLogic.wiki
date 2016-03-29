@@ -1,6 +1,6 @@
 ﻿++ 0.5Connections Clock Logic
 
-- ready for it
+*DONE c:1 ready for it*
 
 - clock is ticking and sending bangs
 

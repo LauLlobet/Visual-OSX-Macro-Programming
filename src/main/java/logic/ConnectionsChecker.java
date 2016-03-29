@@ -93,7 +93,7 @@ public class ConnectionsChecker extends Hashtable<String,ArrayList<TSOConnection
     }
 
     private InputConnectionHubTS getInput(TSOConnection newConn) {
-        return (InputConnectionHubTS) connectionHubs.get("[i]"+newConn.getOriginId());
+        return (InputConnectionHubTS) connectionHubs.get("[i]"+newConn.getDestinyId());
     }
 
 

@@ -1,10 +1,7 @@
 package view.UI;
 
 import Constants.TSOConstants;
-import logic.BewteenWindowsConnectionMaker;
-import logic.Caller;
-import logic.ConnectionsChecker;
-import logic.IdGenerator;
+import logic.*;
 import model.ObjectsFactoryTS;
 import model.SwitchTS;
 import model.tsobject.ObjectTS;
@@ -57,6 +54,8 @@ public class VObjectTSTest {
         ObjectTS ob = of.build(TSOConstants.REPETITIVECOUNTDOWN_TSOBJID);
         ObjectTS ob2 = of.build(TSOConstants.SCREENPRINTER_TSOBJID);
         ob2.setX(500);
+
+        LogicTicCaller lc = new LogicTicCaller(caller);
 
         Thread.sleep(200000);
         of.storeAllModelsInFile("areconnected.txt");
