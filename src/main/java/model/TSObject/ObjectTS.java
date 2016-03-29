@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import logic.*;
 import model.DelayTS;
 import model.SwitchTS;
+import model.tsobject.tsobjectparts.Port;
 import model.tsobject.tsobjectparts.TSOConnection;
 import model.tsobject.tsobjectparts.InputConnectionHubTS;
 import model.tsobject.tsobjectparts.OutputConnectionHubTS;
@@ -14,6 +15,7 @@ import model.tsobject.tsobjectparts.OutputConnectionHubTS;
 import java.beans.Introspector;
 import java.beans.PropertyDescriptor;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by quest on 16/3/16.
@@ -75,6 +77,10 @@ public class ObjectTS {
                System.out.println("oletuu");
            }
         }
+    }
+
+    public void processTic(){
+
     }
 
     //-------- NOLOGIC ----------   regular getters and setters  ----------------------
@@ -150,5 +156,26 @@ public class ObjectTS {
         this.outputsHub.disconnectAll();
         this.inputsHub.disconnectAll();
         this.caller.removeTSObject(this);
+    }
+
+
+
+    // --------------- factory details
+
+    protected static ObjectTS setConectionHubs(ObjectTS obj, ConnectionsChecker cc) throws Throwable{
+        InputConnectionHubTS input = new InputConnectionHubTS(cc);
+        OutputConnectionHubTS output = new OutputConnectionHubTS(cc);
+        input.setParentId(obj.getId());
+        output.setParentId(obj.getId());
+        obj.setInputsHub(input);
+        obj.setOutputsHub(output);
+        return obj;
+    }
+    protected static ArrayList<Port> generatePorts(List<String> anymsg) {
+        ArrayList<Port> ports = new ArrayList<Port>();
+        for( String type : anymsg){
+            ports.add(new Port(type));
+        }
+        return ports;
     }
 }

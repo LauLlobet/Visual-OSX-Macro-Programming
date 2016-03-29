@@ -1,5 +1,6 @@
 package logic;
 
+import Constants.TSOConstants;
 import model.tsobject.tsobjectparts.*;
 
 import java.util.ArrayList;
@@ -77,10 +78,14 @@ public class ConnectionsChecker extends Hashtable<String,ArrayList<TSOConnection
         Port outputP = output.getPorts().get(newConn.getOutPort());
         String typeInput = inputP.getMessageType();
         String typeOutput = outputP.getMessageType();
-        if(!typeInput.startsWith(typeOutput)) {
-            System.out.println("incompatible types of port");
-            throw new Exception("incompatible types of port");
+        if(typeInput.startsWith(TSOConstants.MANY))
+            return;
+        if(typeInput.startsWith(typeOutput)) {
+            return;
         }
+        System.out.println("incompatible types of port");
+        throw new Exception("incompatible types of port");
+
     }
 
     private OutputConnectionHubTS getOutput(TSOConnection newConn) {

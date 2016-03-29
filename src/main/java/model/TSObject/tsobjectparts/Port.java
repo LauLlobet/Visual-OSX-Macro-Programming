@@ -3,19 +3,22 @@ package model.tsobject.tsobjectparts;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 /**
  * Created by quest on 16/3/16.
  */
 public class Port {
     private String messageType;
-    private ArrayList<String> buffer;
+    private LinkedList<String> buffer;
 
     public Port(){
-        buffer = new ArrayList<String>();
+
+        buffer = new LinkedList<String>();
     }
+
     public Port( String type){
-        buffer = new ArrayList<String>();
+        buffer = new LinkedList<String>();
         messageType = type;
     }
 
@@ -27,11 +30,15 @@ public class Port {
         this.messageType = messageType;
     }
 
-    public ArrayList<String> getBuffer() {
+    public void postMessage(String string){
+        this.buffer.add(string);
+    }
+
+    public LinkedList<String> getBuffer() {
         return buffer;
     }
 
-    public void setBuffer(ArrayList<String> buffer) {
+    public void setBuffer(LinkedList<String> buffer) {
         this.buffer = buffer;
     }
 

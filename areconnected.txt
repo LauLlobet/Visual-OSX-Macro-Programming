@@ -1,75 +1,55 @@
 [ {
-  "id" : "testing.model.DelayTS.1.20160329152736482",
-  "x" : 300,
+  "id" : "testing.model.ScreenPrinterTS.2.20160329165205167",
+  "x" : 991,
+  "y" : 318,
+  "w" : 120,
+  "h" : 60,
+  "type" : "SCREENPRINTER_TSOBJID",
+  "inputsHub" : {
+    "type" : "IDTSObjectInputConnectionHub",
+    "ports" : [ {
+      "messageType" : "MANY",
+      "buffer" : [ ]
+    } ],
+    "type" : "IDTSObjectInputConnectionHub",
+    "parentId" : "[i]testing.model.ScreenPrinterTS.2.20160329165205167",
+    "id" : "[i]testing.model.ScreenPrinterTS.2.20160329165205167"
+  },
+  "outputsHub" : {
+    "type" : "IDTSObjectOutputConnectionHub",
+    "ports" : [ ],
+    "type" : "IDTSObjectOutputConnectionHub",
+    "parentId" : "[o]testing.model.ScreenPrinterTS.2.20160329165205167",
+    "connectedToList" : [ ],
+    "id" : "[o]testing.model.ScreenPrinterTS.2.20160329165205167"
+  },
+  "printValue" : "---"
+}, {
+  "id" : "testing.model.RepetitiveCountdownTS.1.20160329165203812",
+  "x" : 800,
   "y" : 300,
   "w" : 90,
-  "h" : 161,
-  "type" : "DELAY_TSOBJID",
+  "h" : 50,
+  "type" : "REPETITIVECOUNTDOWN_TSOBJID",
   "inputsHub" : {
     "type" : "IDTSObjectInputConnectionHub",
     "ports" : [ {
-      "messageType" : "MANY",
-      "buffer" : [ ]
-    }, {
       "messageType" : "MINT",
       "buffer" : [ ]
     } ],
     "type" : "IDTSObjectInputConnectionHub",
-    "parentId" : "[i]testing.model.DelayTS.1.20160329152736482",
-    "id" : "[i]testing.model.DelayTS.1.20160329152736482"
+    "parentId" : "[i]testing.model.RepetitiveCountdownTS.1.20160329165203812",
+    "id" : "[i]testing.model.RepetitiveCountdownTS.1.20160329165203812"
   },
   "outputsHub" : {
     "type" : "IDTSObjectOutputConnectionHub",
     "ports" : [ {
-      "messageType" : "MANY",
+      "messageType" : "MBANG",
       "buffer" : [ ]
     } ],
     "type" : "IDTSObjectOutputConnectionHub",
-    "parentId" : "[o]testing.model.DelayTS.1.20160329152736482",
-    "connectedToList" : [ {
-      "originId" : "testing.model.DelayTS.1.20160329152736482",
-      "outPort" : 0,
-      "destinyId" : "testing.model.DelayTS.2.20160329152737256",
-      "inPort" : 0,
-      "portNum" : 10
-    } ],
-    "id" : "[o]testing.model.DelayTS.1.20160329152736482"
-  }
-}, {
-  "id" : "testing.model.DelayTS.2.20160329152737256",
-  "x" : 950,
-  "y" : 556,
-  "w" : 90,
-  "h" : 161,
-  "type" : "DELAY_TSOBJID",
-  "inputsHub" : {
-    "type" : "IDTSObjectInputConnectionHub",
-    "ports" : [ {
-      "messageType" : "MANY",
-      "buffer" : [ ]
-    }, {
-      "messageType" : "MINT",
-      "buffer" : [ ]
-    } ],
-    "type" : "IDTSObjectInputConnectionHub",
-    "parentId" : "[i]testing.model.DelayTS.2.20160329152737256",
-    "id" : "[i]testing.model.DelayTS.2.20160329152737256"
-  },
-  "outputsHub" : {
-    "type" : "IDTSObjectOutputConnectionHub",
-    "ports" : [ {
-      "messageType" : "MANY",
-      "buffer" : [ ]
-    } ],
-    "type" : "IDTSObjectOutputConnectionHub",
-    "parentId" : "[o]testing.model.DelayTS.2.20160329152737256",
-    "connectedToList" : [ {
-      "originId" : "testing.model.DelayTS.2.20160329152737256",
-      "outPort" : 0,
-      "destinyId" : "testing.model.DelayTS.1.20160329152736482",
-      "inPort" : 0,
-      "portNum" : 10
-    } ],
-    "id" : "[o]testing.model.DelayTS.2.20160329152737256"
+    "parentId" : "[o]testing.model.RepetitiveCountdownTS.1.20160329165203812",
+    "connectedToList" : [ ],
+    "id" : "[o]testing.model.RepetitiveCountdownTS.1.20160329165203812"
   }
 } ]

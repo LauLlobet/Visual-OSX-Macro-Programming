@@ -54,8 +54,8 @@ public class VObjectTSTest {
         IdGenerator idg = new IdGenerator("testing");
         ObjectsFactoryTS of = new ObjectsFactoryTS(cc,idg,caller);
 
-        ObjectTS ob = of.build(TSOConstants.DELAY_TSOBJID);
-        ObjectTS ob2 = of.build(TSOConstants.DELAY_TSOBJID);
+        ObjectTS ob = of.build(TSOConstants.REPETITIVECOUNTDOWN_TSOBJID);
+        ObjectTS ob2 = of.build(TSOConstants.SCREENPRINTER_TSOBJID);
         ob2.setX(500);
 
         Thread.sleep(200000);

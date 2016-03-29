@@ -1,0 +1,9 @@
+﻿++ 0.5Connections Clock Logic
+
+- ready for it
+
+- clock is ticking and sending bangs
+
+- metro stores in buffer >>> printer consumes >>> buffer prints
+
+- delay set + buffer errors

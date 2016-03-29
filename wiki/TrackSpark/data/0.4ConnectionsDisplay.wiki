@@ -4,4 +4,4 @@
 
 *DONE c:2 connectiondrawerminimizewhen not active*
 
-- connections are verified + connections are stored and keept drawn
+*DONE c:3 connections are verified + connections are stored and keept drawn*

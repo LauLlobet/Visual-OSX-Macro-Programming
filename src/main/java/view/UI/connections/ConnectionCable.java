@@ -57,7 +57,7 @@ public class ConnectionCable {
 
         x5 = x6 - miniskew;
         y5 = y4;
-        
+
         float cx1a = x1 + (x2 - x1) / overtureFactor;
         float cy1a = y1 + (y2 - y1) / overtureFactor;
 

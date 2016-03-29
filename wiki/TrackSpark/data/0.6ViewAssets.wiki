@@ -1,0 +1,13 @@
+﻿++ 0.6View Assets
+
+- clicker sense cofigurable 
+
+- conectar metro a clicker per veure que funciona
+
+- fer editor de posicio de click i conectarho amb view
+
+- fer delay
+
+- fer textbox
+
+- fer text writter

@@ -52,8 +52,14 @@ public class ObjectsFactoryTS {
         if( type.startsWith(TSOConstants.SWITCH_TSOBJID) ){
             newObj = createSwitchTS();
         }
-        newObj.registerToMvc(caller);
+        if( type.startsWith(TSOConstants.REPETITIVECOUNTDOWN_TSOBJID) ){
+            newObj = RepetitiveCountdownTS.createOne(this.idGenerator,this.connectionChecker);
+        }
+        if( type.startsWith(TSOConstants.SCREENPRINTER_TSOBJID) ){
+            newObj = ScreenPrinterTS.createOne(this.idGenerator,this.connectionChecker);
+        }
 
+        newObj.registerToMvc(caller);
         refreshUiAfter300Ms();
         return newObj;
     }

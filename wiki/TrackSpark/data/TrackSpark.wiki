@@ -18,8 +18,11 @@ Relase [0.2Persistency]
 
 Relase [0.3ScreenCapture]
 
-Relase [0.4ConnectionsDisplay]  <======(CURRENT)
+Relase [0.4ConnectionsDisplay]  
 
+Relase [0.5ConnectionsClockLogic]  <======(CURRENT)
+
+Relase [0.6ViewAssets]  
 
 
 	* WikiSettings
