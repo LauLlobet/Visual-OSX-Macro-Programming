@@ -1,5 +1,10 @@
 package model.tsobject.tsobjectparts;
 
+import view.UI.PortPanel;
+import view.UI.PortPanelFactory;
+
+import javax.swing.*;
+
 /**
  * Created by quest on 16/3/16.
  */
@@ -49,5 +54,12 @@ public class TSOConnection {
 
     public void setDestinyId(String destinyId) {
         this.destinyId = destinyId;
+    }
+
+    public String doGetOriginViewIdFromConnection() {
+        return PortPanelFactory.createID(this.originId,"o",this.outPort);
+    }
+    public String doGetDestinyViewIdFromConnection() {
+        return PortPanelFactory.createID(this.destinyId,"i",this.inPort);
     }
 }

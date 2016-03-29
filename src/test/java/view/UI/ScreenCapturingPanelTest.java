@@ -6,6 +6,8 @@ import logic.ConnectionsChecker;
 import logic.IdGenerator;
 import model.ObjectsFactoryTS;
 import org.junit.Test;
+import view.UI.connections.ConectionDisplayer;
+import view.UI.connections.ConnectionCableFactory;
 
 import javax.swing.*;
 import java.awt.*;
@@ -40,11 +42,14 @@ public class ScreenCapturingPanelTest {
     public void testScreenCapturingTest() throws Exception {
 
         BewteenWindowsConnectionMaker bwcm = new BewteenWindowsConnectionMaker();
-        PortPanelFactory ppf = new PortPanelFactory(bwcm);
-        Caller c = new Caller(ppf);
-        IdGenerator idg = new IdGenerator("testing");
+        ConnectionCableFactory connectionCableFactory = new ConnectionCableFactory();
+        PortPanelFactory ppf = new PortPanelFactory(bwcm,connectionCableFactory);
         ConnectionsChecker cc = new ConnectionsChecker();
-        ObjectsFactoryTS of = new ObjectsFactoryTS(cc,idg,c);
+        Caller caller = new Caller(ppf);
+        ConectionDisplayer connectionDisplayer = new ConectionDisplayer(caller,cc, connectionCableFactory);
+        bwcm.setCaller(caller,connectionDisplayer);
+        IdGenerator idg = new IdGenerator("testing");
+        ObjectsFactoryTS of = new ObjectsFactoryTS(cc,idg,caller);
 
         ScreenCapturer sc = new ScreenCapturer();
         Frame frame = new FrameVObject("Symmetric",100,100,100,200,ppf);

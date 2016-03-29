@@ -140,7 +140,7 @@ public class VObjectTS extends FrameVObject {
 
     private void trySetOutputsHub(String outputsHubString) throws Exception{
         Iterator<JsonNode> i = getJsonNodeIterator(outputsHubString);
-        int num = 1;
+        int num = 0;
         while (i.hasNext()){
             String port = i.next().path("messageType").textValue();
             createVOutputPort(port,num);
@@ -150,7 +150,7 @@ public class VObjectTS extends FrameVObject {
 
     private void trySetInputsHub(String inputHubString) throws Exception{
         Iterator<JsonNode> i = getJsonNodeIterator(inputHubString);
-        int num = 1;
+        int num = 0;
         while (i.hasNext()){
             String port = i.next().path("messageType").textValue();
             createVInputPort(port,num);

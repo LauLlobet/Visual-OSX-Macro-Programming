@@ -1,7 +1,7 @@
 package logic;
 
-import model.tsobject.tsobjectparts.TSOConnection;
-import model.tsobject.tsobjectparts.ConnectionHubTS;
+import model.tsobject.tsobjectparts.*;
+
 import java.util.ArrayList;
 import java.util.Hashtable;
 
@@ -17,8 +17,8 @@ public class ConnectionsChecker extends Hashtable<String,ArrayList<TSOConnection
         toCheckLaterWhenAllLoadedList = new ArrayList<TSOConnection>();
     }
 
-    public void registerConnectionHub(ConnectionHubTS tsoch) throws Exception{
-        //connectionHubs.add(tsoch);
+    public void registerConnectionHub( String id,ConnectionHubTS tsoch){
+        connectionHubs.put(id,tsoch);
     }
 
 
@@ -56,29 +56,45 @@ public class ConnectionsChecker extends Hashtable<String,ArrayList<TSOConnection
     }
 
     private void throwIfNotAllowed(TSOConnection newConn) throws Exception {
-            throwIfportsHaveNoCompatibleMessageType(newConn);
-            throwIfportsAreNotEmpty(newConn);
-            throwIfBuffersAreNotEmpty(newConn);
-            throwIfTheresADeadLock(newConn);
+        InputConnectionHubTS input = getInput(newConn);
+        OutputConnectionHubTS output = getOutput(newConn);
+        throwIfportsHaveNoCompatibleMessageType(input,output,newConn);
+        throwIfBuffersAreNotEmpty(input,output);
+        throwIfTheresADeadLock(input,output);
 
     }
 
-    private void throwIfTheresADeadLock(TSOConnection newConn) {
+    private void throwIfTheresADeadLock(InputConnectionHubTS input, OutputConnectionHubTS output) {
 
     }
 
-    private void throwIfBuffersAreNotEmpty(TSOConnection newConn) {
+    private void throwIfBuffersAreNotEmpty(InputConnectionHubTS input, OutputConnectionHubTS output) {
 
     }
 
-    private void throwIfportsAreNotEmpty(TSOConnection newConn) {
-
+    private void throwIfportsHaveNoCompatibleMessageType(InputConnectionHubTS input, OutputConnectionHubTS output,TSOConnection newConn) throws Exception {
+        Port inputP = input.getPorts().get(newConn.getInPort());
+        Port outputP = output.getPorts().get(newConn.getOutPort());
+        String typeInput = inputP.getMessageType();
+        String typeOutput = outputP.getMessageType();
+        if(!typeInput.startsWith(typeOutput)) {
+            System.out.println("incompatible types of port");
+            throw new Exception("incompatible types of port");
+        }
     }
 
-    private void throwIfportsHaveNoCompatibleMessageType(TSOConnection newConn) {
+    private OutputConnectionHubTS getOutput(TSOConnection newConn) {
+        return (OutputConnectionHubTS) connectionHubs.get("[o]"+newConn.getOriginId());
     }
 
-    private void throwIfNotComplete(){
-
+    private InputConnectionHubTS getInput(TSOConnection newConn) {
+        return (InputConnectionHubTS) connectionHubs.get("[i]"+newConn.getOriginId());
     }
+
+
+
+    public ArrayList<TSOConnection> getValidConnections() {
+        return validConnections;
+    }
+
 }

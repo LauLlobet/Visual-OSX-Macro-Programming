@@ -13,4 +13,7 @@ public class InputConnectionHubTS extends ConnectionHubTS {
         super(cc);
         type = TSOConstants.IDTSObjectInputConnectionHub;
     }
+    public void setParentId(String id){
+        super.setParentId("[i]"+id);
+    }
 }

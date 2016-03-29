@@ -9,14 +9,13 @@ import view.UI.connections.ConectionDisplayer;
 public class BewteenWindowsConnectionMaker {
     Caller caller;
     private ConectionDisplayer conectionDisplayer;
-    private boolean isDragging = false;
 
     public BewteenWindowsConnectionMaker(){
     }
 
-    public void setCaller(Caller c){
+    public void setCaller(Caller c, ConectionDisplayer conectionDisplayer){
         this.caller = c;
-        conectionDisplayer = new ConectionDisplayer(caller);
+        this.conectionDisplayer = conectionDisplayer;
     }
     public void connect(String out, String in) {;
         if(! (out.startsWith("o") && in.startsWith("i"))) {
@@ -24,16 +23,14 @@ public class BewteenWindowsConnectionMaker {
             return;
         }
         System.out.println("Connecting :"+out+" to "+in);
-        ObjectTS toOut = getObject(in);
-        int portOut =  getPort(in);
+        ObjectTS toOut = getObject(out);
+        int portOut =  getPort(out);
         int portIn = getPort(in);
         try {
-            toOut.connectTo(portOut,out,portIn);
+            toOut.connectTo(portOut,getEmbeddedId(in),portIn);
         } catch (Throwable throwable) {
             System.out.println("pfffff incompatible types");
-            throwable.printStackTrace();
         }
-
     }
 
     private int getPort(String in) {
@@ -41,16 +38,22 @@ public class BewteenWindowsConnectionMaker {
     }
 
     private ObjectTS getObject(String id) {
-        return caller.getModel(id.substring(4));
+        return caller.getModel(getEmbeddedId(id));
     }
 
-    public void draggingOver(int xOrig, int yOrig, int xMouse, int yMouse) {
+    private String getEmbeddedId(String oid){
+        return oid.substring(4);
+    }
 
+
+
+    public void draggingOver(int xOrig, int yOrig, int xMouse, int yMouse) {
+        this.conectionDisplayer.setDragging(true);
         this.conectionDisplayer.draggingConnection(xOrig,yOrig,xMouse,yMouse);
     }
 
     public void draggingEnded() {
-        this.isDragging = false;
+        this.conectionDisplayer.setDragging(false);
         this.conectionDisplayer.invalidateConnectionDisplayerWasAtFocusZNum2();
     }
 }

@@ -1,8 +1,10 @@
 package view.UI.connections;
 
 import com.sun.awt.AWTUtilities;
+import com.sun.corba.se.pept.transport.Connection;
 import logic.Caller;
 import logic.ConnectionsChecker;
+import model.tsobject.tsobjectparts.TSOConnection;
 import view.VObjectTS;
 
 import javax.swing.*;
@@ -32,10 +34,15 @@ public class ConectionDisplayer extends JFrame{
 
     private Caller caller;
     private boolean onFocusZNum2 = false;
+    private boolean dragging = false;
+    private ConnectionsChecker connectionChecker;
+    private ConnectionCableFactory connectionCableFactory;
 
-    public ConectionDisplayer(Caller caller){
+    public ConectionDisplayer(Caller caller, ConnectionsChecker connectionChecker,ConnectionCableFactory connectionCableFactory){
         super();
         this.caller = caller;
+        this.connectionChecker = connectionChecker;
+        this.connectionCableFactory = connectionCableFactory;
         currentDraggingConnection = new ConnectionCable();
         panel = new JPanel()
         {
@@ -80,12 +87,24 @@ public class ConectionDisplayer extends JFrame{
                 ConectionDisplayer.this.bringToBack();
             }
         });
+
+        refreshWhile();
     }
 
     private void paintCurves(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
-        currentDraggingConnection.draw(g2d);
+       if(dragging){
+           currentDraggingConnection.draw(g2d);
+       }
+        drawAllEstablishedConnections(g2d);
 
+    }
+
+    private void drawAllEstablishedConnections(Graphics2D g2d) {
+        for(TSOConnection conn: connectionChecker.getValidConnections()){
+            ConnectionCable connectionCable =  connectionCableFactory.create(conn);
+            connectionCable.draw(g2d);
+        }
     }
 
     public void draggingConnection(int xOrig, int yOrig, int xMouse, int yMouse) {
@@ -93,7 +112,6 @@ public class ConectionDisplayer extends JFrame{
         currentDraggingConnection.y1 = yOrig;
         currentDraggingConnection.x6 = xMouse;
         currentDraggingConnection.y6 = yMouse;
-        currentDraggingConnection.setShouldBePainted(true);
         panel.repaint();
         if(!onFocusZNum2){
             this.bringToBackOfAppWindows();
@@ -133,7 +151,36 @@ public class ConectionDisplayer extends JFrame{
         });
     }
 
+    public void refreshWhile(){
+        Thread myThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while(true) {
+                    java.awt.EventQueue.invokeLater(new Runnable() {
+                        @Override
+                        public void run() {
+                            ConectionDisplayer.this.repaint();
+                        }
+                    });
+                    try {
+                        Thread.sleep(40);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+        myThread.start();
+    }
+
     public void invalidateConnectionDisplayerWasAtFocusZNum2() {
         onFocusZNum2 = false;
+    }
+
+    public void setDragging(boolean dragging) {
+        this.dragging = dragging;
+        if(dragging == false) {
+            panel.repaint();
+        }
     }
 }

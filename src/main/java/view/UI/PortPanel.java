@@ -103,4 +103,8 @@ public class PortPanel extends JPanel implements DragGestureListener, DragSource
         // System.out.println("Drop action changed #2");
     }
 
+
+    public String getViewId() {
+        return id;
+    }
 }

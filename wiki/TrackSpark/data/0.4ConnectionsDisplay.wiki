@@ -2,8 +2,6 @@
 
 *DONE c:1 ports are displayed and drag adn drop connects at model level*
 
-- connectiondrawerminimizewhen not active
+*DONE c:2 connectiondrawerminimizewhen not active*
 
-- connections are verified
-
-- connections are stored and keept drawn
+- connections are verified + connections are stored and keept drawn

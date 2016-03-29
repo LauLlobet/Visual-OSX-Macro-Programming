@@ -36,6 +36,8 @@ public class ObjectsFactoryTS {
     public ObjectTS setConectionHubs(ObjectTS obj) throws Throwable{
         InputConnectionHubTS input = new InputConnectionHubTS(this.connectionChecker);
         OutputConnectionHubTS output = new OutputConnectionHubTS(this.connectionChecker);
+        input.setParentId(obj.getId());
+        output.setParentId(obj.getId());
         obj.setInputsHub(input);
         obj.setOutputsHub(output);
         return obj;
@@ -50,7 +52,6 @@ public class ObjectsFactoryTS {
         if( type.startsWith(TSOConstants.SWITCH_TSOBJID) ){
             newObj = createSwitchTS();
         }
-        newObj.setId(idGenerator.getNextId(newObj));
         newObj.registerToMvc(caller);
 
         refreshUiAfter300Ms();
@@ -60,6 +61,7 @@ public class ObjectsFactoryTS {
     private ObjectTS createSwitchTS() throws Throwable {
         ObjectTS newObj;
         newObj = new SwitchTS();
+        newObj.setId(idGenerator.getNextId(newObj));
         newObj = setConectionHubs(newObj);
         newObj.getOutputsHub().setPorts(generatePorts(Arrays.asList(
                 TSOConstants.MANY,
@@ -79,6 +81,7 @@ public class ObjectsFactoryTS {
     private ObjectTS createDelayTS() throws Throwable {
         ObjectTS newObj;
         newObj = new DelayTS();
+        newObj.setId(idGenerator.getNextId(newObj));
         newObj = setConectionHubs(newObj);
         newObj.getOutputsHub().setPorts(generatePorts(Arrays.asList(
                 TSOConstants.MANY

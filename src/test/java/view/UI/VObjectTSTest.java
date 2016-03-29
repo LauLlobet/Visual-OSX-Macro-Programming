@@ -12,6 +12,8 @@ import model.tsobject.tsobjectparts.InputConnectionHubTS;
 import model.tsobject.tsobjectparts.OutputConnectionHubTS;
 import model.tsobject.tsobjectparts.Port;
 import org.junit.Test;
+import view.UI.connections.ConectionDisplayer;
+import view.UI.connections.ConnectionCableFactory;
 import view.VObjectTS;
 
 import java.awt.*;
@@ -23,45 +25,6 @@ import java.util.*;
 public class VObjectTSTest {
 
 
-    //@Test
-    public void testSetConnections() throws Exception {
-
-        BewteenWindowsConnectionMaker bwcm = new BewteenWindowsConnectionMaker();
-        PortPanelFactory ppf = new PortPanelFactory(bwcm);
-        Caller caller = new Caller(ppf);
-        bwcm.setCaller(caller);
-
-        VObjectTS obj = new VObjectTS("hola",caller,ppf);
-        obj.setX(100);
-        obj.setY(100);
-
-        String inputHubString = "{\"inputsHub\" : {\n" +
-                "    \"type\" : \"IDTSObjectInputConnectionHub\",\n" +
-                "    \"ports\" : [ {\n" +
-                "      \"messageType\" : \"MANY\",\n" +
-                "      \"buffer\" : [ ]\n" +
-                "    }, {\n" +
-                "      \"messageType\" : \"MINT\",\n" +
-                "      \"buffer\" : [ ]\n" +
-                "    } ],\n" +
-                "    \"type\" : \"IDTSObjectInputConnectionHub\"\n" +
-                "  } }";
-
-        String outputHubString = "{  \"outputsHub\" : {\n" +
-                "    \"type\" : \"IDTSObjectOutputConnectionHub\",\n" +
-                "    \"ports\" : [ {\n" +
-                "      \"messageType\" : \"MANY\",\n" +
-                "      \"buffer\" : [ ]\n" +
-                "    } ],\n" +
-                "    \"type\" : \"IDTSObjectOutputConnectionHub\",\n" +
-                "    \"connectedToList\" : [ ]\n" +
-                "  } }";
-
-        obj.setInputsHub(inputHubString);
-        obj.setOutputsHub(outputHubString);
-
-        Thread.sleep(10000);
-    }
 
 
 
@@ -82,12 +45,14 @@ public class VObjectTSTest {
     public void testSetConnectionFromMouseEvents() throws Throwable {
 
         BewteenWindowsConnectionMaker bwcm = new BewteenWindowsConnectionMaker();
-        PortPanelFactory ppf = new PortPanelFactory(bwcm);
-        Caller c = new Caller(ppf);
-        bwcm.setCaller(c);
-        IdGenerator idg = new IdGenerator("testing");
+        ConnectionCableFactory connectionCableFactory = new ConnectionCableFactory();
+        PortPanelFactory ppf = new PortPanelFactory(bwcm,connectionCableFactory);
         ConnectionsChecker cc = new ConnectionsChecker();
-        ObjectsFactoryTS of = new ObjectsFactoryTS(cc,idg,c);
+        Caller caller = new Caller(ppf);
+        ConectionDisplayer connectionDisplayer = new ConectionDisplayer(caller,cc, connectionCableFactory);
+        bwcm.setCaller(caller,connectionDisplayer);
+        IdGenerator idg = new IdGenerator("testing");
+        ObjectsFactoryTS of = new ObjectsFactoryTS(cc,idg,caller);
 
         ObjectTS ob = of.build(TSOConstants.DELAY_TSOBJID);
         ObjectTS ob2 = of.build(TSOConstants.DELAY_TSOBJID);

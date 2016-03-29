@@ -15,6 +15,11 @@ public class OutputConnectionHubTS extends ConnectionHubTS {
         type = TSOConstants.IDTSObjectOutputConnectionHub;
         connectedToList = new ArrayList<TSOConnection>();
     }
+
+    public void setParentId(String id){
+        super.setParentId("[o]"+id);
+    }
+
     public void connectTo(TSOConnection newConn) throws  Throwable{
         this.connectionsChecker.ifAreConnectionPossibleRegisterThemElseThrow(newConn);
         this.connectedToList.add(newConn);

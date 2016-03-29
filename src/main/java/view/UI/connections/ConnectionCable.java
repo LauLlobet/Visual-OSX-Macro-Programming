@@ -30,21 +30,19 @@ public class ConnectionCable {
     double proportionSet = 0.3;
     double proportionRoof = 0.2;
     
-    public void setShouldBePainted(boolean shouldBePainted) {
-        this.shouldBePainted = shouldBePainted;
-    }
-
-    boolean shouldBePainted = false;
 
     public void draw(Graphics2D g2d) {
         g2d.setRenderingHint(
                 RenderingHints.KEY_ANTIALIASING,
                 RenderingHints.VALUE_ANTIALIAS_ON);
-        g2d.setColor(Color.red);
-        g2d.setStroke(new BasicStroke(8));
+        g2d.setColor(new Color(60, 120,40,180));
+        g2d.setStroke(new BasicStroke(6));
+
+
+
         path.reset();
 
-        float skew = (int)((x4 - x1) * proportionSet);
+        float skew = (int)((x6 - x1) * proportionSet);
         float miniskew = (int)(skew * proportionRoof);
 
         x2 = x1 + miniskew;
@@ -59,9 +57,7 @@ public class ConnectionCable {
 
         x5 = x6 - miniskew;
         y5 = y4;
-
-
-
+        
         float cx1a = x1 + (x2 - x1) / overtureFactor;
         float cy1a = y1 + (y2 - y1) / overtureFactor;
 
@@ -89,13 +85,12 @@ public class ConnectionCable {
         float cy5b = y6 - (y6 - y5) / overtureFactor;
 
 
-        Path2D.Double path1 = new Path2D.Double();
-        path1.moveTo(x1, y1);
-        path1.curveTo(cx1a, cy1a, cx1b, cy1b, x2, y2);
-        path1.curveTo(cx2a, cy2a, cx2b, cy2b, x3, y3);
-        path1.curveTo(cx3a, cy3a, cx3b, cy3b, x4, y4);
-        path1.curveTo(cx4a, cy4a, cx4b, cy4b, x5, y5);
-        path1.curveTo(cx5a, cy5a, cx5b, cy5b, x6, y6);
-        g2d.draw(path1);
+        path.moveTo(x1, y1);
+        path.curveTo(cx1a, cy1a, cx1b, cy1b, x2, y2);
+        path.curveTo(cx2a, cy2a, cx2b, cy2b, x3, y3);
+        path.curveTo(cx3a, cy3a, cx3b, cy3b, x4, y4);
+        path.curveTo(cx4a, cy4a, cx4b, cy4b, x5, y5);
+        path.curveTo(cx5a, cy5a, cx5b, cy5b, x6, y6);
+        g2d.draw(path);
     }
 }

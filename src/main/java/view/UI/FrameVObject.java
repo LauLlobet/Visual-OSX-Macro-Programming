@@ -1,7 +1,6 @@
 package view.UI;
 
 import Constants.TSOConstants;
-import view.VObjectTS;
 
 import javax.swing.*;
 import java.awt.*;
@@ -59,12 +58,12 @@ public class FrameVObject extends JFrame {
     }
 
     public void createInputPanelPort(String type,int numPort){
-        JPanel p = this.portPanelFactory.create(type, "i["+numPort+"]"+this.id,this);
+        JPanel p = this.portPanelFactory.create(type,"i", this.id, numPort,this);
         addPanelToObjectAndRevalidate( this.header,p);
     }
 
     public void createOutputPanelPort(String type, int numPort){
-        JPanel p = this.portPanelFactory.create(type, "o["+numPort+"]"+this.id,this);
+        JPanel p = this.portPanelFactory.create(type,"o", this.id, numPort, this);
         addPanelToObjectAndRevalidate( this.footer,p);
     }
 

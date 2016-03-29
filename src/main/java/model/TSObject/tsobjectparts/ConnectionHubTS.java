@@ -23,10 +23,10 @@ public abstract class ConnectionHubTS {
     protected ArrayList<Port> ports;
     protected ConnectionsChecker connectionsChecker;
     public String type;
+    public String parentId;
 
     public ConnectionHubTS(@JacksonInject("cc") final ConnectionsChecker connectionsChecker) throws Throwable {
         this.connectionsChecker = connectionsChecker;
-        this.connectionsChecker.registerConnectionHub(this);
         ports = new ArrayList<Port>();
     }
 
@@ -45,6 +45,15 @@ public abstract class ConnectionHubTS {
 
     public void disconnectAll(){
 
+    }
+
+    public void setParentId(String id){
+        parentId = id;
+        connectionsChecker.registerConnectionHub(id,this);
+    }
+
+    public String getId(){
+        return parentId;
     }
 
     public Object toJSON() {
