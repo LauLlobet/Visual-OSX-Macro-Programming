@@ -35,7 +35,7 @@ public class FrameVObject extends JFrame {
 
         this.setBackground(new Color(200,255,200,40));
 
-        this.setLayout(new BorderLayout());
+        this.getContentPane().setLayout(new BorderLayout());
 
         this.setPreferredSize(new Dimension(100, 161));
 
@@ -49,8 +49,8 @@ public class FrameVObject extends JFrame {
         footer.setBackground(new Color(200,200,200));
         footer.setLayout(new BoxLayout(footer,  BoxLayout.X_AXIS));
 
-        this.add(this.header, BorderLayout.PAGE_START);
-        this.add(footer, BorderLayout.PAGE_END);
+        this.getContentPane().add(this.header, BorderLayout.PAGE_START);
+        this.getContentPane().add(footer, BorderLayout.PAGE_END);
 
 
 
