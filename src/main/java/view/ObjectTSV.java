@@ -3,16 +3,20 @@ package view;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import logic.Caller;
+import model.tsobject.ObjectTS;
 import view.UI.FrameVObject;
 import view.UI.PortPanelFactory;
 
+import java.awt.*;
 import java.io.IOException;
+import java.util.Collection;
 import java.util.Iterator;
+import java.util.concurrent.RunnableFuture;
 
 /**
  * Created by quest on 17/3/16.
  */
-public class VObjectTS extends FrameVObject {
+public class ObjectTSV extends FrameVObject {
 
     public Caller modelCaller;
 
@@ -20,8 +24,9 @@ public class VObjectTS extends FrameVObject {
     private int y;
     private int w;
     private int h;
+    private Boolean toBack;
 
-    public VObjectTS(String id, Caller mc, PortPanelFactory portPanelFactory) {
+    public ObjectTSV(String id, Caller mc, PortPanelFactory portPanelFactory) {
         super(id,1,1,1,1, portPanelFactory);
         this.modelCaller = mc;
         this.setVisible(true);
@@ -55,7 +60,6 @@ public class VObjectTS extends FrameVObject {
         }
         w = nw;
         if (nw != this.getSize().getWidth())  {
-            System.out.println("settingW:"+nw+" "+h);
             super.setSize(nw,h);
         }
 
@@ -68,7 +72,6 @@ public class VObjectTS extends FrameVObject {
         }
         h = nh;
         if (nh != this.getSize().getHeight())  {
-            System.out.println("settingH:"+w+" "+nh);
             super.setSize(w,nh);
         }
     }
@@ -99,6 +102,19 @@ public class VObjectTS extends FrameVObject {
         }
     }
 
+
+    public void setToBack(Boolean ntoBack) {
+        if(ntoBack != toBack && modelCaller != null) {
+            toBack = ntoBack;
+            modelCaller.shynchronizeMVCModel(getId(), toBack, null);  // set model
+        }
+    }
+
+
+
+    public Boolean getToBack() {
+        return this.toBack;
+    }
 
     public int getY() {
         return (int)this.getLocation().getY();

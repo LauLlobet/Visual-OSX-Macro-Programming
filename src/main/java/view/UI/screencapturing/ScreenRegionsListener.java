@@ -1,4 +1,4 @@
-package view.UI;
+package view.UI.screencapturing;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;

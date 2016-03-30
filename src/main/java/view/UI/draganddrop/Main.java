@@ -44,6 +44,8 @@ public class Main extends JFrame implements ActionListener, DropTargetListener {
 
         new DropTarget(target, DnDConstants.ACTION_COPY_OR_MOVE, this);
 
+
+        setUndecorated(true);
         setSize(205, 100);
 
         setVisible(true);

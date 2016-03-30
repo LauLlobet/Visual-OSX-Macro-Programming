@@ -3,18 +3,10 @@ package view.UI;
 import Constants.TSOConstants;
 import logic.*;
 import model.ObjectsFactoryTS;
-import model.SwitchTS;
 import model.tsobject.ObjectTS;
-import model.tsobject.tsobjectparts.InputConnectionHubTS;
-import model.tsobject.tsobjectparts.OutputConnectionHubTS;
-import model.tsobject.tsobjectparts.Port;
 import org.junit.Test;
 import view.UI.connections.ConectionDisplayer;
 import view.UI.connections.ConnectionCableFactory;
-import view.VObjectTS;
-
-import java.awt.*;
-import java.util.*;
 
 /**
  * Created by quest on 15/3/16.
@@ -52,7 +44,9 @@ public class VObjectTSTest {
         ObjectsFactoryTS of = new ObjectsFactoryTS(cc,idg,caller);
 
         ObjectTS ob = of.build(TSOConstants.REPETITIVECOUNTDOWN_TSOBJID);
-        ObjectTS ob2 = of.build(TSOConstants.SCREENPRINTER_TSOBJID);
+        //ObjectTS ob2 = of.build(TSOConstants.SCREENPRINTER_TSOBJID);
+        ObjectTS ob2 = of.build(TSOConstants.CLICKER_TSOBJID);
+
         ob2.setX(500);
 
         LogicTicCaller lc = new LogicTicCaller(caller);

@@ -1,4 +1,4 @@
-package view.UI;
+package view.UI.resizeandmove;
 
 import java.awt.*;
 import java.awt.event.*;

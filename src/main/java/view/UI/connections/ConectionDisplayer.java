@@ -1,18 +1,15 @@
 package view.UI.connections;
 
 import com.sun.awt.AWTUtilities;
-import com.sun.corba.se.pept.transport.Connection;
 import logic.Caller;
 import logic.ConnectionsChecker;
 import model.tsobject.tsobjectparts.TSOConnection;
-import view.VObjectTS;
+import view.ObjectTSV;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.geom.Path2D;
-import java.util.ArrayList;
 import java.util.Collection;
 
 /**
@@ -44,6 +41,7 @@ public class ConectionDisplayer extends JFrame{
         this.connectionChecker = connectionChecker;
         this.connectionCableFactory = connectionCableFactory;
         currentDraggingConnection = new ConnectionCable();
+        this.setAlwaysOnTop( true );
         panel = new JPanel()
         {
             protected void paintComponent ( Graphics g )
@@ -130,8 +128,8 @@ public class ConectionDisplayer extends JFrame{
                 ConectionDisplayer.this.toFront();
                 ConectionDisplayer.this.repaint();
                 Window w = KeyboardFocusManager.getCurrentKeyboardFocusManager().getFocusedWindow();
-                Collection<VObjectTS> list = caller.getViewsInArray();
-                for(VObjectTS windows : list){
+                Collection<ObjectTSV> list = caller.getViewsInArray();
+                for(ObjectTSV windows : list){
                     windows.toFront();
                     windows.repaint();
                 }

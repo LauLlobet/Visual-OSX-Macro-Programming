@@ -1,21 +1,16 @@
-package view.UI;
+package view.UI.screencapturing;
 
 import Constants.TSOConstants;
-import view.VObjectTS;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
 
 /**
  * Created by quest on 21/3/16.
  */
-class ScreenCapturer implements Runnable {
+public class ScreenCapturer implements Runnable {
     private Robot robot;
     BufferedImage image;
     ArrayList<ListenerAndPanel> listeners;

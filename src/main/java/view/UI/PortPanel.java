@@ -27,6 +27,8 @@ public class PortPanel extends JPanel implements DragGestureListener, DragSource
         ds.createDefaultDragGestureRecognizer(this, action, this);
         new DropTarget(this, DnDConstants.ACTION_COPY_OR_MOVE, this);
 
+        System.out.println("port instantiated");
+
     }
 
     public void dragEnter(DropTargetDragEvent e) {

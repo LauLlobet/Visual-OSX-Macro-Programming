@@ -31,19 +31,20 @@ import java.util.List;
 @JsonPropertyOrder({ "id"})
 public class ObjectTS {
 
-    private int x;
-    private int y;
-    private int w;
-    private int h;
+    protected int x;
+    protected int y;
+    protected int w;
+    protected int h;
     public String type;
-    boolean registeredInMvc = false;
+    protected boolean registeredInMvc = false;
 
     private String id;
     private InputConnectionHubTS inputsHub;
     private OutputConnectionHubTS outputsHub;
     private IdGenerator idgen;
 
-    private Caller caller;
+    protected Caller caller;
+    private Boolean toBack = false;
 
     public ObjectTS(){
         //this.caller = caller;
@@ -70,11 +71,14 @@ public class ObjectTS {
     }
 
     private  void registerAllFields() throws Exception{
-        for(PropertyDescriptor propertyDescriptor : Introspector.getBeanInfo(this.getClass(),new Object().getClass(),Introspector.USE_ALL_BEANINFO).getPropertyDescriptors()){
+        for(PropertyDescriptor propertyDescriptor : Introspector.getBeanInfo(this.getClass()).getPropertyDescriptors()){
            try{
                propertyDescriptor.getWriteMethod().invoke(this,propertyDescriptor.getReadMethod().invoke(this));
            }catch( Exception e){
-               System.out.println("oletuu");
+               if(!propertyDescriptor.getReadMethod().getName().startsWith("getClass")) {
+                   e.printStackTrace();
+                   System.out.println("oletuu");
+               }
            }
         }
     }
@@ -109,28 +113,33 @@ public class ObjectTS {
 
 
     public void setX(int x) {
-        int old = getX();
         this.x = x;
         if(registeredInMvc){caller.shyncronizeMVCView(getId(),x,null);}
     }
     public void setY(int y)
     {
-        int old = getY();
         this.y = y;
         if(registeredInMvc){caller.shyncronizeMVCView(getId(),y,null);}
     }
     public void setW(int w) {
-        int old = getW();
         this.w = w;
         if(registeredInMvc){caller.shyncronizeMVCView(getId(),w,null);}
     }
 
     public void setH(int h) {
-        int old = getH();
         this.h = h;
         if(registeredInMvc){caller.shyncronizeMVCView(getId(),h,null);};
     }
-    
+
+    public void setToBack(Boolean toBack) {
+        this.toBack = toBack;
+        if(registeredInMvc){caller.shyncronizeMVCView(getId(),toBack,null);};
+    }
+
+    public Boolean getToBack() {
+        return this.toBack;
+    }
+
 
     public String getId() {
         return id;
@@ -178,4 +187,6 @@ public class ObjectTS {
         }
         return ports;
     }
+
+
 }

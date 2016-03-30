@@ -8,6 +8,9 @@ import model.ObjectsFactoryTS;
 import org.junit.Test;
 import view.UI.connections.ConectionDisplayer;
 import view.UI.connections.ConnectionCableFactory;
+import view.UI.screencapturing.ScreenCapturer;
+import view.UI.screencapturing.ScreenCapturingPanel;
+import view.UI.screencapturing.ScreenRegionsListener;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,16 +1,6 @@
 package model;
 
-import Constants.TSOConstants;
-import logic.Caller;
-import logic.ConnectionsChecker;
-import logic.IdGenerator;
-import model.tsobject.ObjectTS;
 import org.junit.Test;
-import view.VObjectTS;
-
-import java.awt.*;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by quest on 18/3/16.

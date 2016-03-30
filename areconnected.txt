@@ -1,5 +1,33 @@
 [ {
-  "id" : "testing.model.RepetitiveCountdownTS.1.20160329175915155",
+  "id" : "testing.model.ClickerTS.2.20160330141248149",
+  "x" : 500,
+  "y" : 400,
+  "w" : 100,
+  "h" : 161,
+  "type" : "CLICKER_TSOBJID",
+  "inputsHub" : {
+    "type" : "IDTSObjectInputConnectionHub",
+    "ports" : [ {
+      "messageType" : "MBANG",
+      "buffer" : [ ]
+    } ],
+    "type" : "IDTSObjectInputConnectionHub",
+    "parentId" : "[i]testing.model.ClickerTS.2.20160330141248149",
+    "id" : "[i]testing.model.ClickerTS.2.20160330141248149"
+  },
+  "outputsHub" : {
+    "type" : "IDTSObjectOutputConnectionHub",
+    "ports" : [ ],
+    "type" : "IDTSObjectOutputConnectionHub",
+    "parentId" : "[o]testing.model.ClickerTS.2.20160330141248149",
+    "connectedToList" : [ ],
+    "id" : "[o]testing.model.ClickerTS.2.20160330141248149"
+  },
+  "toBack" : false,
+  "clickRelPositionX" : 50,
+  "clickRelPositionY" : 50
+}, {
+  "id" : "testing.model.RepetitiveCountdownTS.1.20160330141247000",
   "x" : 800,
   "y" : 300,
   "w" : 90,
@@ -12,50 +40,19 @@
       "buffer" : [ ]
     } ],
     "type" : "IDTSObjectInputConnectionHub",
-    "parentId" : "[i]testing.model.RepetitiveCountdownTS.1.20160329175915155",
-    "id" : "[i]testing.model.RepetitiveCountdownTS.1.20160329175915155"
+    "parentId" : "[i]testing.model.RepetitiveCountdownTS.1.20160330141247000",
+    "id" : "[i]testing.model.RepetitiveCountdownTS.1.20160330141247000"
   },
   "outputsHub" : {
     "type" : "IDTSObjectOutputConnectionHub",
     "ports" : [ {
       "messageType" : "MBANG",
-      "buffer" : [ ]
+      "buffer" : [ "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang" ]
     } ],
     "type" : "IDTSObjectOutputConnectionHub",
-    "parentId" : "[o]testing.model.RepetitiveCountdownTS.1.20160329175915155",
-    "connectedToList" : [ {
-      "originId" : "testing.model.RepetitiveCountdownTS.1.20160329175915155",
-      "outPort" : 0,
-      "destinyId" : "testing.model.ScreenPrinterTS.2.20160329175916691",
-      "inPort" : 0,
-      "portNum" : 10
-    } ],
-    "id" : "[o]testing.model.RepetitiveCountdownTS.1.20160329175915155"
-  }
-}, {
-  "id" : "testing.model.ScreenPrinterTS.2.20160329175916691",
-  "x" : 500,
-  "y" : 400,
-  "w" : 120,
-  "h" : 60,
-  "type" : "SCREENPRINTER_TSOBJID",
-  "inputsHub" : {
-    "type" : "IDTSObjectInputConnectionHub",
-    "ports" : [ {
-      "messageType" : "MANY",
-      "buffer" : [ ]
-    } ],
-    "type" : "IDTSObjectInputConnectionHub",
-    "parentId" : "[i]testing.model.ScreenPrinterTS.2.20160329175916691",
-    "id" : "[i]testing.model.ScreenPrinterTS.2.20160329175916691"
-  },
-  "outputsHub" : {
-    "type" : "IDTSObjectOutputConnectionHub",
-    "ports" : [ ],
-    "type" : "IDTSObjectOutputConnectionHub",
-    "parentId" : "[o]testing.model.ScreenPrinterTS.2.20160329175916691",
+    "parentId" : "[o]testing.model.RepetitiveCountdownTS.1.20160330141247000",
     "connectedToList" : [ ],
-    "id" : "[o]testing.model.ScreenPrinterTS.2.20160329175916691"
+    "id" : "[o]testing.model.RepetitiveCountdownTS.1.20160330141247000"
   },
-  "printValue" : "bang"
+  "toBack" : false
 } ]

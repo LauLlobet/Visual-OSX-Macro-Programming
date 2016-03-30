@@ -47,17 +47,17 @@ public class PortPanelFactory {
 
     private PortPanel doSetMBANG(PortPanel panel) {
 
-        panel.setBackground(new Color(255,0,0,50));
+        panel.setBackground(new Color(255,0,0));
         return panel;
     }
 
     private PortPanel doSetMANY(PortPanel panel) {
-        panel.setBackground(new Color(255,255,0,50));
+        panel.setBackground(new Color(255,255,0));
         return panel;
     }
 
     private PortPanel doSetMINT(PortPanel panel) {
-        panel.setBackground(new Color(0,0,255,50));
+        panel.setBackground(new Color(0,0,255));
         return panel;
     }
 
@@ -65,7 +65,7 @@ public class PortPanelFactory {
         PortPanel panel = new PortPanel(this.bwcm,id);
         panel.setSize(new Dimension(20,20));
         panel.setMaximumSize(panel.getSize());
-        panel.setBackground(new Color(0,0,0,255));
+        panel.setBackground(new Color(0,0,0));
         return panel;
     }
 

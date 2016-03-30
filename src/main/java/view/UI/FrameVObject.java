@@ -1,6 +1,8 @@
 package view.UI;
 
 import Constants.TSOConstants;
+import view.UI.resizeandmove.ComponentMover;
+import view.UI.resizeandmove.ComponentResizer;
 
 import javax.swing.*;
 import java.awt.*;
@@ -27,6 +29,9 @@ public class FrameVObject extends JFrame {
         point = new Point(w/2,h/2);
         this.setBounds(x,y,w,h);
         this.setUndecorated(true);
+        this.setAlwaysOnTop( true );
+
+        getRootPane().putClientProperty("apple.awt.draggableWindowBackground", Boolean.FALSE);
 
         this.setBackground(new Color(200,255,200,40));
 
@@ -36,12 +41,12 @@ public class FrameVObject extends JFrame {
 
         this.header = new JPanel();
         this.header.setPreferredSize(new Dimension(100, 20));
-        this.header.setBackground(new Color(200,200,200,155));
+        this.header.setBackground(new Color(200,200,200));
         this.header.setLayout(new BoxLayout(this.header, BoxLayout.X_AXIS));
 
         footer = new JPanel();
         footer.setPreferredSize(new Dimension(100, 20));
-        footer.setBackground(new Color(200,200,200,155));
+        footer.setBackground(new Color(200,200,200));
         footer.setLayout(new BoxLayout(footer,  BoxLayout.X_AXIS));
 
         this.add(this.header, BorderLayout.PAGE_START);
@@ -92,7 +97,6 @@ public class FrameVObject extends JFrame {
 
     @Override
     public void setSize(int w, int h){
-        System.out.println("Setting super size:"+w+"."+h);
         super.setSize(w,h);
     }
 

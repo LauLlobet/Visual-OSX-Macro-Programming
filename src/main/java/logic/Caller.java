@@ -2,7 +2,7 @@ package logic;
 
 import model.tsobject.ObjectTS;
 import view.UI.PortPanelFactory;
-import view.VObjectTS;
+import view.ObjectTSV;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -15,20 +15,36 @@ import java.util.Hashtable;
 public class Caller {
 
     Hashtable<String,ObjectTS> modelHash;
-    Hashtable<String, VObjectTS> viewHash;
+    Hashtable<String, ObjectTSV> viewHash;
     PortPanelFactory portPanelFactory;
 
     public Caller(PortPanelFactory portPanelFactory) {
         modelHash = new Hashtable<String, ObjectTS>();
-        viewHash = new Hashtable<String, VObjectTS>();
+        viewHash = new Hashtable<String, ObjectTSV>();
         this.portPanelFactory = portPanelFactory;
     }
 
     public void registerModelObject(ObjectTS model){
         modelHash.put(model.getId(),model);
-        viewHash.put(model.getId(),new VObjectTS(model.getId(),this, this.portPanelFactory));
+        viewHash.put(model.getId(),createViewFromModel(model));
     }
-    public void registerViewObject(VObjectTS view){
+
+    private ObjectTSV createViewFromModel(ObjectTS model) {
+        try {
+            return makeVObjectTs(model.getClass().getName(),model);
+        } catch (Exception e) {
+            System.out.println("Could not instance class:"+model.getClass().getName()+"V");
+            return new ObjectTSV(model.getId(),this, this.portPanelFactory);
+        }
+    }
+
+    public ObjectTSV makeVObjectTs(String classname, ObjectTS model) throws Exception{
+        Class c = Class.forName(classname.replace("model","view")+"V");
+        ObjectTSV product = (ObjectTSV)c.getDeclaredConstructor(String.class,Caller.class,PortPanelFactory.class).newInstance(model.getId(),this, this.portPanelFactory);
+        return product;
+    }
+
+    public void registerViewObject(ObjectTSV view){
         viewHash.put(view.getId(),view);
     }
 
@@ -52,7 +68,7 @@ public class Caller {
             System.out.println("stoping loop trying to update view");
             return;
         }
-        VObjectTS obj = viewHash.get(id);
+        ObjectTSV obj = viewHash.get(id);
         callFunction(obj,x);
     }
 
@@ -81,7 +97,7 @@ public class Caller {
 
     public void removeTSObject(ObjectTS objectTS) {
         modelHash.remove(objectTS.getId());
-        VObjectTS removed = viewHash.remove(objectTS.getId());
+        ObjectTSV removed = viewHash.remove(objectTS.getId());
         removed.dispose();
     }
 
@@ -89,7 +105,7 @@ public class Caller {
         return modelHash.size();
     }
 
-    public VObjectTS getView(String id) {
+    public ObjectTSV getView(String id) {
         return viewHash.get(id);
     }
 
@@ -97,11 +113,11 @@ public class Caller {
         return modelHash.get(id);
     }
 
-    public Collection<VObjectTS> getViews() {
+    public Collection<ObjectTSV> getViews() {
         return viewHash.values();
     }
 
-    public Collection<VObjectTS> getViewsInArray() {
+    public Collection<ObjectTSV> getViewsInArray() {
         return viewHash.values();
     }
 }
