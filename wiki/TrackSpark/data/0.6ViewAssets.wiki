@@ -2,7 +2,9 @@
 
 *DONE c:1 clicker sense cofigurable + conectar metro a clicker per veure que funciona*
 
-- fer editor de posicio de click i conectarho amb view
+*DONE c:2 fer editor de posicio de click i conectarho amb view*
+
+- detector de moviment
 
 - fer delay
 

@@ -1,6 +1,9 @@
 package view.UI.screencapturing;
 
 import Constants.TSOConstants;
+import logic.Caller;
+import model.tsobject.ObjectTS;
+import view.ObjectTSV;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,6 +17,7 @@ public class ScreenCapturer implements Runnable {
     private Robot robot;
     BufferedImage image;
     ArrayList<ListenerAndPanel> listeners;
+
 
     public class ListenerAndPanel {
         public JPanel panel;

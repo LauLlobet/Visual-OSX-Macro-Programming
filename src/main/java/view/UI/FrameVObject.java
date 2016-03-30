@@ -7,7 +7,8 @@ import view.UI.resizeandmove.ComponentResizer;
 import javax.swing.*;
 import java.awt.*;
 
-public class FrameVObject extends JFrame {
+
+public class FrameVObject extends javax.swing.JFrame {
 
     public Point lastLocation;
     public Point point;

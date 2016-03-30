@@ -1,38 +1,10 @@
 [ {
-  "id" : "testing.model.ClickerTS.2.20160330141248149",
-  "x" : 500,
-  "y" : 400,
+  "id" : "testing.model.MovementDetectorTS.1.20160330182320286",
+  "x" : 730,
+  "y" : 80,
   "w" : 100,
   "h" : 161,
-  "type" : "CLICKER_TSOBJID",
-  "inputsHub" : {
-    "type" : "IDTSObjectInputConnectionHub",
-    "ports" : [ {
-      "messageType" : "MBANG",
-      "buffer" : [ ]
-    } ],
-    "type" : "IDTSObjectInputConnectionHub",
-    "parentId" : "[i]testing.model.ClickerTS.2.20160330141248149",
-    "id" : "[i]testing.model.ClickerTS.2.20160330141248149"
-  },
-  "outputsHub" : {
-    "type" : "IDTSObjectOutputConnectionHub",
-    "ports" : [ ],
-    "type" : "IDTSObjectOutputConnectionHub",
-    "parentId" : "[o]testing.model.ClickerTS.2.20160330141248149",
-    "connectedToList" : [ ],
-    "id" : "[o]testing.model.ClickerTS.2.20160330141248149"
-  },
-  "toBack" : false,
-  "clickRelPositionX" : 50,
-  "clickRelPositionY" : 50
-}, {
-  "id" : "testing.model.RepetitiveCountdownTS.1.20160330141247000",
-  "x" : 800,
-  "y" : 300,
-  "w" : 90,
-  "h" : 50,
-  "type" : "REPETITIVECOUNTDOWN_TSOBJID",
+  "type" : "MOVEMENT_DETECTOR_TSOBJID",
   "inputsHub" : {
     "type" : "IDTSObjectInputConnectionHub",
     "ports" : [ {
@@ -40,19 +12,20 @@
       "buffer" : [ ]
     } ],
     "type" : "IDTSObjectInputConnectionHub",
-    "parentId" : "[i]testing.model.RepetitiveCountdownTS.1.20160330141247000",
-    "id" : "[i]testing.model.RepetitiveCountdownTS.1.20160330141247000"
+    "parentId" : "[i]testing.model.MovementDetectorTS.1.20160330182320286",
+    "id" : "[i]testing.model.MovementDetectorTS.1.20160330182320286"
   },
   "outputsHub" : {
     "type" : "IDTSObjectOutputConnectionHub",
     "ports" : [ {
       "messageType" : "MBANG",
-      "buffer" : [ "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang" ]
+      "buffer" : [ "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang" ]
     } ],
     "type" : "IDTSObjectOutputConnectionHub",
-    "parentId" : "[o]testing.model.RepetitiveCountdownTS.1.20160330141247000",
+    "parentId" : "[o]testing.model.MovementDetectorTS.1.20160330182320286",
     "connectedToList" : [ ],
-    "id" : "[o]testing.model.RepetitiveCountdownTS.1.20160330141247000"
+    "id" : "[o]testing.model.MovementDetectorTS.1.20160330182320286"
   },
-  "toBack" : false
+  "toBack" : false,
+  "tolerance" : 100
 } ]
