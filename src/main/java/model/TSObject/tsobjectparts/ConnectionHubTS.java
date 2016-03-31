@@ -24,6 +24,7 @@ public abstract class ConnectionHubTS {
     protected ConnectionsChecker connectionsChecker;
     public String type;
     public String parentId;
+    private ArrayList<Double> activePorts;
 
     public ConnectionHubTS(@JacksonInject("cc") final ConnectionsChecker connectionsChecker) throws Throwable {
         this.connectionsChecker = connectionsChecker;
@@ -65,4 +66,5 @@ public abstract class ConnectionHubTS {
             return "{}";
         }
     }
+
 }

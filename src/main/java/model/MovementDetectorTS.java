@@ -9,11 +9,8 @@ import view.UI.screencapturing.ScreenRegionsListener;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.InputEvent;
 import java.awt.image.BufferedImage;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
 
 
 public class MovementDetectorTS extends ObjectTS implements ScreenRegionsListener {
@@ -26,19 +23,16 @@ public class MovementDetectorTS extends ObjectTS implements ScreenRegionsListene
     public MovementDetectorTS() {
         super();
         type = TSOConstants.MOVEMENT_DETECTOR_TSOBJID;
-        debouncer = new BangDebouncer(1500,0,this);
     }
 
     @Override
     public void processTic(){
-        if(this.movementIndex > tolerance*1000){
-            bang();
+        try {
+            this.getOutputsHub().getPorts().get(0).postMessage(""+movementIndex);
+        }catch(Throwable e) {
+            System.out.println("rep countdown not connected");
         }
-
-    }
-
-    public void bang(){
-        debouncer.bang();
+        super.processTic();
     }
 
 
@@ -48,10 +42,10 @@ public class MovementDetectorTS extends ObjectTS implements ScreenRegionsListene
         newObj.setId(idGenerator.getNextId(newObj));
         newObj = setConectionHubs(newObj, connectionChecker);
 
-        newObj.getOutputsHub().setPorts(generatePorts(Arrays.asList(
-                TSOConstants.MBANG
-        )));
-        newObj.getInputsHub().setPorts(generatePorts(Arrays.asList(
+        newObj.getOutputsHub().setPorts(generateOutputPorts(Arrays.asList(
+                TSOConstants.MINT
+        ),newObj));
+        newObj.getInputsHub().setPorts(generateInputPorts(Arrays.asList(
                 TSOConstants.MINT
         )));
         newObj.setW(100);
@@ -93,7 +87,7 @@ public class MovementDetectorTS extends ObjectTS implements ScreenRegionsListene
         } else {
             return -1;
         }
-        return acumulatedDiference;
+        return acumulatedDiference*1000/(img1.getWidth()*img1.getHeight());
     }
 
     @Override

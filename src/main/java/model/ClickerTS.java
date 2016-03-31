@@ -34,6 +34,7 @@ public class ClickerTS extends ObjectTS {
         } catch (Throwable throwable) {
             throwable.printStackTrace();
         }
+        super.processTic();
     }
 
     private void doClick() {
@@ -54,8 +55,8 @@ public class ClickerTS extends ObjectTS {
         newObj.setId(idGenerator.getNextId(newObj));
         newObj = setConectionHubs(newObj, connectionChecker);
 
-        newObj.getOutputsHub().setPorts(generatePorts(new ArrayList()));
-        newObj.getInputsHub().setPorts(generatePorts(Arrays.asList(
+        newObj.getOutputsHub().setPorts(generateOutputPorts(new ArrayList(),newObj));
+        newObj.getInputsHub().setPorts(generateInputPorts(Arrays.asList(
                 TSOConstants.MBANG
         )));
         newObj.setW(100);

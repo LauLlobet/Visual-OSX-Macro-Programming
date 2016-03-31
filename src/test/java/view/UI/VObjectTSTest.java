@@ -45,11 +45,11 @@ public class VObjectTSTest {
         IdGenerator idg = new IdGenerator("testing");
         ObjectsFactoryTS of = new ObjectsFactoryTS(cc,idg,caller);
 
-        //ObjectTS ob = of.build(TSOConstants.REPETITIVECOUNTDOWN_TSOBJID);
+        ObjectTS ob = of.build(TSOConstants.REPETITIVECOUNTDOWN_TSOBJID);
         //ObjectTS ob2 = of.build(TSOConstants.SCREENPRINTER_TSOBJID);
-        ObjectTS ob2 = of.build(TSOConstants.CLICKER_TSOBJID);
+        //ObjectTS ob2 = of.build(TSOConstants.CLICKER_TSOBJID);
 
-        ObjectTS ob3 = of.build(TSOConstants.MOVEMENT_DETECTOR_TSOBJID);
+        //ObjectTS ob3 = of.build(TSOConstants.MOVEMENT_DETECTOR_TSOBJID);
 
         //ob2.setX(500);
 
@@ -57,7 +57,7 @@ public class VObjectTSTest {
         ScreenCapturer screenCapturer = new ScreenCapturer();
         Thread capturerThread = new Thread(screenCapturer);
         capturerThread.start();
-        ((MovementDetectorTS)ob3).registerToCapturer(screenCapturer);
+        //((MovementDetectorTS)ob3).registerToCapturer(screenCapturer);
 
 
         LogicTicCaller lc = new LogicTicCaller(caller);

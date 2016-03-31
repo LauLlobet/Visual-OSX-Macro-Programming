@@ -29,7 +29,7 @@ public class RepetitiveCountdownTS extends ObjectTS {
             lastBang = System.currentTimeMillis();
             bang();
         }
-
+        super.processTic();
     }
 
     public void bang(){
@@ -47,10 +47,10 @@ public class RepetitiveCountdownTS extends ObjectTS {
         newObj.setId(idGenerator.getNextId(newObj));
         newObj = setConectionHubs(newObj, connectionChecker);
 
-        newObj.getOutputsHub().setPorts(generatePorts(Arrays.asList(
+        newObj.getOutputsHub().setPorts(generateOutputPorts(Arrays.asList(
                 TSOConstants.MBANG
-        )));
-        newObj.getInputsHub().setPorts(generatePorts(Arrays.asList(
+        ),newObj));
+        newObj.getInputsHub().setPorts(generateInputPorts(Arrays.asList(
                 TSOConstants.MINT
         )));
         newObj.setW(90);

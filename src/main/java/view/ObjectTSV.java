@@ -9,8 +9,10 @@ import view.UI.PortPanelFactory;
 
 import java.awt.*;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.concurrent.RunnableFuture;
 
 /**
@@ -110,7 +112,18 @@ public class ObjectTSV extends FrameVObject {
         }
     }
 
+    public ArrayList<LinkedList<Double>> getActivePorts() {
+        return activePorts;
+    }
 
+    public void setActivePorts(ArrayList<LinkedList<Double>> nactivePorts) {
+        if(!nactivePorts.equals(activePorts) && modelCaller != null) {
+            activePorts = nactivePorts;
+            modelCaller.shynchronizeMVCModel(getId(), nactivePorts, null);
+        }
+        setActivePortsRed();
+        repaint();
+    }
 
     public Boolean getToBack() {
         return this.toBack;

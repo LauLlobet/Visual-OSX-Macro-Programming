@@ -3,6 +3,7 @@ package view.UI;
 import logic.BewteenWindowsConnectionMaker;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.StringSelection;
 import java.awt.datatransfer.Transferable;
@@ -19,6 +20,7 @@ public class PortPanel extends JPanel implements DragGestureListener, DragSource
     private BewteenWindowsConnectionMaker bwcm;
     private String id;
     private DragSource ds = DragSource.getDefaultDragSource();
+    private Color defaultBackground;
 
     public PortPanel(BewteenWindowsConnectionMaker bwcm,String id){
         this.bwcm = bwcm;
@@ -108,5 +110,13 @@ public class PortPanel extends JPanel implements DragGestureListener, DragSource
 
     public String getViewId() {
         return id;
+    }
+
+    public void setDefaultBackground(Color defaultBackground) {
+        this.defaultBackground = defaultBackground;
+    }
+
+    public Color getDefaultBackground() {
+        return defaultBackground;
     }
 }

@@ -24,6 +24,7 @@ public class TSOConstants {
     public static final String SCREENPRINTER_TSOBJID = "SCREENPRINTER_TSOBJID" ;
     public static final String REPETITIVECOUNTDOWN_TSOBJID = "REPETITIVECOUNTDOWN_TSOBJID";
     public static final String MOVEMENT_DETECTOR_TSOBJID = "MOVEMENT_DETECTOR_TSOBJID";
+    public static final String THRESHOLD_TSOBJID = "THRESHOLD_TSOBJID" ;
 
     public static int UI_SEPARATIONBETWEENPORTS = 10;
 

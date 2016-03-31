@@ -11,6 +11,9 @@ import java.util.LinkedList;
 public class Port {
     private String messageType;
     private LinkedList<String> buffer;
+    private LinkedList<Double> activePort;
+
+    private int beActiveTillPlus = 1000;
 
     public Port(){
 
@@ -32,6 +35,18 @@ public class Port {
 
     public void postMessage(String string){
         this.buffer.add(string);
+        this.activePort.removeAll(this.activePort);
+        this.activePort.add((double)System.currentTimeMillis()+beActiveTillPlus);
+    }
+
+    public String readMessage(){
+        return this.buffer.removeFirst();
+    }
+
+    public String readLastInMessageAndFlushTheRest(){
+        String message = this.buffer.getLast();
+        buffer.removeAll(buffer);
+        return message;
     }
 
     public LinkedList<String> getBuffer() {
@@ -46,5 +61,9 @@ public class Port {
     @JsonIgnore
     public String getNextMessageFromBuffer() {
         return "";
+    }
+
+    public void addActivePortNotifier(LinkedList<Double> activePort) {
+        this.activePort = activePort;
     }
 }

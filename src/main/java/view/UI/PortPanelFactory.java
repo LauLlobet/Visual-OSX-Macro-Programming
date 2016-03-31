@@ -48,16 +48,20 @@ public class PortPanelFactory {
     private PortPanel doSetMBANG(PortPanel panel) {
 
         panel.setBackground(new Color(255,0,0));
+        panel.setDefaultBackground(new Color(255,0,0));
         return panel;
     }
 
     private PortPanel doSetMANY(PortPanel panel) {
         panel.setBackground(new Color(255,255,0));
+        panel.setDefaultBackground(new Color(255,255,0));
+
         return panel;
     }
 
     private PortPanel doSetMINT(PortPanel panel) {
         panel.setBackground(new Color(0,0,255));
+        panel.setDefaultBackground(new Color(0,0,255));
         return panel;
     }
 

@@ -4,7 +4,9 @@
 
 *DONE c:2 fer editor de posicio de click i conectarho amb view*
 
-- detector de moviment
+*DONE c:3 detector de moviment*
+
+- bang en gui
 
 - fer delay
 

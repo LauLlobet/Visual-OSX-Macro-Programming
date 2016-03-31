@@ -11,10 +11,12 @@ import model.tsobject.tsobjectparts.Port;
 import model.tsobject.tsobjectparts.TSOConnection;
 import model.tsobject.tsobjectparts.InputConnectionHubTS;
 import model.tsobject.tsobjectparts.OutputConnectionHubTS;
+import sun.awt.image.ImageWatched;
 
 import java.beans.Introspector;
 import java.beans.PropertyDescriptor;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -43,11 +45,14 @@ public class ObjectTS {
     private OutputConnectionHubTS outputsHub;
     private IdGenerator idgen;
 
+    private ArrayList<LinkedList<Double>> activePorts;
+
     protected Caller caller;
     private Boolean toBack = false;
 
     public ObjectTS(){
         //this.caller = caller;
+        activePorts = new ArrayList<LinkedList<Double>>();
     }
 
     public void connectTo(int outPort,String destinyId, int inPort) throws Throwable {
@@ -84,7 +89,7 @@ public class ObjectTS {
     }
 
     public void processTic(){
-
+        this.setActivePorts(this.getActivePorts());
     }
 
     //-------- NOLOGIC ----------   regular getters and setters  ----------------------
@@ -133,7 +138,16 @@ public class ObjectTS {
 
     public void setToBack(Boolean toBack) {
         this.toBack = toBack;
-        if(registeredInMvc){caller.shyncronizeMVCView(getId(),toBack,null);};
+        if(registeredInMvc){caller.shyncronizeMVCView(getId(),toBack,null);}
+    }
+
+    public ArrayList<LinkedList<Double>> getActivePorts() {
+        return activePorts;
+    }
+
+    public void setActivePorts(ArrayList<LinkedList<Double>> activePorts) {
+        this.activePorts = activePorts;
+        if(registeredInMvc){caller.shyncronizeMVCView(getId(),activePorts,null);};
     }
 
     public Boolean getToBack() {
@@ -180,7 +194,23 @@ public class ObjectTS {
         obj.setOutputsHub(output);
         return obj;
     }
-    protected static ArrayList<Port> generatePorts(List<String> anymsg) {
+    protected static ArrayList<Port> generateOutputPorts(List<String> anymsg,ObjectTS obj) {
+        ArrayList<Port> ports = new ArrayList<Port>();
+        int i = 0;
+        for( String type : anymsg){
+            Port p = new Port(type);
+            LinkedList<Double> activatedPort = new LinkedList<Double>();
+            activatedPort.add((double)0);
+            obj.getActivePorts().add(activatedPort);
+            p.addActivePortNotifier(activatedPort);
+            ports.add(p);
+            i++;
+        }
+        obj.setActivePorts(obj.getActivePorts());
+        return ports;
+    }
+
+    protected static ArrayList<Port> generateInputPorts(List<String> anymsg) {
         ArrayList<Port> ports = new ArrayList<Port>();
         for( String type : anymsg){
             ports.add(new Port(type));

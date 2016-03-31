@@ -28,7 +28,7 @@ public class BangDebouncer {
 
     private void doBang() {
         try {
-            objectTS.getOutputsHub().getPorts().get(0).postMessage("bang");
+            objectTS.getOutputsHub().getPorts().get(this.port).postMessage("bang");
             System.out.println("bang sent from movment detector"+System.currentTimeMillis());
         }catch(Throwable e) {
             System.out.println("rep countdown not connected");

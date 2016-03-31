@@ -6,6 +6,8 @@ import view.UI.resizeandmove.ComponentResizer;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.LinkedList;
 
 
 public class FrameVObject extends javax.swing.JFrame {
@@ -20,7 +22,13 @@ public class FrameVObject extends javax.swing.JFrame {
     public PortPanelFactory portPanelFactory;
     public String id;
 
-    public FrameVObject(String id, int x, int y, int w, int h,PortPanelFactory portPanelFactory) {
+
+    protected ArrayList<LinkedList<Double>> activePorts;
+    private ArrayList<PortPanel> outputPorts;
+    private Color red = new Color(0,0,0);
+
+
+    public FrameVObject(String id, int x, int y, int w, int h, PortPanelFactory portPanelFactory) {
         super(id);
         this.id = id;
         this.portPanelFactory = portPanelFactory;
@@ -28,6 +36,9 @@ public class FrameVObject extends javax.swing.JFrame {
         lastLocation = new Point(x,y);
         nonFullscreenSize = this.getSize();
         point = new Point(w/2,h/2);
+        activePorts = new ArrayList<LinkedList<Double>>();
+        outputPorts = new ArrayList<PortPanel>();
+        
         this.setBounds(x,y,w,h);
         this.setUndecorated(true);
         this.setAlwaysOnTop( true );
@@ -64,13 +75,14 @@ public class FrameVObject extends javax.swing.JFrame {
     }
 
     public void createInputPanelPort(String type,int numPort){
-        JPanel p = this.portPanelFactory.create(type,"i", this.id, numPort,this);
+        PortPanel p = this.portPanelFactory.create(type,"i", this.id, numPort,this);
         addPanelToObjectAndRevalidate( this.header,p);
     }
 
     public void createOutputPanelPort(String type, int numPort){
-        JPanel p = this.portPanelFactory.create(type,"o", this.id, numPort, this);
+        PortPanel p = this.portPanelFactory.create(type,"o", this.id, numPort, this);
         addPanelToObjectAndRevalidate( this.footer,p);
+        outputPorts.add(p);
     }
 
     public void addPanelToObjectAndRevalidate(JPanel parent, JPanel p){
@@ -81,6 +93,32 @@ public class FrameVObject extends javax.swing.JFrame {
     }
 
 
+    protected void setActivePortsRed() {
+        int i = 0;
+        for(LinkedList<Double> port: activePorts) {
+            try {
+                if (System.currentTimeMillis() > port.getFirst()) {
+                    outputPorts.get(i).setBackground(red);
+                } else {
+                    outputPorts.get(i).setBackground(outputPorts.get(i).getDefaultBackground());
+                }
+                outputPorts.get(i).revalidate();
+                footer.revalidate();
+            }catch (Exception e){
+                    e.printStackTrace();
+            }
+            i++;
+        }
+    }
+
+
+    public ArrayList<LinkedList<Double>> getActivePorts() {
+        return activePorts;
+    }
+
+    public void setActivePorts(ArrayList<LinkedList<Double>> activePorts) {
+        this.activePorts = activePorts;
+    }
 
     public void setFullscreen(Boolean b){
         if(b){
@@ -95,6 +133,8 @@ public class FrameVObject extends javax.swing.JFrame {
         }
         this.isFullscreen = b;
     }
+    
+    
 
     @Override
     public void setSize(int w, int h){
