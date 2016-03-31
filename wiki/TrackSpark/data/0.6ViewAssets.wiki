@@ -6,7 +6,9 @@
 
 *DONE c:3 detector de moviment*
 
-- bang en gui
+*DONE c:4 bang en gui*
+
+- gui retocs
 
 - fer delay
 

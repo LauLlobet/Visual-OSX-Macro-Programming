@@ -52,12 +52,12 @@ public class FrameVObject extends javax.swing.JFrame {
         this.setPreferredSize(new Dimension(100, 161));
 
         this.header = new JPanel();
-        this.header.setPreferredSize(new Dimension(100, 20));
+        this.header.setPreferredSize(new Dimension(100, 10));
         this.header.setBackground(new Color(200,200,200));
         this.header.setLayout(new BoxLayout(this.header, BoxLayout.X_AXIS));
 
         footer = new JPanel();
-        footer.setPreferredSize(new Dimension(100, 20));
+        footer.setPreferredSize(new Dimension(100, 10));
         footer.setBackground(new Color(200,200,200));
         footer.setLayout(new BoxLayout(footer,  BoxLayout.X_AXIS));
 
@@ -97,7 +97,7 @@ public class FrameVObject extends javax.swing.JFrame {
         int i = 0;
         for(LinkedList<Double> port: activePorts) {
             try {
-                if (System.currentTimeMillis() > port.getFirst()) {
+                if ( System.currentTimeMillis() < port.getFirst()) {
                     outputPorts.get(i).setBackground(red);
                 } else {
                     outputPorts.get(i).setBackground(outputPorts.get(i).getDefaultBackground());
@@ -105,7 +105,7 @@ public class FrameVObject extends javax.swing.JFrame {
                 outputPorts.get(i).revalidate();
                 footer.revalidate();
             }catch (Exception e){
-                    e.printStackTrace();
+
             }
             i++;
         }

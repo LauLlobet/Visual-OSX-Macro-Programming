@@ -67,7 +67,7 @@ public class PortPanelFactory {
 
     private PortPanel createPortPanel(String id) {
         PortPanel panel = new PortPanel(this.bwcm,id);
-        panel.setSize(new Dimension(20,20));
+        panel.setSize(new Dimension(10,10));
         panel.setMaximumSize(panel.getSize());
         panel.setBackground(new Color(0,0,0));
         return panel;

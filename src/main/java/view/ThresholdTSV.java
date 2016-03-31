@@ -1,7 +1,7 @@
-package view.UI;
+package view;
 
 import logic.Caller;
-import view.ObjectTSV;
+import view.UI.PortPanelFactory;
 
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
@@ -13,20 +13,23 @@ import java.awt.*;
  */
 public class ThresholdTSV extends ObjectTSV {
 
-    private final JPanel boxpanel;
+    private  JPanel boxpanel;
     private int threshold2;
     private int threshold1;
     private int maxValue;
     private int value;
-    final JSlider sliderValue;
+    private JSlider sliderValue;
 
     public ThresholdTSV(String id, Caller mc, PortPanelFactory portPanelFactory) {
         super(id, mc, portPanelFactory);
         boxpanel = new JPanel();
-        boxpanel.setLayout(new BoxLayout(this,BoxLayout.Y_AXIS));
-
+        boxpanel.setLayout(new BorderLayout());
         this.getContentPane().add(boxpanel,BorderLayout.CENTER);
+        JPanel inputSliderPanel = new JPanel();
+        boxpanel.setBackground(new Color(200,200,200));
 
+        inputSliderPanel.setBackground(new Color(100,100,100));
+        inputSliderPanel.setLayout(new BorderLayout());
 
         sliderValue = new JSlider();
         sliderValue.addChangeListener(new ChangeListener() {
@@ -36,6 +39,8 @@ public class ThresholdTSV extends ObjectTSV {
                 s.setValue(value);
             }
         });
+        sliderValue.putClientProperty("JComponent.sizeVariant", "mini");
+        inputSliderPanel.add(sliderValue,BorderLayout.CENTER);
 
 
         final JSlider sliderT1 = new JSlider();
@@ -47,7 +52,7 @@ public class ThresholdTSV extends ObjectTSV {
             }
         });
         sliderT1.setPreferredSize(new Dimension(100,20));
-
+        sliderT1.putClientProperty("JComponent.sizeVariant", "mini");
         final JSlider sliderT2 = new JSlider();
         sliderT2.addChangeListener(new ChangeListener() {
             @Override
@@ -57,10 +62,10 @@ public class ThresholdTSV extends ObjectTSV {
             }
         });
         sliderT2.setPreferredSize(new Dimension(100,20));
-
-
-        boxpanel.add(sliderT1);
-        boxpanel.add(sliderT2);
+        sliderT2.putClientProperty("JComponent.sizeVariant", "mini");
+        boxpanel.add(inputSliderPanel,BorderLayout.NORTH);
+        boxpanel.add(sliderT1,BorderLayout.CENTER);
+        boxpanel.add(sliderT2,BorderLayout.SOUTH);
     }
 
 

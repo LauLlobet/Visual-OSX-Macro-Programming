@@ -63,6 +63,9 @@ public class ObjectsFactoryTS {
         if( type.startsWith(TSOConstants.MOVEMENT_DETECTOR_TSOBJID) ){
             newObj = MovementDetectorTS.createOne(this.idGenerator,this.connectionChecker);
         }
+        if( type.startsWith(TSOConstants.THRESHOLD_TSOBJID) ){
+            newObj = ThresholdTS.createOne(this.idGenerator,this.connectionChecker);
+        }
 
         newObj.registerToMvc(caller);
         refreshUiAfter300Ms();

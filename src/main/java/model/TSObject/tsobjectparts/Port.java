@@ -13,7 +13,7 @@ public class Port {
     private LinkedList<String> buffer;
     private LinkedList<Double> activePort;
 
-    private int beActiveTillPlus = 1000;
+    private int beActiveTillPlus = 100;
 
     public Port(){
 
@@ -43,7 +43,7 @@ public class Port {
         return this.buffer.removeFirst();
     }
 
-    public String readLastInMessageAndFlushTheRest(){
+    public String readLastInMessageAndFlushTheRest() throws Exception{
         String message = this.buffer.getLast();
         buffer.removeAll(buffer);
         return message;

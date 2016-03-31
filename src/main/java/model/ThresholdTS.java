@@ -11,6 +11,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.Arrays;
+import java.util.NoSuchElementException;
 
 
 public class ThresholdTS extends ObjectTS {
@@ -37,7 +38,6 @@ public class ThresholdTS extends ObjectTS {
     @Override
     public void processTic(){
         try {
-
             String message = this.getInputsHub().getPorts().get(0).readLastInMessageAndFlushTheRest();
             Integer inputValue = Integer.parseInt(message);
             if(threshold2<threshold1){
@@ -61,8 +61,10 @@ public class ThresholdTS extends ObjectTS {
                 setMaxValue(inputValue);
             }
             setValue(inputValue);
-        }catch(Throwable e) {
-            System.out.println("rep countdown not connected");
+        }catch(NoSuchElementException e){
+            return;
+        }catch (Throwable e) {
+            e.printStackTrace();
         }
         super.processTic();
     }
@@ -110,16 +112,16 @@ public class ThresholdTS extends ObjectTS {
         newObj.setId(idGenerator.getNextId(newObj));
         newObj = setConectionHubs(newObj, connectionChecker);
         newObj.getOutputsHub().setPorts(generateOutputPorts(Arrays.asList(
-                TSOConstants.MINT
-        ),newObj));
-        newObj.getOutputsHub().setPorts(generateInputPorts(Arrays.asList(
                 TSOConstants.MBANG,
                 TSOConstants.MBANG,
                 TSOConstants.MBANG
-                )));
+        ),newObj));
+        newObj.getInputsHub().setPorts(generateInputPorts(Arrays.asList(
+                TSOConstants.MINT
+        )));
 
-        newObj.setW(100);
-        newObj.setH(161);
+        newObj.setW(300);
+        newObj.setH(100);
         newObj.setX(900);
         newObj.setY(400);
         return newObj;
