@@ -8,7 +8,9 @@
 
 *DONE c:4 bang en gui*
 
-- gui retocs
+*DONE c:5 gui retocs*
+
+- threshold done
 
 - fer delay
 

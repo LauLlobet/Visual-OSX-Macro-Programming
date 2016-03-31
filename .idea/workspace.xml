@@ -5,27 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68c84884-33a5-4953-89cf-c14b9ee7c1b2" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/view/UI/MovementDetectorTSV$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/view/UI/MovementDetectorTSV.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/view/UI/ThresholdTSV$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/view/UI/ThresholdTSV$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/view/UI/ThresholdTSV$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/view/UI/ThresholdTSV.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/view/UI/MovementDetectorTSV.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/view/UI/ThresholdTSV.java" afterPath="$PROJECT_DIR$/src/main/java/view/ThresholdTSV.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/model/ObjectsFactoryTS$1Refresher.class" afterPath="$PROJECT_DIR$/build/classes/main/model/ObjectsFactoryTS$1Refresher.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/model/ObjectsFactoryTS.class" afterPath="$PROJECT_DIR$/build/classes/main/model/ObjectsFactoryTS.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/model/ThresholdTS.class" afterPath="$PROJECT_DIR$/build/classes/main/model/ThresholdTS.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/model/tsobject/tsobjectparts/Port.class" afterPath="$PROJECT_DIR$/build/classes/main/model/tsobject/tsobjectparts/Port.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/UI/FrameVObject.class" afterPath="$PROJECT_DIR$/build/classes/main/view/UI/FrameVObject.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/view/UI/VObjectTSTest.class" afterPath="$PROJECT_DIR$/build/classes/test/view/UI/VObjectTSTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/ObjectsFactoryTS.java" afterPath="$PROJECT_DIR$/src/main/java/model/ObjectsFactoryTS.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/TSObject/tsobjectparts/Port.java" afterPath="$PROJECT_DIR$/src/main/java/model/TSObject/tsobjectparts/Port.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/MovementDetectorTS.java" afterPath="$PROJECT_DIR$/src/main/java/model/MovementDetectorTS.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/ThresholdTS.java" afterPath="$PROJECT_DIR$/src/main/java/model/ThresholdTS.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/view/UI/FrameVObject.java" afterPath="$PROJECT_DIR$/src/main/java/view/UI/FrameVObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/view/UI/PortPanelFactory.java" afterPath="$PROJECT_DIR$/src/main/java/view/UI/PortPanelFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/view/ThresholdTSV.java" afterPath="$PROJECT_DIR$/src/main/java/view/ThresholdTSV.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/view/UI/VObjectTSTest.java" afterPath="$PROJECT_DIR$/src/test/java/view/UI/VObjectTSTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wiki/TrackSpark/TrackSpark.wiki" afterPath="$PROJECT_DIR$/wiki/TrackSpark/TrackSpark.wiki" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wiki/TrackSpark/data/0.6ViewAssets.wiki" afterPath="$PROJECT_DIR$/wiki/TrackSpark/data/0.6ViewAssets.wiki" />
     </list>
     <ignored path="trackspark.iws" />
@@ -101,9 +87,21 @@
       <file leaf-file-name="ThresholdTS.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/model/ThresholdTS.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-28.61111">
-              <caret line="123" column="23" selection-start-line="123" selection-start-column="23" selection-end-line="123" selection-end-column="23" />
+            <state vertical-scroll-proportion="-16.518518">
+              <caret line="63" column="43" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MovementDetectorTS.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/MovementDetectorTS.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.8217822">
+              <caret line="80" column="58" selection-start-line="80" selection-start-column="58" selection-end-line="80" selection-end-column="58" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -156,7 +154,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/view/UI/VObjectTSTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
+              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -164,11 +162,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PortPanelFactory.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PortPanelFactory.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/view/UI/PortPanelFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.52871287">
-              <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -177,37 +175,23 @@
       <file leaf-file-name="ThresholdTSV.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/view/ThresholdTSV.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.444445">
-              <caret line="67" column="48" selection-start-line="67" selection-start-column="48" selection-end-line="67" selection-end-column="48" />
+            <state vertical-scroll-proportion="-3.1111112">
+              <caret line="42" column="62" selection-start-line="42" selection-start-column="62" selection-end-line="42" selection-end-column="62" />
               <folding>
-                <element signature="e#1018#1228#0" expanded="true" />
-                <element signature="e#1227#1228#0" expanded="true" />
-                <element signature="e#1452#1690#0" expanded="true" />
-                <element signature="e#1689#1690#0" expanded="true" />
-                <element signature="e#1904#2142#0" expanded="true" />
-                <element signature="e#2141#2142#0" expanded="true" />
-                <element signature="e#2474#2475#0" expanded="true" />
-                <element signature="e#2507#2508#0" expanded="true" />
-                <element signature="e#2795#2796#0" expanded="true" />
-                <element signature="e#2828#2829#0" expanded="true" />
-                <element signature="e#3114#3115#0" expanded="true" />
-                <element signature="e#3145#3146#0" expanded="true" />
-                <element signature="e#3460#3461#0" expanded="true" />
-                <element signature="e#3488#3489#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MovementDetectorTSV.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/view/MovementDetectorTSV.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="0" selection-start-line="31" selection-start-column="8" selection-end-line="32" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1813#1814#0" expanded="true" />
-                <element signature="e#1843#1844#0" expanded="true" />
+                <element signature="e#1018#1230#0" expanded="true" />
+                <element signature="e#1229#1230#0" expanded="true" />
+                <element signature="e#1454#1692#0" expanded="true" />
+                <element signature="e#1691#1692#0" expanded="true" />
+                <element signature="e#1906#2144#0" expanded="true" />
+                <element signature="e#2143#2144#0" expanded="true" />
+                <element signature="e#2476#2477#0" expanded="true" />
+                <element signature="e#2509#2510#0" expanded="true" />
+                <element signature="e#2797#2798#0" expanded="true" />
+                <element signature="e#2830#2831#0" expanded="true" />
+                <element signature="e#3116#3117#0" expanded="true" />
+                <element signature="e#3147#3148#0" expanded="true" />
+                <element signature="e#3462#3463#0" expanded="true" />
+                <element signature="e#3490#3491#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -591,18 +575,18 @@
         <option value="$PROJECT_DIR$/src/main/java/view/UI/PortPanel.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/tsobject/tsobjectparts/ConnectionHubTS.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/ClickerTS.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/MovementDetectorTS.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/RepetitiveCountdownTS.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/ScreenPrinterTS.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/tsobject/ObjectTS.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/ObjectTSV.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/ObjectsFactoryTS.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/ThresholdTS.java" />
-        <option value="$PROJECT_DIR$/src/test/java/view/UI/VObjectTSTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/tsobject/tsobjectparts/Port.java" />
-        <option value="$PROJECT_DIR$/src/main/java/view/ThresholdTSV.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/UI/FrameVObject.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/UI/PortPanelFactory.java" />
+        <option value="$PROJECT_DIR$/src/test/java/view/UI/VObjectTSTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/view/ThresholdTSV.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/ThresholdTS.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/MovementDetectorTS.java" />
       </list>
     </option>
   </component>
@@ -619,7 +603,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="x" value="41" />
+    <option name="y" value="124" />
     <option name="width" value="1440" />
     <option name="height" value="833" />
   </component>
@@ -1610,44 +1595,44 @@
       <workItem from="1458749702456" duration="10295000" />
       <workItem from="1459241319915" duration="46567000" />
       <workItem from="1459438001391" duration="109000" />
-      <workItem from="1459438135098" duration="8005000" />
+      <workItem from="1459438135098" duration="10402000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.03.31 at 19h 29m 43s.xml">
-      <configuration name="VObjectTSTest.testSetConnectionFromMouseEvents" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.03.31 at 19h 35m 21s.xml">
-      <configuration name="VObjectTSTest.testSetConnectionFromMouseEvents" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.03.31 at 19h 35m 53s.xml">
-      <configuration name="VObjectTSTest.testSetConnectionFromMouseEvents" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.03.31 at 19h 36m 24s.xml">
-      <configuration name="VObjectTSTest.testSetConnectionFromMouseEvents" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.03.31 at 19h 37m 02s.xml">
-      <configuration name="VObjectTSTest.testSetConnectionFromMouseEvents" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.03.31 at 19h 38m 59s.xml">
-      <configuration name="VObjectTSTest.testSetConnectionFromMouseEvents" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.03.31 at 19h 40m 19s.xml">
-      <configuration name="VObjectTSTest.testSetConnectionFromMouseEvents" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.03.31 at 19h 40m 57s.xml">
-      <configuration name="VObjectTSTest.testSetConnectionFromMouseEvents" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.03.31 at 19h 42m 42s.xml">
-      <configuration name="VObjectTSTest.testSetConnectionFromMouseEvents" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.03.31 at 19h 45m 06s.xml">
+      <configuration name="VObjectTSTest.testSetConnectionFromMouseEvents" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.03.31 at 19h 56m 08s.xml">
+      <configuration name="VObjectTSTest.testSetConnectionFromMouseEvents" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.03.31 at 20h 00m 27s.xml">
+      <configuration name="VObjectTSTest.testSetConnectionFromMouseEvents" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.03.31 at 20h 01m 49s.xml">
+      <configuration name="VObjectTSTest.testSetConnectionFromMouseEvents" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.03.31 at 20h 13m 01s.xml">
+      <configuration name="VObjectTSTest.testSetConnectionFromMouseEvents" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.03.31 at 20h 13m 54s.xml">
+      <configuration name="VObjectTSTest.testSetConnectionFromMouseEvents" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.03.31 at 20h 15m 36s.xml">
+      <configuration name="VObjectTSTest.testSetConnectionFromMouseEvents" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.03.31 at 20h 18m 53s.xml">
+      <configuration name="VObjectTSTest.testSetConnectionFromMouseEvents" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.03.31 at 20h 19m 44s.xml">
+      <configuration name="VObjectTSTest.testSetConnectionFromMouseEvents" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.03.31 at 20h 23m 07s.xml">
       <configuration name="VObjectTSTest.testSetConnectionFromMouseEvents" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="191955000" />
+    <option name="totallyTimeSpent" value="194352000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1659,7 +1644,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="833" extended-state="0" />
+    <frame x="41" y="124" width="1440" height="833" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1716,17 +1701,17 @@
           <option name="timeStamp" value="180" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/model/ThresholdTS.java</url>
-          <line>40</line>
+          <url>file://$PROJECT_DIR$/src/main/java/view/ThresholdTSV.java</url>
+          <line>37</line>
           <properties />
-          <option name="timeStamp" value="248" />
+          <option name="timeStamp" value="252" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="249" />
+      <option name="time" value="253" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
-        <watch expression="this.getInputsHub().getPorts()" language="JAVA" custom="" />
+        <watch expression="ThresholdTSV.this.getMaxValue()" language="JAVA" custom="" />
       </configuration>
       <configuration name="Application">
         <watch expression="xSize" language="JAVA" custom="" />
@@ -2038,16 +2023,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/MovementDetectorTS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="39" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/RepetitiveCountdownTS.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2076,24 +2051,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/ThresholdTS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-28.61111">
-          <caret line="123" column="23" selection-start-line="123" selection-start-column="23" selection-end-line="123" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/view/UI/VObjectTSTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/tsobject/tsobjectparts/Port.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2102,44 +2059,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/ThresholdTSV.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.444445">
-          <caret line="67" column="48" selection-start-line="67" selection-start-column="48" selection-end-line="67" selection-end-column="48" />
-          <folding>
-            <element signature="e#1018#1228#0" expanded="true" />
-            <element signature="e#1227#1228#0" expanded="true" />
-            <element signature="e#1452#1690#0" expanded="true" />
-            <element signature="e#1689#1690#0" expanded="true" />
-            <element signature="e#1904#2142#0" expanded="true" />
-            <element signature="e#2141#2142#0" expanded="true" />
-            <element signature="e#2474#2475#0" expanded="true" />
-            <element signature="e#2507#2508#0" expanded="true" />
-            <element signature="e#2795#2796#0" expanded="true" />
-            <element signature="e#2828#2829#0" expanded="true" />
-            <element signature="e#3114#3115#0" expanded="true" />
-            <element signature="e#3145#3146#0" expanded="true" />
-            <element signature="e#3460#3461#0" expanded="true" />
-            <element signature="e#3488#3489#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/view/ObjectTSV.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="123" column="19" selection-start-line="123" selection-start-column="19" selection-end-line="123" selection-end-column="19" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/UI/FrameVObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="59" column="52" selection-start-line="59" selection-start-column="52" selection-end-line="59" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2163,9 +2087,70 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/view/UI/PortPanelFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52871287">
-          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/view/UI/VObjectTSTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/UI/FrameVObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="59" column="52" selection-start-line="59" selection-start-column="52" selection-end-line="59" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/ThresholdTSV.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.1111112">
+          <caret line="42" column="62" selection-start-line="42" selection-start-column="62" selection-end-line="42" selection-end-column="62" />
+          <folding>
+            <element signature="e#1018#1230#0" expanded="true" />
+            <element signature="e#1229#1230#0" expanded="true" />
+            <element signature="e#1454#1692#0" expanded="true" />
+            <element signature="e#1691#1692#0" expanded="true" />
+            <element signature="e#1906#2144#0" expanded="true" />
+            <element signature="e#2143#2144#0" expanded="true" />
+            <element signature="e#2476#2477#0" expanded="true" />
+            <element signature="e#2509#2510#0" expanded="true" />
+            <element signature="e#2797#2798#0" expanded="true" />
+            <element signature="e#2830#2831#0" expanded="true" />
+            <element signature="e#3116#3117#0" expanded="true" />
+            <element signature="e#3147#3148#0" expanded="true" />
+            <element signature="e#3462#3463#0" expanded="true" />
+            <element signature="e#3490#3491#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/ThresholdTS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.518518">
+          <caret line="63" column="43" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/MovementDetectorTS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8217822">
+          <caret line="80" column="58" selection-start-line="80" selection-start-column="58" selection-end-line="80" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

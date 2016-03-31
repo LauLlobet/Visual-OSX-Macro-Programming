@@ -87,7 +87,10 @@ public class MovementDetectorTS extends ObjectTS implements ScreenRegionsListene
         } else {
             return -1;
         }
-        return acumulatedDiference*1000/(img1.getWidth()*img1.getHeight());
+
+        double accum = (double)acumulatedDiference;
+        double ratio = accum/((float)img1.getWidth()*(float)img1.getHeight());
+        return (int)(ratio * 3.5);
     }
 
     @Override

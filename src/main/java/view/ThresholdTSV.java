@@ -36,7 +36,7 @@ public class ThresholdTSV extends ObjectTSV {
             @Override
             public void stateChanged(ChangeEvent e) {
                 JSlider s = (JSlider) e.getSource();
-                s.setValue(value);
+                //s.setValue(value);
             }
         });
         sliderValue.putClientProperty("JComponent.sizeVariant", "mini");
