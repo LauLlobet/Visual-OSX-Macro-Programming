@@ -47,6 +47,8 @@ public class VObjectTSTest {
         ObjectTS ob = of.build(TSOConstants.BANG_TSOBJID);
 //        ObjectTS bang = of.build(TSOConstants.BANG_TSOBJID);
 
+        ObjectTS delay = of.build(TSOConstants.DELAY_TSOBJID);
+
  //       ObjectTS ob2 = of.build(TSOConstants.SCREENPRINTER_TSOBJID);
         //ObjectTS ob2 = of.build(TSOConstants.CLICKER_TSOBJID);
         //ObjectTS ob2 = of.build(TSOConstants.THRESHOLD_TSOBJID);

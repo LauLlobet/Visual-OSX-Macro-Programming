@@ -14,7 +14,7 @@
 
 *DONE c:7 fer textbox*
 
-- fer bang
+*DONE c:8 fer bang*
 
 - fer delay
 

@@ -47,7 +47,7 @@ public class ObjectsFactoryTS {
         ObjectTS newObj = null;
 
         if( type.startsWith(TSOConstants.DELAY_TSOBJID) ){
-            newObj = createDelayTS();
+            newObj = DelayTS.createOne(this.idGenerator,this.connectionChecker);
         }
         if( type.startsWith(TSOConstants.SWITCH_TSOBJID) ){
             newObj = createSwitchTS();
@@ -94,25 +94,6 @@ public class ObjectsFactoryTS {
         newObj.setW(90);
         newObj.setH(60);
         newObj.setX(800);
-        newObj.setY(300);
-        return newObj;
-    }
-
-    private ObjectTS createDelayTS() throws Throwable {
-        ObjectTS newObj;
-        newObj = new DelayTS();
-        newObj.setId(idGenerator.getNextId(newObj));
-        newObj = setConectionHubs(newObj);
-        newObj.getOutputsHub().setPorts(generatePorts(Arrays.asList(
-                TSOConstants.MANY
-        )));
-        newObj.getInputsHub().setPorts(generatePorts(Arrays.asList(
-                TSOConstants.MANY,
-                TSOConstants.MINT
-        )));
-        newObj.setW(90);
-        newObj.setH(161);
-        newObj.setX(300);
         newObj.setY(300);
         return newObj;
     }
