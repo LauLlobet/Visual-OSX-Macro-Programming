@@ -22,14 +22,10 @@ public class ScreenPrinterTS extends ObjectTS {
     @Override
     public void processTic(){
         try {
-            LinkedList<String> buffer = getInputsHub().getPorts().get(0).getBuffer();
-            if(buffer.size() == 0){
-                return;
-            }
-            String message = buffer.removeFirst();
+            String message = receiveMessageFromPortIfTrueFromTheLast(0,true);
             setPrintValue(message);
+            flushReceivedMessagesInPort(0);
         } catch (Throwable throwable) {
-            throwable.printStackTrace();
         }
         super.processTic();
     }

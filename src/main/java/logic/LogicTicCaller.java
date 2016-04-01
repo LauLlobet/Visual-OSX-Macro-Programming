@@ -1,5 +1,6 @@
 package logic;
 
+import Constants.TSOConstants;
 import model.tsobject.ObjectTS;
 import model.tsobject.tsobjectparts.OutputConnectionHubTS;
 import model.tsobject.tsobjectparts.TSOConnection;
@@ -26,7 +27,7 @@ public class LogicTicCaller {
                 while(true) {
                     LogicTicCaller.this.doTic();
                     try {
-                        Thread.sleep(40);
+                        Thread.sleep(TSOConstants.FREQ_TICS);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }

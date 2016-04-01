@@ -27,11 +27,7 @@ public class MovementDetectorTS extends ObjectTS implements ScreenRegionsListene
 
     @Override
     public void processTic(){
-        try {
-            this.getOutputsHub().getPorts().get(0).postMessage(""+movementIndex);
-        }catch(Throwable e) {
-            System.out.println("rep countdown not connected");
-        }
+        postMessageToPort(0,""+movementIndex);
         super.processTic();
     }
 
@@ -61,7 +57,13 @@ public class MovementDetectorTS extends ObjectTS implements ScreenRegionsListene
 
     public void setTolerance(int tolerance) {
         this.tolerance = tolerance;
-        if(registeredInMvc){caller.shyncronizeMVCView(getId(),tolerance,null);};
+        if(registeredInMvc){
+            try {
+                caller.shyncronizeMVCView(getId(),tolerance,null);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        };
     }
 
     public void registerToCapturer(ScreenCapturer screenCapturer) {

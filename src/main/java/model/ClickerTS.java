@@ -22,17 +22,8 @@ public class ClickerTS extends ObjectTS {
 
     @Override
     public void processTic(){
-        try {
-            LinkedList<String> buffer = getInputsHub().getPorts().get(0).getBuffer();
-            if(buffer.size() == 0){
-                return;
-            }
-            String message = buffer.removeFirst();
-            if("bang".startsWith(message)){
-                doClick();
-            }
-        } catch (Throwable throwable) {
-            throwable.printStackTrace();
+        if(haveIReceivedABang(0)) {
+            doClick();
         }
         super.processTic();
     }
@@ -72,7 +63,13 @@ public class ClickerTS extends ObjectTS {
 
     public void setClickRelPositionX(int clickRelPositionX) {
         this.clickRelPositionX = clickRelPositionX;
-        if(registeredInMvc){caller.shyncronizeMVCView(getId(),clickRelPositionX,null);};
+        if(registeredInMvc){
+            try {
+                caller.shyncronizeMVCView(getId(),clickRelPositionX,null);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        };
     }
 
     public int getClickRelPositionY() {
@@ -81,7 +78,13 @@ public class ClickerTS extends ObjectTS {
 
     public void setClickRelPositionY(int clickRelPositionY) {
         this.clickRelPositionY = clickRelPositionY;
-        if(registeredInMvc){caller.shyncronizeMVCView(getId(),clickRelPositionY,null);};
+        if(registeredInMvc){
+            try {
+                caller.shyncronizeMVCView(getId(),clickRelPositionY,null);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        };
 
     }
 

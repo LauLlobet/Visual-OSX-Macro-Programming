@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class RepetitiveCountdownTS extends ObjectTS {
+public class RepetitiveCountdownTS extends SingleNumericFieldObjectTS {
 
     private long lastBang = 0;
     private double countdownTime = 3000;
@@ -24,6 +24,7 @@ public class RepetitiveCountdownTS extends ObjectTS {
 
     @Override
     public void processTic(){
+        countdownTime = intField1 < TSOConstants.FREQ_TICS ? 1000000000 : intField1;
         double now = System.currentTimeMillis();
         if( now - lastBang > countdownTime){
             lastBang = System.currentTimeMillis();
@@ -34,7 +35,7 @@ public class RepetitiveCountdownTS extends ObjectTS {
 
     public void bang(){
         try {
-            getOutputsHub().getPorts().get(0).postMessage("bang");
+            getOutputsHub().getPorts().get(0).postMessage(TSOConstants.BANG_STRING);
             System.out.println("rep sent");
         }catch(Throwable e) {
             System.out.println("rep countdown not connected");

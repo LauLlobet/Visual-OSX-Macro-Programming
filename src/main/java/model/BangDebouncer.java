@@ -1,5 +1,6 @@
 package model;
 
+import Constants.TSOConstants;
 import model.tsobject.ObjectTS;
 
 /**
@@ -28,7 +29,7 @@ public class BangDebouncer {
 
     private void doBang() {
         try {
-            objectTS.getOutputsHub().getPorts().get(this.port).postMessage("bang");
+            objectTS.getOutputsHub().getPorts().get(this.port).postMessage(TSOConstants.BANG_STRING);
             System.out.println("bang sent from movment detector"+System.currentTimeMillis());
         }catch(Throwable e) {
             System.out.println("rep countdown not connected");

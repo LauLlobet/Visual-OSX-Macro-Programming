@@ -76,7 +76,11 @@ public class ThresholdTSV extends ObjectTSV {
     public void setThreshold2(int nthreshold2) {
         if(nthreshold2 != threshold2 && modelCaller != null) {
             threshold2 = nthreshold2;
-            modelCaller.shynchronizeMVCModel(getId(), threshold2, null);  // set model
+            try {
+                modelCaller.shynchronizeMVCModel(getId(), threshold2, null);  // set model
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -87,7 +91,11 @@ public class ThresholdTSV extends ObjectTSV {
     public void setThreshold1(int nthreshold1) {
         if(nthreshold1 != threshold1 && modelCaller != null) {
             threshold1 = nthreshold1;
-            modelCaller.shynchronizeMVCModel(getId(), threshold1, null);  // set model
+            try{
+                modelCaller.shynchronizeMVCModel(getId(), threshold1, null);  // set model
+            }catch (Exception e){
+
+            }
         }
     }
 
@@ -98,7 +106,11 @@ public class ThresholdTSV extends ObjectTSV {
     public void setMaxValue(int nmaxValue) {
         if(nmaxValue != maxValue && modelCaller != null) {
             maxValue = nmaxValue;
-            modelCaller.shynchronizeMVCModel(getId(), maxValue, null);  // set model
+            try {
+                modelCaller.shynchronizeMVCModel(getId(), maxValue, null);  // set model
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
             sliderValue.setMaximum(maxValue);
         }
     }
@@ -110,7 +122,11 @@ public class ThresholdTSV extends ObjectTSV {
     public void setValue(int nvalue) {
         if(nvalue != value && modelCaller != null) {
             value = nvalue;
-            modelCaller.shynchronizeMVCModel(getId(), value, null);  // set model
+            try {
+                modelCaller.shynchronizeMVCModel(getId(), value, null);  // set model
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
             sliderValue.setValue(value);
         }
     }

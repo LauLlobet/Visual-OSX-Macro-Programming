@@ -35,6 +35,7 @@ read -p "Current task: $MSGP"
 
 git add -A;
 git commit -m "$MSG"; 
+git push -u origin --all
 
 read -p "SAVE task? [OK?]"
 

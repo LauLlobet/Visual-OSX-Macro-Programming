@@ -58,7 +58,11 @@ public class ObjectTSV extends FrameVObject {
     public void setW(int nw) {;
         if(nw != w && modelCaller != null) {
             w = nw;
-            modelCaller.shynchronizeMVCModel(getId(), nw, null);  // set model
+            try {
+                modelCaller.shynchronizeMVCModel(getId(), nw, null);  // set model
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
         w = nw;
         if (nw != this.getSize().getWidth())  {
@@ -70,7 +74,11 @@ public class ObjectTSV extends FrameVObject {
     public void setH(int nh) {
         if(nh != h && modelCaller != null) {
             h = nh;
-            modelCaller.shynchronizeMVCModel(getId(), nh, null);  // set model
+            try {
+                modelCaller.shynchronizeMVCModel(getId(), nh, null);  // set model
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
         h = nh;
         if (nh != this.getSize().getHeight())  {
@@ -87,7 +95,11 @@ public class ObjectTSV extends FrameVObject {
     public void setX(int nx) {
         if(nx != x && modelCaller != null) {
             x = nx;
-            modelCaller.shynchronizeMVCModel(getId(), nx, null);  // set model
+            try {
+                modelCaller.shynchronizeMVCModel(getId(), nx, null);  // set model
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
         if (nx != this.getLocation().getX())  {
             super.setLocation(nx,this.getY());
@@ -97,7 +109,11 @@ public class ObjectTSV extends FrameVObject {
     {
         if(ny != y && modelCaller != null) {
             y = ny;
-            modelCaller.shynchronizeMVCModel(getId(), ny, null);  // set model
+            try {
+                modelCaller.shynchronizeMVCModel(getId(), ny, null);  // set model
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
         if (ny != this.getLocation().getY())  {
             super.setLocation(this.getX(),ny);
@@ -108,7 +124,11 @@ public class ObjectTSV extends FrameVObject {
     public void setToBack(Boolean ntoBack) {
         if(ntoBack != toBack && modelCaller != null) {
             toBack = ntoBack;
-            modelCaller.shynchronizeMVCModel(getId(), toBack, null);  // set model
+            try {
+                modelCaller.shynchronizeMVCModel(getId(), toBack, null);  // set model
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -119,7 +139,11 @@ public class ObjectTSV extends FrameVObject {
     public void setActivePorts(ArrayList<LinkedList<Double>> nactivePorts) {
         if(!nactivePorts.equals(activePorts) && modelCaller != null) {
             activePorts = nactivePorts;
-            modelCaller.shynchronizeMVCModel(getId(), nactivePorts, null);
+            try {
+                modelCaller.shynchronizeMVCModel(getId(), nactivePorts, null);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
         setActivePortsRed();
         repaint();

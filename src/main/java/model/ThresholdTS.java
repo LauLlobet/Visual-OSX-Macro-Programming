@@ -76,7 +76,13 @@ public class ThresholdTS extends ObjectTS {
 
     public void setValue(int value) {
         this.value = value;
-        if(registeredInMvc){caller.shyncronizeMVCView(getId(),value,null);};
+        if(registeredInMvc){
+            try {
+                caller.shyncronizeMVCView(getId(),value,null);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        };
     }
     public int getMaxValue() {
         return maxValue;
@@ -84,7 +90,13 @@ public class ThresholdTS extends ObjectTS {
 
     public void setMaxValue(int maxValue) {
         this.maxValue = maxValue;
-        if(registeredInMvc){caller.shyncronizeMVCView(getId(),maxValue,null);};
+        if(registeredInMvc){
+            try {
+                caller.shyncronizeMVCView(getId(),maxValue,null);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        };
     }
 
     public int getThreshold1() {
@@ -93,7 +105,13 @@ public class ThresholdTS extends ObjectTS {
 
     public void setThreshold1(int threshold1) {
         this.threshold1 = threshold1;
-        if(registeredInMvc){caller.shyncronizeMVCView(getId(),threshold1,null);};
+        if(registeredInMvc){
+            try {
+                caller.shyncronizeMVCView(getId(),threshold1,null);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        };
     }
 
 
@@ -103,7 +121,13 @@ public class ThresholdTS extends ObjectTS {
 
     public void setThreshold2(int threshold2) {
         this.threshold2 = threshold2;
-        if(registeredInMvc){caller.shyncronizeMVCView(getId(),threshold2,null);};
+        if(registeredInMvc){
+            try {
+                caller.shyncronizeMVCView(getId(),threshold2,null);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        };
     }
 
 

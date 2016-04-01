@@ -92,6 +92,65 @@ public class ObjectTS {
         this.setActivePorts(this.getActivePorts());
     }
 
+    public boolean haveIReceivedABang(int port){
+
+        try {
+            String message = receiveMessageFromPortIfTrueFromTheLast(port,false);
+            if(TSOConstants.BANG_STRING.equals(message)){
+                return true;
+            }else{
+                returnReceivedMessageToBuffer(port,message,false);
+                return false;
+            }
+        } catch (Throwable throwable) {
+            return false;
+        }
+    }
+
+    public String receiveMessageFromPortIfTrueFromTheLast(int port, boolean flush) throws Throwable{
+        try {
+            LinkedList<String> buffer = getInputsHub().getPorts().get(port).getBuffer();
+            if(buffer.size() == 0){
+                throw new InofensiveException();
+            }
+            String message = "";
+            if(flush){
+                message = buffer.removeLast();
+            }else{
+                message = buffer.removeFirst();
+            }
+            return message;
+        } catch (InofensiveException e){
+            throw e;
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+            throw  throwable;
+        }
+    }
+
+    public void returnReceivedMessageToBuffer(int port, String message, boolean flush) throws Throwable{
+        LinkedList<String> buffer = getInputsHub().getPorts().get(port).getBuffer();
+        if(flush){
+            buffer.addLast(message);
+        }else{
+            buffer.addFirst(message);
+        }
+
+    }
+
+    public void flushReceivedMessagesInPort(int port)throws Throwable{
+        LinkedList<String> buffer = getInputsHub().getPorts().get(port).getBuffer();
+        buffer.removeAll(buffer);
+    }
+
+    protected void postMessageToPort(int i, String s) {
+        try {
+            this.getOutputsHub().getPorts().get(i).postMessage(s);
+        }catch(Throwable e) {
+            System.out.println("port threw an exception");
+        }
+    }
+
     //-------- NOLOGIC ----------   regular getters and setters  ----------------------
 
     public void doSetConectedToList(ArrayList<TSOConnection> conectedTo) throws Throwable {
@@ -104,12 +163,24 @@ public class ObjectTS {
 
     public void setOutputsHub( OutputConnectionHubTS outputs) {
         outputsHub = outputs;
-        if(registeredInMvc){caller.shyncronizeMVCView(getId(),outputs.toJSON(),null);}
+        if(registeredInMvc){
+            try {
+                caller.shyncronizeMVCView(getId(),outputs.toJSON(),null);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public void setInputsHub( InputConnectionHubTS inputs) {
         inputsHub = inputs;
-        if(registeredInMvc){caller.shyncronizeMVCView(getId(),inputs.toJSON(),null);}
+        if(registeredInMvc){
+            try {
+                caller.shyncronizeMVCView(getId(),inputs.toJSON(),null);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public void setId(String id) {
@@ -119,26 +190,56 @@ public class ObjectTS {
 
     public void setX(int x) {
         this.x = x;
-        if(registeredInMvc){caller.shyncronizeMVCView(getId(),x,null);}
+        if(registeredInMvc){
+            try {
+                caller.shyncronizeMVCView(getId(),x,null);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
     public void setY(int y)
     {
         this.y = y;
-        if(registeredInMvc){caller.shyncronizeMVCView(getId(),y,null);}
+        if(registeredInMvc){
+            try {
+                caller.shyncronizeMVCView(getId(),y,null);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
     public void setW(int w) {
         this.w = w;
-        if(registeredInMvc){caller.shyncronizeMVCView(getId(),w,null);}
+        if(registeredInMvc){
+            try {
+                caller.shyncronizeMVCView(getId(),w,null);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public void setH(int h) {
         this.h = h;
-        if(registeredInMvc){caller.shyncronizeMVCView(getId(),h,null);};
+        if(registeredInMvc){
+            try {
+                caller.shyncronizeMVCView(getId(),h,null);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        };
     }
 
     public void setToBack(Boolean toBack) {
         this.toBack = toBack;
-        if(registeredInMvc){caller.shyncronizeMVCView(getId(),toBack,null);}
+        if(registeredInMvc){
+            try {
+                caller.shyncronizeMVCView(getId(),toBack,null);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public ArrayList<LinkedList<Double>> getActivePorts() {
@@ -147,7 +248,13 @@ public class ObjectTS {
 
     public void setActivePorts(ArrayList<LinkedList<Double>> activePorts) {
         this.activePorts = activePorts;
-        if(registeredInMvc){caller.shyncronizeMVCView(getId(),activePorts,null);};
+        if(registeredInMvc){
+            try {
+                caller.shyncronizeMVCView(getId(),activePorts,null);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        };
     }
 
     public Boolean getToBack() {

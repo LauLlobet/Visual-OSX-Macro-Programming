@@ -64,7 +64,11 @@ public class MovementDetectorTSV extends ObjectTSV {
     public void setTolerance(int ntolerance) {
         if(ntolerance != tolerance && modelCaller != null) {
             tolerance = ntolerance;
-            modelCaller.shynchronizeMVCModel(getId(), tolerance, null);  // set model
+            try {
+                modelCaller.shynchronizeMVCModel(getId(), tolerance, null);  // set model
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 

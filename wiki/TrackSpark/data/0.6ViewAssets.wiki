@@ -10,14 +10,10 @@
 
 *DONE c:5 gui retocs*
 
-- threshold done
-
-- fer delay
+*DONE c:6 threshold done*
 
 - fer textbox
 
+- fer delay
+
 - text writter
-
-- keyboard shortcuts
-
-- fer text writter

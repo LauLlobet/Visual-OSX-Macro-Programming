@@ -66,6 +66,9 @@ public class ObjectsFactoryTS {
         if( type.startsWith(TSOConstants.THRESHOLD_TSOBJID) ){
             newObj = ThresholdTS.createOne(this.idGenerator,this.connectionChecker);
         }
+        if( type.startsWith(TSOConstants.TEXT_MESSAGE_TSOBJID) ){
+            newObj = TextMessageTS.createOne(this.idGenerator,this.connectionChecker);
+        }
 
         newObj.registerToMvc(caller);
         refreshUiAfter300Ms();

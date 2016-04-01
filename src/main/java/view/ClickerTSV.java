@@ -101,7 +101,11 @@ public class ClickerTSV extends ObjectTSV {
     public void setClickRelPositionX(int nclickRelPositionX) {
         if(nclickRelPositionX != clickRelPositionX && modelCaller != null) {
             clickRelPositionX = nclickRelPositionX;
-            modelCaller.shynchronizeMVCModel(getId(), nclickRelPositionX, null);  // set model
+            try {
+                modelCaller.shynchronizeMVCModel(getId(), nclickRelPositionX, null);  // set model
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
         repaint();
     }
@@ -113,7 +117,11 @@ public class ClickerTSV extends ObjectTSV {
     public void setClickRelPositionY(int nclickRelPositionY) {
         if(nclickRelPositionY != clickRelPositionY && modelCaller != null) {
             clickRelPositionY = nclickRelPositionY;
-            modelCaller.shynchronizeMVCModel(getId(), clickRelPositionY, null);  // set model
+            try {
+                modelCaller.shynchronizeMVCModel(getId(), clickRelPositionY, null);  // set model
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
         repaint();
     }

@@ -1,6 +1,7 @@
 package logic;
 
 import model.tsobject.ObjectTS;
+import view.InvalidFieldException;
 import view.UI.PortPanelFactory;
 import view.ObjectTSV;
 
@@ -49,7 +50,7 @@ public class Caller {
     }
 
 
-    public void shynchronizeMVCModel(String id, Object x, Object old) { //throws Exception{
+    public void shynchronizeMVCModel(String id, Object x, Object old) throws Exception{
         if(x.equals(old)){
             System.out.println("stoping loop trying to update model");
             return;
@@ -63,7 +64,7 @@ public class Caller {
         }
     }
 
-    public void shyncronizeMVCView(String id, Object x, Object old) {
+    public void shyncronizeMVCView(String id, Object x, Object old)throws  Exception {
         if(x.equals(old)){
             System.out.println("stoping loop trying to update view");
             return;
@@ -72,7 +73,7 @@ public class Caller {
         callFunction(obj,x);
     }
 
-    private void callFunction(Object obj, Object x) {
+    private void callFunction(Object obj, Object x) throws Exception {
         StackTraceElement[] stacktrace = Thread.currentThread().getStackTrace();
         StackTraceElement e = stacktrace[3];//maybe this number needs to be corrected
         String methodName = e.getMethodName();
@@ -81,10 +82,16 @@ public class Caller {
             method = obj.getClass().getMethod(methodName, int.class);
             method.invoke(obj,x);
         } catch (Exception q) {
+            if( q.getCause() instanceof InvalidFieldException){
+                throw (InvalidFieldException)q.getCause();
+            }
             try {
                 method = obj.getClass().getMethod(methodName, x.getClass());
-                method.invoke(obj,x);
+                method.invoke(obj, x);
             }catch (Exception b){
+                if( b.getCause() instanceof InvalidFieldException){
+                    throw (InvalidFieldException)b.getCause();
+                }
                 q.printStackTrace();
                 b.printStackTrace();
             }
