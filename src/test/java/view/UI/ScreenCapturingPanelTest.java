@@ -4,7 +4,7 @@ import logic.BewteenWindowsConnectionMaker;
 import logic.Caller;
 import logic.ConnectionsChecker;
 import logic.IdGenerator;
-import model.ObjectsFactoryTS;
+import model.tsobject.ObjectsFactoryTS;
 import org.junit.Test;
 import view.UI.connections.ConectionDisplayer;
 import view.UI.connections.ConnectionCableFactory;

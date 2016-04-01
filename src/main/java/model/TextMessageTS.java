@@ -28,6 +28,7 @@ public class TextMessageTS extends SingleFieldObjectTS {
             postMessageToPort(0,out);
             i++;
         }
+        super.processTic();
     }
 
     @Override
@@ -48,7 +49,7 @@ public class TextMessageTS extends SingleFieldObjectTS {
                 TSOConstants.MANY
         ),newObj));
         newObj.setW(200);
-        newObj.setH(100);
+        newObj.setH(40);
         newObj.setX(400);
         newObj.setY(600);
         return newObj;

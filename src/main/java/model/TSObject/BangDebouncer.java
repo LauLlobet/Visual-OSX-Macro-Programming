@@ -1,4 +1,4 @@
-package model;
+package model.tsobject;
 
 import Constants.TSOConstants;
 import model.tsobject.ObjectTS;

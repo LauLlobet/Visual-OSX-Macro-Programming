@@ -22,7 +22,7 @@ public class ClickerTS extends ObjectTS {
 
     @Override
     public void processTic(){
-        if(haveIReceivedABang(0)) {
+        if(haveIReceivedABang(0)){
             doClick();
         }
         super.processTic();

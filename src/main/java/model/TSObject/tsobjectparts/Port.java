@@ -1,6 +1,7 @@
 package model.tsobject.tsobjectparts;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import model.tsobject.InofensiveException;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -49,11 +50,7 @@ public class Port {
         return message;
     }
 
-    public LinkedList<String> getBuffer() {
-        return buffer;
-    }
-
-    public void setBuffer(LinkedList<String> buffer) {
+    public void doSetBuffer(LinkedList<String> buffer) {
         this.buffer = buffer;
     }
 
@@ -65,5 +62,39 @@ public class Port {
 
     public void addActivePortNotifier(LinkedList<Double> activePort) {
         this.activePort = activePort;
+    }
+
+    public String removeLast() throws InofensiveException{
+        if(buffer.size() == 0){
+            throw new InofensiveException();
+        }
+        return buffer.removeLast();
+    }
+
+    public String removeFirst() throws InofensiveException {
+        if(buffer.size() == 0){
+            throw new InofensiveException();
+        }
+        return buffer.removeFirst();
+    }
+
+    public void addLast(String message) {
+        buffer.addLast(message);
+    }
+
+    public void addFirst(String message) {
+        buffer.addFirst(message);
+    }
+
+    public void removeAll() {
+        buffer.removeAll(buffer);
+    }
+
+    public boolean doIsEmpty() {
+        return buffer.isEmpty();
+    }
+
+    public void add(String s) {
+        buffer.add(s);
     }
 }

@@ -1,4 +1,4 @@
-package model;
+package model.tsobject;
 
 import Constants.TSOConstants;
 import com.fasterxml.jackson.databind.InjectableValues;
@@ -7,6 +7,7 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 import logic.Caller;
 import logic.ConnectionsChecker;
 import logic.IdGenerator;
+import model.*;
 import model.tsobject.ObjectTS;
 import model.tsobject.tsobjectparts.InputConnectionHubTS;
 import model.tsobject.tsobjectparts.OutputConnectionHubTS;
@@ -69,7 +70,9 @@ public class ObjectsFactoryTS {
         if( type.startsWith(TSOConstants.TEXT_MESSAGE_TSOBJID) ){
             newObj = TextMessageTS.createOne(this.idGenerator,this.connectionChecker);
         }
-
+        if( type.startsWith(TSOConstants.BANG_TSOBJID) ){
+            newObj = BangTS.createOne(this.idGenerator,this.connectionChecker);
+        }
         newObj.registerToMvc(caller);
         refreshUiAfter300Ms();
         return newObj;

@@ -12,7 +12,9 @@
 
 *DONE c:6 threshold done*
 
-- fer textbox
+*DONE c:7 fer textbox*
+
+- fer bang
 
 - fer delay
 

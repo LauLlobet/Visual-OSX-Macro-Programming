@@ -2,8 +2,7 @@ package view.UI;
 
 import Constants.TSOConstants;
 import logic.*;
-import model.MovementDetectorTS;
-import model.ObjectsFactoryTS;
+import model.tsobject.ObjectsFactoryTS;
 import model.tsobject.ObjectTS;
 import org.junit.Test;
 import view.UI.connections.ConectionDisplayer;
@@ -45,8 +44,10 @@ public class VObjectTSTest {
         IdGenerator idg = new IdGenerator("testing");
         ObjectsFactoryTS of = new ObjectsFactoryTS(cc,idg,caller);
 
-        ObjectTS ob = of.build(TSOConstants.REPETITIVECOUNTDOWN_TSOBJID);
-        ObjectTS ob2 = of.build(TSOConstants.SCREENPRINTER_TSOBJID);
+        ObjectTS ob = of.build(TSOConstants.BANG_TSOBJID);
+//        ObjectTS bang = of.build(TSOConstants.BANG_TSOBJID);
+
+ //       ObjectTS ob2 = of.build(TSOConstants.SCREENPRINTER_TSOBJID);
         //ObjectTS ob2 = of.build(TSOConstants.CLICKER_TSOBJID);
         //ObjectTS ob2 = of.build(TSOConstants.THRESHOLD_TSOBJID);
         ObjectTS textmessage = of.build(TSOConstants.TEXT_MESSAGE_TSOBJID);

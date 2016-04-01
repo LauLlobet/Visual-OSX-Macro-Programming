@@ -2,6 +2,7 @@ package model;
 import Constants.TSOConstants;
 import logic.ConnectionsChecker;
 import logic.IdGenerator;
+import model.tsobject.BangDebouncer;
 import model.tsobject.ObjectTS;
 import view.MovementDetectorTSV;
 import view.UI.screencapturing.ScreenCapturer;

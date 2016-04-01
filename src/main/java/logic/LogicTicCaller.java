@@ -3,6 +3,7 @@ package logic;
 import Constants.TSOConstants;
 import model.tsobject.ObjectTS;
 import model.tsobject.tsobjectparts.OutputConnectionHubTS;
+import model.tsobject.tsobjectparts.Port;
 import model.tsobject.tsobjectparts.TSOConnection;
 import org.w3c.dom.stylesheets.LinkStyle;
 
@@ -75,9 +76,9 @@ public class LogicTicCaller {
     private void doCommuniateConnections(TSOConnection conn) throws Throwable {
         ObjectTS output = caller.getModel(conn.getOriginId());
         ObjectTS input = caller.getModel(conn.getDestinyId());
-        LinkedList<String> outBuffer = output.getOutputsHub().getPorts().get(conn.getOutPort()).getBuffer();
-        LinkedList<String> inBuffer = input.getInputsHub().getPorts().get(conn.getInPort()).getBuffer();
-        while(!outBuffer.isEmpty()){
+        Port outBuffer = output.getOutputsHub().getPorts().get(conn.getOutPort());
+        Port inBuffer = input.getInputsHub().getPorts().get(conn.getInPort());
+        while(!outBuffer.doIsEmpty()){
             inBuffer.add(outBuffer.removeFirst());
         }
     }

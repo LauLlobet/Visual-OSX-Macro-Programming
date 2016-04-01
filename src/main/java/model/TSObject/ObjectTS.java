@@ -109,15 +109,12 @@ public class ObjectTS {
 
     public String receiveMessageFromPortIfTrueFromTheLast(int port, boolean flush) throws Throwable{
         try {
-            LinkedList<String> buffer = getInputsHub().getPorts().get(port).getBuffer();
-            if(buffer.size() == 0){
-                throw new InofensiveException();
-            }
+            Port portbuffer = getInputsHub().getPorts().get(port);
             String message = "";
             if(flush){
-                message = buffer.removeLast();
+                message = portbuffer.removeLast();
             }else{
-                message = buffer.removeFirst();
+                message = portbuffer.removeFirst();
             }
             return message;
         } catch (InofensiveException e){
@@ -128,19 +125,19 @@ public class ObjectTS {
         }
     }
 
-    public void returnReceivedMessageToBuffer(int port, String message, boolean flush) throws Throwable{
-        LinkedList<String> buffer = getInputsHub().getPorts().get(port).getBuffer();
+    public void returnReceivedMessageToBuffer(int portnum, String message, boolean flush) throws Throwable{
+        Port port = getInputsHub().getPorts().get(portnum);
         if(flush){
-            buffer.addLast(message);
+            port.addLast(message);
         }else{
-            buffer.addFirst(message);
+            port.addFirst(message);
         }
 
     }
 
-    public void flushReceivedMessagesInPort(int port)throws Throwable{
-        LinkedList<String> buffer = getInputsHub().getPorts().get(port).getBuffer();
-        buffer.removeAll(buffer);
+    public void flushReceivedMessagesInPort(int portnum)throws Throwable{
+        Port port = getInputsHub().getPorts().get(portnum);
+        port.removeAll();
     }
 
     protected void postMessageToPort(int i, String s) {
