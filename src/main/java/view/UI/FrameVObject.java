@@ -48,7 +48,7 @@ public class FrameVObject extends javax.swing.JFrame {
 
         this.mainPanel = new JPanel(new BorderLayout());
 
-        this.setBackground(new Color(200,0,0,10));
+        this.setBackground(new Color(0,0,0,0));
 
         this.getContentPane().setLayout(new BorderLayout());
         this.getContentPane().add(mainPanel,BorderLayout.CENTER);
@@ -57,12 +57,12 @@ public class FrameVObject extends javax.swing.JFrame {
 
         this.header = new JPanel();
         this.header.setPreferredSize(new Dimension(100, 10));
-        this.header.setBackground(new Color(200,200,200,30));
+        this.header.setBackground(new Color(200,200,200));
         this.header.setLayout(new BoxLayout(this.header, BoxLayout.X_AXIS));
 
         footer = new JPanel();
         footer.setPreferredSize(new Dimension(100, 10));
-        footer.setBackground(new Color(200,200,200,20));
+        footer.setBackground(new Color(200,200,200));
         footer.setLayout(new BoxLayout(footer,  BoxLayout.X_AXIS));
 
         this.mainPanel.add(this.header, BorderLayout.NORTH);

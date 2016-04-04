@@ -5,31 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68c84884-33a5-4953-89cf-c14b9ee7c1b2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/model/ScreenFeaturesFinderTS.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/view/MovementDetectorTSV$1.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/Constants/TSOConstants.class" afterPath="$PROJECT_DIR$/build/classes/main/Constants/TSOConstants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/model/MovementDetectorTS.class" afterPath="$PROJECT_DIR$/build/classes/main/model/MovementDetectorTS.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/MovementDetectorTSV.class" afterPath="$PROJECT_DIR$/build/classes/main/view/MovementDetectorTSV.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/model/AssetsPersistanceAccessor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/view/ScreenFeatureFinderTSV.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/model/ScreenFeaturesFinderTS.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/model/ScreenFeaturesFinderTS.java" afterPath="$PROJECT_DIR$/src/main/java/model/ScreenFeatureFinderTS.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/model/tsobject/ObjectsFactoryTS$1Refresher.class" afterPath="$PROJECT_DIR$/build/classes/main/model/tsobject/ObjectsFactoryTS$1Refresher.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/model/tsobject/ObjectsFactoryTS.class" afterPath="$PROJECT_DIR$/build/classes/main/model/tsobject/ObjectsFactoryTS.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/ObjectTSV.class" afterPath="$PROJECT_DIR$/build/classes/main/view/ObjectTSV.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/UI/FrameVObject.class" afterPath="$PROJECT_DIR$/build/classes/main/view/UI/FrameVObject.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/logic/KeyboardTest.class" afterPath="$PROJECT_DIR$/build/classes/test/logic/KeyboardTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/view/UI/VObjectTSTest.class" afterPath="$PROJECT_DIR$/build/classes/test/view/UI/VObjectTSTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wiki/TrackSpark/data/wikiovw.sli" afterPath="$PROJECT_DIR$/wiki/TrackSpark/data/wikiovw.sli" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wiki/TrackSpark/data/wikiovw.sli-journal" afterPath="$PROJECT_DIR$/wiki/TrackSpark/data/wikiovw.sli-journal" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Constants/TSOConstants.java" afterPath="$PROJECT_DIR$/src/main/java/Constants/TSOConstants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/MovementDetectorTS.java" afterPath="$PROJECT_DIR$/src/main/java/model/MovementDetectorTS.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/view/BangTSV.java" afterPath="$PROJECT_DIR$/src/main/java/view/BangTSV.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/view/ClickerTSV.java" afterPath="$PROJECT_DIR$/src/main/java/view/ClickerTSV.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/view/FixedTextObjectTSV.java" afterPath="$PROJECT_DIR$/src/main/java/view/FixedTextObjectTSV.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/view/MovementDetectorTSV.java" afterPath="$PROJECT_DIR$/src/main/java/view/MovementDetectorTSV.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/view/ObjectTSV.java" afterPath="$PROJECT_DIR$/src/main/java/view/ObjectTSV.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/view/SingleFieldObjectTSV.java" afterPath="$PROJECT_DIR$/src/main/java/view/SingleFieldObjectTSV.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/view/ThresholdTSV.java" afterPath="$PROJECT_DIR$/src/main/java/view/ThresholdTSV.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/TSObject/ObjectsFactoryTS.java" afterPath="$PROJECT_DIR$/src/main/java/model/TSObject/ObjectsFactoryTS.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/view/UI/FrameVObject.java" afterPath="$PROJECT_DIR$/src/main/java/view/UI/FrameVObject.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/view/UI/VObjectTSTest.java" afterPath="$PROJECT_DIR$/src/test/java/view/UI/VObjectTSTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wiki/TrackSpark/TrackSpark.wiki" afterPath="$PROJECT_DIR$/wiki/TrackSpark/TrackSpark.wiki" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wiki/TrackSpark/data/0.6ViewAssets.wiki" afterPath="$PROJECT_DIR$/wiki/TrackSpark/data/0.6ViewAssets.wiki" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wiki/TrackSpark/data/TrackSpark.wiki" afterPath="$PROJECT_DIR$/wiki/TrackSpark/data/TrackSpark.wiki" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wiki/TrackSpark/data/0.8OpenCv.wiki" afterPath="$PROJECT_DIR$/wiki/TrackSpark/data/0.8OpenCv.wiki" />
     </list>
     <ignored path="trackspark.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -105,7 +96,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/view/UI/VObjectTSTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+              <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -113,90 +104,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MovementDetectorTSV.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/view/MovementDetectorTSV.java">
+      <file leaf-file-name="ScreenFeatureFinderTSV.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/view/ScreenFeatureFinderTSV.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.44931507">
+              <caret line="101" column="9" selection-start-line="101" selection-start-column="9" selection-end-line="101" selection-end-column="9" />
               <folding>
-                <element signature="e#1057#1058#0" expanded="true" />
-                <element signature="e#1094#1095#0" expanded="true" />
+                <element signature="e#999#1395#0" expanded="true" />
+                <element signature="e#1394#1395#0" expanded="true" />
+                <element signature="e#2833#2834#0" expanded="true" />
+                <element signature="e#2870#2871#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SingleFieldObjectTSV.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/view/SingleFieldObjectTSV.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ThresholdTSV.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/view/ThresholdTSV.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ObjectTSV.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/view/ObjectTSV.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41643837">
-              <caret line="147" column="28" selection-start-line="147" selection-start-column="28" selection-end-line="147" selection-end-column="28" />
-              <folding>
-                <element signature="e#5331#5332#0" expanded="true" />
-                <element signature="e#5377#5378#0" expanded="true" />
-                <element signature="e#5437#5438#0" expanded="true" />
-                <element signature="e#5485#5486#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BangTSV.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/view/BangTSV.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClickerTSV.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/view/ClickerTSV.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FixedTextObjectTSV.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/view/FixedTextObjectTSV.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Component.class" pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/awt/Component.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.4814816">
-              <caret line="427" column="16" selection-start-line="427" selection-start-column="16" selection-end-line="427" selection-end-column="16" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -205,15 +123,87 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/view/UI/FrameVObject.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="98" column="36" selection-start-line="98" selection-start-column="19" selection-end-line="98" selection-end-column="36" />
+              <caret line="50" column="43" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3919#3920#0" expanded="true" />
-                <element signature="e#3953#3954#0" expanded="true" />
-                <element signature="e#4030#4031#0" expanded="true" />
-                <element signature="e#4076#4077#0" expanded="true" />
-                <element signature="e#4609#4610#0" expanded="true" />
-                <element signature="e#4643#4644#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Class.class" pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/lang/Class.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.185185">
+              <caret line="304" column="0" selection-start-line="304" selection-start-column="0" selection-end-line="304" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Caller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/logic/Caller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ObjectTSV.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/view/ObjectTSV.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.148148">
+              <caret line="41" column="11" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="11" />
+              <folding>
+                <element signature="e#881#882#0" expanded="true" />
+                <element signature="e#906#907#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScreenFeatureFinderTS.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/ScreenFeatureFinderTS.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+              <folding>
+                <element signature="e#2341#2342#0" expanded="true" />
+                <element signature="e#2380#2381#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ObjectTS.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/tsobject/ObjectTS.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TSOConstants.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Constants/TSOConstants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="31" column="49" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AssetsPersistanceAccessor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/AssetsPersistanceAccessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -225,8 +215,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -548,9 +538,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/view/UI/MovementDetectorTSV.java" />
-        <option value="$PROJECT_DIR$/src/main/java/view/UI/SymmetricResizableFrame.java" />
-        <option value="$PROJECT_DIR$/src/main/java/view/UI/ConectionDisplay.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/UI/BewteenWindowsConnectionMaker.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/UI/ThresholdTSV.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/UI/PortPanel.java" />
@@ -579,26 +566,29 @@
         <option value="$PROJECT_DIR$/src/main/java/model/FixedTextObjectTS.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/ScreenPrinterTSV.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/ScreenPrinterTS.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/tsobject/ObjectsFactoryTS.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/TextPrinterTS.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/TextPrinterTSV.java" />
         <option value="$PROJECT_DIR$/src/main/java/logic/Keyboard.java" />
         <option value="$PROJECT_DIR$/src/test/java/logic/KeyboardTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/ScreenItItemsTargetTS.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/ScreenItemsFinderTS.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Constants/TSOConstants.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/ScreenFeaturesFinderTS.java" />
         <option value="$PROJECT_DIR$/src/main/java/logic/LogicTicCaller.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/MovementDetectorTS.java" />
-        <option value="$PROJECT_DIR$/src/test/java/view/UI/VObjectTSTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/BangTSV.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/ClickerTSV.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/FixedTextObjectTSV.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/MovementDetectorTSV.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/SingleFieldObjectTSV.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/ThresholdTSV.java" />
-        <option value="$PROJECT_DIR$/src/main/java/view/UI/FrameVObject.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/ObjectTSV.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/tsobject/ObjectsFactoryTS.java" />
+        <option value="$PROJECT_DIR$/src/main/java/view/UI/FrameVObject.java" />
+        <option value="$PROJECT_DIR$/src/test/java/view/UI/VObjectTSTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Constants/TSOConstants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/ScreenFeatureFinderTS.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/AssetsPersistanceAccessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/view/ScreenFeatureFinderTSV.java" />
       </list>
     </option>
   </component>
@@ -1084,15 +1074,15 @@
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="model" />
       <recent name="view" />
+      <recent name="model" />
       <recent name="view.UI" />
       <recent name="model.tsobject" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="model" />
       <recent name="model.tsobject" />
       <recent name="view" />
-      <recent name="model" />
       <recent name="view.UI.connections" />
       <recent name="view.UI" />
     </key>
@@ -1672,44 +1662,44 @@
       <workItem from="1459438001391" duration="109000" />
       <workItem from="1459438135098" duration="10461000" />
       <workItem from="1459503744312" duration="23957000" />
-      <workItem from="1459769129548" duration="4074000" />
+      <workItem from="1459769129548" duration="11851000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.04.04 at 14h 41m 54s.xml">
+    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.04.04 at 16h 46m 58s.xml">
       <configuration name="VObjectTSTest.testSetConnectionFromMouseEvents" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.04.04 at 14h 49m 33s.xml">
+    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.04.04 at 16h 48m 16s.xml">
       <configuration name="VObjectTSTest.testSetConnectionFromMouseEvents" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.04.04 at 14h 49m 44s.xml">
+    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.04.04 at 16h 48m 47s.xml">
       <configuration name="VObjectTSTest.testSetConnectionFromMouseEvents" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.04.04 at 14h 51m 30s.xml">
+    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.04.04 at 17h 18m 24s.xml">
       <configuration name="VObjectTSTest.testSetConnectionFromMouseEvents" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.04.04 at 14h 52m 58s.xml">
+    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.04.04 at 17h 19m 13s.xml">
       <configuration name="VObjectTSTest.testSetConnectionFromMouseEvents" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.04.04 at 14h 53m 34s.xml">
+    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.04.04 at 17h 21m 17s.xml">
       <configuration name="VObjectTSTest.testSetConnectionFromMouseEvents" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.04.04 at 14h 57m 17s.xml">
+    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.04.04 at 17h 23m 13s.xml">
       <configuration name="VObjectTSTest.testSetConnectionFromMouseEvents" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.04.04 at 14h 57m 54s.xml">
+    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.04.04 at 17h 23m 58s.xml">
       <configuration name="VObjectTSTest.testSetConnectionFromMouseEvents" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.04.04 at 14h 58m 30s.xml">
+    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.04.04 at 17h 25m 53s.xml">
       <configuration name="VObjectTSTest.testSetConnectionFromMouseEvents" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.04.04 at 14h 58m 56s.xml">
+    <history-entry file="VObjectTSTest_testSetConnectionFromMouseEvents - 2016.04.04 at 17h 25m 56s.xml">
       <configuration name="VObjectTSTest.testSetConnectionFromMouseEvents" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="222442000" />
+    <option name="totallyTimeSpent" value="230219000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1726,23 +1716,23 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286119" sideWeight="0.49745825" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32307693" sideWeight="0.2832618" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32307693" sideWeight="0.27896994" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45034966" sideWeight="0.5965665" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45034966" sideWeight="0.61587983" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914925" sideWeight="0.49713877" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45034966" sideWeight="0.40343347" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45034966" sideWeight="0.38412017" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3265306" sideWeight="0.49164852" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28898427" sideWeight="0.4927235" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32307693" sideWeight="0.43133047" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32307693" sideWeight="0.42846924" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15665236" sideWeight="0.49261993" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.50727654" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3958042" sideWeight="0.5522174" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3958042" sideWeight="0.6123033" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1767,7 +1757,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/model/tsobject/ObjectsFactoryTS.java</url>
-          <line>88</line>
+          <line>92</line>
           <properties />
           <option name="timeStamp" value="175" />
         </line-breakpoint>
@@ -1807,12 +1797,33 @@
           <properties />
           <option name="timeStamp" value="288" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/model/ScreenFeatureFinderTS.java</url>
+          <line>82</line>
+          <properties />
+          <option name="timeStamp" value="299" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/logic/Caller.java</url>
+          <line>95</line>
+          <properties />
+          <option name="timeStamp" value="305" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/model/AssetsPersistanceAccessor.java</url>
+          <line>38</line>
+          <properties />
+          <option name="timeStamp" value="306" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="290" />
+      <option name="time" value="307" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
-        <watch expression="allkeys" language="JAVA" custom="" />
+        <watch expression="methodName" language="JAVA" custom="" />
+        <watch expression="x.getClass()" language="JAVA" custom="" />
+        <watch expression="obj" language="JAVA" custom="" />
+        <watch expression="((ScreenFeatureFinderTS) obj).doTakePicture(&quot;&quot;);" language="JAVA" custom="model.ScreenFeatureFinderTS" />
       </configuration>
       <configuration name="Application">
         <watch expression="xSize" language="JAVA" custom="" />
@@ -1824,48 +1835,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/lang/Class.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.37037">
-          <caret line="304" column="0" selection-start-line="304" selection-start-column="0" selection-end-line="304" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/UI/PortPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="20" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/lang/reflect/Method.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.407408">
-          <caret line="64" column="28" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/UI/SymmetricResizableFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/view/UI/ScreenCapturingPanelTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.02970297">
-          <caret line="56" column="47" selection-start-line="56" selection-start-column="47" selection-end-line="56" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/view/TextMessageTSV.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1918,14 +1887,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/ThresholdTS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="134" column="16" selection-start-line="134" selection-start-column="16" selection-end-line="134" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -2057,17 +2018,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/tsobject/ObjectsFactoryTS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="76" column="31" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3939#3945#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/TextPrinterTS.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2150,33 +2100,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Constants/TSOConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46866485">
-          <caret line="30" column="77" selection-start-line="30" selection-start-column="77" selection-end-line="30" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/ScreenFeaturesFinderTS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="76" column="32" selection-start-line="76" selection-start-column="32" selection-end-line="76" selection-end-column="32" />
-          <folding>
-            <element signature="e#2266#2267#0" expanded="true" />
-            <element signature="e#2305#2306#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/Caller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/logic/LogicTicCaller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2193,32 +2116,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/tsobject/ObjectTS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="245" column="16" selection-start-line="245" selection-start-column="16" selection-end-line="245" selection-end-column="16" />
-          <folding>
-            <element signature="e#2855#2856#0" expanded="true" />
-            <element signature="e#2913#2914#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/awt/Component.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.4814816">
           <caret line="427" column="16" selection-start-line="427" selection-start-column="16" selection-end-line="427" selection-end-column="16" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/view/UI/VObjectTSTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2246,14 +2148,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/ThresholdTSV.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/view/SingleFieldObjectTSV.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2273,31 +2167,142 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/UI/FrameVObject.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/ThresholdTS.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="98" column="36" selection-start-line="98" selection-start-column="19" selection-end-line="98" selection-end-column="36" />
+          <caret line="124" column="10" selection-start-line="117" selection-start-column="8" selection-end-line="124" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/ThresholdTSV.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="131" column="5" selection-start-line="120" selection-start-column="0" selection-end-line="131" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/sun/reflect/NativeMethodAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.444445">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Constants/TSOConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="49" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/tsobject/ObjectsFactoryTS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3919#3920#0" expanded="true" />
-            <element signature="e#3953#3954#0" expanded="true" />
-            <element signature="e#4030#4031#0" expanded="true" />
-            <element signature="e#4076#4077#0" expanded="true" />
-            <element signature="e#4609#4610#0" expanded="true" />
-            <element signature="e#4643#4644#0" expanded="true" />
+            <element signature="e#4147#4153#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/sun/reflect/DelegatingMethodAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5769231">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/view/UI/VObjectTSTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/tsobject/ObjectTS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/view/ObjectTSV.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41643837">
-          <caret line="147" column="28" selection-start-line="147" selection-start-column="28" selection-end-line="147" selection-end-column="28" />
+        <state vertical-scroll-proportion="-4.148148">
+          <caret line="41" column="11" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="11" />
           <folding>
-            <element signature="e#5331#5332#0" expanded="true" />
-            <element signature="e#5377#5378#0" expanded="true" />
-            <element signature="e#5437#5438#0" expanded="true" />
-            <element signature="e#5485#5486#0" expanded="true" />
+            <element signature="e#881#882#0" expanded="true" />
+            <element signature="e#906#907#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/lang/Class.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.185185">
+          <caret line="304" column="0" selection-start-line="304" selection-start-column="0" selection-end-line="304" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/Caller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/AssetsPersistanceAccessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/ScreenFeatureFinderTS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+          <folding>
+            <element signature="e#2341#2342#0" expanded="true" />
+            <element signature="e#2380#2381#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/UI/FrameVObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="50" column="43" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/ScreenFeatureFinderTSV.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44931507">
+          <caret line="101" column="9" selection-start-line="101" selection-start-column="9" selection-end-line="101" selection-end-column="9" />
+          <folding>
+            <element signature="e#999#1395#0" expanded="true" />
+            <element signature="e#1394#1395#0" expanded="true" />
+            <element signature="e#2833#2834#0" expanded="true" />
+            <element signature="e#2870#2871#0" expanded="true" />
           </folding>
         </state>
       </provider>

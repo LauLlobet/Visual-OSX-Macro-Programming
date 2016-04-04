@@ -2,6 +2,7 @@ package view.UI;
 
 import Constants.TSOConstants;
 import logic.*;
+import model.ScreenFeatureFinderTS;
 import model.tsobject.ObjectsFactoryTS;
 import model.tsobject.ObjectTS;
 import org.junit.Test;
@@ -44,24 +45,26 @@ public class VObjectTSTest {
 
         //ObjectTS delay = of.build(TSOConstants.DELAY_TSOBJID);
 
-        ObjectTS repetitive = of.build(TSOConstants.REPETITIVECOUNTDOWN_TSOBJID);
+       // ObjectTS repetitive = of.build(TSOConstants.REPETITIVECOUNTDOWN_TSOBJID);
 
         //ObjectTS ob2 = of.build(TSOConstants.TEXTPRINTER_TSOBJID);
         //ObjectTS ob2 = of.build(TSOConstants.CLICKER_TSOBJID);
         //ObjectTS ob2 = of.build(TSOConstants.THRESHOLD_TSOBJID);
         //ObjectTS textmessage = of.build(TSOConstants.TEXT_MESSAGE_TSOBJID);
+        //ObjectTS mdetect = of.build(TSOConstants.MOVEMENT_DETECTOR_TSOBJID);
 
 
-        ObjectTS ob3 = of.build(TSOConstants.MOVEMENT_DETECTOR_TSOBJID);
+        ObjectTS sfinder = of.build(TSOConstants.SCREEN_FEATURES_FINDE);
 
         //ob2.setX(500);
 
 
-      /*  ScreenCapturer screenCapturer = new ScreenCapturer();
+        ScreenCapturer screenCapturer = new ScreenCapturer();
         Thread capturerThread = new Thread(screenCapturer);
         capturerThread.start();
-        */
-        //((MovementDetectorTS)ob3).registerToCapturer(screenCapturer);
+
+//        ((MovementDetectorTS)ob3).registerToCapturer(screenCapturer);
+        ((ScreenFeatureFinderTS)sfinder).registerToCapturer(screenCapturer);
 
 
         LogicTicCaller lc = new LogicTicCaller(caller);

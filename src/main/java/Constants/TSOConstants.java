@@ -29,6 +29,7 @@ public class TSOConstants {
     public static final String TEXT_MESSAGE_TSOBJID = "TEXT_MESSAGE_TSOBJID" ;
     public static final String TEXTPRINTER_TSOBJID = "TEXTPRINTER_TSOBJID";
     public static final String SCREEN_FEATURES_FINDE = "SCREEN_FEATURES_FINDE";
+    public static final String NOASSET = "NOASSET";
 
 
     public static int UI_SEPARATIONBETWEENPORTS = 10;
