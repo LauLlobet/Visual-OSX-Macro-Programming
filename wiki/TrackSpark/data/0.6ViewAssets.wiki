@@ -16,6 +16,6 @@
 
 *DONE c:8 fer bang*
 
-- fer delay
+*DONE c:9 fer delay*
 
 - text writter

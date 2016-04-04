@@ -2,29 +2,33 @@ package model;
 import Constants.TSOConstants;
 import logic.ConnectionsChecker;
 import logic.IdGenerator;
+import logic.Keyboard;
 import model.tsobject.ObjectTS;
-import view.FixedTextObjectTSV;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
 
-public class ScreenPrinterTS extends FixedTextObjectTS {
+public class TextPrinterTS extends FixedTextObjectTS {
 
     public String printValue;
-
-    public ScreenPrinterTS() {
+    Keyboard keyboard;
+    public TextPrinterTS() {
         super();
-        type = TSOConstants.SCREENPRINTER_TSOBJID;
+        type = TSOConstants.TEXTPRINTER_TSOBJID;
         printValue = "---";
+        try{
+            keyboard = new Keyboard();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void processTic(){
         try {
             String message = receiveMessageFromPortIfTrueFromTheLast(0,true);
-            setPrintValue(message);
+            writeDown(message);
             setField1(message);
             flushReceivedMessagesInPort(0);
         } catch (Throwable throwable) {
@@ -32,22 +36,17 @@ public class ScreenPrinterTS extends FixedTextObjectTS {
         super.processTic();
     }
 
-    public void setPrintValue(String printValue){
-        System.out.println("-------------PRINT VALUE---------------");
-        System.out.println("---------   "+printValue+"      ----------");
-        System.out.println("-----------------------------------------");
-        this.printValue = printValue;
+    public void writeDown(String printValue){
+        keyboard.type(printValue);
+
     }
 
-    public String getPrintValue(){
-        return  this.printValue;
-    }
 
 
 
     public static ObjectTS createOne(IdGenerator idGenerator, ConnectionsChecker connectionChecker) throws Throwable{
         ObjectTS newObj;
-        newObj = new ScreenPrinterTS();
+        newObj = new TextPrinterTS();
         newObj.setId(idGenerator.getNextId(newObj));
         newObj = setConectionHubs(newObj, connectionChecker);
 
@@ -55,7 +54,7 @@ public class ScreenPrinterTS extends FixedTextObjectTS {
         newObj.getInputsHub().setPorts(generateInputPorts(Arrays.asList(
                 TSOConstants.MANY
         )));
-        newObj.setW(120);
+        newObj.setW(90);
         newObj.setH(60);
         newObj.setX(900);
         newObj.setY(400);

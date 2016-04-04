@@ -27,6 +27,7 @@ public class TSOConstants {
     public static final String MOVEMENT_DETECTOR_TSOBJID = "MOVEMENT_DETECTOR_TSOBJID";
     public static final String THRESHOLD_TSOBJID = "THRESHOLD_TSOBJID" ;
     public static final String TEXT_MESSAGE_TSOBJID = "TEXT_MESSAGE_TSOBJID" ;
+    public static final String TEXTPRINTER_TSOBJID = "TEXTPRINTER_TSOBJID";
 
 
     public static int UI_SEPARATIONBETWEENPORTS = 10;

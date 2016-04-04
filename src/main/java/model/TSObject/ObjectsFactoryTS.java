@@ -73,6 +73,9 @@ public class ObjectsFactoryTS {
         if( type.startsWith(TSOConstants.BANG_TSOBJID) ){
             newObj = BangTS.createOne(this.idGenerator,this.connectionChecker);
         }
+        if( type.startsWith(TSOConstants.TEXTPRINTER_TSOBJID) ){
+            newObj = TextPrinterTS.createOne(this.idGenerator,this.connectionChecker);
+        }
         newObj.registerToMvc(caller);
         refreshUiAfter300Ms();
         return newObj;

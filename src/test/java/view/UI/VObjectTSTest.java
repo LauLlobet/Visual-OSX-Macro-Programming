@@ -14,10 +14,6 @@ import view.UI.screencapturing.ScreenCapturer;
  */
 public class VObjectTSTest {
 
-
-
-
-
     //@Test
     public void testSetConnectionFromModel() throws Throwable {
 
@@ -29,7 +25,6 @@ public class VObjectTSTest {
 
         Thread.sleep(10000);*/
     }
-
 
     @Test
     public void testSetConnectionFromMouseEvents() throws Throwable {
@@ -49,7 +44,7 @@ public class VObjectTSTest {
 
         ObjectTS delay = of.build(TSOConstants.DELAY_TSOBJID);
 
- //       ObjectTS ob2 = of.build(TSOConstants.SCREENPRINTER_TSOBJID);
+        ObjectTS ob2 = of.build(TSOConstants.TEXTPRINTER_TSOBJID);
         //ObjectTS ob2 = of.build(TSOConstants.CLICKER_TSOBJID);
         //ObjectTS ob2 = of.build(TSOConstants.THRESHOLD_TSOBJID);
         ObjectTS textmessage = of.build(TSOConstants.TEXT_MESSAGE_TSOBJID);
@@ -71,7 +66,4 @@ public class VObjectTSTest {
         Thread.sleep(2000000000);
         of.storeAllModelsInFile("areconnected.txt");
     }
-
-
-
 }
