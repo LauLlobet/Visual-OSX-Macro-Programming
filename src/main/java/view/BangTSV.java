@@ -29,7 +29,7 @@ public class BangTSV extends ObjectTSV {
         });
 
         button.putClientProperty("JComponent.sizeVariant", "mini");
-        this.getContentPane().add(button,BorderLayout.CENTER);
+        this.mainPanel.add(button,BorderLayout.CENTER);
     }
 
     public void doSendBang(String s) {

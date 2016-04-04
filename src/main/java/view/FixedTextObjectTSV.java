@@ -21,7 +21,7 @@ public class FixedTextObjectTSV extends ObjectTSV {
         jfield1 = new JTextField();
         jfield1.setEditable(false);
         jfield1.putClientProperty("JComponent.sizeVariant", "mini");
-        this.getContentPane().add(jfield1,BorderLayout.CENTER);
+        this.mainPanel.add(jfield1,BorderLayout.CENTER);
     }
 
     public String getField1() {

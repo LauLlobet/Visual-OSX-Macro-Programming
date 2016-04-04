@@ -24,7 +24,7 @@ public class ThresholdTSV extends ObjectTSV {
         super(id, mc, portPanelFactory);
         boxpanel = new JPanel();
         boxpanel.setLayout(new BorderLayout());
-        this.getContentPane().add(boxpanel,BorderLayout.CENTER);
+        this.mainPanel.add(boxpanel,BorderLayout.CENTER);
         JPanel inputSliderPanel = new JPanel();
         boxpanel.setBackground(new Color(200,200,200));
 

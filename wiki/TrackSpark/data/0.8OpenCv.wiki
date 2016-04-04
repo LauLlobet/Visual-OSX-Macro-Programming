@@ -1,0 +1,17 @@
+﻿++ 0.8Open Cv
+
+- bugfix transparent background
+
+- panel that makes photo
+
+- cross in the panel
+
+- cv engine register picture and followingInterface
+
+- return coordinates
+
+- face placer
+
+- clicker passive
+
+- spotify despliegue

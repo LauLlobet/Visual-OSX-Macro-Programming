@@ -21,7 +21,7 @@ public class ClickerTSV extends ObjectTSV {
         super(id, mc, portPanelFactory);
         Button b = new Button("Set");
         b.setPreferredSize(new Dimension(20,20));
-        this.getContentPane().add(b,BorderLayout.AFTER_LAST_LINE);
+        this.mainPanel.add(b,BorderLayout.AFTER_LAST_LINE);
         b.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {

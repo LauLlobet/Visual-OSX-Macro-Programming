@@ -146,7 +146,6 @@ public class ObjectTSV extends FrameVObject {
             }
         }
         setActivePortsRed();
-        repaint();
     }
 
     public Boolean getToBack() {

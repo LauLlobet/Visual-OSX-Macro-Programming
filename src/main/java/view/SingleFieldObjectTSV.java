@@ -44,7 +44,7 @@ public class SingleFieldObjectTSV extends ObjectTSV {
             }
         });
         jfield1.putClientProperty("JComponent.sizeVariant", "mini");
-        this.getContentPane().add(jfield1,BorderLayout.CENTER);
+        this.mainPanel.add(jfield1,BorderLayout.CENTER);
     }
 
     public String getField1() {

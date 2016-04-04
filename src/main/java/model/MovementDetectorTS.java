@@ -15,7 +15,6 @@ import java.util.Arrays;
 
 
 public class MovementDetectorTS extends ObjectTS implements ScreenRegionsListener {
-    int tolerance;
 
     BufferedImage previousImage;
     private int movementIndex;
@@ -50,21 +49,6 @@ public class MovementDetectorTS extends ObjectTS implements ScreenRegionsListene
         newObj.setX(900);
         newObj.setY(400);
         return newObj;
-    }
-
-    public int getTolerance() {
-        return tolerance;
-    }
-
-    public void setTolerance(int tolerance) {
-        this.tolerance = tolerance;
-        if(registeredInMvc){
-            try {
-                caller.shyncronizeMVCView(getId(),tolerance,null);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        };
     }
 
     public void registerToCapturer(ScreenCapturer screenCapturer) {

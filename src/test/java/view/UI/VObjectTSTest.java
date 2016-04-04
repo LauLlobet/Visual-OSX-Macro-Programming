@@ -39,25 +39,28 @@ public class VObjectTSTest {
         IdGenerator idg = new IdGenerator("testing");
         ObjectsFactoryTS of = new ObjectsFactoryTS(cc,idg,caller);
 
-        ObjectTS ob = of.build(TSOConstants.BANG_TSOBJID);
+        //ObjectTS ob = of.build(TSOConstants.BANG_TSOBJID);
 //        ObjectTS bang = of.build(TSOConstants.BANG_TSOBJID);
 
-        ObjectTS delay = of.build(TSOConstants.DELAY_TSOBJID);
+        //ObjectTS delay = of.build(TSOConstants.DELAY_TSOBJID);
 
-        ObjectTS ob2 = of.build(TSOConstants.TEXTPRINTER_TSOBJID);
+        ObjectTS repetitive = of.build(TSOConstants.REPETITIVECOUNTDOWN_TSOBJID);
+
+        //ObjectTS ob2 = of.build(TSOConstants.TEXTPRINTER_TSOBJID);
         //ObjectTS ob2 = of.build(TSOConstants.CLICKER_TSOBJID);
         //ObjectTS ob2 = of.build(TSOConstants.THRESHOLD_TSOBJID);
-        ObjectTS textmessage = of.build(TSOConstants.TEXT_MESSAGE_TSOBJID);
+        //ObjectTS textmessage = of.build(TSOConstants.TEXT_MESSAGE_TSOBJID);
 
 
-        //ObjectTS ob3 = of.build(TSOConstants.MOVEMENT_DETECTOR_TSOBJID);
+        ObjectTS ob3 = of.build(TSOConstants.MOVEMENT_DETECTOR_TSOBJID);
 
         //ob2.setX(500);
 
 
-        ScreenCapturer screenCapturer = new ScreenCapturer();
+      /*  ScreenCapturer screenCapturer = new ScreenCapturer();
         Thread capturerThread = new Thread(screenCapturer);
         capturerThread.start();
+        */
         //((MovementDetectorTS)ob3).registerToCapturer(screenCapturer);
 
 

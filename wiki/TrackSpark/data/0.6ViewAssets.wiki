@@ -18,4 +18,4 @@
 
 *DONE c:9 fer delay*
 
-- text writter
+*DONE c:10 text writter*

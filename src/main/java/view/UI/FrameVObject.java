@@ -26,6 +26,7 @@ public class FrameVObject extends javax.swing.JFrame {
     protected ArrayList<LinkedList<Double>> activePorts;
     private ArrayList<PortPanel> outputPorts;
     private Color red = new Color(0,0,0);
+    protected JPanel mainPanel;
 
 
     public FrameVObject(String id, int x, int y, int w, int h, PortPanelFactory portPanelFactory) {
@@ -38,33 +39,34 @@ public class FrameVObject extends javax.swing.JFrame {
         point = new Point(w/2,h/2);
         activePorts = new ArrayList<LinkedList<Double>>();
         outputPorts = new ArrayList<PortPanel>();
-        
+
         this.setBounds(x,y,w,h);
         this.setUndecorated(true);
         this.setAlwaysOnTop( true );
 
         getRootPane().putClientProperty("apple.awt.draggableWindowBackground", Boolean.FALSE);
 
-        this.setBackground(new Color(200,255,200,40));
+        this.mainPanel = new JPanel(new BorderLayout());
+
+        this.setBackground(new Color(200,0,0,10));
 
         this.getContentPane().setLayout(new BorderLayout());
+        this.getContentPane().add(mainPanel,BorderLayout.CENTER);
 
         this.setPreferredSize(new Dimension(100, 161));
 
         this.header = new JPanel();
         this.header.setPreferredSize(new Dimension(100, 10));
-        this.header.setBackground(new Color(200,200,200));
+        this.header.setBackground(new Color(200,200,200,30));
         this.header.setLayout(new BoxLayout(this.header, BoxLayout.X_AXIS));
 
         footer = new JPanel();
         footer.setPreferredSize(new Dimension(100, 10));
-        footer.setBackground(new Color(200,200,200));
+        footer.setBackground(new Color(200,200,200,20));
         footer.setLayout(new BoxLayout(footer,  BoxLayout.X_AXIS));
 
-        this.getContentPane().add(this.header, BorderLayout.PAGE_START);
-        this.getContentPane().add(footer, BorderLayout.PAGE_END);
-
-
+        this.mainPanel.add(this.header, BorderLayout.NORTH);
+        this.mainPanel.add(footer, BorderLayout.SOUTH);
 
         this.pack();
         this.setVisible(true);
@@ -72,6 +74,7 @@ public class FrameVObject extends javax.swing.JFrame {
         ComponentResizer cr = new ComponentResizer(new Insets(2, 2, 2, 2),new Dimension(1, 1));
         cr.registerComponent(this);
         ComponentMover cm = new ComponentMover(this,header);
+
     }
 
     public void createInputPanelPort(String type,int numPort){
@@ -111,7 +114,6 @@ public class FrameVObject extends javax.swing.JFrame {
         }
     }
 
-
     public ArrayList<LinkedList<Double>> getActivePorts() {
         return activePorts;
     }
@@ -133,8 +135,6 @@ public class FrameVObject extends javax.swing.JFrame {
         }
         this.isFullscreen = b;
     }
-    
-    
 
     @Override
     public void setSize(int w, int h){
