@@ -15,8 +15,13 @@ public class FeaturesScreenFinderTes {
         ImageFeaturesFinder iff = new ImageFeaturesFinder();
         iff.loadBigFromFile("./asssets/big.png");
         iff.loadSmallFromFile("./asssets/small.png");
-        Point xy = iff.getFeatureXYPosition();
-        Assert.assertEquals(xy, new Point(10,10));
+        int num = 1;
+        double now = System.currentTimeMillis();
+        for(int i=0; i< num;i++) {
+            Point xy = iff.getFeatureXYPositionEach2Sec();
+        }
+        System.out.println("->"+(1000/(System.currentTimeMillis()-now)));
+        iff.print();
     }
 
 
