@@ -4,7 +4,9 @@
 
 *DONE c:2 panel that makes photo*
 
-- cv engine imported
+*DONE c:3 cv engine imported*
+
+- casi fet
 
 - cv engine register picture and followingInterface
 
