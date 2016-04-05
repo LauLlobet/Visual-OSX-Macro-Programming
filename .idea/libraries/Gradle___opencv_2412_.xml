@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: :opencv-2412:">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/opencv-2412.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

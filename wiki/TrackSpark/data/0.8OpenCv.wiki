@@ -2,11 +2,13 @@
 
 *DONE c:1 bugfix transparent background*
 
-- panel that makes photo
+*DONE c:2 panel that makes photo*
 
-- cross in the panel
+- cv engine imported
 
 - cv engine register picture and followingInterface
+
+- cross in the panel
 
 - return coordinates
 

@@ -9,6 +9,16 @@ repositories {
     mavenCentral()
 }
 
+repositories {
+    flatDir {
+        dirs 'lib'
+    }
+}
+
+dependencies {
+    compile name: 'opencv-2412'
+}
+
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
     compile 'com.1stleg:jnativehook:2.0.2'

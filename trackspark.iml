@@ -20,5 +20,6 @@
     <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.0.1" level="project" />
     <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.0.1" level="project" />
     <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: :opencv-2412:" level="project" />
   </component>
 </module>
