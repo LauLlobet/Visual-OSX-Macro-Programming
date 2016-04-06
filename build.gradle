@@ -17,6 +17,7 @@ repositories {
 
 dependencies {
     compile name: 'opencv-2412'
+    compile name: 'javaml-0.1.5'
 }
 
 dependencies {

@@ -8,7 +8,9 @@
 
 *DONE c:4 casi fet*
 
-- dos segons per tria, 100% d'exit 1/2 imatge |||| tres en un segon 1/6 d'imatge
+*DONE c:5 dos segons per tria, 100% d'exit 1/2 imatge |||| tres en un segon 1/6 d'imatge*
+
+- own matcher casi fet
 
 - cv engine register picture and followingInterface
 

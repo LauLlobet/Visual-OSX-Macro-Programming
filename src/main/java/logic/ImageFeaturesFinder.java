@@ -1,14 +1,13 @@
 package logic;
 
 import javax.imageio.ImageIO;
-import java.awt.*;
 import java.awt.Point;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.*;
 
+import net.sf.javaml.core.kdtree.KDTree;
 import org.opencv.core.*;
 import org.opencv.features2d.*;
 import org.opencv.highgui.Highgui;
@@ -34,13 +33,14 @@ public class ImageFeaturesFinder {
     Mat observedDescriptors = new Mat();
     DescriptorExtractor descriptor =  DescriptorExtractor.create(DescriptorExtractor.SIFT);
     DescriptorMatcher matcher = DescriptorMatcher.create(DescriptorMatcher.BRUTEFORCE);
+    DescriptorMatcher fastmatcher = DescriptorMatcher.create(DescriptorMatcher.BRUTEFORCE);
     FeatureDetector fast = FeatureDetector.create(FeatureDetector.FAST);
     MatOfDMatch matches = new MatOfDMatch();
+    private MatOfKeyPoint matchingObservedKeyPoints = new MatOfKeyPoint();
+    private MatOfKeyPoint matchingModelKeyPoints = new MatOfKeyPoint();
 
 
-    public BufferedImage loadFromFile(String s) {
-
-        double ratio = 4;
+    public BufferedImage loadFromFile(String s,int ratio) {
         Imgproc.resize(modelImagebig,modelImage,new Size(modelImagebig.size().width/ratio,modelImagebig.size().height/ratio));
         Imgproc.resize(observedImagebig,observedImage, new Size(observedImagebig.size().width/ratio,observedImagebig.size().height/ratio));
 
@@ -54,12 +54,12 @@ public class ImageFeaturesFinder {
         return buffImg;
     }
 
-    public void loadBigFromFile(String s) {
-        big = loadFromFile(s);
+    public void loadBigFromFile(String s, int ratio) {
+        big = loadFromFile(s, ratio);
     }
 
-    public void loadSmallFromFile(String s) {
-        small = loadFromFile(s);
+    public void loadSmallFromFile(String s, int ratio) {
+        small = loadFromFile(s, ratio);
     }
 
     public Point getFeatureXYPositionEach2Sec() {
@@ -72,6 +72,16 @@ public class ImageFeaturesFinder {
 
         matcher.match(modelDescriptors, observedDescriptors,matches);
 
+
+        return new Point(10,10);
+    }
+
+
+    public Point getFeatureXYsameSize(FeatureSearchParams featureSearchParams) {
+        fast.detect(modelImage,modelKeyPoints);
+        fast.detect(observedImage,observedKeyPoints);
+        KeyPointsComparer kpcomp = new KeyPointsComparer(featureSearchParams);
+        kpcomp.findOffsetBetweenImages(modelKeyPoints,observedKeyPoints,matchingModelKeyPoints,matchingObservedKeyPoints);
         return new Point(10,10);
     }
 
@@ -79,8 +89,17 @@ public class ImageFeaturesFinder {
         Mat outImage = new Mat();
         //Draw the matched keypoints
         Features2d.drawMatches(modelImage, modelKeyPoints, observedImage, observedKeyPoints, matches, outImage);
-
         Highgui.imwrite("./assets/result2.png",outImage);
+    }
+
+    public void printQuick() {
+        Mat outImage = new Mat();
+        //Draw the matched keypoints
+        Features2d.drawMatches(modelImage, matchingModelKeyPoints, observedImage, matchingObservedKeyPoints, matches, outImage);
+        Highgui.imwrite("./assets/result2.png",outImage);
+
+        Features2d.drawMatches(modelImage, modelKeyPoints, observedImage, observedKeyPoints, matches, outImage);
+        Highgui.imwrite("./assets/keyPoints2.png",outImage);
     }
 
     public void iterateMatches(){
@@ -93,6 +112,5 @@ public class ImageFeaturesFinder {
             // your code here
         }
     }
-
 
 }
