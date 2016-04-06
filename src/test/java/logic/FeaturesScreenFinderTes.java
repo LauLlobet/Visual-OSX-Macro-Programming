@@ -1,6 +1,7 @@
 package logic;
 
-import org.junit.Assert;
+import logic.features.util.FeatureSearchParams;
+import logic.features.ImageFeaturesFinder;
 import org.junit.Test;
 
 import java.awt.*;
@@ -27,17 +28,16 @@ public class FeaturesScreenFinderTes {
     @Test
     public void testSingleScreen(){
         ImageFeaturesFinder iff = new ImageFeaturesFinder();
-        iff.loadBigFromFile("./asssets/big.png",2);
-        iff.loadSmallFromFile("./asssets/small.png",2);
-        int num = 1;//7 * 25 * 10;
+        iff.loadBigFromFile("./asssets/big.png",2.5f);
+        iff.loadSmallFromFile("./asssets/small.png",2.5f);
+        int num = 7 * 25 * 10;
         double now = System.currentTimeMillis();
 
 
         FeatureSearchParams featureSearchParams = new FeatureSearchParams();
-        featureSearchParams.matchingPercent = 50;
-        featureSearchParams.nstars = 10;
-        featureSearchParams.precision = 5; //px
-        featureSearchParams.spongeLimit = 10;
+        featureSearchParams.matchingPercent = 5;
+        featureSearchParams.nstars = 20;
+        featureSearchParams.precision = 3; //px
 
         for(int i=0; i< num;i++) {
             Point xy = iff.getFeatureXYsameSize(featureSearchParams);

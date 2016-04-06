@@ -10,7 +10,9 @@
 
 *DONE c:5 dos segons per tria, 100% d'exit 1/2 imatge |||| tres en un segon 1/6 d'imatge*
 
-- own matcher casi fet
+*DONE c:6 own matcher casi fet*
+
+- clusters a mig fer
 
 - cv engine register picture and followingInterface
 

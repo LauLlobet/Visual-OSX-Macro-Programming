@@ -1,12 +1,12 @@
-package logic;
+package logic.features;
 
+import logic.features.Constelation;
+import logic.features.util.FeatureSearchParams;
 import net.sf.javaml.core.kdtree.KDTree;
 import org.opencv.core.MatOfKeyPoint;
-import org.opencv.features2d.DMatch;
 import org.opencv.features2d.KeyPoint;
 
 import java.awt.*;
-import java.security.cert.PolicyNode;
 import java.util.ArrayList;
 
 /**
@@ -15,13 +15,15 @@ import java.util.ArrayList;
 public class KeyPointsComparer {
     private final int matchingPercent;
     private final FeatureSearchParams constalationParams;
-    KDTree kdreeMod = new KDTree(2);
-    KDTree kdreeObs = new KDTree(2);
+    KDTree kdreeModX = new KDTree(1);
+    KDTree kdreeObsX = new KDTree(1);
+    KDTree kdreeModY = new KDTree(1);
+    KDTree kdreeObsY = new KDTree(1);
     ArrayList<double[][]> matchingPoints;
     private MatOfKeyPoint observedKeyPoints;
     private MatOfKeyPoint modelKeyPoints;
-    private MatOfKeyPoint matchingObservedKeyPoints;
-    private MatOfKeyPoint matchingModelKeyPoints;
+
+
 
     public KeyPointsComparer(FeatureSearchParams constelationParams){
         this.constalationParams = constelationParams;
@@ -33,8 +35,10 @@ public class KeyPointsComparer {
         this.matchingObservedKeyPoints = matchingObservedKeyPoints;
         this.modelKeyPoints = modelKeyPoints;
         this.observedKeyPoints = observedKeyPoints;
-        createKDTree(kdreeMod,modelKeyPoints);
-        createKDTree(kdreeObs,observedKeyPoints);
+        createKDTree(kdreeModX,modelKeyPoints,0);
+        createKDTree(kdreeObsX,observedKeyPoints,0);
+        createKDTree(kdreeModY,modelKeyPoints,1);
+        createKDTree(kdreeObsY,observedKeyPoints,1);
         findMatchingConstelationsPoints();
         return null;
     }
@@ -47,7 +51,7 @@ public class KeyPointsComparer {
     }
 
     private void findMatchingConstelationsPoints() {
-        ArrayList<KeyPoint> modelKPMatched = new ArrayList<KeyPoint>();
+      /*  ArrayList<KeyPoint> modelKPMatched = new ArrayList<KeyPoint>();
         ArrayList<KeyPoint> observerdKPMatched = new ArrayList<KeyPoint>();
         for(KeyPoint obsp:observedKeyPoints.toList()){
             try{
@@ -76,15 +80,18 @@ public class KeyPointsComparer {
         System.out.println("NumMatches:"+modelKPMatched.size());
         System.out.println("ObserverdKPMatched:"+observerdKPMatched.size());
         matchingModelKeyPoints.fromList(modelKPMatched);
-        matchingObservedKeyPoints.fromList(observerdKPMatched);
+        matchingObservedKeyPoints.fromList(observerdKPMatched);*/
     }
 
-    private void createKDTree(KDTree tree, MatOfKeyPoint kp) {
-        double[] point = new double[2];
+    private void createKDTree(KDTree tree, MatOfKeyPoint kp, int x0y1) {
+        double[] point = new double[1];
         KeyPoint[] keypoints = kp.toArray();
         for(KeyPoint k : keypoints){
-            point[0] = k.pt.x;
-            point[1] = k.pt.y;
+            if(x0y1 == 0){
+                point[0] = k.pt.x;
+            }else{
+                point[0] = k.pt.y;
+            }
             try{
                 tree.insert(point,k);
             }catch (Exception e){

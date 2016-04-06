@@ -1,9 +1,9 @@
-package logic;
+package logic.features;
 
 
+import logic.features.util.PointsEqualator;
+import logic.features.util.FeatureSearchParams;
 import org.opencv.features2d.KeyPoint;
-
-import java.util.Comparator;
 
 public class  Constelation {
     double[][] nearestPoints;
@@ -11,9 +11,6 @@ public class  Constelation {
     int insertedIndexNearestPoints = 0;
     double[] pos;
     PointsEqualator equalator;
-    boolean isNotSponged = false;
-    float spongeLimit = 0;
-    float acumDist = 0;
     FeatureSearchParams params;
 
     public Constelation(double[] inpos,FeatureSearchParams params){
@@ -21,7 +18,6 @@ public class  Constelation {
             pos = inpos;
             nearestPoints = new double[params.nstars][2];
             this.nstars = params.nstars;
-            this.spongeLimit = params.spongeLimit;
     }
     public double[] createPoint(double x, double y){
         double[] pos = new double[2];
@@ -46,24 +42,15 @@ public class  Constelation {
         }
         double dx = point[0]-pos[0];
         double dy = point[1]-pos[1];
-        acumDist += Math.sqrt(dx*dx+dy*dy);
         nearestPoints[insertedIndexNearestPoints][0] = dx;
         nearestPoints[insertedIndexNearestPoints][1] = dy;
         insertedIndexNearestPoints++;
-        if(insertedIndexNearestPoints >= nstars){
-            if(acumDist/nstars < spongeLimit){
-                isNotSponged = true;
-            }
-        }
     }
 
     public float doesItMatch(Constelation constelation){
         double[][] other = constelation.nearestPoints;
         int similarity = 0;
         double[] star;
-        if(isNotSponged || constelation.isNotSponged){
-            return 0;
-        }
         for(int j=0; j < nstars; j++){
             star = this.nearestPoints[j];
             for(int i=0; i < other.length; i++){

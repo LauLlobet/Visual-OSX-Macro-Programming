@@ -1,5 +1,6 @@
 package logic;
 
+import logic.features.util.PointsEqualator;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

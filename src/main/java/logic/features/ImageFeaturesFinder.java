@@ -1,4 +1,4 @@
-package logic;
+package logic.features;
 
 import javax.imageio.ImageIO;
 import java.awt.Point;
@@ -7,7 +7,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
-import net.sf.javaml.core.kdtree.KDTree;
+import logic.features.util.FeatureSearchParams;
 import org.opencv.core.*;
 import org.opencv.features2d.*;
 import org.opencv.highgui.Highgui;
@@ -40,7 +40,7 @@ public class ImageFeaturesFinder {
     private MatOfKeyPoint matchingModelKeyPoints = new MatOfKeyPoint();
 
 
-    public BufferedImage loadFromFile(String s,int ratio) {
+    public BufferedImage loadFromFile(String s,float ratio) {
         Imgproc.resize(modelImagebig,modelImage,new Size(modelImagebig.size().width/ratio,modelImagebig.size().height/ratio));
         Imgproc.resize(observedImagebig,observedImage, new Size(observedImagebig.size().width/ratio,observedImagebig.size().height/ratio));
 
@@ -54,11 +54,11 @@ public class ImageFeaturesFinder {
         return buffImg;
     }
 
-    public void loadBigFromFile(String s, int ratio) {
+    public void loadBigFromFile(String s, float ratio) {
         big = loadFromFile(s, ratio);
     }
 
-    public void loadSmallFromFile(String s, int ratio) {
+    public void loadSmallFromFile(String s, float ratio) {
         small = loadFromFile(s, ratio);
     }
 
