@@ -81,7 +81,13 @@ public class ImageFeaturesFinder {
         fast.detect(modelImage,modelKeyPoints);
         fast.detect(observedImage,observedKeyPoints);
         KeyPointsComparer kpcomp = new KeyPointsComparer(featureSearchParams);
-        kpcomp.findOffsetBetweenImages(modelKeyPoints,observedKeyPoints,matchingModelKeyPoints,matchingObservedKeyPoints);
+        kpcomp.findOffsetBetweenImages(modelImage,
+                observedImage,
+                modelKeyPoints,
+                observedKeyPoints,
+                matchingModelKeyPoints,
+                matchingObservedKeyPoints);
+
         return new Point(10,10);
     }
 

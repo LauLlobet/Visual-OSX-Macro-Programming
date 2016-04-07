@@ -1,5 +1,6 @@
-package logic.features.util;
+package logic.features;
 
+import logic.features.util.ClusterCenter;
 import org.opencv.features2d.KeyPoint;
 import sun.awt.resources.awt;
 
@@ -10,8 +11,10 @@ import java.util.ArrayList;
  * Created by quest on 6/4/16.
  */
     public class ClusterImage {
+    private final int width;
     ArrayList<ClusterCenter> mostGeneralCenters = new ArrayList<ClusterCenter>();
     private double version = 0;
+    private int height;
 
     public class ClusterImagePixel {
         KPointAndCluster xpy;
@@ -41,7 +44,9 @@ import java.util.ArrayList;
     ClusterImagePixel[][] clusterImagePixel;
 
     public ClusterImage(int w ,int h){
-        allocateImage(w, h);
+        this.width = w;
+        this.height = h;
+        //allocateImage(w+1, h+1);
         mostGeneralCenters = new ArrayList<ClusterCenter>();
     }
 
@@ -53,7 +58,7 @@ import java.util.ArrayList;
                 for (int y = -margin; y < margin; y++) {
                     int xp = (int) point.pt.x +x;
                     int yp = (int) point.pt.y +y;
-                    if(xp >=0 && yp>=0){
+                    if(xp >=0 && yp>=0 && xp < width && yp < height){
                         clusterImagePixel[xp][yp].touchedBy(p, version);
                     }
                 }
@@ -62,7 +67,7 @@ import java.util.ArrayList;
         version ++;
     }
 
-    public ArrayList<KeyPoint> getCenters(KeyPoint[] points ,int margin){
+    public ArrayList<KeyPoint> groupKeyPointsInSingleOnes(KeyPoint[] points , int margin){
         processClusters(points,margin);
         return extractMostGeneralCenters();
     }

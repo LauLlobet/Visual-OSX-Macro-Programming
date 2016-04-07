@@ -14,7 +14,9 @@
 
 *DONE c:7 clusters a mig fer*
 
-- clusters work en proves
+*DONE c:8 clusters work en proves*
+
+- conversion slows down, checkit puting it in a single thread, will build a screen capturer that gives images in correct bytetype and ratio
 
 - cv engine register picture and followingInterface
 

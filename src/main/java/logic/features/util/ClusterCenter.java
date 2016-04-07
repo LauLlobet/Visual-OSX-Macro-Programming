@@ -2,7 +2,6 @@ package logic.features.util;
 
 import org.opencv.features2d.KeyPoint;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
@@ -12,20 +11,20 @@ import java.util.Set;
  */
 public class ClusterCenter {
     private final ArrayList<ClusterCenter> mostGeneralCenters;
-    java.awt.Point point;
+    public DoublePoint point;
         int numOfPoints;
         ClusterCenter mergedClusterCenter;
     private Set colidedWidth;
 
     public ClusterCenter(double x, double y, int num, ArrayList<ClusterCenter> mostGeneralCenters) {
-            point = new Point((int)x,(int)y);
+            point = new DoublePoint(x,y);
             numOfPoints = num;
             this.mostGeneralCenters = mostGeneralCenters;
             mostGeneralCenters.add(this);
             colidedWidth = new HashSet();
         }
         public ClusterCenter(KeyPoint p, ArrayList<ClusterCenter> _mostGeneralCenter) {
-            point = new Point((int)p.pt.x,(int)p.pt.y);
+            point = new DoublePoint(p.pt.x,p.pt.y);
             numOfPoints = 1;
             this.mostGeneralCenters = _mostGeneralCenter;
             mostGeneralCenters.add(this);
@@ -51,10 +50,10 @@ public class ClusterCenter {
                 return;
             }
 
-            double px = point.getX();
-            double py = point.getY();
             double pxn = ((a.numOfPoints * a.point.getX()) + (b.numOfPoints * b.point.getX() )) / (a.numOfPoints + b.numOfPoints);
             double pyn = ((a.numOfPoints * a.point.getY()) + (b.numOfPoints * b.point.getY() )) / (a.numOfPoints + b.numOfPoints);
+
+
 
             ClusterCenter newClusterCenter = new ClusterCenter(pxn,pyn,a.numOfPoints+b.numOfPoints,mostGeneralCenters);
 

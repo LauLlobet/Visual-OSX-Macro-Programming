@@ -1,9 +1,8 @@
 package logic.features;
 
-import logic.features.Constelation;
-import logic.features.util.ClusterImage;
 import logic.features.util.FeatureSearchParams;
 import net.sf.javaml.core.kdtree.KDTree;
+import org.opencv.core.Mat;
 import org.opencv.core.MatOfKeyPoint;
 import org.opencv.features2d.KeyPoint;
 
@@ -31,12 +30,12 @@ public class KeyPointsComparer {
         this.matchingPercent = constelationParams.matchingPercent;
     }
 
-    public Point findOffsetBetweenImages(MatOfKeyPoint modelKeyPoints, MatOfKeyPoint observedKeyPoints, MatOfKeyPoint matchingModelKeyPoints, MatOfKeyPoint matchingObservedKeyPoints){
+    public Point findOffsetBetweenImages(Mat w, Mat h, MatOfKeyPoint modelKeyPoints, MatOfKeyPoint observedKeyPoints, MatOfKeyPoint matchingModelKeyPoints, MatOfKeyPoint matchingObservedKeyPoints){
 
-        ClusterImage ci = new ClusterImage(266,45);
+        ClusterImage ci = new ClusterImage(w.width(),h.height());
         KeyPoint[] mod = modelKeyPoints.toArray();
         int modl = mod.length;
-        ArrayList<KeyPoint> ans = ci.getCenters(mod,(int)constalationParams.precision);
+        ArrayList<KeyPoint> ans = ci.groupKeyPointsInSingleOnes(mod,(int)constalationParams.precision);
         matchingModelKeyPoints.fromList(ans);
         return null;
     }
