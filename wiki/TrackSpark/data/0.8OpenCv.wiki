@@ -12,7 +12,9 @@
 
 *DONE c:6 own matcher casi fet*
 
-- clusters a mig fer
+*DONE c:7 clusters a mig fer*
+
+- clusters work en proves
 
 - cv engine register picture and followingInterface
 

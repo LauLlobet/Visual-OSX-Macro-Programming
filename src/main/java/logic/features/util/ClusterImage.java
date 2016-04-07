@@ -17,11 +17,12 @@ import java.util.ArrayList;
         KPointAndCluster xpy;
         double version;
         public ClusterImagePixel(){
-            version = 0;
+            version = -1;
         }
         public void touchedBy(KPointAndCluster touching, double version){
             if(this.version != version){
                 xpy = touching;
+                this.version = version;
                 return;
             }
             xpy.clusterCenter.touches(touching.clusterCenter);
@@ -39,20 +40,39 @@ import java.util.ArrayList;
 
     ClusterImagePixel[][] clusterImagePixel;
 
-    public ClusterImage(int w ,int h,int margin){
+    public ClusterImage(int w ,int h){
         allocateImage(w, h);
         mostGeneralCenters = new ArrayList<ClusterCenter>();
     }
 
-    public void processClusters(KeyPoint[] points ,int margin){
+    private void processClusters(KeyPoint[] points ,int margin){
         mostGeneralCenters.clear();
         for(KeyPoint point: points){
             KPointAndCluster p = new KPointAndCluster(point);
-            int x = (int)point.pt.x;
-            int y = (int)point.pt.y;
-            clusterImagePixel[x][y].touchedBy(p,version);
+            for(int x = -margin; x<margin ; x++) {
+                for (int y = -margin; y < margin; y++) {
+                    int xp = (int) point.pt.x +x;
+                    int yp = (int) point.pt.y +y;
+                    if(xp >=0 && yp>=0){
+                        clusterImagePixel[xp][yp].touchedBy(p, version);
+                    }
+                }
+            }
         }
         version ++;
+    }
+
+    public ArrayList<KeyPoint> getCenters(KeyPoint[] points ,int margin){
+        processClusters(points,margin);
+        return extractMostGeneralCenters();
+    }
+
+    private ArrayList<KeyPoint> extractMostGeneralCenters() {
+        ArrayList<KeyPoint> result = new ArrayList<KeyPoint>();
+        for(ClusterCenter cc: mostGeneralCenters){
+            result.add(new KeyPoint((float)cc.point.getX(),(float)cc.point.getY(),10));
+        }
+        return result;
     }
 
     private void allocateImage(int w, int h) {

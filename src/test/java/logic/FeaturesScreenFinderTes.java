@@ -37,7 +37,7 @@ public class FeaturesScreenFinderTes {
         FeatureSearchParams featureSearchParams = new FeatureSearchParams();
         featureSearchParams.matchingPercent = 5;
         featureSearchParams.nstars = 20;
-        featureSearchParams.precision = 3; //px
+        featureSearchParams.precision = 20; //px
 
         for(int i=0; i< num;i++) {
             Point xy = iff.getFeatureXYsameSize(featureSearchParams);
