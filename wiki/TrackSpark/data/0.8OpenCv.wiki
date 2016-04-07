@@ -18,7 +18,9 @@
 
 *DONE c:9 conversion slows down, checkit puting it in a single thread, will build a screen capturer that gives images in correct bytetype and ratio*
 
-- thread based 
+*DONE c:10 thread based *
+
+- 13 fps
 
 - cv engine register picture and followingInterface
 

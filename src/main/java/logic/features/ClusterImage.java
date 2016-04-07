@@ -46,7 +46,7 @@ import java.util.ArrayList;
     public ClusterImage(int w ,int h){
         this.width = w;
         this.height = h;
-        //allocateImage(w+1, h+1);
+        allocateImage(w+1, h+1);
         mostGeneralCenters = new ArrayList<ClusterCenter>();
     }
 
