@@ -2,11 +2,14 @@ package logic.features.util;
 
 
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 public class ClusterColider {
     private static ClusterColider instance = new ClusterColider();
 
     private static boolean[][] colisions;
+    private static HashSet<Integer>[] colisionsHash;
 
     private static int next = 0;
     static int size = 10000;
@@ -22,6 +25,12 @@ public class ClusterColider {
     public static void reserveColisions() {
         if(colisions == null){
             colisions = new boolean[size][size];
+        }
+        if(colisionsHash == null){
+            colisionsHash = new HashSet[size];
+            for(int i=0;i<size;i++){
+                colisionsHash[i] = new HashSet<Integer>();
+            }
         }
         next = 0;
     }
@@ -41,6 +50,8 @@ public class ClusterColider {
 
     public static void doColideTargetWithSource(int target, int source){
         colisions[target][source] = true;
+        colisionsHash[target].add(source);
+        colisionsHash[target].addAll(colisionsHash[source]);
         doOr(target,source);
     }
 
@@ -54,14 +65,10 @@ public class ClusterColider {
         for(int i=0;i< size;i++){
             colisions[cluster][i] = false;
         }
+        colisionsHash[cluster].clear();
     }
 
-    public static boolean areColided(int a,int b){
-            try{
-                return colisions[a][b] || colisions[b][a];
-            }catch(Exception e){
-                e.printStackTrace();
-            }
-        return false;
+    public static boolean areColided(int a,int newc){
+            return colisionsHash[a].contains(newc);
     }
 }

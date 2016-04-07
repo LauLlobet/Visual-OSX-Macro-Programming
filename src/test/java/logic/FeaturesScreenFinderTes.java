@@ -48,7 +48,7 @@ public class FeaturesScreenFinderTes {
 
 
         float expectedPerOneTime = 0.1f;
-        double testTimeInmilliseconds = 500;
+        double testTimeInmilliseconds = 5000;
         int singleIterations = (int)(13 * testTimeInmilliseconds/1000);
 
         //singleIterations = 1;

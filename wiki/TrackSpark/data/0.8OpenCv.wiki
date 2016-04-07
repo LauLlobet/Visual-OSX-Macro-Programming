@@ -20,7 +20,9 @@
 
 *DONE c:10 thread based *
 
-- 13 fps
+*DONE c:11 13 fps*
+
+- ready to switch to hashsets 0.4 real time hopefully
 
 - cv engine register picture and followingInterface
 

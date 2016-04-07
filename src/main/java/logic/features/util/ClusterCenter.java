@@ -37,6 +37,7 @@ public class ClusterCenter {
         point = new DoublePoint(x,y);
         numOfPoints = num;
         this.mostGeneralCenters = mostGeneralCenters;
+        mostGeneralCenters.add(this);
     }
 
     public boolean iammostGeneralClusterCenter() {
