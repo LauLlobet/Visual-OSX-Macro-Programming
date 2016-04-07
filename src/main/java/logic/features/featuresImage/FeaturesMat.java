@@ -1,5 +1,6 @@
 package logic.features.featuresImage;
 
+import org.opencv.core.Mat;
 import org.opencv.core.MatOfKeyPoint;
 import org.opencv.features2d.DescriptorExtractor;
 import org.opencv.features2d.DescriptorMatcher;
@@ -18,8 +19,7 @@ public class FeaturesMat extends ResizableMat {
     MatOfKeyPoint keyPoints = new MatOfKeyPoint();
 
 
-    public FeaturesMat(BufferedImage img, float ratio) {
-        super(img, ratio);
+    public FeaturesMat() {
     }
 
     public void setFeatureFinder(int finder){ //FeatureDetector.FAST

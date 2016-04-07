@@ -25,34 +25,18 @@ public class ResizableMat {
     BufferedImage imageCopy;
 
     public ResizableMat(){
-        //imageCopy = new BufferedImage(img.getWidth(), img.getHeight(), BufferedImage.TYPE_3BYTE_BGR);
-        //loadFromBufferedImageToOriginalVersion(img);
-        //targetImg = new Mat();
-        //setTargetSize(ratio);
     }
 
     public void setImage(Mat img){
-        loadFromBufferedImageToOriginalVersion(img);
-        setTargetSize(ratio);
+        targetImg = img;
         setNotValidated();
     }
 
-    private void loadFromBufferedImageToOriginalVersion(BufferedImage image) {
-        imageCopy.getGraphics().drawImage(image, 0, 0, null);
-        byte[] data = ((DataBufferByte) imageCopy.getRaster().getDataBuffer()).getData();
-        imageOriginal = new Mat(image.getHeight(),image.getWidth(), CvType.CV_8UC3);
-        imageOriginal.put(0, 0, data);
-    }
 
     public void setNotValidated(){
         validated = false;
     }
 
-    public void setTargetSize(float ratio) {
-        this.ratio = ratio;
-        Size s = new Size(imageOriginal.size().width/ratio,imageOriginal.size().height/ratio);
-        Imgproc.resize(imageOriginal,targetImg,s);
-    }
 
     public Mat getImage() {
         return targetImg;

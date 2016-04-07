@@ -23,8 +23,8 @@ public class ImageFeaturesFinder {
 
     static{ System.loadLibrary(Core.NATIVE_LIBRARY_NAME); }
 
-    Mat modelImagebig = Highgui.imread("./assets/small.png");
     Mat observedImagebig = Highgui.imread("./assets/big.png");
+    Mat modelImagebig = Highgui.imread("./assets/small.png");
     Mat modelImage = Highgui.imread("./assets/small.png");
     Mat observedImage = Highgui.imread("./assets/big.png");
     MatOfKeyPoint modelKeyPoints = new MatOfKeyPoint();

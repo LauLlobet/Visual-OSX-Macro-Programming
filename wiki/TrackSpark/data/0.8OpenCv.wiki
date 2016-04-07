@@ -16,7 +16,9 @@
 
 *DONE c:8 clusters work en proves*
 
-- conversion slows down, checkit puting it in a single thread, will build a screen capturer that gives images in correct bytetype and ratio
+*DONE c:9 conversion slows down, checkit puting it in a single thread, will build a screen capturer that gives images in correct bytetype and ratio*
+
+- thread based 
 
 - cv engine register picture and followingInterface
 

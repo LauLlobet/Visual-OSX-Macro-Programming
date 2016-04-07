@@ -1,6 +1,7 @@
 package logic.features.featuresImage;
 
 import logic.features.ClusterImage;
+import org.opencv.core.Mat;
 import org.opencv.core.MatOfKeyPoint;
 import org.opencv.features2d.KeyPoint;
 
@@ -17,13 +18,12 @@ public class ClusterSimplifiedMat extends FeaturesMat {
     int keyPointContactClusteringArea = 3;
     private MatOfKeyPoint defaultKeyPoints;
 
-    public ClusterSimplifiedMat(BufferedImage img, float ratio) {
-        super(img, ratio);
-        clusterKeyPointsSimplifier = new ClusterImage(img.getWidth(),img.getHeight());
+    public ClusterSimplifiedMat(Mat img) {
+        clusterKeyPointsSimplifier = new ClusterImage(img.width(),img.height());
     }
 
     @Override
-    public void setImage(BufferedImage img){
+    public void setImage(Mat img){
         super.setImage(img);
         super.extractKeyPoints();
         defaultKeyPoints = keyPoints;
