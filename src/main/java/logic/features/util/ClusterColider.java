@@ -17,15 +17,9 @@ public class ClusterColider {
     private  ClusterColider() {
         size = 10000;
         reserveColisions();
-        //hashset = new HashSet<String>();
-        // prevent external instantiation of a singleton.
-
     }
 
     public static void reserveColisions() {
-        if(colisions == null){
-            colisions = new boolean[size][size];
-        }
         if(colisionsHash == null){
             colisionsHash = new HashSet[size];
             for(int i=0;i<size;i++){
@@ -44,27 +38,16 @@ public class ClusterColider {
 
     public static int getNextSequence() {
         next++;
-        doZero(next);
+        doClear(next);
         return next;
     }
 
     public static void doColideTargetWithSource(int target, int source){
-        colisions[target][source] = true;
         colisionsHash[target].add(source);
         colisionsHash[target].addAll(colisionsHash[source]);
-        doOr(target,source);
     }
 
-    private static void doOr(int source, int target) {
-        for(int i=0;i< source;i++){
-            colisions[target][i] = colisions[target][i] || colisions[source][i];
-        }
-    }
-
-    private static void doZero(int cluster) {
-        for(int i=0;i< size;i++){
-            colisions[cluster][i] = false;
-        }
+    private static void doClear(int cluster) {
         colisionsHash[cluster].clear();
     }
 

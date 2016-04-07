@@ -22,7 +22,9 @@
 
 *DONE c:11 13 fps*
 
-- ready to switch to hashsets 0.4 real time hopefully
+*DONE c:12 ready to switch to hashsets 0.4 real time hopefully*
+
+- 0.3% reached with the simplifier
 
 - cv engine register picture and followingInterface
 
