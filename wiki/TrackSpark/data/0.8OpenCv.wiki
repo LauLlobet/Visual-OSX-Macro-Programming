@@ -26,7 +26,10 @@
 
 *DONE c:13 0.3% reached with the simplifier*
 
-- matcher works for "simplereal", not optimized
+
+*DONE c:14 matcher works for "simplereal", not optimized*
+
+- fi d'us de constelacions, cluster image instead
 
 - cv engine register picture and followingInterface
 

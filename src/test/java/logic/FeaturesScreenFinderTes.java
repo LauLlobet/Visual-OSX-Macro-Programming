@@ -31,7 +31,7 @@ public class FeaturesScreenFinderTes {
     static{ System.loadLibrary(Core.NATIVE_LIBRARY_NAME); }
     @Test
     public void testSingleScreen() throws Exception{
-        String set ="realsimple";
+        String set ="real";
 
         Mat smallBiNfi = Highgui.imread("./assets/"+set+"/small.png");
         Mat bigBiNfi = Highgui.imread("./assets/"+set+"/big.png");
@@ -58,7 +58,7 @@ public class FeaturesScreenFinderTes {
         params.matchingPercent = 59;
         params.nstars = 5;
         params.clusterContactDistance = 4;
-        params.equalator = new PointsEqualator(2);
+        params.equalator = new PointsEqualator(1);
 
         MatchingObservedMat big = new MatchingObservedMat(bigBiNf,params);
         ClusterSimplifiedMat small = new ClusterSimplifiedMat(smallBiNf);
@@ -89,7 +89,7 @@ public class FeaturesScreenFinderTes {
         FeaturesMatcher fm = new FeaturesMatcher("CONSTELATIONS");
         fm.printKeyPoints(small,big);
         //big.printKeyPoints();
-        big.printMatches();
+        //big.printMatches();
     }
 
 
