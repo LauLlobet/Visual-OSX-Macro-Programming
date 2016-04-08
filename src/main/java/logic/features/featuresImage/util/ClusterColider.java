@@ -1,9 +1,7 @@
-package logic.features.util;
+package logic.features.featuresImage.util;
 
 
-import java.util.Arrays;
 import java.util.HashSet;
-import java.util.Set;
 
 public class ClusterColider {
     private static ClusterColider instance = new ClusterColider();

@@ -1,12 +1,11 @@
 package logic.features.featuresImage;
 
 import logic.features.ClusterImage;
-import logic.features.util.ClusterColider;
+import logic.features.featuresImage.util.ClusterColider;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfKeyPoint;
 import org.opencv.features2d.KeyPoint;
 
-import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
 /**

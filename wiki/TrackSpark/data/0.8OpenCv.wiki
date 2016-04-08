@@ -24,7 +24,9 @@
 
 *DONE c:12 ready to switch to hashsets 0.4 real time hopefully*
 
-- 0.3% reached with the simplifier
+*DONE c:13 0.3% reached with the simplifier*
+
+- matcher works for "simplereal", not optimized
 
 - cv engine register picture and followingInterface
 

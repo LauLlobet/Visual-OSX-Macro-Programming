@@ -1,6 +1,4 @@
-package logic.features.util;
-
-import java.util.Comparator;
+package logic.features.featuresImage.util;
 
 /**
  * Created by quest on 6/4/16.

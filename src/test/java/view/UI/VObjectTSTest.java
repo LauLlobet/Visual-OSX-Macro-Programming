@@ -40,21 +40,23 @@ public class VObjectTSTest {
         IdGenerator idg = new IdGenerator("testing");
         ObjectsFactoryTS of = new ObjectsFactoryTS(cc,idg,caller);
 
-        //ObjectTS ob = of.build(TSOConstants.BANG_TSOBJID);
-//        ObjectTS bang = of.build(TSOConstants.BANG_TSOBJID);
+        ObjectTS ob = of.build(TSOConstants.BANG_TSOBJID);
+        ObjectTS bang = of.build(TSOConstants.BANG_TSOBJID);
 
-        //ObjectTS delay = of.build(TSOConstants.DELAY_TSOBJID);
+        ObjectTS delay = of.build(TSOConstants.DELAY_TSOBJID);
 
-       // ObjectTS repetitive = of.build(TSOConstants.REPETITIVECOUNTDOWN_TSOBJID);
+      //  ObjectTS repetitive = of.build(TSOConstants.REPETITIVECOUNTDOWN_TSOBJID);
 
-        //ObjectTS ob2 = of.build(TSOConstants.TEXTPRINTER_TSOBJID);
-        //ObjectTS ob2 = of.build(TSOConstants.CLICKER_TSOBJID);
-        //ObjectTS ob2 = of.build(TSOConstants.THRESHOLD_TSOBJID);
-        //ObjectTS textmessage = of.build(TSOConstants.TEXT_MESSAGE_TSOBJID);
-        //ObjectTS mdetect = of.build(TSOConstants.MOVEMENT_DETECTOR_TSOBJID);
+        ObjectTS ob2 = of.build(TSOConstants.TEXTPRINTER_TSOBJID);
+        ObjectTS ob21 = of.build(TSOConstants.CLICKER_TSOBJID);
+        //ObjectTS ob22 = of.build(TSOConstants.THRESHOLD_TSOBJID);
+        ObjectTS textmessage = of.build(TSOConstants.TEXT_MESSAGE_TSOBJID);
+        ObjectTS printer = of.build(TSOConstants.TEXTPRINTER_TSOBJID);
+
+        // ObjectTS mdetect = of.build(TSOConstants.MOVEMENT_DETECTOR_TSOBJID);
 
 
-        ObjectTS sfinder = of.build(TSOConstants.SCREEN_FEATURES_FINDE);
+        // ObjectTS sfinder = of.build(TSOConstants.SCREEN_FEATURES_FINDE);
 
         //ob2.setX(500);
 
@@ -64,7 +66,7 @@ public class VObjectTSTest {
         capturerThread.start();
 
 //        ((MovementDetectorTS)ob3).registerToCapturer(screenCapturer);
-        ((ScreenFeatureFinderTS)sfinder).registerToCapturer(screenCapturer);
+        //((ScreenFeatureFinderTS)sfinder).registerToCapturer(screenCapturer);
 
 
         LogicTicCaller lc = new LogicTicCaller(caller);

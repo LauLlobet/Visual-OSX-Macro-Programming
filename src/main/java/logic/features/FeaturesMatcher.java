@@ -1,6 +1,7 @@
 package logic.features;
 
 import logic.features.featuresImage.ClusterSimplifiedMat;
+import logic.features.featuresImage.MatchingObservedMat;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfDMatch;
 import org.opencv.features2d.Features2d;
@@ -14,7 +15,7 @@ public class FeaturesMatcher {
         
     }
 
-    public void printKeyPoints(ClusterSimplifiedMat small, ClusterSimplifiedMat big) {
+    public void printKeyPoints(ClusterSimplifiedMat small, MatchingObservedMat big) {
         Mat out = new Mat();
         Features2d.drawMatches(small.getImage(),
                 small.getKeyPoints(),
@@ -26,6 +27,11 @@ public class FeaturesMatcher {
         out = new Mat();
         Features2d.drawMatches(small.getImage(), small.getDefaultKeyPoints(), big.getImage(), big.getDefaultKeyPoints(), new MatOfDMatch(), out);
         Highgui.imwrite("./assets/defaultKeyPoints.png",out);
+
+        out = new Mat();
+        Features2d.drawMatches(small.getImage(), big.getModelMatchingKeyPoints(), big.getImage(), big.getObslMatchingKeyPoints(), new MatOfDMatch(), out);
+        Highgui.imwrite("./assets/matches.png",out);
+
 
     }
 }

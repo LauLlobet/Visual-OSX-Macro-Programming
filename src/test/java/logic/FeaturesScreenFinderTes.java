@@ -2,20 +2,17 @@ package logic;
 
 import logic.features.FeaturesMatcher;
 import logic.features.featuresImage.ClusterSimplifiedMat;
-import logic.features.util.ClusterColider;
+import logic.features.featuresImage.MatchingObservedMat;
+import logic.features.featuresImage.util.ClusterColider;
+import logic.features.featuresImage.util.DoublePoint;
+import logic.features.featuresImage.util.FeatureSearchParams;
+import logic.features.featuresImage.util.PointsEqualator;
 import org.junit.Test;
 import org.opencv.core.Core;
 import org.opencv.core.Mat;
 import org.opencv.core.Size;
 import org.opencv.highgui.Highgui;
 import org.opencv.imgproc.Imgproc;
-
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.concurrent.SynchronousQueue;
 
 /**
  * Created by quest on 5/4/16.
@@ -34,7 +31,7 @@ public class FeaturesScreenFinderTes {
     static{ System.loadLibrary(Core.NATIVE_LIBRARY_NAME); }
     @Test
     public void testSingleScreen() throws Exception{
-        String set ="real";
+        String set ="realsimple";
 
         Mat smallBiNfi = Highgui.imread("./assets/"+set+"/small.png");
         Mat bigBiNfi = Highgui.imread("./assets/"+set+"/big.png");
@@ -51,14 +48,19 @@ public class FeaturesScreenFinderTes {
         double testTimeInmilliseconds = 5000;
         int singleIterations = (int)(13 * testTimeInmilliseconds/1000);
 
-        //singleIterations = 1;
+        singleIterations = 1;
 
         beeingUsed = false;
         finished = 0;
         this.started = 0;
 
+        FeatureSearchParams params = new FeatureSearchParams();
+        params.matchingPercent = 59;
+        params.nstars = 5;
+        params.clusterContactDistance = 4;
+        params.equalator = new PointsEqualator(2);
 
-        ClusterSimplifiedMat big = new ClusterSimplifiedMat(bigBiNf);
+        MatchingObservedMat big = new MatchingObservedMat(bigBiNf,params);
         ClusterSimplifiedMat small = new ClusterSimplifiedMat(smallBiNf);
 
         big.setImage(bigBiNf);
@@ -70,15 +72,24 @@ public class FeaturesScreenFinderTes {
         for(int i=0; i< singleIterations ;i++) {
             big.setImage(bigBiNf);
             small.setImage(smallBiNf);
+            DoublePoint a = big.findOffset(small);
+            System.out.println("offset:"+a.toString());
+           /* small.setImage(smallBiNf);
+            big.findOffset(small);
             small.setImage(smallBiNf);
+            big.findOffset(small);
             small.setImage(smallBiNf);
+            big.findOffset(small);
             small.setImage(smallBiNf);
+            big.findOffset(small);
             small.setImage(smallBiNf);
-            small.setImage(smallBiNf);
+            big.findOffset(small);*/
         }
         System.out.println("->"+((System.currentTimeMillis()-now)/testTimeInmilliseconds));
         FeaturesMatcher fm = new FeaturesMatcher("CONSTELATIONS");
         fm.printKeyPoints(small,big);
+        //big.printKeyPoints();
+        big.printMatches();
     }
 
 

@@ -7,7 +7,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
-import logic.features.util.FeatureSearchParams;
+import logic.features.featuresImage.util.FeatureSearchParams;
 import org.opencv.core.*;
 import org.opencv.features2d.*;
 import org.opencv.highgui.Highgui;

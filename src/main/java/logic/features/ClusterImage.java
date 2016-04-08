@@ -1,10 +1,8 @@
 package logic.features;
 
-import logic.features.util.ClusterCenter;
+import logic.features.featuresImage.util.ClusterCenter;
 import org.opencv.features2d.KeyPoint;
-import sun.awt.resources.awt;
 
-import java.awt.*;
 import java.util.ArrayList;
 
 /**

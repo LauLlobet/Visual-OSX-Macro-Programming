@@ -1,8 +1,6 @@
-package logic.features;
+package logic.features.featuresImage.util;
 
 
-import logic.features.util.PointsEqualator;
-import logic.features.util.FeatureSearchParams;
 import org.opencv.features2d.KeyPoint;
 
 public class  Constelation {
@@ -11,13 +9,13 @@ public class  Constelation {
     int insertedIndexNearestPoints = 0;
     double[] pos;
     PointsEqualator equalator;
-    FeatureSearchParams params;
+    public boolean debug;
 
     public Constelation(double[] inpos,FeatureSearchParams params){
-
             pos = inpos;
             nearestPoints = new double[params.nstars][2];
             this.nstars = params.nstars;
+            equalator = params.equalator;
     }
     public double[] createPoint(double x, double y){
         double[] pos = new double[2];
@@ -32,7 +30,6 @@ public class  Constelation {
             KeyPoint point = (KeyPoint) pointo;
             addOwnPoint(createPoint(point.pt.x,point.pt.y));
         }
-        equalator = new PointsEqualator(params.precision);
     }
 
     public void addOwnPoint(double[] point){
@@ -57,10 +54,16 @@ public class  Constelation {
                 double[] otherstar = other[i];
                 if(equalator.compare(star,otherstar) == 0){
                     similarity ++;
+                    print(star[0]+" matches "+otherstar[0]);
                 }
             }
         }
-        return ((float)similarity)/(nstars*nstars);
+        return ((float)similarity)/(nstars);
     }
 
+    public void print(String s){
+        if(debug){
+            System.out.println("["+this.getClass().getName()+"]"+s);
+        }
+    }
 }

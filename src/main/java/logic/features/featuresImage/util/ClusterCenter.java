@@ -1,10 +1,8 @@
-package logic.features.util;
+package logic.features.featuresImage.util;
 
 import org.opencv.features2d.KeyPoint;
 
 import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
 
 /**
  * Created by quest on 6/4/16.
