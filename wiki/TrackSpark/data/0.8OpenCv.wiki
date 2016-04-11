@@ -26,10 +26,13 @@
 
 *DONE c:13 0.3% reached with the simplifier*
 
-
 *DONE c:14 matcher works for "simplereal", not optimized*
 
-- fi d'us de constelacions, cluster image instead
+*DONE c:15 fi d'us de constelacions, cluster image instead*
+
+- features tracking no funciona amb assets petits, nomes en finestres grans, cambi d'estrategia per complir amb el pla inmarçio
+
+- color sensitive
 
 - cv engine register picture and followingInterface
 

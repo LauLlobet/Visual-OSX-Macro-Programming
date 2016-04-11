@@ -1,11 +1,10 @@
 package logic.features.featuresImage;
 
+import logic.features.ClusterImage;
 import logic.features.featuresImage.util.Constelation;
 import logic.features.featuresImage.util.DoublePoint;
 import logic.features.featuresImage.util.FeatureSearchParams;
 import net.sf.javaml.core.kdtree.KDTree;
-import net.sf.javaml.core.kdtree.KeyDuplicateException;
-import net.sf.javaml.core.kdtree.KeySizeException;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfKeyPoint;
 import org.opencv.features2d.KeyPoint;
@@ -20,119 +19,82 @@ import java.util.Hashtable;
 
 public class MatchingObservedMat extends ClusterSimplifiedMat {
 
-    FeatureSearchParams params;
-    private net.sf.javaml.core.kdtree.KDTree kdreeObs;
-    private net.sf.javaml.core.kdtree.KDTree kdreeMod;
-
     private Hashtable<KeyPoint,Constelation> ownConstelations;
-
     KeyPoint[] modelKeyPoints;
     KeyPoint[] observedKeyPoints;
-
     ArrayList<KeyPoint> modelKPMatched = new ArrayList<KeyPoint>();
     ArrayList<KeyPoint> observerdKPMatched = new ArrayList<KeyPoint>();
-
-    public Constelation getOwnConstelation(KeyPoint point){
-        try{
-            return ownConstelations.get(point);
-        }catch (Exception e){
-            double[] modePoint = createPoint(point.pt.x,point.pt.y);
-            Object[] modpNeightbours = new Object[0];
-            try {
-                modpNeightbours = kdreeMod.nearest(modePoint,params.nstars);
-            } catch (KeySizeException e1) {
-                e1.printStackTrace();
-            }
-            Constelation modeConst = new Constelation(modePoint,modpNeightbours,params);
-            ownConstelations.put(point,modeConst);
-            return modeConst;
-        }
-    }
+    ClusterImage observedSimplifiedKeyPointsPrecisionIsClusterWidth;
+    int version = 0;
 
     public MatchingObservedMat(Mat img, FeatureSearchParams params) {
-        super(img);
-        ownConstelations = new Hashtable<KeyPoint, Constelation>();
-        this.params = params;
+        super(img,params);
+        observedSimplifiedKeyPointsPrecisionIsClusterWidth = new ClusterImage(img.width(),img.height());
     }
     @Override
     public void setImage(Mat img){
         super.setImage(img);
-        kdreeObs = new KDTree(2);
         observedKeyPoints = this.getKeyPoints().toArray();
-        createKDTree(kdreeObs,observedKeyPoints);
+        observedSimplifiedKeyPointsPrecisionIsClusterWidth.processClusters(observedKeyPoints,params.matchingMatPrecision, img);
+    }
+
+    private void fillClusterImage() {
     }
 
     public DoublePoint findOffset(ClusterSimplifiedMat otherImage){
-        kdreeMod = new KDTree(2);
         modelKeyPoints = otherImage.getKeyPoints().toArray();
-        createKDTree(kdreeMod,modelKeyPoints);
-        findMatchingConstelationsPoints();
-        return findOffsetInMatches();
-    }
+        KeyPoint[] bestMatch = new KeyPoint[2];
+        float bestMatchIndex = 0;
+        for(KeyPoint modelKPoint: modelKeyPoints){
+            for(KeyPoint observedPointPosibleCenterOfModelConstelation : observedKeyPoints){
+                Constelation oneOfmodelsConstelations = new Constelation(createPoint(modelKPoint.pt.x, modelKPoint.pt.y),
+                        modelKeyPoints);
 
-    private DoublePoint findOffsetInMatches() {
-        DoublePoint[] deltas = new DoublePoint[modelKPMatched.size()];
-        double avgDelta = 0;
-        int i = 0;
-        if(modelKPMatched.size() == 0){
+                if(observedPointPosibleCenterOfModelConstelation.pt.x == 325
+                        && observedPointPosibleCenterOfModelConstelation.pt.y == 161
+                        && modelKPoint.pt.x == 8
+                        && modelKPoint.pt.y == 9){
+                    int a =2;
+                }
+
+               /* if(observedPointPosibleCenterOfModelConstelation.pt.x == 281
+                        && observedPointPosibleCenterOfModelConstelation.pt.y == 78
+                        && modelKPoint.pt.x == 15
+                        && modelKPoint.pt.y == 8){
+                    int a =2;
+                }*/
+
+                double[] color = otherImage.targetImg.get((int)modelKPoint.pt.y+5,(int)modelKPoint.pt.x);
+
+                float matchingIndex = oneOfmodelsConstelations.doesItMatch(observedPointPosibleCenterOfModelConstelation,
+                        observedSimplifiedKeyPointsPrecisionIsClusterWidth,color);
+                if(bestMatchIndex < matchingIndex){
+                    bestMatch[0]=modelKPoint;
+                    bestMatch[1]=observedPointPosibleCenterOfModelConstelation;
+                    bestMatchIndex = matchingIndex;
+                }
+               /* if(matchingIndex >= 0.8 && matchingIndex <= 1){// && observedPointPosibleCenterOfModelConstelation.pt.x > 316
+                        //&& observedPointPosibleCenterOfModelConstelation.pt.x < 320){
+                    DoublePoint doub = new DoublePoint(observedPointPosibleCenterOfModelConstelation.pt.x,
+                            observedPointPosibleCenterOfModelConstelation.pt.y);
+
+                    System.out.println("---------------------- bingo V"+matchingIndex+" "+doub);
+                    System.out.println("off:"+new DoublePoint(observedPointPosibleCenterOfModelConstelation.pt.x - modelKPoint.pt.x,
+                            observedPointPosibleCenterOfModelConstelation.pt.y - modelKPoint.pt.y));
+                    System.out.println("mod:"+new DoublePoint( modelKPoint.pt.x,
+                             modelKPoint.pt.y));
+                    System.out.println("obs:"+new DoublePoint(observedPointPosibleCenterOfModelConstelation.pt.x
+                            ,observedPointPosibleCenterOfModelConstelation.pt.y));
+
+                }*/
+            }
+        }
+        try{
+            return new DoublePoint(bestMatch[0].pt.x - bestMatch[1].pt.x,
+                    bestMatch[0].pt.y - bestMatch[1].pt.y);
+        }catch (Exception e){
             return null;
         }
-        KDTree moduls = new KDTree(1);
-        for (KeyPoint m:modelKPMatched){
-            KeyPoint o = observerdKPMatched.get(i);
-            DoublePoint delta = new DoublePoint(m.pt.x-o.pt.x,m.pt.y-o.pt.y);
-            deltas[i] = delta;
-            double[] deltad =  new double[1];
-            double deltamod = delta.getQuadDist();
-            deltad[0] = deltamod;
-            try {
-                moduls.insert(deltad,delta);
-            } catch (Exception e) {
-
-            }
-            System.out.println("Delta:"+Math.sqrt(deltamod));
-            avgDelta = ((avgDelta*(double)i)+deltamod)/(i+1);
-            i++;
-        }
-        double[] avgdeltaA =  new double[1];
-        avgdeltaA[0] = avgDelta;
-        try {
-            Object[] array = (Object[])moduls.nearest(avgdeltaA,1);
-            DoublePoint ans = (DoublePoint) array[0];
-            return ans;
-        } catch (KeySizeException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    private void findMatchingConstelationsPoints() {
-
-
-        for(KeyPoint obsp : observedKeyPoints){
-            try{
-                double[] obsPoint = createPoint(obsp.pt.x, obsp.pt.y);
-                Object[] obsNeightbours = kdreeObs.nearest(obsPoint,params.nstars);
-                Constelation obsConst = new Constelation(obsPoint,obsNeightbours,params);
-
-                for (KeyPoint modp:modelKeyPoints){
-
-                    double[] modePoint = createPoint(modp.pt.x,modp.pt.y);
-                    Object[] modpNeightbours = kdreeMod.nearest(modePoint,params.nstars);
-                    Constelation modeConst = new Constelation(modePoint,modpNeightbours,params);
-
-                    float matching = modeConst.doesItMatch(obsConst);
-
-                    if(matching > ((float)params.matchingPercent/100)){
-                        modelKPMatched.add(modp);
-                        observerdKPMatched.add(obsp);
-                    }
-                }
-            }catch (Exception e){
-                e.printStackTrace();
-            }
-        }
-
     }
 
     public void printMatches(){

@@ -29,4 +29,10 @@ public class DoublePoint {
     public String toString(){
         return "("+x+","+y+")";
     }
+
+    public DoublePoint compare(DoublePoint doublePoint) {
+        double x = Math.abs(Math.abs(doublePoint.getX()) - Math.abs(this.getX()));
+        double y = Math.abs(Math.abs(doublePoint.getY()) - Math.abs(this.getY()));
+        return new DoublePoint(x,y);
+    }
 }

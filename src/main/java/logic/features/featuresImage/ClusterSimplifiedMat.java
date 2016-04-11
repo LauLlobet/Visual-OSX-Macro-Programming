@@ -2,6 +2,7 @@ package logic.features.featuresImage;
 
 import logic.features.ClusterImage;
 import logic.features.featuresImage.util.ClusterColider;
+import logic.features.featuresImage.util.FeatureSearchParams;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfKeyPoint;
 import org.opencv.features2d.KeyPoint;
@@ -13,13 +14,14 @@ import java.util.ArrayList;
  */
 public class ClusterSimplifiedMat extends FeaturesMat {
 
+    protected final FeatureSearchParams params;
     ClusterImage clusterKeyPointsSimplifier;
 
-    int keyPointContactClusteringArea = 2;
     private MatOfKeyPoint defaultKeyPoints;
 
-    public ClusterSimplifiedMat(Mat img) {
+    public ClusterSimplifiedMat(Mat img, FeatureSearchParams params) {
         clusterKeyPointsSimplifier = new ClusterImage(img.width(),img.height());
+        this.params = params;
     }
 
     @Override
@@ -33,17 +35,9 @@ public class ClusterSimplifiedMat extends FeaturesMat {
 
     private void filterKeypoints(){
         ArrayList<KeyPoint> ans = clusterKeyPointsSimplifier.groupKeyPointsInSingleOnes(keyPoints.toArray(),
-                keyPointContactClusteringArea);
+                (int)params.simplifiyingPrecision,targetImg);
         keyPoints = new MatOfKeyPoint();
         keyPoints.fromList(ans);
-    }
-
-    public int getKeyPointContactClusteringArea() {
-        return keyPointContactClusteringArea;
-    }
-
-    public void setKeyPointContactClusteringArea(int keyPointContactClusteringArea) {
-        this.keyPointContactClusteringArea = keyPointContactClusteringArea;
     }
 
     public MatOfKeyPoint getDefaultKeyPoints() {

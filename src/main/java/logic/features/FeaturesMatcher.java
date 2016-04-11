@@ -11,7 +11,9 @@ import org.opencv.highgui.Highgui;
  * Created by quest on 7/4/16.
  */
 public class FeaturesMatcher {
+    String set = ".";
     public FeaturesMatcher(String constelations) {
+        set = constelations;
         
     }
 
@@ -23,14 +25,14 @@ public class FeaturesMatcher {
                 big.getKeyPoints(),
                 new MatOfDMatch(),
                 out);
-        Highgui.imwrite("./assets/simplifiedKeyPoints.png",out);
+        Highgui.imwrite("./assets/"+set+"/simplifiedKeyPoints.png",out);
         out = new Mat();
-        Features2d.drawMatches(small.getImage(), small.getDefaultKeyPoints(), big.getImage(), big.getDefaultKeyPoints(), new MatOfDMatch(), out);
+       /* Features2d.drawMatches(small.getImage(), small.getDefaultKeyPoints(), big.getImage(), big.getDefaultKeyPoints(), new MatOfDMatch(), out);
         Highgui.imwrite("./assets/defaultKeyPoints.png",out);
 
         out = new Mat();
         Features2d.drawMatches(small.getImage(), big.getModelMatchingKeyPoints(), big.getImage(), big.getObslMatchingKeyPoints(), new MatOfDMatch(), out);
-        Highgui.imwrite("./assets/matches.png",out);
+        Highgui.imwrite("./assets/matches.png",out);*/
 
 
     }
