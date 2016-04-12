@@ -54,7 +54,6 @@ public class MovementDetectorTS extends ObjectTS implements ScreenRegionsListene
     public void registerToCapturer(ScreenCapturer screenCapturer) {
         JPanel frame = ((MovementDetectorTSV)(caller.getView(this.getId()))).doGetRecordingPane();
         screenCapturer.addPanelAndListener(frame,this);
-
     }
 
     public int bufferedImagesEqual(BufferedImage img1, BufferedImage img2) {

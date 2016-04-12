@@ -36,20 +36,20 @@ public class BufferImageObserved extends BufferedImage {
         BufferedImage img = null;
         try {
             img = ImageIO.read(new File(filepath));
-            final  BufferImageObserved cstImg = new BufferImageObserved(
-                    img.getWidth(),
-                    img.getHeight(), img.
-                    getType());
-
-            Graphics g = cstImg.createGraphics();
-            g.drawImage(img,0,0,null);
-            g.dispose();
-            cstImg.rgbData = cstImg.getRGB(0,0, cstImg.getWidth(), cstImg.getHeight(), null, 0,cstImg.getWidth());
-
-            return cstImg;
+            return createFromImage(img);
         } catch (IOException e) {
             return null;
         }
+    }
+
+    public static BufferImageObserved createFromImage(BufferedImage img) {
+        final  BufferImageObserved cstImg = new BufferImageObserved(
+                img.getWidth(),
+                img.getHeight(), img.
+                getType());
+
+        cstImg.rgbData = img.getRGB(0,0, cstImg.getWidth(), cstImg.getHeight(), null, 0,cstImg.getWidth());
+        return cstImg;
     }
 
     public DoublePoint startSearching() {

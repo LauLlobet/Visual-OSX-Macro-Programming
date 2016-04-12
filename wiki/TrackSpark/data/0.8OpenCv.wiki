@@ -32,7 +32,9 @@
 
 *DONE c:16 features tracking no funciona amb assets petits, nomes en finestres grans, cambi d'estrategia per complir amb el pla inmarçio*
 
-- search works
+*DONE c:17 search works*
+
+- interface object to find images done, needs to be integrated, next is a pause to test movment detector
 
 - integrate searcher in searcher object
 

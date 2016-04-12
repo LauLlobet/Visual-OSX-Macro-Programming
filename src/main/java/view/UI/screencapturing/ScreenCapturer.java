@@ -17,6 +17,7 @@ public class ScreenCapturer implements Runnable {
     private Robot robot;
     BufferedImage image;
     ArrayList<ListenerAndPanel> listeners;
+    private ScreenRegionsListener fullScreenListener;
 
 
     public class ListenerAndPanel {
@@ -31,6 +32,10 @@ public class ScreenCapturer implements Runnable {
     public ScreenCapturer() throws Exception {
         robot = new Robot();
         listeners = new ArrayList<ListenerAndPanel>();
+    }
+
+    public void setFullScreenListener(ScreenRegionsListener srl) {
+        fullScreenListener = srl;
     }
 
     public void addPanelAndListener(JPanel panel, ScreenRegionsListener listener) {
@@ -62,6 +67,7 @@ public class ScreenCapturer implements Runnable {
             final BufferedImage dst = getBufferedImage(listener.panel);
             listener.listener.newCapture(dst);
         }
+        fullScreenListener.newCapture(image);
     }
 
     private BufferedImage getBufferedImage(JPanel listener) {
