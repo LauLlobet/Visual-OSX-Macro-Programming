@@ -1,8 +1,6 @@
 package logic;
 
-import logic.features.featuresImage.util.Constelation;
-import logic.features.featuresImage.util.FeatureSearchParams;
-import logic.features.featuresImage.util.PointsEqualator;
+import logic.imagematching.features.featuresImage.util.PointsEqualator;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

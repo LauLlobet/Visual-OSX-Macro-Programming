@@ -2,7 +2,6 @@ package view.UI;
 
 import Constants.TSOConstants;
 import logic.*;
-import model.ScreenFeatureFinderTS;
 import model.tsobject.ObjectsFactoryTS;
 import model.tsobject.ObjectTS;
 import org.junit.Test;
@@ -66,7 +65,7 @@ public class VObjectTSTest {
         capturerThread.start();
 
 //        ((MovementDetectorTS)ob3).registerToCapturer(screenCapturer);
-        //((ScreenFeatureFinderTS)sfinder).registerToCapturer(screenCapturer);
+        //((ScreenImageFinderTS)sfinder).registerToCapturer(screenCapturer);
 
 
         LogicTicCaller lc = new LogicTicCaller(caller);

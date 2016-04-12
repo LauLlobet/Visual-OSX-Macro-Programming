@@ -1,11 +1,11 @@
 package logic;
 
-import logic.features.FeaturesMatcher;
-import logic.features.featuresImage.ClusterSimplifiedMat;
-import logic.features.featuresImage.MatchingObservedMat;
-import logic.features.featuresImage.util.ClusterColider;
-import logic.features.featuresImage.util.DoublePoint;
-import logic.features.featuresImage.util.FeatureSearchParams;
+import logic.imagematching.features.featuresImage.FeaturesMatcher;
+import logic.imagematching.features.featuresImage.ClusterSimplifiedMat;
+import logic.imagematching.features.featuresImage.MatchingObservedMat;
+import logic.imagematching.features.featuresImage.util.ClusterColider;
+import logic.imagematching.features.featuresImage.util.DoublePoint;
+import logic.imagematching.features.featuresImage.util.FeatureSearchParams;
 import org.junit.Test;
 import org.opencv.core.Core;
 import org.opencv.core.Mat;
@@ -13,7 +13,6 @@ import org.opencv.core.Size;
 import org.opencv.highgui.Highgui;
 import org.opencv.imgproc.Imgproc;
 
-import java.util.HashSet;
 import java.util.Hashtable;
 
 /**

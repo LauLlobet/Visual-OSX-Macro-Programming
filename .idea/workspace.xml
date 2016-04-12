@@ -5,36 +5,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68c84884-33a5-4953-89cf-c14b9ee7c1b2" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/real/big.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/real/small.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/logic/features/ImageFeaturesFinder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/logic/features/KeyPointsComparer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/logic/features/ImageFeaturesFinder.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/logic/features/KeyPointsComparer.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wiki/TrackSpark/TrackSpark.wiki.lock" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/matches.png" afterPath="$PROJECT_DIR$/assets/matches.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/logic/features/ClusterImage$ClusterImagePixel.class" afterPath="$PROJECT_DIR$/build/classes/main/logic/features/ClusterImage$ClusterImagePixel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/logic/features/ClusterImage$KPointAndCluster.class" afterPath="$PROJECT_DIR$/build/classes/main/logic/features/ClusterImage$KPointAndCluster.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/logic/features/ClusterImage.class" afterPath="$PROJECT_DIR$/build/classes/main/logic/features/ClusterImage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/logic/features/featuresImage/ClusterSimplifiedMat.class" afterPath="$PROJECT_DIR$/build/classes/main/logic/features/featuresImage/ClusterSimplifiedMat.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/logic/features/featuresImage/MatchingObservedMat.class" afterPath="$PROJECT_DIR$/build/classes/main/logic/features/featuresImage/MatchingObservedMat.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/logic/features/featuresImage/util/Constelation.class" afterPath="$PROJECT_DIR$/build/classes/main/logic/features/featuresImage/util/Constelation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/logic/features/featuresImage/util/FeatureSearchParams.class" afterPath="$PROJECT_DIR$/build/classes/main/logic/features/featuresImage/util/FeatureSearchParams.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/logic/ImageFinderInScreen.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/logic/imagematching/features/pixelbypixel/BufferImageObserved.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/logic/imagematching/features/pixelbypixel/BufferImageObservedTest.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/1/simplifiedKeyPoints.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/logic/features/ClusterImage$ClusterImagePixel.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/logic/features/ClusterImage$KPointAndCluster.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/logic/features/ClusterImage.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/logic/features/FeaturesMatcher.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/logic/features/featuresImage/ClusterSimplifiedMat.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/logic/features/featuresImage/FeaturesMat.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/logic/features/featuresImage/MatchingObservedMat.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/logic/features/featuresImage/ResizableMat.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/logic/features/featuresImage/util/ClusterCenter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/logic/features/featuresImage/util/ClusterColider.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/logic/features/featuresImage/util/Constelation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/logic/features/featuresImage/util/DoublePoint.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/logic/features/featuresImage/util/FeatureSearchParams.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/logic/features/featuresImage/util/PointsEqualator$DoubleComparator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/logic/features/featuresImage/util/PointsEqualator.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/logic/features/ClusterImage.java" afterPath="$PROJECT_DIR$/src/main/java/logic/imagematching/features/featuresImage/ClusterImage.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/logic/features/FeaturesMatcher.java" afterPath="$PROJECT_DIR$/src/main/java/logic/imagematching/features/featuresImage/FeaturesMatcher.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/logic/features/featuresImage/ClusterSimplifiedMat.java" afterPath="$PROJECT_DIR$/src/main/java/logic/imagematching/features/featuresImage/ClusterSimplifiedMat.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/logic/features/featuresImage/FeaturesMat.java" afterPath="$PROJECT_DIR$/src/main/java/logic/imagematching/features/featuresImage/FeaturesMat.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/logic/features/featuresImage/MatchingObservedMat.java" afterPath="$PROJECT_DIR$/src/main/java/logic/imagematching/features/featuresImage/MatchingObservedMat.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/logic/features/featuresImage/ResizableMat.java" afterPath="$PROJECT_DIR$/src/main/java/logic/imagematching/features/featuresImage/ResizableMat.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/logic/features/featuresImage/util/ClusterCenter.java" afterPath="$PROJECT_DIR$/src/main/java/logic/imagematching/features/featuresImage/util/ClusterCenter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/logic/features/featuresImage/util/ClusterColider.java" afterPath="$PROJECT_DIR$/src/main/java/logic/imagematching/features/featuresImage/util/ClusterColider.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/logic/features/featuresImage/util/Constelation.java" afterPath="$PROJECT_DIR$/src/main/java/logic/imagematching/features/featuresImage/util/Constelation.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/logic/features/featuresImage/util/DoublePoint.java" afterPath="$PROJECT_DIR$/src/main/java/logic/imagematching/features/featuresImage/util/DoublePoint.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/logic/features/featuresImage/util/FeatureSearchParams.java" afterPath="$PROJECT_DIR$/src/main/java/logic/imagematching/features/featuresImage/util/FeatureSearchParams.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/logic/features/featuresImage/util/PointsEqualator.java" afterPath="$PROJECT_DIR$/src/main/java/logic/imagematching/features/featuresImage/util/PointsEqualator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/model/ScreenFeatureFinderTS.java" afterPath="$PROJECT_DIR$/src/main/java/model/ScreenImageFinderTS.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/logic/ConstelationTest.class" afterPath="$PROJECT_DIR$/build/classes/test/logic/ConstelationTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/logic/FeaturesScreenFinderTes.class" afterPath="$PROJECT_DIR$/build/classes/test/logic/FeaturesScreenFinderTes.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wiki/TrackSpark/data/wikiovw.sli" afterPath="$PROJECT_DIR$/wiki/TrackSpark/data/wikiovw.sli" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/logic/features/ClusterImage.java" afterPath="$PROJECT_DIR$/src/main/java/logic/features/ClusterImage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/logic/features/FeaturesMatcher.java" afterPath="$PROJECT_DIR$/src/main/java/logic/features/FeaturesMatcher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/logic/features/featuresImage/ClusterSimplifiedMat.java" afterPath="$PROJECT_DIR$/src/main/java/logic/features/featuresImage/ClusterSimplifiedMat.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/logic/features/featuresImage/MatchingObservedMat.java" afterPath="$PROJECT_DIR$/src/main/java/logic/features/featuresImage/MatchingObservedMat.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/logic/features/featuresImage/util/Constelation.java" afterPath="$PROJECT_DIR$/src/main/java/logic/features/featuresImage/util/Constelation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/logic/features/featuresImage/util/DoublePoint.java" afterPath="$PROJECT_DIR$/src/main/java/logic/features/featuresImage/util/DoublePoint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/logic/features/featuresImage/util/FeatureSearchParams.java" afterPath="$PROJECT_DIR$/src/main/java/logic/features/featuresImage/util/FeatureSearchParams.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/TSObject/ObjectsFactoryTS.java" afterPath="$PROJECT_DIR$/src/main/java/model/TSObject/ObjectsFactoryTS.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/logic/ConstelationTest.java" afterPath="$PROJECT_DIR$/src/test/java/logic/ConstelationTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/logic/FeaturesScreenFinderTes.java" afterPath="$PROJECT_DIR$/src/test/java/logic/FeaturesScreenFinderTes.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/view/UI/VObjectTSTest.java" afterPath="$PROJECT_DIR$/src/test/java/view/UI/VObjectTSTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wiki/TrackSpark/TrackSpark.wiki" afterPath="$PROJECT_DIR$/wiki/TrackSpark/TrackSpark.wiki" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wiki/TrackSpark/data/0.8OpenCv.wiki" afterPath="$PROJECT_DIR$/wiki/TrackSpark/data/0.8OpenCv.wiki" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wiki/TrackSpark/data/TrackSpark.wiki" afterPath="$PROJECT_DIR$/wiki/TrackSpark/data/TrackSpark.wiki" />
     </list>
     <ignored path="trackspark.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -106,68 +119,116 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FeaturesScreenFinderTes.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/logic/FeaturesScreenFinderTes.java">
+      <file leaf-file-name="BufferImageObserved.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/logic/imagematching/features/pixelbypixel/BufferImageObserved.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5714286">
-              <caret line="40" column="46" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.46373627">
+              <caret line="66" column="50" selection-start-line="66" selection-start-column="50" selection-end-line="66" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1014#1034#0" expanded="true" />
+                <element signature="e#2553#2554#0" expanded="true" />
+                <element signature="e#2604#2605#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BufferImageObservedTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/logic/imagematching/features/pixelbypixel/BufferImageObservedTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.185185">
+              <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScreenImageFinderTS.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/ScreenImageFinderTS.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MovementDetectorTS.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/MovementDetectorTS.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="53" column="38" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScreenCapturer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/view/UI/screencapturing/ScreenCapturer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScreenRegionsListener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/view/UI/screencapturing/ScreenRegionsListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageFinderInScreen.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/logic/ImageFinderInScreen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="FeaturesMatcher.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/logic/features/FeaturesMatcher.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/logic/imagematching/features/featuresImage/FeaturesMatcher.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+              <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="DoublePoint.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/logic/features/featuresImage/util/DoublePoint.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/logic/imagematching/features/featuresImage/util/DoublePoint.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="77" selection-start-line="33" selection-start-column="77" selection-end-line="33" selection-end-column="77" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MatchingObservedMat.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/logic/features/featuresImage/MatchingObservedMat.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="115" column="31" selection-start-line="115" selection-start-column="31" selection-end-line="115" selection-end-column="31" />
+              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Constelation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/logic/features/featuresImage/util/Constelation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="50" column="66" selection-start-line="50" selection-start-column="66" selection-end-line="50" selection-end-column="66" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#834#835#0" expanded="true" />
+                <element signature="e#860#861#0" expanded="true" />
+                <element signature="e#894#895#0" expanded="true" />
+                <element signature="e#920#921#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="ClusterImage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/logic/features/ClusterImage.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/logic/imagematching/features/featuresImage/ClusterImage.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="80" column="54" selection-start-line="80" selection-start-column="54" selection-end-line="80" selection-end-column="54" />
+              <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -504,11 +565,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/view/FixedTextObjectTSV.java" />
-        <option value="$PROJECT_DIR$/src/main/java/view/MovementDetectorTSV.java" />
-        <option value="$PROJECT_DIR$/src/main/java/view/SingleFieldObjectTSV.java" />
-        <option value="$PROJECT_DIR$/src/main/java/view/ThresholdTSV.java" />
-        <option value="$PROJECT_DIR$/src/main/java/view/ObjectTSV.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/tsobject/ObjectsFactoryTS.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/UI/FrameVObject.java" />
         <option value="$PROJECT_DIR$/src/main/java/Constants/TSOConstants.java" />
@@ -555,6 +611,11 @@
         <option value="$PROJECT_DIR$/src/main/java/logic/features/featuresImage/MatchingObservedMat.java" />
         <option value="$PROJECT_DIR$/src/main/java/logic/features/FeaturesMatcher.java" />
         <option value="$PROJECT_DIR$/src/test/java/logic/FeaturesScreenFinderTes.java" />
+        <option value="$PROJECT_DIR$/src/main/java/logic/imagematching/features/featuresImage/util/DoublePoint.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/ScreenImageFinderTS.java" />
+        <option value="$PROJECT_DIR$/src/main/java/logic/ImageFinderInScreen.java" />
+        <option value="$PROJECT_DIR$/src/test/java/logic/imagematching/features/pixelbypixel/BufferImageObservedTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/logic/imagematching/features/pixelbypixel/BufferImageObserved.java" />
       </list>
     </option>
   </component>
@@ -571,8 +632,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-2" />
-    <option name="y" value="28" />
+    <option name="x" value="31" />
+    <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="833" />
   </component>
@@ -776,30 +837,8 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="trackspark" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trackspark" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
+              <option name="myItemId" value="view" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -825,7 +864,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="logic" />
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UI" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -851,11 +894,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="logic" />
+              <option name="myItemId" value="view" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="features" />
+              <option name="myItemId" value="UI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="screencapturing" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -878,18 +925,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="features" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="featuresImage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -916,44 +951,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="logic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="features" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="featuresImage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trackspark" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trackspark" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IO" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -987,6 +984,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="logic.imagematching.features.pixelbypixel" />
       <recent name="logic" />
       <recent name="model" />
     </key>
@@ -994,6 +992,7 @@
       <recent name="" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="logic.imagematching" />
       <recent name="view" />
       <recent name="model" />
     </key>
@@ -1014,11 +1013,11 @@
       <recent name="model.tsobject" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FeaturesScreenFinderTes.testSingleScreen">
+  <component name="RunManager" selected="JUnit.BufferImageObservedTest.performanceTest">
     <configuration default="false" name="FeaturesScreenFinderTes.testSingleScreen" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="logic.features.featuresImage.util.*" />
+          <option name="PATTERN" value="logic.imagematching.features.featuresImage.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -1044,7 +1043,7 @@
     <configuration default="false" name="ConstelationTest.TestSimilarity1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="logic.features.featuresImage.util.*" />
+          <option name="PATTERN" value="logic.imagematching.features.featuresImage.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -1054,58 +1053,6 @@
       <option name="PACKAGE_NAME" value="logic" />
       <option name="MAIN_CLASS_NAME" value="logic.ConstelationTest" />
       <option name="METHOD_NAME" value="TestSimilarity1" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="ConstelationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="logic.features.featuresImage.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="trackspark" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="logic" />
-      <option name="MAIN_CLASS_NAME" value="logic.ConstelationTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="VObjectTSTest.testSetConnectionFromMouseEvents" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="view.UI.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="trackspark" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="view.UI" />
-      <option name="MAIN_CLASS_NAME" value="view.UI.VObjectTSTest" />
-      <option name="METHOD_NAME" value="testSetConnectionFromMouseEvents" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -1133,6 +1080,58 @@
       <option name="MAIN_CLASS_NAME" value="logic.ConstelationTest" />
       <option name="METHOD_NAME" value="TestRealSmall" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="BufferImageObservedTest.performanceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="logic.imagematching.features.pixelbypixel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="trackspark" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="logic.imagematching.features.pixelbypixel" />
+      <option name="MAIN_CLASS_NAME" value="logic.imagematching.features.pixelbypixel.BufferImageObservedTest" />
+      <option name="METHOD_NAME" value="performanceTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="BufferImageObservedTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="logic.imagematching.features.pixelbypixel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="trackspark" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="logic.imagematching.features.pixelbypixel" />
+      <option name="MAIN_CLASS_NAME" value="logic.imagematching.features.pixelbypixel.BufferImageObservedTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -1579,17 +1578,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.FeaturesScreenFinderTes.testSingleScreen" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.ConstelationTest.TestSimilarity1" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ConstelationTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.VObjectTSTest.testSetConnectionFromMouseEvents" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ConstelationTest.TestRealSmall" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ConstelationTest.TestRealSmall" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.BufferImageObservedTest.performanceTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.BufferImageObservedTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.FeaturesScreenFinderTes.testSingleScreen" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ConstelationTest.TestRealSmall" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ConstelationTest.TestSimilarity1" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.VObjectTSTest.testSetConnectionFromMouseEvents" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ConstelationTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.BufferImageObservedTest.performanceTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.BufferImageObservedTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.FeaturesScreenFinderTes.testSingleScreen" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ConstelationTest.TestRealSmall" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ConstelationTest.TestSimilarity1" />
       </list>
     </recent_temporary>
   </component>
@@ -1613,44 +1612,44 @@
       <workItem from="1459769129548" duration="19785000" />
       <workItem from="1459850881073" duration="57867000" />
       <workItem from="1460024512477" duration="27318000" />
-      <workItem from="1460057233747" duration="35749000" />
+      <workItem from="1460057233747" duration="55953000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FeaturesScreenFinderTes_testSingleScreen - 2016.04.11 at 12h 56m 04s.xml">
-      <configuration name="FeaturesScreenFinderTes.testSingleScreen" configurationId="JUnit" />
+    <history-entry file="BufferImageObservedTest_performanceTest - 2016.04.12 at 12h 44m 40s.xml">
+      <configuration name="BufferImageObservedTest.performanceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FeaturesScreenFinderTes_testSingleScreen - 2016.04.11 at 12h 57m 22s.xml">
-      <configuration name="FeaturesScreenFinderTes.testSingleScreen" configurationId="JUnit" />
+    <history-entry file="BufferImageObservedTest_performanceTest - 2016.04.12 at 12h 46m 31s.xml">
+      <configuration name="BufferImageObservedTest.performanceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FeaturesScreenFinderTes_testSingleScreen - 2016.04.11 at 12h 57m 30s.xml">
-      <configuration name="FeaturesScreenFinderTes.testSingleScreen" configurationId="JUnit" />
+    <history-entry file="BufferImageObservedTest_performanceTest - 2016.04.12 at 12h 54m 56s.xml">
+      <configuration name="BufferImageObservedTest.performanceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FeaturesScreenFinderTes_testSingleScreen - 2016.04.11 at 12h 58m 44s.xml">
-      <configuration name="FeaturesScreenFinderTes.testSingleScreen" configurationId="JUnit" />
+    <history-entry file="BufferImageObservedTest_performanceTest - 2016.04.12 at 12h 58m 40s.xml">
+      <configuration name="BufferImageObservedTest.performanceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FeaturesScreenFinderTes_testSingleScreen - 2016.04.11 at 12h 59m 14s.xml">
-      <configuration name="FeaturesScreenFinderTes.testSingleScreen" configurationId="JUnit" />
+    <history-entry file="BufferImageObservedTest_performanceTest - 2016.04.12 at 13h 01m 00s.xml">
+      <configuration name="BufferImageObservedTest.performanceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FeaturesScreenFinderTes_testSingleScreen - 2016.04.11 at 12h 59m 36s.xml">
-      <configuration name="FeaturesScreenFinderTes.testSingleScreen" configurationId="JUnit" />
+    <history-entry file="BufferImageObservedTest_performanceTest - 2016.04.12 at 13h 05m 01s.xml">
+      <configuration name="BufferImageObservedTest.performanceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FeaturesScreenFinderTes_testSingleScreen - 2016.04.11 at 13h 00m 00s.xml">
-      <configuration name="FeaturesScreenFinderTes.testSingleScreen" configurationId="JUnit" />
+    <history-entry file="BufferImageObservedTest_performanceTest - 2016.04.12 at 13h 05m 53s.xml">
+      <configuration name="BufferImageObservedTest.performanceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FeaturesScreenFinderTes_testSingleScreen - 2016.04.11 at 13h 00m 41s.xml">
-      <configuration name="FeaturesScreenFinderTes.testSingleScreen" configurationId="JUnit" />
+    <history-entry file="BufferImageObservedTest_performanceTest - 2016.04.12 at 13h 06m 53s.xml">
+      <configuration name="BufferImageObservedTest.performanceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FeaturesScreenFinderTes_testSingleScreen - 2016.04.11 at 13h 03m 51s.xml">
-      <configuration name="FeaturesScreenFinderTes.testSingleScreen" configurationId="JUnit" />
+    <history-entry file="BufferImageObservedTest_performanceTest - 2016.04.12 at 13h 10m 10s.xml">
+      <configuration name="BufferImageObservedTest.performanceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FeaturesScreenFinderTes_testSingleScreen - 2016.04.11 at 13h 04m 43s.xml">
-      <configuration name="FeaturesScreenFinderTes.testSingleScreen" configurationId="JUnit" />
+    <history-entry file="BufferImageObservedTest_performanceTest - 2016.04.12 at 13h 11m 34s.xml">
+      <configuration name="BufferImageObservedTest.performanceTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="359087000" />
+    <option name="totallyTimeSpent" value="379291000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1662,7 +1661,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="28" width="1440" height="833" extended-state="0" />
+    <frame x="31" y="23" width="1440" height="833" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1675,14 +1674,14 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32447553" sideWeight="0.5393419" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3265306" sideWeight="0.49164852" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26108727" sideWeight="0.8074534" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31831187" sideWeight="0.8074534" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32307693" sideWeight="0.5178827" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11158799" sideWeight="0.49261993" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26108727" sideWeight="0.19254659" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31831187" sideWeight="0.19254659" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3944056" sideWeight="0.68955654" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1708,7 +1707,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/model/tsobject/ObjectsFactoryTS.java</url>
-          <line>92</line>
+          <line>90</line>
           <properties />
           <option name="timeStamp" value="175" />
         </line-breakpoint>
@@ -1749,8 +1748,8 @@
           <option name="timeStamp" value="288" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/model/ScreenFeatureFinderTS.java</url>
-          <line>82</line>
+          <url>file://$PROJECT_DIR$/src/main/java/model/ScreenImageFinderTS.java</url>
+          <line>81</line>
           <properties />
           <option name="timeStamp" value="299" />
         </line-breakpoint>
@@ -1773,17 +1772,31 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/logic/FeaturesScreenFinderTes.java</url>
-          <line>85</line>
+          <line>84</line>
           <properties />
           <option name="timeStamp" value="451" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/logic/imagematching/features/pixelbypixel/BufferImageObservedTest.java</url>
+          <line>39</line>
+          <properties />
+          <option name="timeStamp" value="462" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/logic/imagematching/features/pixelbypixel/BufferImageObserved.java</url>
+          <line>38</line>
+          <properties />
+          <option name="timeStamp" value="463" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="452" />
+      <option name="time" value="464" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
-        <watch expression="this.getY()" language="JAVA" custom="" />
-        <watch expression="this.getX()" language="JAVA" custom="" />
+        <watch expression="big.resultsBuffer.size()" language="JAVA" custom="" />
+        <watch expression="singleIterations" language="JAVA" custom="" />
+        <watch expression="filepath" language="JAVA" custom="" />
+        <watch expression="img" language="JAVA" custom="" />
       </configuration>
       <configuration name="Application">
         <watch expression="xSize" language="JAVA" custom="" />
@@ -1795,41 +1808,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/awt/Component.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4814816">
-          <caret line="427" column="16" selection-start-line="427" selection-start-column="16" selection-end-line="427" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/BangTSV.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/ClickerTSV.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/FixedTextObjectTSV.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/SingleFieldObjectTSV.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/view/MovementDetectorTSV.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1872,7 +1850,7 @@
           <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#4147#4153#0" expanded="false" />
+            <element signature="e#4077#4083#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1957,14 +1935,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/ScreenFeatureFinderTS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.6027397">
-          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/opencv-2412.jar!/org/opencv/features2d/DescriptorMatcher.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7337278">
@@ -1986,7 +1956,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/features/featuresImage/util/PointsEqualator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/imagematching/features/featuresImage/util/PointsEqualator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.28767124">
           <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
@@ -2043,7 +2013,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/features/featuresImage/ResizableMat.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/imagematching/features/featuresImage/ResizableMat.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
@@ -2067,14 +2037,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/features/featuresImage/FeaturesMat.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/imagematching/features/featuresImage/FeaturesMat.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="37" column="25" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#1060#1061#0" expanded="false" />
-            <element signature="e#1117#1118#0" expanded="false" />
+            <element signature="e#1008#1009#0" expanded="false" />
+            <element signature="e#1065#1066#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2087,18 +2057,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/features/featuresImage/util/ClusterCenter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/imagematching/features/featuresImage/util/ClusterCenter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#1403#1404#0" expanded="false" />
-            <element signature="e#1461#1462#0" expanded="false" />
-            <element signature="e#3050#3051#0" expanded="false" />
-            <element signature="e#3116#3117#0" expanded="false" />
-            <element signature="e#3319#3320#0" expanded="false" />
-            <element signature="e#3368#3369#0" expanded="false" />
+            <element signature="e#1417#1418#0" expanded="false" />
+            <element signature="e#1475#1476#0" expanded="false" />
+            <element signature="e#3064#3065#0" expanded="false" />
+            <element signature="e#3130#3131#0" expanded="false" />
+            <element signature="e#3333#3334#0" expanded="false" />
+            <element signature="e#3382#3383#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2119,7 +2089,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/features/featuresImage/util/FeatureSearchParams.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/imagematching/features/featuresImage/util/FeatureSearchParams.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1978022">
           <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
@@ -2127,7 +2097,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/features/featuresImage/ClusterSimplifiedMat.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/imagematching/features/featuresImage/ClusterSimplifiedMat.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="39" column="32" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
@@ -2135,7 +2105,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/features/featuresImage/util/ClusterColider.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/imagematching/features/featuresImage/util/ClusterColider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33186814">
           <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
@@ -2151,57 +2121,136 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/features/ClusterImage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/imagematching/features/featuresImage/util/Constelation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="80" column="54" selection-start-line="80" selection-start-column="54" selection-end-line="80" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/features/featuresImage/util/Constelation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="66" selection-start-line="50" selection-start-column="66" selection-end-line="50" selection-end-column="66" />
+          <caret line="49" column="66" selection-start-line="49" selection-start-column="66" selection-end-line="49" selection-end-column="66" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/features/featuresImage/util/DoublePoint.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/imagematching/features/featuresImage/MatchingObservedMat.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="77" selection-start-line="33" selection-start-column="77" selection-end-line="33" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/features/featuresImage/MatchingObservedMat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="115" column="31" selection-start-line="115" selection-start-column="31" selection-end-line="115" selection-end-column="31" />
+          <caret line="114" column="31" selection-start-line="114" selection-start-column="31" selection-end-line="114" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/features/FeaturesMatcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/logic/FeaturesScreenFinderTes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5714286">
-          <caret line="40" column="46" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="101" column="9" selection-start-line="34" selection-start-column="0" selection-end-line="101" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1014#1034#0" expanded="true" />
+            <element signature="e#1086#1106#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/imagematching/features/featuresImage/ClusterImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/imagematching/features/featuresImage/FeaturesMatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/awt/image/BufferedImage.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35280374">
+          <caret line="60" column="15" selection-start-line="60" selection-start-column="15" selection-end-line="60" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/imagematching/features/featuresImage/util/DoublePoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="e#834#835#0" expanded="true" />
+            <element signature="e#860#861#0" expanded="true" />
+            <element signature="e#894#895#0" expanded="true" />
+            <element signature="e#920#921#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/ScreenImageFinderTS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/MovementDetectorTS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="53" column="38" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/UI/screencapturing/ScreenCapturer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/UI/screencapturing/ScreenRegionsListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/ImageFinderInScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/logic/imagematching/features/pixelbypixel/BufferImageObservedTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.185185">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/imagematching/features/pixelbypixel/BufferImageObserved.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46373627">
+          <caret line="66" column="50" selection-start-line="66" selection-start-column="50" selection-end-line="66" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2553#2554#0" expanded="true" />
+            <element signature="e#2604#2605#0" expanded="true" />
           </folding>
         </state>
       </provider>

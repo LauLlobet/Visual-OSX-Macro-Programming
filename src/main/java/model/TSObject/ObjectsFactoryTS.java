@@ -8,12 +8,10 @@ import logic.Caller;
 import logic.ConnectionsChecker;
 import logic.IdGenerator;
 import model.*;
-import model.tsobject.ObjectTS;
 import model.tsobject.tsobjectparts.InputConnectionHubTS;
 import model.tsobject.tsobjectparts.OutputConnectionHubTS;
 import model.tsobject.tsobjectparts.Port;
 import view.ObjectTSV;
-import view.ScreenFeatureFinderTSV;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -78,7 +76,7 @@ public class ObjectsFactoryTS {
             newObj = TextPrinterTS.createOne(this.idGenerator,this.connectionChecker);
         }
         if( type.startsWith(TSOConstants.SCREEN_FEATURES_FINDE) ){
-            newObj = ScreenFeatureFinderTS.createOne(this.idGenerator,this.connectionChecker);
+            newObj = ScreenImageFinderTS.createOne(this.idGenerator,this.connectionChecker);
         }
         newObj.registerToMvc(caller);
         refreshUiAfter300Ms();

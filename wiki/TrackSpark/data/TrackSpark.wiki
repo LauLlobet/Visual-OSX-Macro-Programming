@@ -26,6 +26,6 @@ Relase [0.6ViewAssets]
 
 Relase [0.8OpenCv]  <======(CURRENT)
 
-
+Relase [0.9FaceRecognizer] 
 
 	* WikiSettings

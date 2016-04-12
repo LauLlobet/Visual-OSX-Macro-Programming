@@ -30,18 +30,14 @@
 
 *DONE c:15 fi d'us de constelacions, cluster image instead*
 
-- features tracking no funciona amb assets petits, nomes en finestres grans, cambi d'estrategia per complir amb el pla inmarçio
+*DONE c:16 features tracking no funciona amb assets petits, nomes en finestres grans, cambi d'estrategia per complir amb el pla inmarçio*
 
-- color sensitive
+- search works
 
-- cv engine register picture and followingInterface
+- integrate searcher in searcher object
 
-- cross in the panel
+- create coordinate inputs to follow
 
-- return coordinates
+- create ignore mask drawing in alpha channel (backup image + ARGB reading splitter)
 
-- face placer
-
-- clicker passive
-
-- spotify despliegue
+- create sprite placer
