@@ -55,7 +55,14 @@ public class SingleFieldObjectTSV extends ObjectTSV {
         if( !nfield1.equals(field1) && modelCaller != null) {
             field1 = nfield1;
             modelCaller.shynchronizeMVCModel(getId(), field1, null);  // set model
+            if(!field1.equals(jfield1.getText())){
+                setTextBoxField1();
+            }
         }
+    }
+
+    public void setTextBoxField1(){
+        jfield1.setText(field1);
     }
 }
 

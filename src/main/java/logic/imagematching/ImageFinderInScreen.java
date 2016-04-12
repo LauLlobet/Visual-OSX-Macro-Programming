@@ -1,7 +1,8 @@
-package logic;
+package logic.imagematching;
 
 import logic.imagematching.features.featuresImage.util.DoublePoint;
 import logic.imagematching.features.pixelbypixel.BufferImageObserved;
+import view.UI.screencapturing.ScreenCapturer;
 import view.UI.screencapturing.ScreenRegionsListener;
 
 import java.awt.image.BufferedImage;
@@ -23,14 +24,23 @@ public class ImageFinderInScreen implements ScreenRegionsListener {
     }
 
     public void registerASmallImage(BufferedImage bi, String id){
+        if(resultsForId.containsKey(id)){
+            BufferImageObserved removed = resultsForId.remove(id);
+            smallImages.remove(removed);
+        }
         BufferImageObserved small = BufferImageObserved.createFromImage(bi);
         smallImages.add(small);
         resultsForId.put(id,small);
     }
 
     public DoublePoint getLocationFromId(String id){
-        BufferImageObserved small = resultsForId.get(id);
-        DoublePoint dp = new DoublePoint( small.finalX,small.finalY);
+        DoublePoint dp;
+        try{
+            BufferImageObserved small = resultsForId.get(id);
+            dp = new DoublePoint( small.finalX,small.finalY);
+        }catch (Exception e){
+            dp = new DoublePoint(-2,-2);
+        }
         return dp;
     }
 
@@ -57,5 +67,10 @@ public class ImageFinderInScreen implements ScreenRegionsListener {
     @Override
     public void newCapture(BufferedImage capture) {
         registerNewBigImage(capture);
+    }
+
+    public void registerToCapturer(ScreenCapturer screenCapturer){
+        screenCapturer.setFullScreenListener(this);
+
     }
 }

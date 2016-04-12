@@ -4,6 +4,7 @@ import logic.ConnectionsChecker;
 import logic.IdGenerator;
 import model.tsobject.BangDebouncer;
 import model.tsobject.ObjectTS;
+import view.InvalidFieldException;
 import view.MovementDetectorTSV;
 import view.UI.screencapturing.ScreenCapturer;
 import view.UI.screencapturing.ScreenRegionsListener;
@@ -17,6 +18,7 @@ import java.util.Arrays;
 public class MovementDetectorTS extends ObjectTS implements ScreenRegionsListener {
 
     BufferedImage previousImage;
+
     private int movementIndex;
     private BangDebouncer debouncer;
 
@@ -37,7 +39,11 @@ public class MovementDetectorTS extends ObjectTS implements ScreenRegionsListene
             previousImage = capture;
             return;
         }
-        this.movementIndex = bufferedImagesEqual(previousImage,capture);
+        try {
+            this.setMovementIndex(bufferedImagesEqual(previousImage,capture));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         previousImage = capture;
 
     }
@@ -87,6 +93,19 @@ public class MovementDetectorTS extends ObjectTS implements ScreenRegionsListene
         double accum = (double)acumulatedDiference;
         double ratio = accum/((float)img1.getWidth()*(float)img1.getHeight());
         return (int)(ratio * 3.5);
+    }
+
+    public int getMovementIndex() {
+        return movementIndex;
+    }
+
+    public void setMovementIndex(int movementIndex) throws Exception{
+        try{
+            this.movementIndex = movementIndex;
+            if(registeredInMvc){caller.shyncronizeMVCView(getId(),movementIndex,null);};
+        }catch (NumberFormatException e){
+            throw  new InvalidFieldException();
+        }
     }
 
 }

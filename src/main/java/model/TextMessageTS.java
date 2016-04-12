@@ -3,6 +3,7 @@ package model;
 import Constants.TSOConstants;
 import logic.ConnectionsChecker;
 import logic.IdGenerator;
+import model.tsobject.InofensiveException;
 import model.tsobject.ObjectTS;
 import view.SingleFieldObjectTSV;
 
@@ -22,6 +23,13 @@ public class TextMessageTS extends SingleFieldObjectTS {
     }
     @Override
     public void processTic(){
+
+        try{
+            String message = receiveMessageFromPortIfTrueFromTheLast(1,true);
+            setField1(message);
+        }catch (Throwable e){
+
+        }
         if(haveIReceivedABang(0)) {
             String out = field1.replace("\\\\i\\\\",""+i);
             out = out.replace("\\\\r\\\\",""+(int)(Math.floor(Math.random()*10000)));
@@ -33,7 +41,9 @@ public class TextMessageTS extends SingleFieldObjectTS {
 
     @Override
     public void setField1(String field1) throws Exception{
-        super.setField1(field1);
+        this.field1 = field1;
+        if(registeredInMvc){caller.shyncronizeMVCView(getId(),field1,null);};
+
     }
 
 
@@ -43,7 +53,7 @@ public class TextMessageTS extends SingleFieldObjectTS {
         newObj.setId(idGenerator.getNextId(newObj));
         newObj = setConectionHubs(newObj, connectionChecker);
         newObj.getInputsHub().setPorts(generateInputPorts(Arrays.asList(
-                TSOConstants.MBANG
+                TSOConstants.MBANG, TSOConstants.MANY
         )));
         newObj.getOutputsHub().setPorts(generateOutputPorts(Arrays.asList(
                 TSOConstants.MANY

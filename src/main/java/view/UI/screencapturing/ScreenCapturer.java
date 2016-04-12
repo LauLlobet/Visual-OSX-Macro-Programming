@@ -56,6 +56,7 @@ public class ScreenCapturer implements Runnable {
                 Thread.sleep(TSOConstants.FREQ_SCREEN_CAPTURE_MS);
                 image = robot.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
                 deliverScreenCaptureRegions();
+                System.out.println("capturing"+System.currentTimeMillis());
             }
         }catch(Exception e){
             e.printStackTrace();

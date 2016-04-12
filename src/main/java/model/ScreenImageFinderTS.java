@@ -2,9 +2,11 @@ package model;
 import Constants.TSOConstants;
 import logic.ConnectionsChecker;
 import logic.IdGenerator;
+import logic.imagematching.ImageFinderInScreen;
+import logic.imagematching.features.featuresImage.util.DoublePoint;
 import model.tsobject.BangDebouncer;
 import model.tsobject.ObjectTS;
-import view.ScreenFeatureFinderTSV;
+import view.ScreenImageFinderTSV;
 import view.UI.screencapturing.ScreenCapturer;
 import view.UI.screencapturing.ScreenRegionsListener;
 
@@ -30,6 +32,7 @@ public class ScreenImageFinderTS extends ObjectTS implements ScreenRegionsListen
     private int movementIndex;
     private BangDebouncer debouncer;
     private String pictureToFindString;
+    private ImageFinderInScreen imageFinderInScreen;
 
     public ScreenImageFinderTS() {
         super();
@@ -38,10 +41,15 @@ public class ScreenImageFinderTS extends ObjectTS implements ScreenRegionsListen
 
     @Override
     public void processTic() {
-        postMessageToPort(0, "[" + foundX + "," + foundY + "]");
-        if (pictureFound) {
-            postMessageToPort(1, TSOConstants.BANG_STRING);
+
+        DoublePoint xy = imageFinderInScreen.getLocationFromId(this.getId());
+        postMessageToPort(0, "[" + xy.getX() + "," + xy.getY() + "]");
+        pictureFound = true;
+        if(xy.getX() == -1 && xy.getY() == -1){
             pictureFound = false;
+        }
+        if (!pictureFound) {
+            postMessageToPort(1, TSOConstants.BANG_STRING);
         }
         super.processTic();
     }
@@ -67,9 +75,12 @@ public class ScreenImageFinderTS extends ObjectTS implements ScreenRegionsListen
     }
 
     public void registerToCapturer(ScreenCapturer screenCapturer) {
-        JPanel frame = ((ScreenFeatureFinderTSV) (caller.getView(this.getId()))).doGetRecordingPane();
-        screenCapturer.addPanelAndListener(frame, this);
+            JPanel frame = ((ScreenImageFinderTSV) (caller.getView(this.getId()))).doGetRecordingPane();
+            screenCapturer.addPanelAndListener(frame, this);
+        }
 
+    public void registerToScreenSearcher(ImageFinderInScreen ifis){
+        imageFinderInScreen = ifis;
     }
 
     @Override
@@ -83,6 +94,7 @@ public class ScreenImageFinderTS extends ObjectTS implements ScreenRegionsListen
         pictureToFind = capturedImage;
         String id = AssetsPersistanceAccessor.getInstance().addNewAssetToPersist(pictureToFind);
         setPictureToFind(id);
+        imageFinderInScreen.registerASmallImage(pictureToFind,this.getId());
     }
 
     public void setPictureToFind(String npictureToFind) {

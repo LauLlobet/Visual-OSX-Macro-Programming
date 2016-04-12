@@ -3,8 +3,6 @@ package logic.imagematching.features.pixelbypixel;
 import logic.imagematching.features.featuresImage.util.DoublePoint;
 import org.junit.Test;
 
-import java.util.ArrayList;
-
 /**
  * Created by quest on 11/4/16.
  */
@@ -62,7 +60,7 @@ public class BufferImageObservedTest {
     @Test
     public void performanceTest(){
 
-        int seti = 9;
+        int seti = 10;
 
         String set =""+seti;
         BufferImageObserved big = BufferImageObserved.createBufferImageObserved("./assets/"+set+"/big.png");

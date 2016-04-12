@@ -16,7 +16,7 @@ import java.nio.Buffer;
 /**
  * Created by quest on 30/3/16.
  */
-public class ScreenFeatureFinderTSV extends ObjectTSV implements ItemListener {
+public class ScreenImageFinderTSV extends ObjectTSV implements ItemListener {
 
     private static final String LOOK_MODE = "LOOK_MODE";
     private static final String TAKE_PIC_MODE = "TAKE_PIC_MODE";
@@ -30,7 +30,7 @@ public class ScreenFeatureFinderTSV extends ObjectTSV implements ItemListener {
     private String pictureToFindString;
     private BufferedImage pictureToFind;
 
-    public ScreenFeatureFinderTSV(String id, Caller mc, PortPanelFactory portPanelFactory) {
+    public ScreenImageFinderTSV(String id, Caller mc, PortPanelFactory portPanelFactory) {
         super(id, mc, portPanelFactory);
         recordingPanel = new JPanel(){
             @Override
@@ -41,6 +41,7 @@ public class ScreenFeatureFinderTSV extends ObjectTSV implements ItemListener {
                     System.out.println("look");
                 }else {
                     g.drawImage(pictureToFind, 0, 0, null);
+                    g.drawLine(0, 0, 0, 0);
                 }
             }
         };
@@ -55,6 +56,8 @@ public class ScreenFeatureFinderTSV extends ObjectTSV implements ItemListener {
         takePic = new Checkbox("C", mode, false);
         paint = new Checkbox("P", mode, false);
         look = new Checkbox("L", mode, false);
+
+        mode.setSelectedCheckbox(look);
 
         //add radio buttons
         buttons.add(start);
