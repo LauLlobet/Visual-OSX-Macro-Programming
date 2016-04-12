@@ -56,7 +56,6 @@ public class ThresholdTS extends ObjectTS {
                // setMaxValue(inputValue);
             }
             setValue(inputValue);
-            System.out.println(inputValue);
         }catch(NoSuchElementException e){
             return;
         }catch (Throwable e) {

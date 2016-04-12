@@ -31,6 +31,16 @@ public class MovementDetectorTS extends ObjectTS implements ScreenRegionsListene
         super.processTic();
     }
 
+    @Override
+    public void newCapture(BufferedImage capture) {
+        if(previousImage == null){
+            previousImage = capture;
+            return;
+        }
+        this.movementIndex = bufferedImagesEqual(previousImage,capture);
+        previousImage = capture;
+
+    }
 
     public static ObjectTS createOne(IdGenerator idGenerator, ConnectionsChecker connectionChecker) throws Throwable{
         ObjectTS newObj;
@@ -79,14 +89,4 @@ public class MovementDetectorTS extends ObjectTS implements ScreenRegionsListene
         return (int)(ratio * 3.5);
     }
 
-    @Override
-    public void newCapture(BufferedImage capture) {
-        if(previousImage == null){
-            previousImage = capture;
-            return;
-        }
-        this.movementIndex = bufferedImagesEqual(previousImage,capture);
-        previousImage = capture;
-
-    }
 }

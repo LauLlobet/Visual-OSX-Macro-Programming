@@ -64,13 +64,19 @@ public class ScreenCapturer implements Runnable {
 
     private void deliverScreenCaptureRegions() {
         for(ListenerAndPanel listener : listeners){
-            final BufferedImage dst = getBufferedImage(listener.panel);
-            listener.listener.newCapture(dst);
+            try{
+                final BufferedImage dst = getBufferedImage(listener.panel);
+                listener.listener.newCapture(dst);
+            } catch (Exception e){
+                int pp = 3;
+            }
         }
-        fullScreenListener.newCapture(image);
+        if(fullScreenListener != null){
+            fullScreenListener.newCapture(image);
+        }
     }
 
-    private BufferedImage getBufferedImage(JPanel listener) {
+    private BufferedImage getBufferedImage(JPanel listener) throws IllegalComponentStateException {
         int x = (int)listener.getLocationOnScreen().getX();
         int y = (int)listener.getLocationOnScreen().getY();
         int w = (int)listener.getSize().getWidth();

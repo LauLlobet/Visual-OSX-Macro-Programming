@@ -34,7 +34,9 @@
 
 *DONE c:17 search works*
 
-- interface object to find images done, needs to be integrated, next is a pause to test movment detector
+*DONE c:18 interface object to find images done, needs to be integrated, next is a pause to test movment detector*
+
+- movmentDetector arreglat
 
 - integrate searcher in searcher object
 
