@@ -42,7 +42,7 @@
 
 *DONE c:21 jni sample working*
 
-- multiple cpp linked
+*DONE c:22 multiple cpp linked*
 
 - colour extraction
 
