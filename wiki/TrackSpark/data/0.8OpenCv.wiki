@@ -38,7 +38,13 @@
 
 *DONE c:19 movmentDetector arreglat*
 
-- integrate searcher in searcher object
+*DONE c:20 integrate searcher in searcher object*
+
+- jni sample working
+
+- performance test now colors are compared by type
+
+- 
 
 - create coordinate inputs to follow
 

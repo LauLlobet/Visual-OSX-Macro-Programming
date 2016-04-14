@@ -1,10 +1,14 @@
 package logic.imagematching.features.pixelbypixel;
 
+import jni.JniSample;
+import logic.HelloWorld;
 import logic.imagematching.features.featuresImage.util.DoublePoint;
-import org.opencv.core.Mat;
+import org.opencv.core.Core;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
+import java.awt.image.DataBuffer;
+import java.awt.image.DataBufferByte;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -16,6 +20,8 @@ import java.util.Arrays;
 
 public class BufferImageObserved extends BufferedImage {
     public static ArrayList<DoublePoint> resultsBuffer;
+
+
 
     int[] rgbData ;
     private DoublePoint dp;
@@ -61,7 +67,7 @@ public class BufferImageObserved extends BufferedImage {
         }
     }
 
-    public DoublePoint startSearching() {
+    public void borrAM(){
         DoublePoint dp = new DoublePoint(-1,-1);
         float maxMatchingPixels = 0;
 
@@ -88,14 +94,13 @@ public class BufferImageObserved extends BufferedImage {
             }
         }
 
-           for(BufferImageObserved modelto0: models){
+        for(BufferImageObserved modelto0: models){
             if(modelto0.maxMatchingPixels == 0){
                 modelto0.finalX = -1;
                 modelto0.finalY = -1;
             }
         }
         resetModelsList();
-        return dp;
     }
 
     private void resetModelsList() {
@@ -137,7 +142,7 @@ public class BufferImageObserved extends BufferedImage {
 
         int pixdiff = Math.abs((blue-oblue)) + Math.abs((green-ogreen)) + Math.abs(red-ored);
 
-        if( pixdiff <= 30){
+        if( pixdiff <= 3){
             return 1;
         }
         return 0;
@@ -156,4 +161,22 @@ public class BufferImageObserved extends BufferedImage {
         models =a.toArray(new BufferImageObserved[models.length+1]);
     }
 
+    public void startSearching() {
+       /* ImageMatcher im = new ImageMatcher();
+
+
+        int[] observed = toByteArray®(this.fromImage);
+        int[] model = toByteArray(this.models[0]);
+        im.searchImageInImage(observed,model);*/
+        System.load("/libJniSample.dylib");
+        JniSample js = new JniSample();
+        js.sayHello();
+
+    }
+
+    public int[] toByteArray(BufferedImage image)
+    {
+        return image.getRGB(0,0, image.getWidth(), image.getHeight(), null, 0,image.getWidth());
+
+    }
 }
