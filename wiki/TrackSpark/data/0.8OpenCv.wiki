@@ -40,7 +40,14 @@
 
 *DONE c:20 integrate searcher in searcher object*
 
-- jni sample working
+*DONE c:21 jni sample working*
+
+- multiple cpp linked
+
+- colour extraction
+
+- brute force comparer for bucles
+
 
 - performance test now colors are compared by type
 

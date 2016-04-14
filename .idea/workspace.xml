@@ -5,105 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68c84884-33a5-4953-89cf-c14b9ee7c1b2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ImageMatcher.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ImageMatcherHelper.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ImageMatcherHelper.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/logic/HelloWorld.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/logic/imagematching/features/featuresImage/util/ColorSimple.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/logic/imagematching/features/pixelbypixel/ImageMatcher.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/1460477051250image.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/1460477063685image.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/1460477067119image.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/1460477070486image.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/1460477080574image.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/1460477088640image.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/1460477092058image.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/1460477093304image.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/1460477096457image.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/1460477099944image.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/1460477104275image.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wiki/TrackSpark/TrackSpark.wiki.lock" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wiki/TrackSpark/data/wikiovw.sli-journal" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/IO/GlobalKeyListener.class" afterPath="$PROJECT_DIR$/build/classes/main/IO/GlobalKeyListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/logic/Caller.class" afterPath="$PROJECT_DIR$/build/classes/main/logic/Caller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/logic/ConnectionsChecker.class" afterPath="$PROJECT_DIR$/build/classes/main/logic/ConnectionsChecker.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/logic/Keyboard.class" afterPath="$PROJECT_DIR$/build/classes/main/logic/Keyboard.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/logic/LogicTicCaller$1.class" afterPath="$PROJECT_DIR$/build/classes/main/logic/LogicTicCaller$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/logic/LogicTicCaller.class" afterPath="$PROJECT_DIR$/build/classes/main/logic/LogicTicCaller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/logic/imagematching/ImageFinderInScreen.class" afterPath="$PROJECT_DIR$/build/classes/main/logic/imagematching/ImageFinderInScreen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/logic/imagematching/features/featuresImage/ClusterImage$ClusterImagePixel.class" afterPath="$PROJECT_DIR$/build/classes/main/logic/imagematching/features/featuresImage/ClusterImage$ClusterImagePixel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/logic/imagematching/features/featuresImage/ClusterImage$KPointAndCluster.class" afterPath="$PROJECT_DIR$/build/classes/main/logic/imagematching/features/featuresImage/ClusterImage$KPointAndCluster.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/logic/imagematching/features/featuresImage/ClusterImage.class" afterPath="$PROJECT_DIR$/build/classes/main/logic/imagematching/features/featuresImage/ClusterImage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/logic/imagematching/features/featuresImage/FeaturesMat.class" afterPath="$PROJECT_DIR$/build/classes/main/logic/imagematching/features/featuresImage/FeaturesMat.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/logic/imagematching/features/featuresImage/FeaturesMatcher.class" afterPath="$PROJECT_DIR$/build/classes/main/logic/imagematching/features/featuresImage/FeaturesMatcher.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/logic/imagematching/features/featuresImage/MatchingObservedMat.class" afterPath="$PROJECT_DIR$/build/classes/main/logic/imagematching/features/featuresImage/MatchingObservedMat.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/logic/imagematching/features/featuresImage/util/Constelation.class" afterPath="$PROJECT_DIR$/build/classes/main/logic/imagematching/features/featuresImage/util/Constelation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/logic/imagematching/features/featuresImage/util/PointsEqualator$DoubleComparator.class" afterPath="$PROJECT_DIR$/build/classes/main/logic/imagematching/features/featuresImage/util/PointsEqualator$DoubleComparator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/logic/imagematching/features/featuresImage/util/PointsEqualator.class" afterPath="$PROJECT_DIR$/build/classes/main/logic/imagematching/features/featuresImage/util/PointsEqualator.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/logic/imagematching/features/pixelbypixel/Borram.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/libJniSample.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/libJniSample2.o" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/logic/imagematching/features/pixelbypixel/BufferImageObserved.class" afterPath="$PROJECT_DIR$/build/classes/main/logic/imagematching/features/pixelbypixel/BufferImageObserved.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/model/AssetsPersistanceAccessor.class" afterPath="$PROJECT_DIR$/build/classes/main/model/AssetsPersistanceAccessor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/model/BangTS.class" afterPath="$PROJECT_DIR$/build/classes/main/model/BangTS.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/model/ClickerTS.class" afterPath="$PROJECT_DIR$/build/classes/main/model/ClickerTS.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/model/DelayTS.class" afterPath="$PROJECT_DIR$/build/classes/main/model/DelayTS.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/model/MovementDetectorTS.class" afterPath="$PROJECT_DIR$/build/classes/main/model/MovementDetectorTS.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/model/RepetitiveCountdownTS.class" afterPath="$PROJECT_DIR$/build/classes/main/model/RepetitiveCountdownTS.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/model/ScreenImageFinderTS.class" afterPath="$PROJECT_DIR$/build/classes/main/model/ScreenImageFinderTS.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/model/ScreenPrinterTS.class" afterPath="$PROJECT_DIR$/build/classes/main/model/ScreenPrinterTS.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/model/SwitchTS.class" afterPath="$PROJECT_DIR$/build/classes/main/model/SwitchTS.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/model/TextMessageTS.class" afterPath="$PROJECT_DIR$/build/classes/main/model/TextMessageTS.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/model/TextPrinterTS.class" afterPath="$PROJECT_DIR$/build/classes/main/model/TextPrinterTS.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/model/ThresholdTS.class" afterPath="$PROJECT_DIR$/build/classes/main/model/ThresholdTS.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/model/tsobject/BangDebouncer.class" afterPath="$PROJECT_DIR$/build/classes/main/model/tsobject/BangDebouncer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/model/tsobject/ObjectTS.class" afterPath="$PROJECT_DIR$/build/classes/main/model/tsobject/ObjectTS.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/model/tsobject/ObjectsFactoryTS$1Refresher.class" afterPath="$PROJECT_DIR$/build/classes/main/model/tsobject/ObjectsFactoryTS$1Refresher.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/model/tsobject/ObjectsFactoryTS.class" afterPath="$PROJECT_DIR$/build/classes/main/model/tsobject/ObjectsFactoryTS.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/model/tsobject/tsobjectparts/InputConnectionHubTS.class" afterPath="$PROJECT_DIR$/build/classes/main/model/tsobject/tsobjectparts/InputConnectionHubTS.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/model/tsobject/tsobjectparts/OutputConnectionHubTS.class" afterPath="$PROJECT_DIR$/build/classes/main/model/tsobject/tsobjectparts/OutputConnectionHubTS.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/BangTSV$1.class" afterPath="$PROJECT_DIR$/build/classes/main/view/BangTSV$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/BangTSV.class" afterPath="$PROJECT_DIR$/build/classes/main/view/BangTSV.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/ClickerTSV$1.class" afterPath="$PROJECT_DIR$/build/classes/main/view/ClickerTSV$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/ClickerTSV$2.class" afterPath="$PROJECT_DIR$/build/classes/main/view/ClickerTSV$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/ClickerTSV.class" afterPath="$PROJECT_DIR$/build/classes/main/view/ClickerTSV.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/FixedTextObjectTSV.class" afterPath="$PROJECT_DIR$/build/classes/main/view/FixedTextObjectTSV.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/FullScreenConnectionShow$1.class" afterPath="$PROJECT_DIR$/build/classes/main/view/FullScreenConnectionShow$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/FullScreenConnectionShow.class" afterPath="$PROJECT_DIR$/build/classes/main/view/FullScreenConnectionShow.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/MovementDetectorTSV.class" afterPath="$PROJECT_DIR$/build/classes/main/view/MovementDetectorTSV.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/ScreenImageFinderTSV$1.class" afterPath="$PROJECT_DIR$/build/classes/main/view/ScreenImageFinderTSV$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/ScreenImageFinderTSV.class" afterPath="$PROJECT_DIR$/build/classes/main/view/ScreenImageFinderTSV.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/SingleFieldObjectTSV$1.class" afterPath="$PROJECT_DIR$/build/classes/main/view/SingleFieldObjectTSV$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/SingleFieldObjectTSV.class" afterPath="$PROJECT_DIR$/build/classes/main/view/SingleFieldObjectTSV.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/ThresholdTSV$1.class" afterPath="$PROJECT_DIR$/build/classes/main/view/ThresholdTSV$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/ThresholdTSV$2.class" afterPath="$PROJECT_DIR$/build/classes/main/view/ThresholdTSV$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/ThresholdTSV$3.class" afterPath="$PROJECT_DIR$/build/classes/main/view/ThresholdTSV$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/ThresholdTSV.class" afterPath="$PROJECT_DIR$/build/classes/main/view/ThresholdTSV.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/UI/ConectionDisplayer$1.class" afterPath="$PROJECT_DIR$/build/classes/main/view/UI/ConectionDisplayer$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/UI/ConectionDisplayer$2.class" afterPath="$PROJECT_DIR$/build/classes/main/view/UI/ConectionDisplayer$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/UI/ConectionDisplayer.class" afterPath="$PROJECT_DIR$/build/classes/main/view/UI/ConectionDisplayer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/UI/FrameVObject.class" afterPath="$PROJECT_DIR$/build/classes/main/view/UI/FrameVObject.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/UI/PortPanel.class" afterPath="$PROJECT_DIR$/build/classes/main/view/UI/PortPanel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/UI/PortPanelFactory.class" afterPath="$PROJECT_DIR$/build/classes/main/view/UI/PortPanelFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/UI/connections/ConectionDisplayer$1.class" afterPath="$PROJECT_DIR$/build/classes/main/view/UI/connections/ConectionDisplayer$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/UI/connections/ConectionDisplayer$2.class" afterPath="$PROJECT_DIR$/build/classes/main/view/UI/connections/ConectionDisplayer$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/UI/connections/ConectionDisplayer$3.class" afterPath="$PROJECT_DIR$/build/classes/main/view/UI/connections/ConectionDisplayer$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/UI/connections/ConectionDisplayer$4.class" afterPath="$PROJECT_DIR$/build/classes/main/view/UI/connections/ConectionDisplayer$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/UI/connections/ConectionDisplayer$5$1.class" afterPath="$PROJECT_DIR$/build/classes/main/view/UI/connections/ConectionDisplayer$5$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/UI/connections/ConectionDisplayer$5.class" afterPath="$PROJECT_DIR$/build/classes/main/view/UI/connections/ConectionDisplayer$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/UI/connections/ConectionDisplayer.class" afterPath="$PROJECT_DIR$/build/classes/main/view/UI/connections/ConectionDisplayer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/UI/draganddrop/DragLabel.class" afterPath="$PROJECT_DIR$/build/classes/main/view/UI/draganddrop/DragLabel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/UI/draganddrop/Main.class" afterPath="$PROJECT_DIR$/build/classes/main/view/UI/draganddrop/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/UI/resizeandmove/ComponentMover.class" afterPath="$PROJECT_DIR$/build/classes/main/view/UI/resizeandmove/ComponentMover.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/UI/resizeandmove/ComponentResizer.class" afterPath="$PROJECT_DIR$/build/classes/main/view/UI/resizeandmove/ComponentResizer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/UI/screencapturing/ScreenCapturer$ListenerAndPanel.class" afterPath="$PROJECT_DIR$/build/classes/main/view/UI/screencapturing/ScreenCapturer$ListenerAndPanel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/view/UI/screencapturing/ScreenCapturer.class" afterPath="$PROJECT_DIR$/build/classes/main/view/UI/screencapturing/ScreenCapturer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/TransparentPanel$1.class" afterPath="$PROJECT_DIR$/build/classes/test/TransparentPanel$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/TransparentPanel.class" afterPath="$PROJECT_DIR$/build/classes/test/TransparentPanel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/logic/imagematching/features/pixelbypixel/BufferImageObservedTest.class" afterPath="$PROJECT_DIR$/build/classes/test/logic/imagematching/features/pixelbypixel/BufferImageObservedTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/model/ConnectionHubTSTest.class" afterPath="$PROJECT_DIR$/build/classes/test/model/ConnectionHubTSTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/view/UI/ScreenCapturingPanelTest$ShowingFramesPanel.class" afterPath="$PROJECT_DIR$/build/classes/test/view/UI/ScreenCapturingPanelTest$ShowingFramesPanel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/view/UI/VObjectTSTest.class" afterPath="$PROJECT_DIR$/build/classes/test/view/UI/VObjectTSTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wiki/TrackSpark/data/wikiovw.sli" afterPath="$PROJECT_DIR$/wiki/TrackSpark/data/wikiovw.sli" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/libImageMatcher.dylib" afterPath="$PROJECT_DIR$/lib/libImageMatcher.dylib" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ImageMatcher.o" afterPath="$PROJECT_DIR$/src/main/java/ImageMatcher.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ImageMatcher.cpp" afterPath="$PROJECT_DIR$/src/main/java/ImageMatcher.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ImageMatcherHelper.cpp" afterPath="$PROJECT_DIR$/src/main/java/ImageMatcherHelper.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ImageMatcherHelper.h" afterPath="$PROJECT_DIR$/src/main/java/ImageMatcherHelper.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/import.sh" afterPath="$PROJECT_DIR$/src/main/java/import.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/logic/imagematching/features/pixelbypixel/BufferImageObserved.java" afterPath="$PROJECT_DIR$/src/main/java/logic/imagematching/features/pixelbypixel/BufferImageObserved.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/logic/imagematching/features/pixelbypixel/BufferImageObservedTest.java" afterPath="$PROJECT_DIR$/src/test/java/logic/imagematching/features/pixelbypixel/BufferImageObservedTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wiki/TrackSpark/TrackSpark.wiki" afterPath="$PROJECT_DIR$/wiki/TrackSpark/TrackSpark.wiki" />
@@ -183,29 +95,35 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/logic/imagematching/features/pixelbypixel/BufferImageObserved.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="167" column="37" selection-start-line="167" selection-start-column="37" selection-end-line="167" selection-end-column="37" />
+              <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1099#1100#0" expanded="true" />
+                <element signature="e#1150#1151#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JniSample.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jni/JniSample.java">
+      <file leaf-file-name="Borram.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/logic/imagematching/features/pixelbypixel/Borram.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2402746">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="-6.537037">
+              <caret line="65" column="9" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1923#1924#0" expanded="true" />
+                <element signature="e#1961#1962#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="logic_imagematching_features_pixelbypixel_ImageMatcher.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/logic_imagematching_features_pixelbypixel_ImageMatcher.h">
+      <file leaf-file-name="BufferedImage.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/src.zip!/java/awt/image/BufferedImage.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="31" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="31" />
+              <caret line="951" column="20" selection-start-line="951" selection-start-column="20" selection-end-line="951" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -215,7 +133,17 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/ImageMatcherHelper.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+              <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BufferImageObservedTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/logic/imagematching/features/pixelbypixel/BufferImageObservedTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="46" column="44" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -225,7 +153,17 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/ImageMatcherHelper.h">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="68" selection-start-line="3" selection-start-column="68" selection-end-line="3" selection-end-column="68" />
+              <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logic_imagematching_features_pixelbypixel_ImageMatcher.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/logic_imagematching_features_pixelbypixel_ImageMatcher.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -241,33 +179,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageMatcher.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ImageMatcher.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ImageMatcher.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HelloWorld.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/logic/HelloWorld.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ModelCaller.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/logic/ModelCaller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.13729978">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -604,7 +520,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/logic/features/util/DoublePoint.java" />
         <option value="$PROJECT_DIR$/src/main/java/logic/features/CaptureFrame.java" />
         <option value="$PROJECT_DIR$/src/main/java/logic/features/util/FeatureSearchParams.java" />
         <option value="$PROJECT_DIR$/src/main/java/logic/features/ResizableMat.java" />
@@ -644,17 +559,18 @@
         <option value="$PROJECT_DIR$/src/main/java/view/UI/screencapturing/ScreenCapturer.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/ScreenImageFinderTSV.java" />
         <option value="$PROJECT_DIR$/src/main/java/logic/imagematching/features/featuresImage/util/ColorSimple.java" />
-        <option value="$PROJECT_DIR$/src/test/java/logic/imagematching/features/pixelbypixel/BufferImageObservedTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/logic_imagematching_features_pixelbypixel_ImageMatcher.h" />
-        <option value="$PROJECT_DIR$/src/main/java/ImageMatcherHelper.h" />
-        <option value="$PROJECT_DIR$/src/main/java/ImageMatcherHelper.cpp" />
         <option value="$PROJECT_DIR$/src/main/java/logic/imagematching/ImageFinderInScreen.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ImageMatcher.cpp" />
         <option value="$PROJECT_DIR$/src/main/java/logic/imagematching/features/pixelbypixel/ImageMatcher.java" />
         <option value="$PROJECT_DIR$/src/main/java/HelloWorld.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello.cpp" />
-        <option value="$PROJECT_DIR$/src/main/java/logic/imagematching/features/pixelbypixel/BufferImageObserved.java" />
         <option value="$PROJECT_DIR$/src/main/java/jni/JniSample.java" />
+        <option value="$PROJECT_DIR$/src/test/java/logic/imagematching/features/pixelbypixel/BufferImageObservedTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/logic/imagematching/features/pixelbypixel/BufferImageObserved.java" />
+        <option value="$PROJECT_DIR$/src/main/java/logic/imagematching/features/pixelbypixel/Borram.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ImageMatcherHelper.h" />
+        <option value="$PROJECT_DIR$/src/main/java/ImageMatcherHelper.cpp" />
+        <option value="$PROJECT_DIR$/src/main/java/ImageMatcher.cpp" />
       </list>
     </option>
   </component>
@@ -850,7 +766,47 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trackspark" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trackspark" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trackspark" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trackspark" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -859,6 +815,70 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="logic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trackspark" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trackspark" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imagematching" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trackspark" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trackspark" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imagematching" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="features" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -883,26 +903,20 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trackspark" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trackspark" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imagematching" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="features" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -996,7 +1010,7 @@
       <recent name="model.tsobject" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.JniSample">
+  <component name="RunManager" selected="JUnit.BufferImageObservedTest.performanceTest">
     <configuration default="false" name="FeaturesScreenFinderTes.testSingleScreen" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1037,7 +1051,7 @@
       <option name="MAIN_CLASS_NAME" value="logic.imagematching.features.pixelbypixel.BufferImageObservedTest" />
       <option name="METHOD_NAME" value="performanceTest" />
       <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="" />
+      <option name="VM_PARAMETERS" value="-ea -Djava.library.path=&quot;./lib&quot;" />
       <option name="PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
       <option name="ENV_VARIABLES" />
@@ -1613,44 +1627,44 @@
       <workItem from="1460057233747" duration="61960000" />
       <workItem from="1460465960179" duration="18577000" />
       <workItem from="1460542534344" duration="8618000" />
-      <workItem from="1460558616064" duration="1494000" />
+      <workItem from="1460558616064" duration="5052000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BufferImageObservedTest_performanceTest - 2016.04.13 at 16h 31m 12s.xml">
+    <history-entry file="BufferImageObservedTest_performanceTest - 2016.04.14 at 11h 29m 21s.xml">
       <configuration name="BufferImageObservedTest.performanceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BufferImageObservedTest_performanceTest - 2016.04.13 at 16h 31m 31s.xml">
+    <history-entry file="BufferImageObservedTest_performanceTest - 2016.04.14 at 11h 43m 44s.xml">
       <configuration name="BufferImageObservedTest.performanceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BufferImageObservedTest_performanceTest - 2016.04.13 at 16h 32m 04s.xml">
+    <history-entry file="BufferImageObservedTest_performanceTest - 2016.04.14 at 11h 44m 51s.xml">
       <configuration name="BufferImageObservedTest.performanceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BufferImageObservedTest_performanceTest - 2016.04.13 at 16h 33m 12s.xml">
+    <history-entry file="BufferImageObservedTest_performanceTest - 2016.04.14 at 11h 45m 02s.xml">
       <configuration name="BufferImageObservedTest.performanceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BufferImageObservedTest_performanceTest - 2016.04.13 at 16h 33m 20s.xml">
+    <history-entry file="BufferImageObservedTest_performanceTest - 2016.04.14 at 11h 46m 30s.xml">
       <configuration name="BufferImageObservedTest.performanceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BufferImageObservedTest_performanceTest - 2016.04.13 at 16h 33m 48s.xml">
+    <history-entry file="BufferImageObservedTest_performanceTest - 2016.04.14 at 11h 46m 54s.xml">
       <configuration name="BufferImageObservedTest.performanceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BufferImageObservedTest_performanceTest - 2016.04.13 at 16h 34m 25s.xml">
+    <history-entry file="BufferImageObservedTest_performanceTest - 2016.04.14 at 11h 47m 37s.xml">
       <configuration name="BufferImageObservedTest.performanceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BufferImageObservedTest_performanceTest - 2016.04.13 at 16h 35m 18s.xml">
+    <history-entry file="BufferImageObservedTest_performanceTest - 2016.04.14 at 11h 47m 55s.xml">
       <configuration name="BufferImageObservedTest.performanceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BufferImageObservedTest_performanceTest - 2016.04.13 at 16h 36m 00s.xml">
+    <history-entry file="BufferImageObservedTest_performanceTest - 2016.04.14 at 12h 02m 58s.xml">
       <configuration name="BufferImageObservedTest.performanceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BufferImageObservedTest_performanceTest - 2016.04.13 at 16h 36m 38s.xml">
+    <history-entry file="BufferImageObservedTest_performanceTest - 2016.04.14 at 12h 12m 18s.xml">
       <configuration name="BufferImageObservedTest.performanceTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="413987000" />
+    <option name="totallyTimeSpent" value="417545000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1677,6 +1691,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31688127" sideWeight="0.7591398" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24489796" sideWeight="0.5178827" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11087268" sideWeight="0.49261993" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1689,7 +1704,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12875536" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15665236" sideWeight="0.50738007" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32215744" sideWeight="0.5178827" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1765,20 +1779,18 @@
           <properties />
           <option name="timeStamp" value="465" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/logic/imagematching/features/pixelbypixel/BufferImageObservedTest.java</url>
+          <line>42</line>
+          <properties />
+          <option name="timeStamp" value="584" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="583" />
+      <option name="time" value="587" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
-        <watch expression="xobs" language="JAVA" custom="" />
-        <watch expression="yobs" language="JAVA" custom="" />
-        <watch expression="mx" language="JAVA" custom="" />
-        <watch expression="my" language="JAVA" custom="" />
-        <watch expression="blueh[xobs][yobs]- model.blueh[mx][my]" language="JAVA" custom="" />
-        <watch expression="greenh[xobs][yobs]- model.greenh[mx][my]" language="JAVA" custom="" />
-        <watch expression="redh[xobs][yobs]- model.redh[mx][my]" language="JAVA" custom="" />
-        <watch expression="this.saveInFile();" language="JAVA" custom="" />
-        <watch expression="model.saveInFile();" language="JAVA" custom="" />
+        <watch expression="model[0]" language="JAVA" custom="" />
       </configuration>
       <configuration name="Application">
         <watch expression="xSize" language="JAVA" custom="" />
@@ -1790,22 +1802,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/ModelCaller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/logic/ConstelationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8901099">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/logic/imagematching/features/featuresImage/util/Constelation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1824,6 +1820,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="e#834#835#0" expanded="false" />
+            <element signature="e#860#861#0" expanded="false" />
+            <element signature="e#894#895#0" expanded="false" />
+            <element signature="e#920#921#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2056,14 +2058,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/logic/imagematching/features/pixelbypixel/BufferImageObservedTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="25" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/doc/help-doc.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.21791768">
@@ -2096,37 +2090,52 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1751#1752#0" expanded="true" />
+            <element signature="e#1792#1793#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/ModelCaller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17162472">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/HelloWorld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17162472">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jni/JniSample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17162472">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/logic_imagematching_features_pixelbypixel_ImageMatcher.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="31" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="31" />
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ImageMatcherHelper.cpp">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/src.zip!/java/awt/image/BufferedImage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ImageMatcherHelper.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="68" selection-start-line="3" selection-start-column="68" selection-end-line="3" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ImageMatcher.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <caret line="951" column="20" selection-start-line="951" selection-start-column="20" selection-end-line="951" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -2139,38 +2148,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/ModelCaller.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/imagematching/features/pixelbypixel/Borram.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.537037">
+          <caret line="65" column="9" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1923#1924#0" expanded="true" />
+            <element signature="e#1961#1962#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ImageMatcherHelper.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/HelloWorld.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ImageMatcherHelper.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/logic/imagematching/features/pixelbypixel/BufferImageObservedTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="44" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/logic/imagematching/features/pixelbypixel/BufferImageObserved.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="167" column="37" selection-start-line="167" selection-start-column="37" selection-end-line="167" selection-end-column="37" />
+          <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1099#1100#0" expanded="true" />
+            <element signature="e#1150#1151#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jni/JniSample.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ImageMatcher.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2402746">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.13729978">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>

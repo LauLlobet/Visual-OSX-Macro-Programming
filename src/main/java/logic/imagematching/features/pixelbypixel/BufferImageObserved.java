@@ -33,9 +33,20 @@ public class BufferImageObserved extends BufferedImage {
     public int finalY = -1;
     BufferedImage fromImage;
 
+
+    ImageMatcher js = new ImageMatcher();
+
+    static {
+        System.loadLibrary("ImageMatcher");
+    }
+
     public BufferImageObserved(int i, int i1, int i2) {
         super(i, i1, i2);
         resetModelsList();
+    }
+
+    private void resetModelsList() {
+        models = new BufferImageObserved[0];
     }
 
     public static BufferImageObserved createBufferImageObserved(String filepath){
@@ -67,94 +78,6 @@ public class BufferImageObserved extends BufferedImage {
         }
     }
 
-    public void borrAM(){
-        DoublePoint dp = new DoublePoint(-1,-1);
-        float maxMatchingPixels = 0;
-
-        for(BufferImageObserved modelto0: models){
-            modelto0.maxMatchingPixels = 0;
-        }
-        for (int x = 0; x < BufferImageObserved.this.getWidth(); x++) {
-            for (int y = 0; y < BufferImageObserved.this.getHeight(); y++) {
-                int catchedFirstColor = rgbData[(y*this.getWidth())+x];
-                for( int i=0; i<models.length; i++){
-                    BufferImageObserved model = models[i];
-
-                    if(x == 1340 && y == 682){
-                        int qqqq = 0;
-                    }
-
-                    float index = BufferImageObserved.this.compareOwnToModelAtPoint(x, y, model, catchedFirstColor);
-                    if (index > 0) {
-                        model.maxMatchingPixels = 1;
-                        model.finalX = x;
-                        model.finalY = y;
-                    }
-                }
-            }
-        }
-
-        for(BufferImageObserved modelto0: models){
-            if(modelto0.maxMatchingPixels == 0){
-                modelto0.finalX = -1;
-                modelto0.finalY = -1;
-            }
-        }
-        resetModelsList();
-    }
-
-    private void resetModelsList() {
-        models = new BufferImageObserved[0];
-    }
-
-    private float compareOwnToModelAtPoint(int x, int y, BufferImageObserved model, int catchedFirstPixelColor) {
-        int numberOfMatchingPixels = 0;
-        if (modelAndThisNotComparableAtThisPoint(x, y, model)) {
-            return 0;
-        }
-
-        for (int xo = 0; xo < model.getWidth(); xo++) {
-            for (int yo = 0; yo < model.getHeight(); yo++) {
-               if(xo==0 && yo ==97){
-                   int ggg = 21;
-               }
-                float inc =  compareTwoPointsObsModel(x + xo, y +yo, xo, yo, model);
-                if(inc == 0){
-                    return 0;
-                }
-            }
-        }
-        return 1;
-    }
-
-    private float compareTwoPointsObsModel(int xobs, int yobs, int mx, int my, BufferImageObserved model) {
-        int pixelMod = model.rgbData[(my*model.getWidth())+mx];
-        int pixelObs = rgbData[(yobs*this.getWidth())+xobs];
-
-        int blue =  pixelMod & 255;
-        int green = (pixelMod >> 8) & 255;
-        int red =   (pixelMod >> 16) & 255;
-
-
-        int oblue =  pixelObs & 255;
-        int ogreen = (pixelObs >> 8) & 255;
-        int ored =   (pixelObs >> 16) & 255;
-
-        int pixdiff = Math.abs((blue-oblue)) + Math.abs((green-ogreen)) + Math.abs(red-ored);
-
-        if( pixdiff <= 3){
-            return 1;
-        }
-        return 0;
-    }
-
-    private boolean modelAndThisNotComparableAtThisPoint(int x, int y, BufferImageObserved model) {
-        if (x + model.getWidth() > getWidth() || y + model.getHeight() > getHeight()) {
-            return true;
-        }
-        return false;
-    }
-
     public void addBufferedImagesEqual(BufferImageObserved model) {
         ArrayList<BufferImageObserved> a =  new ArrayList(Arrays.asList(models));
         a.add(model);
@@ -162,21 +85,12 @@ public class BufferImageObserved extends BufferedImage {
     }
 
     public void startSearching() {
-       /* ImageMatcher im = new ImageMatcher();
+        int[] observed = this.rgbData;
 
-
-        int[] observed = toByteArray®(this.fromImage);
-        int[] model = toByteArray(this.models[0]);
-        im.searchImageInImage(observed,model);*/
-        System.load("/libJniSample.dylib");
-        JniSample js = new JniSample();
-        js.sayHello();
-
-    }
-
-    public int[] toByteArray(BufferedImage image)
-    {
-        return image.getRGB(0,0, image.getWidth(), image.getHeight(), null, 0,image.getWidth());
-
+        for(int i=0; i< models.length ; i++){
+            int[] model = this.models[i].rgbData;
+            js.searchImageInImage(observed,models[0].rgbData);
+        }
+        resetModelsList();
     }
 }

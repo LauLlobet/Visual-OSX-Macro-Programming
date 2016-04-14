@@ -1,25 +1,21 @@
 #include <jni.h>
 #include <stdio.h>
 #include "logic_imagematching_features_pixelbypixel_ImageMatcher.h"
+#include "ImageMatcherHelper.h"
 
 // Implementation of native method sayHello() of HelloJNI class
-JNIEXPORT jdoubleArray JNICALL Java_logic_imagematching_features_pixelbypixel_ImageMatcher_searchImageInImage(JNIEnv *env,  jintArray obs, jintArray mod) {
-   //printf("Hello World!\n");
 
-    /*jintArray result;
-    result = (*env)->NewIntArray(env, size);
-    */
-/*
-jint *b = (jint *)env->GetIntArrayElements(obs, NULL);
-// read bytes in *b here
+JNIEXPORT jdoubleArray JNICALL Java_logic_imagematching_features_pixelbypixel_ImageMatcher_searchImageInImage
+  (JNIEnv *env, jobject, jintArray obs, jintArray mod){
 
-   printf("image first char : %d\n",b[0]);
+jint *obsInt = (jint *)env->GetIntArrayElements(obs, NULL);
+jint *modInt = (jint *)env->GetIntArrayElements(mod, NULL);
 
-// release it
-env->ReleaseIntArrayElements(obs, b, 0 );
-*/
+calculate(obsInt,modInt);
 
-    printf("gggg");
+printf("result...\n");
+env->ReleaseIntArrayElements(obs, obsInt, 0 );
+/**/
 
     return NULL;
 

@@ -1,5 +1,5 @@
 #include <jni.h>
 #ifndef _helper
 #define _helper
-unsigned char* as_unsigned_char_array(jbyteArray array,JNIEnv *env);
+double* calculate(int *obs,int *mod);
 #endif

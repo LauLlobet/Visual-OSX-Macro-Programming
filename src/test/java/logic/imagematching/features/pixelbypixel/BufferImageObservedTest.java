@@ -32,7 +32,7 @@ public class BufferImageObservedTest {
         results.add(small4);
 
 
-        double testTimeInmilliseconds = 5000;
+        double testTimeInmilliseconds = 1000;
         int singleIterations = (int) (13 * testTimeInmilliseconds / 1000);
 
 
