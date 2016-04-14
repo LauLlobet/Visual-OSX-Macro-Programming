@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68c84884-33a5-4953-89cf-c14b9ee7c1b2" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wiki/TrackSpark/data/wikiovw.sli-journal" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/libImageMatcher.dylib" afterPath="$PROJECT_DIR$/lib/libImageMatcher.dylib" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ImageMatcher.o" afterPath="$PROJECT_DIR$/src/main/java/ImageMatcher.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ImageMatcherHelper.o" afterPath="$PROJECT_DIR$/src/main/java/ImageMatcherHelper.o" />
@@ -14,10 +13,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ImageMatcher.cpp" afterPath="$PROJECT_DIR$/src/main/java/ImageMatcher.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ImageMatcherHelper.cpp" afterPath="$PROJECT_DIR$/src/main/java/ImageMatcherHelper.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ImageMatcherHelper.h" afterPath="$PROJECT_DIR$/src/main/java/ImageMatcherHelper.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/logic/imagematching/features/pixelbypixel/BufferImageObserved.java" afterPath="$PROJECT_DIR$/src/main/java/logic/imagematching/features/pixelbypixel/BufferImageObserved.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/logic/imagematching/features/pixelbypixel/ImageMatcher.java" afterPath="$PROJECT_DIR$/src/main/java/logic/imagematching/features/pixelbypixel/ImageMatcher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/logic_imagematching_features_pixelbypixel_ImageMatcher.h" afterPath="$PROJECT_DIR$/src/main/java/logic_imagematching_features_pixelbypixel_ImageMatcher.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wiki/TrackSpark/TrackSpark.wiki" afterPath="$PROJECT_DIR$/wiki/TrackSpark/TrackSpark.wiki" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wiki/TrackSpark/data/0.8OpenCv.wiki" afterPath="$PROJECT_DIR$/wiki/TrackSpark/data/0.8OpenCv.wiki" />
     </list>
@@ -91,11 +87,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BufferImageObserved.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BufferImageObserved.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/logic/imagematching/features/pixelbypixel/BufferImageObserved.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.1281464">
-              <caret line="90" column="49" selection-start-line="90" selection-start-column="49" selection-end-line="90" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="93" column="42" selection-start-line="93" selection-start-column="42" selection-end-line="93" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1099#1100#0" expanded="true" />
@@ -129,11 +125,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageMatcherHelper.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ImageMatcherHelper.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ImageMatcherHelper.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.79405034">
+              <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -183,7 +179,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/ImageMatcher.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="48" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
+              <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -568,9 +564,9 @@
         <option value="$PROJECT_DIR$/src/main/java/logic/imagematching/features/pixelbypixel/Borram.java" />
         <option value="$PROJECT_DIR$/src/main/java/ImageMatcherHelper.h" />
         <option value="$PROJECT_DIR$/src/main/java/logic/imagematching/features/pixelbypixel/ImageMatcher.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ImageMatcherHelper.cpp" />
-        <option value="$PROJECT_DIR$/src/main/java/ImageMatcher.cpp" />
         <option value="$PROJECT_DIR$/src/main/java/logic/imagematching/features/pixelbypixel/BufferImageObserved.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ImageMatcher.cpp" />
+        <option value="$PROJECT_DIR$/src/main/java/ImageMatcherHelper.cpp" />
       </list>
     </option>
   </component>
@@ -1653,14 +1649,11 @@
       <workItem from="1460057233747" duration="61960000" />
       <workItem from="1460465960179" duration="18577000" />
       <workItem from="1460542534344" duration="8618000" />
-      <workItem from="1460558616064" duration="6442000" />
+      <workItem from="1460558616064" duration="7691000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BufferImageObservedTest_performanceTest - 2016.04.14 at 11h 44m 51s.xml">
-      <configuration name="BufferImageObservedTest.performanceTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BufferImageObservedTest_performanceTest - 2016.04.14 at 11h 45m 02s.xml">
       <configuration name="BufferImageObservedTest.performanceTest" configurationId="JUnit" />
     </history-entry>
@@ -1688,9 +1681,12 @@
     <history-entry file="BufferImageObservedTest_performanceTest - 2016.04.14 at 12h 35m 17s.xml">
       <configuration name="BufferImageObservedTest.performanceTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="BufferImageObservedTest_performanceTest - 2016.04.14 at 12h 54m 35s.xml">
+      <configuration name="BufferImageObservedTest.performanceTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="418935000" />
+    <option name="totallyTimeSpent" value="420184000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2178,26 +2174,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ImageMatcherHelper.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="69" selection-start-line="3" selection-start-column="69" selection-end-line="3" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/logic/imagematching/features/pixelbypixel/ImageMatcher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ImageMatcherHelper.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -2210,23 +2190,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ImageMatcher.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="48" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/logic/imagematching/features/pixelbypixel/BufferImageObserved.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1281464">
-          <caret line="90" column="49" selection-start-line="90" selection-start-column="49" selection-end-line="90" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="93" column="42" selection-start-line="93" selection-start-column="42" selection-end-line="93" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1099#1100#0" expanded="true" />
             <element signature="e#1150#1151#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ImageMatcher.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ImageMatcherHelper.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="69" selection-start-line="3" selection-start-column="69" selection-end-line="3" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ImageMatcherHelper.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.79405034">
+          <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>

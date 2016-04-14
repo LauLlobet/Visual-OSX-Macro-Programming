@@ -89,7 +89,9 @@ public class BufferImageObserved extends BufferedImage {
 
         for(int i=0; i< models.length ; i++){
             int[] model = this.models[i].rgbData;
-            js.searchImageInImage(observed,this.getWidth(),this.getHeight(),models[0].rgbData,models[i].getWidth(),models[i].getHeight());
+            double[] xy = js.searchImageInImage(observed,this.getWidth(),this.getHeight(),models[0].rgbData,models[i].getWidth(),models[i].getHeight());
+            models[i].finalX = (int)xy[0];
+            models[i].finalY = (int)xy[1];
         }
         resetModelsList();
     }

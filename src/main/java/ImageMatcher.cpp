@@ -12,12 +12,17 @@ JNIEXPORT jdoubleArray JNICALL Java_logic_imagematching_features_pixelbypixel_Im
 jint *obsInt = (jint *)env->GetIntArrayElements(obs, NULL);
 jint *modInt = (jint *)env->GetIntArrayElements(mod, NULL);
 
-calculate(obsInt,ow,oh,modInt,mw,mh);
+double* ans = calculate(obsInt,ow,oh,modInt,mw,mh);
 
 printf("result...\n");
 env->ReleaseIntArrayElements(obs, obsInt, 0 );
+env->ReleaseIntArrayElements(mod, modInt, 0 );
 /**/
 
-    return NULL;
+
+jdoubleArray output = env->NewDoubleArray( 2 );
+env->SetDoubleArrayRegion( output, 0, 2, ans );
+
+    return output;
 
 }

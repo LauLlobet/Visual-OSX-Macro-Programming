@@ -46,7 +46,9 @@
 
 *DONE c:23 colour extraction*
 
-- size is passed to jni
+*DONE c:24 size is passed to jni*
+
+- jni returns double
 
 - brute force comparer for bucles
 
