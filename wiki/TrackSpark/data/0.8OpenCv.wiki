@@ -44,7 +44,9 @@
 
 *DONE c:22 multiple cpp linked*
 
-- colour extraction
+*DONE c:23 colour extraction*
+
+- size is passed to jni
 
 - brute force comparer for bucles
 

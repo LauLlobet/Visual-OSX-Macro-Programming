@@ -5,6 +5,6 @@ package logic.imagematching.features.pixelbypixel;
  */
 public class ImageMatcher {
 
-    public native double[] searchImageInImage(int[] observer, int[] model);
+    public native double[] searchImageInImage(int[] observer,int ow, int oh, int[] model, int mw, int mh);
 
 }

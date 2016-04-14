@@ -10,10 +10,10 @@ extern "C" {
 /*
  * Class:     logic_imagematching_features_pixelbypixel_ImageMatcher
  * Method:    searchImageInImage
- * Signature: ([I[I)[D
+ * Signature: ([III[III)[D
  */
 JNIEXPORT jdoubleArray JNICALL Java_logic_imagematching_features_pixelbypixel_ImageMatcher_searchImageInImage
-  (JNIEnv *, jobject, jintArray, jintArray);
+  (JNIEnv *, jobject, jintArray, jint, jint, jintArray, jint, jint);
 
 #ifdef __cplusplus
 }
