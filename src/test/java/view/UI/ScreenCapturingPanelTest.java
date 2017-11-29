@@ -4,7 +4,7 @@ import logic.BewteenWindowsConnectionMaker;
 import logic.Caller;
 import logic.ConnectionsChecker;
 import logic.IdGenerator;
-import model.tsobject.ObjectsFactoryTS;
+import model.TSObject.ObjectsFactoryTS;
 import org.junit.Test;
 import view.UI.connections.ConectionDisplayer;
 import view.UI.connections.ConnectionCableFactory;
@@ -28,7 +28,6 @@ public class ScreenCapturingPanelTest {
 
         }
 
-        @Override
         public void newCapture(BufferedImage capture) {
             image = capture;
             this.repaint();

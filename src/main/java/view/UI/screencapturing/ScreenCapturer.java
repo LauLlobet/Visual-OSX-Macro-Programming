@@ -2,7 +2,7 @@ package view.UI.screencapturing;
 
 import Constants.TSOConstants;
 import logic.Caller;
-import model.tsobject.ObjectTS;
+import model.TSObject.ObjectTS;
 import view.ObjectTSV;
 
 import javax.swing.*;

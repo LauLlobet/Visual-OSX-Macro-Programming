@@ -2,7 +2,7 @@ package model;
 import Constants.TSOConstants;
 import logic.ConnectionsChecker;
 import logic.IdGenerator;
-import model.tsobject.ObjectTS;
+import model.TSObject.ObjectTS;
 import view.FixedTextObjectTSV;
 
 import java.util.ArrayList;

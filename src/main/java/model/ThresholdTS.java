@@ -2,8 +2,8 @@ package model;
 import Constants.TSOConstants;
 import logic.ConnectionsChecker;
 import logic.IdGenerator;
-import model.tsobject.BangDebouncer;
-import model.tsobject.ObjectTS;
+import model.TSObject.BangDebouncer;
+import model.TSObject.ObjectTS;
 
 import java.util.Arrays;
 import java.util.NoSuchElementException;

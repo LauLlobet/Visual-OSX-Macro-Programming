@@ -2,10 +2,10 @@ package model;
 import Constants.TSOConstants;
 import logic.ConnectionsChecker;
 import logic.IdGenerator;
-import model.tsobject.ObjectTS;
-import model.tsobject.tsobjectparts.InputConnectionHubTS;
-import model.tsobject.tsobjectparts.OutputConnectionHubTS;
-import model.tsobject.tsobjectparts.Port;
+import model.TSObject.ObjectTS;
+import model.TSObject.TSObjectparts.InputConnectionHubTS;
+import model.TSObject.TSObjectparts.OutputConnectionHubTS;
+import model.TSObject.TSObjectparts.Port;
 
 import java.util.ArrayList;
 import java.util.Arrays;

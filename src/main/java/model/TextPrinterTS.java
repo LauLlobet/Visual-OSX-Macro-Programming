@@ -3,7 +3,7 @@ import Constants.TSOConstants;
 import logic.ConnectionsChecker;
 import logic.IdGenerator;
 import logic.Keyboard;
-import model.tsobject.ObjectTS;
+import model.TSObject.ObjectTS;
 
 import java.awt.*;
 import java.util.ArrayList;

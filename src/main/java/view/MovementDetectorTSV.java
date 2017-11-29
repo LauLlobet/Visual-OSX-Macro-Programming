@@ -27,7 +27,8 @@ public class MovementDetectorTSV extends ObjectTSV {
         recordingPanel = new JPanel();
     //    recordingPanel.setBackground(new Color(255, 0, 0, 5));
         this.mainPanel.add(recordingPanel, BorderLayout.CENTER);
-        //this.setTransparent();
+        this.mainPanel.setBackground(new Color(0,0,0,0));
+        this.setTransparent();
     }
 
     private void setTransparent() {

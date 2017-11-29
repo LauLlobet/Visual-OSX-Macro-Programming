@@ -1,6 +1,6 @@
 package logic;
 
-import model.tsobject.ObjectTS;
+import model.TSObject.ObjectTS;
 import view.InvalidFieldException;
 import view.UI.PortPanelFactory;
 import view.ObjectTSV;

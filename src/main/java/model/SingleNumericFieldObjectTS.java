@@ -1,6 +1,6 @@
 package model;
 
-import model.tsobject.ObjectTS;
+import model.TSObject.ObjectTS;
 import view.InvalidFieldException;
 
 /**

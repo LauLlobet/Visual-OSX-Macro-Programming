@@ -1,4 +1,4 @@
-package model.tsobject;
+package model.TSObject;
 
 import Constants.TSOConstants;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -7,10 +7,10 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import logic.*;
 import model.DelayTS;
 import model.SwitchTS;
-import model.tsobject.tsobjectparts.Port;
-import model.tsobject.tsobjectparts.TSOConnection;
-import model.tsobject.tsobjectparts.InputConnectionHubTS;
-import model.tsobject.tsobjectparts.OutputConnectionHubTS;
+import model.TSObject.TSObjectparts.Port;
+import model.TSObject.TSObjectparts.TSOConnection;
+import model.TSObject.TSObjectparts.InputConnectionHubTS;
+import model.TSObject.TSObjectparts.OutputConnectionHubTS;
 import sun.awt.image.ImageWatched;
 
 import java.beans.Introspector;

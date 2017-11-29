@@ -4,8 +4,8 @@ import com.fasterxml.jackson.annotation.JacksonInject;
 import logic.Caller;
 import logic.ConnectionsChecker;
 import logic.IdGenerator;
-import model.tsobject.InofensiveException;
-import model.tsobject.ObjectTS;
+import model.TSObject.InofensiveException;
+import model.TSObject.ObjectTS;
 
 import java.util.Arrays;
 

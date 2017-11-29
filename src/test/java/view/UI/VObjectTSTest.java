@@ -3,9 +3,9 @@ package view.UI;
 import Constants.TSOConstants;
 import logic.*;
 import logic.imagematching.ImageFinderInScreen;
+import model.MovementDetectorTS;
 import model.ScreenImageFinderTS;
-import model.tsobject.ObjectsFactoryTS;
-import model.tsobject.ObjectTS;
+import model.TSObject.*;
 import org.junit.Test;
 import view.UI.connections.ConectionDisplayer;
 import view.UI.connections.ConnectionCableFactory;
@@ -40,10 +40,15 @@ public class VObjectTSTest {
         bwcm.setCaller(caller,connectionDisplayer);
         IdGenerator idg = new IdGenerator("testing");
         ObjectsFactoryTS of = new ObjectsFactoryTS(cc,idg,caller);
-        ImageFinderInScreen ifis = new ImageFinderInScreen();
+
+
+        //ImageFinderInScreen ifis = new ImageFinderInScreen();
 
        // ObjectTS ob = of.build(TSOConstants.BANG_TSOBJID);
          ObjectTS bang = of.build(TSOConstants.BANG_TSOBJID);
+         bang.setY(90);
+
+        ObjectTS obj2 = of.build(TSOConstants.TEXT_MESSAGE_TSOBJID);
 
        // ObjectTS delay = of.build(TSOConstants.DELAY_TSOBJID);
 
@@ -56,22 +61,27 @@ public class VObjectTSTest {
        //   ObjectTS printer = of.build(TSOConstants.TEXTPRINTER_TSOBJID);
 
 
-        ObjectTS sfinder = of.build(TSOConstants.SCREEN_FEATURES_FINDE);
+       // ObjectTS sfinder = of.build(TSOConstants.SCREEN_FEATURES_FINDE);
 
 
-        // ObjectTS mdetect = of.build(TSOConstants.MOVEMENT_DETECTOR_TSOBJID);
-        // ObjectTS ob22 = of.build(TSOConstants.THRESHOLD_TSOBJID);
+         ObjectTS mdetect = of.build(TSOConstants.MOVEMENT_DETECTOR_TSOBJID);
+
+         mdetect.setY(200);
+         ObjectTS ob22 = of.build(TSOConstants.THRESHOLD_TSOBJID);
+
+        ObjectTS ob33 = of.build(TSOConstants.CLICKER_TSOBJID);
+
 
         ScreenCapturer screenCapturer = new ScreenCapturer();
         Thread capturerThread = new Thread(screenCapturer);
         capturerThread.start();
 
-        //((MovementDetectorTS)mdetect).registerToCapturer(screenCapturer);
+        ((MovementDetectorTS)mdetect).registerToCapturer(screenCapturer);
 
-        ifis.registerToCapturer(screenCapturer);
+        /*ifis.registerToCapturer(screenCapturer);
         ((ScreenImageFinderTS)sfinder).registerToCapturer(screenCapturer);
         ((ScreenImageFinderTS)sfinder).registerToScreenSearcher(ifis);
-
+*/
 
         LogicTicCaller lc = new LogicTicCaller(caller);
 

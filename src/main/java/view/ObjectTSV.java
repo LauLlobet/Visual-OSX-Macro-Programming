@@ -3,7 +3,7 @@ package view;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import logic.Caller;
-import model.tsobject.ObjectTS;
+import model.TSObject.ObjectTS;
 import view.UI.FrameVObject;
 import view.UI.PortPanelFactory;
 

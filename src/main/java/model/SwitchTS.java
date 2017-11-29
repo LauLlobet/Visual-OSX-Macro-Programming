@@ -1,7 +1,7 @@
 package model;
 
 import Constants.TSOConstants;
-import model.tsobject.ObjectTS;
+import model.TSObject.ObjectTS;
 
 /**
  * Created by quest on 18/3/16.

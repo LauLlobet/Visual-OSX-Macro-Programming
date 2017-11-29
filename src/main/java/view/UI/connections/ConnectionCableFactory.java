@@ -1,7 +1,7 @@
 package view.UI.connections;
 
 import logic.ConnectionsChecker;
-import model.tsobject.tsobjectparts.TSOConnection;
+import model.TSObject.TSObjectparts.TSOConnection;
 import view.UI.PortPanel;
 
 import java.util.Hashtable;

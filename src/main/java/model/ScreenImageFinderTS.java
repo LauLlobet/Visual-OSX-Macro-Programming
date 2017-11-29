@@ -4,8 +4,8 @@ import logic.ConnectionsChecker;
 import logic.IdGenerator;
 import logic.imagematching.ImageFinderInScreen;
 import logic.imagematching.features.featuresImage.util.DoublePoint;
-import model.tsobject.BangDebouncer;
-import model.tsobject.ObjectTS;
+import model.TSObject.BangDebouncer;
+import model.TSObject.ObjectTS;
 import view.ScreenImageFinderTSV;
 import view.UI.screencapturing.ScreenCapturer;
 import view.UI.screencapturing.ScreenRegionsListener;
@@ -83,7 +83,6 @@ public class ScreenImageFinderTS extends ObjectTS implements ScreenRegionsListen
         imageFinderInScreen = ifis;
     }
 
-    @Override
     public void newCapture(BufferedImage capture) {
         capturedImage = capture;
     }

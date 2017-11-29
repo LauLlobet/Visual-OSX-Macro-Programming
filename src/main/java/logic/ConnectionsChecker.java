@@ -1,7 +1,7 @@
 package logic;
 
 import Constants.TSOConstants;
-import model.tsobject.tsobjectparts.*;
+import model.TSObject.TSObjectparts.*;
 
 import java.util.ArrayList;
 import java.util.Hashtable;

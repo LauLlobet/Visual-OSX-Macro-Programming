@@ -21,35 +21,36 @@ public class ClickerTSV extends ObjectTSV {
         super(id, mc, portPanelFactory);
         Button b = new Button("Set");
         b.setPreferredSize(new Dimension(20,20));
-        this.mainPanel.add(b,BorderLayout.AFTER_LAST_LINE);
         b.addActionListener(new ActionListener() {
-            @Override
+
             public void actionPerformed(ActionEvent actionEvent) {
                 ClickerTSV.this.doSetToBeClicked();
             }
         });
+        this.mainPanel.setBackground(new Color(0,0,0,0));
+        GraphicsEnvironment ge;
+        ge = GraphicsEnvironment.getLocalGraphicsEnvironment ();
+
+        this.mainPanel.add(b,BorderLayout.AFTER_LAST_LINE);
+
         this.addMouseListener(new MouseListener() {
-            @Override
+
             public void mouseClicked(MouseEvent mouseEvent) {
                 ClickerTSV.this.hasBeenClicked(mouseEvent.getX(), mouseEvent.getY());
             }
 
-            @Override
             public void mousePressed(MouseEvent mouseEvent) {
 
             }
 
-            @Override
             public void mouseReleased(MouseEvent mouseEvent) {
 
             }
 
-            @Override
             public void mouseEntered(MouseEvent mouseEvent) {
 
             }
 
-            @Override
             public void mouseExited(MouseEvent mouseEvent) {
 
             }

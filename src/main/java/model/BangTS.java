@@ -2,8 +2,8 @@ package model;
 import Constants.TSOConstants;
 import logic.ConnectionsChecker;
 import logic.IdGenerator;
-import model.tsobject.InofensiveException;
-import model.tsobject.ObjectTS;
+import model.TSObject.InofensiveException;
+import model.TSObject.ObjectTS;
 
 import java.util.ArrayList;
 import java.util.Arrays;

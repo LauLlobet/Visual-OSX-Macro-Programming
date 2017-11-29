@@ -2,8 +2,8 @@ package model;
 import Constants.TSOConstants;
 import logic.ConnectionsChecker;
 import logic.IdGenerator;
-import model.tsobject.BangDebouncer;
-import model.tsobject.ObjectTS;
+import model.TSObject.BangDebouncer;
+import model.TSObject.ObjectTS;
 import view.InvalidFieldException;
 import view.MovementDetectorTSV;
 import view.UI.screencapturing.ScreenCapturer;
@@ -33,7 +33,6 @@ public class MovementDetectorTS extends ObjectTS implements ScreenRegionsListene
         super.processTic();
     }
 
-    @Override
     public void newCapture(BufferedImage capture) {
         if(previousImage == null){
             previousImage = capture;
@@ -60,8 +59,8 @@ public class MovementDetectorTS extends ObjectTS implements ScreenRegionsListene
         newObj.getInputsHub().setPorts(generateInputPorts(Arrays.asList(
                 TSOConstants.MINT
         )));
-        newObj.setW(100);
-        newObj.setH(161);
+        newObj.setW(170);
+        newObj.setH(121);
         newObj.setX(900);
         newObj.setY(400);
         return newObj;

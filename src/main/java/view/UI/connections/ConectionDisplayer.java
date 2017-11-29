@@ -3,7 +3,7 @@ package view.UI.connections;
 import com.sun.awt.AWTUtilities;
 import logic.Caller;
 import logic.ConnectionsChecker;
-import model.tsobject.tsobjectparts.TSOConnection;
+import model.TSObject.TSObjectparts.TSOConnection;
 import view.ObjectTSV;
 
 import javax.swing.*;
@@ -123,7 +123,6 @@ public class ConectionDisplayer extends JFrame{
 
     public void bringToBackOfAppWindows(){
         java.awt.EventQueue.invokeLater(new Runnable() {
-            @Override
             public void run() {
                 ConectionDisplayer.this.toFront();
                 ConectionDisplayer.this.repaint();
@@ -141,7 +140,6 @@ public class ConectionDisplayer extends JFrame{
 
     public void bringToBack(){
         java.awt.EventQueue.invokeLater(new Runnable() {
-            @Override
             public void run() {
                 ConectionDisplayer.this.toBack();
                 ConectionDisplayer.this.repaint();
@@ -151,11 +149,9 @@ public class ConectionDisplayer extends JFrame{
 
     public void refreshWhile(){
         Thread myThread = new Thread(new Runnable() {
-            @Override
             public void run() {
                 while(true) {
                     java.awt.EventQueue.invokeLater(new Runnable() {
-                        @Override
                         public void run() {
                             ConectionDisplayer.this.repaint();
                         }

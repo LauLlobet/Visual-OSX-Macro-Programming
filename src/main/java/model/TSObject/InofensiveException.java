@@ -1,4 +1,4 @@
-package model.tsobject;
+package model.TSObject;
 
     /**
  * Created by quest on 1/4/16.

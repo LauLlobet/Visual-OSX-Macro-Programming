@@ -6,10 +6,10 @@ import com.fasterxml.jackson.databind.InjectableValues;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import logic.ConnectionsChecker;
-import model.tsobject.ObjectTS;
-import model.tsobject.tsobjectparts.ConnectionHubTS;
-import model.tsobject.tsobjectparts.InputConnectionHubTS;
-import model.tsobject.tsobjectparts.OutputConnectionHubTS;
+import model.TSObject.ObjectTS;
+import model.TSObject.TSObjectparts.ConnectionHubTS;
+import model.TSObject.TSObjectparts.InputConnectionHubTS;
+import model.TSObject.TSObjectparts.OutputConnectionHubTS;
 import org.junit.Test;
 
 import java.util.ArrayList;

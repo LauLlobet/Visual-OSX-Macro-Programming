@@ -1,6 +1,7 @@
 
 import javax.swing.*;
 import java.awt.*;
+
 class TransparentPanel extends JFrame
 {
     JPanel p1,p2;
@@ -17,7 +18,7 @@ class TransparentPanel extends JFrame
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         // Set a background for JFrame
-        setContentPane(new JLabel(new ImageIcon("E:\\Wallpapers\\frombeyond.jpg")));
+       // setContentPane(new JLabel(new ImageIcon("E:\\Wallpapers\\frombeyond.jpg")));
 
         // Set some layout, say FlowLayout
         setLayout(new FlowLayout());
@@ -28,6 +29,10 @@ class TransparentPanel extends JFrame
 
         // Set the background, black with 125 as alpha value
         // This is less transparent
+        this.setUndecorated(true);
+        //this.setOpacity(0.55f);
+
+
         p1.setBackground(new Color(0,0,0,125));
 
         // Create another JPanel

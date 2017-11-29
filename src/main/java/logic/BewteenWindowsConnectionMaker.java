@@ -1,6 +1,6 @@
 package logic;
 
-import model.tsobject.ObjectTS;
+import model.TSObject.ObjectTS;
 import view.UI.connections.ConectionDisplayer;
 
 /**

@@ -1,10 +1,10 @@
 package logic;
 
 import Constants.TSOConstants;
-import model.tsobject.ObjectTS;
-import model.tsobject.tsobjectparts.OutputConnectionHubTS;
-import model.tsobject.tsobjectparts.Port;
-import model.tsobject.tsobjectparts.TSOConnection;
+import model.TSObject.ObjectTS;
+import model.TSObject.TSObjectparts.OutputConnectionHubTS;
+import model.TSObject.TSObjectparts.Port;
+import model.TSObject.TSObjectparts.TSOConnection;
 import org.w3c.dom.stylesheets.LinkStyle;
 
 import java.util.ArrayList;
@@ -23,7 +23,7 @@ public class LogicTicCaller {
 
     public void launch(){
         Thread myThread = new Thread(new Runnable() {
-            @Override
+
             public void run() {
                 while(true) {
                     LogicTicCaller.this.doTic();

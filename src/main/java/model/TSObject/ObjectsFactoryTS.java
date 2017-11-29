@@ -1,4 +1,4 @@
-package model.tsobject;
+package model.TSObject;
 
 import Constants.TSOConstants;
 import com.fasterxml.jackson.databind.InjectableValues;
@@ -8,9 +8,9 @@ import logic.Caller;
 import logic.ConnectionsChecker;
 import logic.IdGenerator;
 import model.*;
-import model.tsobject.tsobjectparts.InputConnectionHubTS;
-import model.tsobject.tsobjectparts.OutputConnectionHubTS;
-import model.tsobject.tsobjectparts.Port;
+import model.TSObject.TSObjectparts.InputConnectionHubTS;
+import model.TSObject.TSObjectparts.OutputConnectionHubTS;
+import model.TSObject.TSObjectparts.Port;
 import view.ObjectTSV;
 
 import java.io.File;
