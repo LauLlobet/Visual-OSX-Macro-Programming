@@ -12,7 +12,7 @@ With this project code graphic patterns such as window corners can be tracked. T
 See video of how it works [here](https://youtu.be/gX0Ift1YbQM)
 
 ### How to run it
-** Execute with java 1.6 in OSX /src/test/java/view/UI/VObjectTSTest.java*
+**Execute with java 1.6 in OSX /src/test/java/view/UI/VObjectTSTest.java**
 
 ### Libraries used:
 * Java's Robot (for mouse macro actions and screen capture)
@@ -23,5 +23,3 @@ See video of how it works [here](https://youtu.be/gX0Ift1YbQM)
 * MVC using mirroring, for the view - persistance - logic interaction.
 * 1:1 Producer-Consumer, for the comunication between macro objects.
 * Factory, for creating the objects
-* Template, for implementing concrete reactions to standard input of macro objects
-* 
